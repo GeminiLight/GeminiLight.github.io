@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>data analysis</title>
+    <url>/2019/08/22/data-analysis/</url>
+    <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p>Python</p>
+<p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
+<h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
+<li>Numpy</li>
+<li>pandas</li>
+<li>matplotlib</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/08/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation<i class="fa fa-external-link-alt"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting<i class="fa fa-external-link-alt"></i></span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub<i class="fa fa-external-link-alt"></i></span>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>P-N-1-Numpy简介</title>
+    <url>/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<h3 id="Numpy简史："><a href="#Numpy简史：" class="headerlink" title="Numpy简史："></a>Numpy简史：</h3><ul>
+<li>Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。</li>
+<li>2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。</li>
+<li>如今，Numpy广泛应用于计算多维数组和大型数组等方面。此外，它还提供多个函数，操作起数组来效率很高，还可用来实现高级数学运算。</li>
+<li>当前，NumPy是开源项目，使用BSD许可证。</li>
+</ul>
+<h3 id="Numpy-amp-pandas"><a href="#Numpy-amp-pandas" class="headerlink" title="Numpy &amp; pandas"></a>Numpy &amp; pandas</h3><ul>
+<li>NumPy是用Python进行科学计算，尤其是数据分析时，所用到的一个基础库。<br>它是大量Python数学和科学计算包的基础，比如pandas库就用到了NumPy。</li>
+<li>pandas库专门用于数据分析，充分借鉴了Python标准库NumPy的相关概念。</li>
+</ul>
+<h3 id="Numpy的安装："><a href="#Numpy的安装：" class="headerlink" title="Numpy的安装："></a>Numpy的安装：</h3><ul>
+<li>Windows：<br>  <code>pip install numpy</code><br>  若下载慢导致失败，可指定国内pip源（加上-i参数，指定pip源） <br>  <code>pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple</code>\</li>
+<li>导入Numpy模块<br>  <code>&gt;&gt;&gt; import numpy as np</code></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
+        <tag>Numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Start the Journey of My Blog</title>
+    <url>/2020/08/13/start/</url>
+    <content><![CDATA[<h2 id="Welcome-to-My-Programming-World"><a href="#Welcome-to-My-Programming-World" class="headerlink" title="Welcome to My Programming World"></a>Welcome to My Programming World</h2><p>  有趣的灵魂终将相遇<br> 欢迎来到我的博客<br> 希望你能在这里找到对你有帮助的东西</p>
+<h2 id="Self-Introduction"><a href="#Self-Introduction" class="headerlink" title="Self Introduction"></a>Self Introduction</h2><p>Gemini向光性<br>一个困在双子星座的流浪旅人<br>目前就读于重庆大学软件工程专业 · 大二<br>在这里，我会记录下自己学习与生活的痕迹</p>
+<p><strong>座右铭：热爱code，渴望better</strong></p>
+<h2 id="Major-Language"><a href="#Major-Language" class="headerlink" title="Major Language"></a>Major Language</h2><p>博客主要会涉及以下语言：</p>
+<ul>
+<li><p>C</p>
+</li>
+<li><p>C++</p>
+</li>
+<li><p>Python</p>
+</li>
+<li><p>Web前端（HTML/ CSS/ JS等）</p>
+<p>当然，之后也会涉及其他语言的</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>简介</tag>
+        <tag>历程</tag>
+        <tag>愿望</tag>
+      </tags>
+  </entry>
+</search>
