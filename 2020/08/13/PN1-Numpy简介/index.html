@@ -20,13 +20,13 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
+    var CONFIG = {"hostname":"www.blog.geminilight.cn","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
   <meta name="description" content="Numpy简史： Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。 2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。 如今，Numpy广泛应用于计算多维数组和大型数组等方面。此外，它还提供多个函数，操作起数组来效率很高，还可用来实现高级数学运算。 当前，NumPy是开源项目，使用BSD许可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="P-N-1-Numpy简介">
-<meta property="og:url" content="https://www.geminilight.cn/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/index.html">
+<meta property="og:url" content="https://www.blog.geminilight.cn/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="Gemini向光性">
 <meta property="og:description" content="Numpy简史： Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。 2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。 如今，Numpy广泛应用于计算多维数组和大型数组等方面。此外，它还提供多个函数，操作起数组来效率很高，还可用来实现高级数学运算。 当前，NumPy是开源项目，使用BSD许可">
 <meta property="og:locale" content="zh_CN">
@@ -39,7 +39,7 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.geminilight.cn/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/">
+<link rel="canonical" href="https://www.blog.geminilight.cn/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/">
 
 
 <script class="page-configurations">
@@ -136,14 +136,9 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-archives">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -151,14 +146,14 @@
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-tags">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-        <li class="menu-item menu-item-commonweal">
+        <li class="menu-item menu-item-about">
 
-    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
   </ul>
@@ -274,7 +269,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/">
+    <link itemprop="mainEntityOfPage" href="https://www.blog.geminilight.cn/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -302,13 +297,6 @@
 
               <time title="创建时间：2020-08-13 22:22:03" itemprop="dateCreated datePublished" datetime="2020-08-13T22:22:03+08:00">2020-08-13</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-22 12:26:24" itemprop="dateModified" datetime="2019-08-22T12:26:24+08:00">2019-08-22</time>
-              </span>
 
           
 
@@ -467,8 +455,8 @@ NexT.utils.loadComments('#gitalk-container', () => {
       clientID    : 'ec28f6e4cd300bb646a0',
       clientSecret: 'c110fe37a840a4133f1470ed107de921584bf2fa',
       repo        : 'gitment-of-blog.github.io',
-      owner       : 'geminilight',
-      admin       : ['geminilight'],
+      owner       : 'GeminiLight',
+      admin       : ['GeminiLight'],
       id          : 'd01fcf6e25e2b18207dba3b7eb20d896',
         language: 'zh-CN',
       distractionFreeMode: true
