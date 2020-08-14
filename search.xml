@@ -75,7 +75,7 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件读取</span></span><br><span class="line"><span class="keyword">with</span> open(file, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度计算</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> g:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br></pre></td></tr></table></figure>
 
 <p>在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try/finally模式的简化。它原理上是利用了上下文管理器，下文简要介绍将对其执行原理和自定义的方法。<a id="more"></a></p>
-<h2 id="概念与原理"><a href="#概念与原理" class="headerlink" title="概念与原理"></a>概念与原理</h2><h3 id="上下文管理协议（Context-Management-Protocol）"><a href="#上下文管理协议（Context-Management-Protocol）" class="headerlink" title="上下文管理协议（Context Management Protocol）"></a>上下文管理协议（Context Management Protocol）</h3><p>包含方法 <code>__enter__()</code> 和 <code>__exit__()</code> ，支持该协议的对象要实现这两个方法。</p>
+<h2 id="上下文管理器概念"><a href="#上下文管理器概念" class="headerlink" title="上下文管理器概念"></a>上下文管理器概念</h2><h3 id="上下文管理协议（Context-Management-Protocol）"><a href="#上下文管理协议（Context-Management-Protocol）" class="headerlink" title="上下文管理协议（Context Management Protocol）"></a>上下文管理协议（Context Management Protocol）</h3><p>包含方法 <code>__enter__()</code> 和 <code>__exit__()</code> ，支持该协议的对象要实现这两个方法。</p>
 <h3 id="上下文管理器（Context-Manager）"><a href="#上下文管理器（Context-Manager）" class="headerlink" title="上下文管理器（Context Manager）"></a>上下文管理器（Context Manager）</h3><p>支持上下文管理协议的对象，这种对象必须实现 <code>__enter__()</code> 和 <code>__exit__()</code> 方法。<br>上下文管理器定义执行with语句时要建立的运行时上下文，负责执行with语句块上下文中的进入与退出操作。<br>通常使用with语句调用上下文管理器，也可以通过直接调用其方法来使用。</p>
 <ul>
 <li><strong><code>__enter__()</code></strong><ul>
@@ -122,6 +122,25 @@
         <category>Python</category>
       </categories>
       <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习概念</title>
+    <url>/2019/08/22/DL%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/</url>
+    <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p>Python</p>
+<p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
+<h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
+<li>Numpy</li>
+<li>pandas</li>
+<li>matplotlib</li>
+</ul>
+]]></content>
+      <categories>
+        <category>DL 深度学习</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
         <tag>Python</tag>
       </tags>
   </entry>

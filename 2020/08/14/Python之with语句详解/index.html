@@ -32,7 +32,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/991157/1597208515088-0b99ba87-9eb4-4792-8ded-64b5463a6531.png#align=left&display=inline&height=224&margin=%5Bobject%20Object%5D&name=image.png&originHeight=333&originWidth=1151&size=119002&status=done&style=none&width=773">
 <meta property="article:published_time" content="2020-08-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-14T04:41:22.017Z">
+<meta property="article:modified_time" content="2020-08-14T05:00:58.227Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -213,7 +213,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">概念与原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%8D%8F%E8%AE%AE%EF%BC%88Context-Management-Protocol%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">上下文管理协议（Context Management Protocol）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%88Context-Manager%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">上下文管理器（Context Manager）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#with%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">with语句执行过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">自定义上下文管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">上下文管理器概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%8D%8F%E8%AE%AE%EF%BC%88Context-Management-Protocol%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">上下文管理协议（Context Management Protocol）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%88Context-Manager%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">上下文管理器（Context Manager）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#with%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">with语句执行过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">自定义上下文管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -229,14 +229,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -348,7 +348,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文件读取</span></span><br><span class="line"><span class="keyword">with</span> open(file, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度计算</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> g:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br></pre></td></tr></table></figure>
 
 <p>在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try/finally模式的简化。它原理上是利用了上下文管理器，下文简要介绍将对其执行原理和自定义的方法。<a id="more"></a></p>
-<h2 id="概念与原理"><a href="#概念与原理" class="headerlink" title="概念与原理"></a>概念与原理</h2><h3 id="上下文管理协议（Context-Management-Protocol）"><a href="#上下文管理协议（Context-Management-Protocol）" class="headerlink" title="上下文管理协议（Context Management Protocol）"></a>上下文管理协议（Context Management Protocol）</h3><p>包含方法 <code>__enter__()</code> 和 <code>__exit__()</code> ，支持该协议的对象要实现这两个方法。</p>
+<h2 id="上下文管理器概念"><a href="#上下文管理器概念" class="headerlink" title="上下文管理器概念"></a>上下文管理器概念</h2><h3 id="上下文管理协议（Context-Management-Protocol）"><a href="#上下文管理协议（Context-Management-Protocol）" class="headerlink" title="上下文管理协议（Context Management Protocol）"></a>上下文管理协议（Context Management Protocol）</h3><p>包含方法 <code>__enter__()</code> 和 <code>__exit__()</code> ，支持该协议的对象要实现这两个方法。</p>
 <h3 id="上下文管理器（Context-Manager）"><a href="#上下文管理器（Context-Manager）" class="headerlink" title="上下文管理器（Context Manager）"></a>上下文管理器（Context Manager）</h3><p>支持上下文管理协议的对象，这种对象必须实现 <code>__enter__()</code> 和 <code>__exit__()</code> 方法。<br>上下文管理器定义执行with语句时要建立的运行时上下文，负责执行with语句块上下文中的进入与退出操作。<br>通常使用with语句调用上下文管理器，也可以通过直接调用其方法来使用。</p>
 <ul>
 <li><strong><code>__enter__()</code></strong><ul>
@@ -404,6 +404,9 @@
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="\2019\08\22\data-analysis\" rel="bookmark">data analysis</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2019\08\22\DL 深度学习\data-analysis\" rel="bookmark">深度学习概念</a></div>
     </li>
   </ul>
 
