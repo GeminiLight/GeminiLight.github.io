@@ -25,6 +25,22 @@
       </tags>
   </entry>
   <entry>
+    <title>data analysis</title>
+    <url>/2019/08/22/data-analysis/</url>
+    <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p>Python</p>
+<p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
+<h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
+<li>Numpy</li>
+<li>pandas</li>
+<li>matplotlib</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Start the Journey of My Blog</title>
     <url>/2019/08/03/start/</url>
     <content><![CDATA[<h2 id="Welcome-to-My-Programming-World"><a href="#Welcome-to-My-Programming-World" class="headerlink" title="Welcome to My Programming World"></a>Welcome to My Programming World</h2><p>  有趣的灵魂终将相遇<br> 欢迎来到我的博客<br> 希望你能在这里找到对你有帮助的东西</p>
@@ -54,8 +70,8 @@
       </tags>
   </entry>
   <entry>
-    <title>data analysis</title>
-    <url>/2019/08/22/data-analysis/</url>
+    <title>深度学习概念</title>
+    <url>/2019/08/22/DL%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/</url>
     <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p>Python</p>
 <p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
 <h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
@@ -64,6 +80,9 @@
 <li>matplotlib</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>DL 深度学习</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
         <tag>Python</tag>
@@ -123,25 +142,6 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习概念</title>
-    <url>/2019/08/22/DL%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/</url>
-    <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p>Python</p>
-<p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
-<h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
-<li>Numpy</li>
-<li>pandas</li>
-<li>matplotlib</li>
-</ul>
-]]></content>
-      <categories>
-        <category>DL 深度学习</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
         <tag>Python</tag>
       </tags>
   </entry>
