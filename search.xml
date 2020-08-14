@@ -70,25 +70,6 @@
       </tags>
   </entry>
   <entry>
-    <title>深度学习概念</title>
-    <url>/2019/08/22/DL%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/</url>
-    <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p>Python</p>
-<p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
-<h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
-<li>Numpy</li>
-<li>pandas</li>
-<li>matplotlib</li>
-</ul>
-]]></content>
-      <categories>
-        <category>DL 深度学习</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python之with语句详解</title>
     <url>/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/</url>
     <content><![CDATA[<p>在我们使用Python的时候，常使用到如下的代码块:</p>
@@ -142,6 +123,25 @@
         <category>Python</category>
       </categories>
       <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习概念</title>
+    <url>/2019/08/22/DL%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/</url>
+    <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p>Python</p>
+<p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
+<h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
+<li>Numpy</li>
+<li>pandas</li>
+<li>matplotlib</li>
+</ul>
+]]></content>
+      <categories>
+        <category>DL 深度学习</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
         <tag>Python</tag>
       </tags>
   </entry>
