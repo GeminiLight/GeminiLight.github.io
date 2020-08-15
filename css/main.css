@@ -3175,7 +3175,7 @@ mark.search-keyword {
   transform: translate(-50%, -50%);
   border-bottom: 1px solid #d4d7ff;
   border-top: 1px solid #d4d7ff;
-  background: url("../../imgage/effects/source.gif");
+  background: url("../../images/effects/source.gif");
   background-clip: text;
   -webkit-background-clip: text;
 }
