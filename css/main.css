@@ -3163,16 +3163,17 @@ mark.search-keyword {
   position: relative;
 }
 .text {
-  flex: 0 0 100%;
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 14rem;
   font-weight: 900;
   color: rgba(0,0,0,0);
   text-align: center;
   font-family: 'Lato', sans-serif;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   border-bottom: 1px solid #d4d7ff;
   border-top: 1px solid #d4d7ff;
   background: url("../../images/effects/source.gif");
