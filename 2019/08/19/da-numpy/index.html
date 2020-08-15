@@ -23,19 +23,23 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="Welcome to my blog where I am sharing my life and knowledge.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Gemini向光性">
-<meta property="og:url" content="https://www.geminilight.cn/tags/Numpy/index.html">
+  <meta name="description" content="Numpy简史： Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。 2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。 如今，Numpy广泛应用于计算多维数组和大型数组等方面。此外，它还提供多个函数，操作起数组来效率很高，还可用来实现高级数学运算。 当前，NumPy是开源项目，使用BSD许可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Numpy简介">
+<meta property="og:url" content="https://www.geminilight.cn/2019/08/19/da-numpy/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="Welcome to my blog where I am sharing my life and knowledge.">
+<meta property="og:description" content="Numpy简史： Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。 2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。 如今，Numpy广泛应用于计算多维数组和大型数组等方面。此外，它还提供多个函数，操作起数组来效率很高，还可用来实现高级数学运算。 当前，NumPy是开源项目，使用BSD许可">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-08-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-08-15T15:45:02.578Z">
 <meta property="article:author" content="GeminiLight">
-<meta property="article:tag" content="Gemini向光性, GeminiLight, hexo, blog">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="Numpy">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.geminilight.cn/tags/Numpy/">
+<link rel="canonical" href="https://www.geminilight.cn/2019/08/19/da-numpy/">
 
 
 <script class="page-configurations">
@@ -43,12 +47,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: Numpy | Gemini向光性</title>
+  <title>Numpy简介 | Gemini向光性</title>
   
 
 
@@ -198,7 +202,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -210,6 +214,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Numpy%E7%AE%80%E5%8F%B2%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">Numpy简史：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numpy-amp-pandas"><span class="nav-number">2.</span> <span class="nav-text">Numpy &amp; pandas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numpy%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">Numpy的安装：</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -561,58 +566,146 @@ if(canvas.getContext){
 </noscript>
 
 
-    <div class="main-inner tag">
+    <div class="main-inner post posts-expand">
       
 
       
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Numpy
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2019/08/19/da-numpy/">
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2019</span>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="GeminiLight">
+      <meta itemprop="description" content="Welcome to my blog where I am sharing my life and knowledge.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gemini向光性">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Numpy简介
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-19 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-19T00:00:00+08:00">2019-08-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DA-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">DA - 数据分析</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="Numpy简史："><a href="#Numpy简史：" class="headerlink" title="Numpy简史："></a>Numpy简史：</h3><ul>
+<li>Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。</li>
+<li>2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。</li>
+<li>如今，Numpy广泛应用于计算多维数组和大型数组等方面。此外，它还提供多个函数，操作起数组来效率很高，还可用来实现高级数学运算。</li>
+<li>当前，NumPy是开源项目，使用BSD许可证。</li>
+</ul>
+<h3 id="Numpy-amp-pandas"><a href="#Numpy-amp-pandas" class="headerlink" title="Numpy &amp; pandas"></a>Numpy &amp; pandas</h3><ul>
+<li>NumPy是用Python进行科学计算，尤其是数据分析时，所用到的一个基础库。<br>它是大量Python数学和科学计算包的基础，比如pandas库就用到了NumPy。</li>
+<li>pandas库专门用于数据分析，充分借鉴了Python标准库NumPy的相关概念。</li>
+</ul>
+<h3 id="Numpy的安装："><a href="#Numpy的安装：" class="headerlink" title="Numpy的安装："></a>Numpy的安装：</h3><ul>
+<li>Windows：<br>  <code>pip install numpy</code><br>  若下载慢导致失败，可指定国内pip源（加上-i参数，指定pip源） <br>  <code>pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple</code>\</li>
+<li>导入Numpy模块<br>  <code>&gt;&gt;&gt; import numpy as np</code></li>
+</ul>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-08-19T00:00:00+08:00"
-              content="2019-08-19">
-          08-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/08/19/da-numpy/" itemprop="url">
-            <span itemprop="name">Numpy简介</span>
-          </a>
-      </div>
-
+    
+    
+    
       
-    </header>
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2019\08\22\da-introduction\" rel="bookmark">data analysis</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2019\08\22\DL - 深度学习\data-analysis\" rel="bookmark">深度学习概念</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\08\14\PL - Python\Python-with\" rel="bookmark">Python之with语句详解</a></div>
+    </li>
+  </ul>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Gemini向光性
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.geminilight.cn/2019/08/19/da-numpy/" title="Numpy简介">https://www.geminilight.cn/2019/08/19/da-numpy/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"># 数据分析</a>
+              <a href="/tags/Numpy/" rel="tag"># Numpy</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/08/03/MY%20-%20%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/start-my-blog/" rel="prev" title="Start the Journey of My Blog">
+                  <i class="fa fa-chevron-left"></i> Start the Journey of My Blog
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/" rel="next" title="深度学习概念">
+                  深度学习概念 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
 
       
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -702,6 +795,25 @@ if(canvas.getContext){
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ec28f6e4cd300bb646a0',
+      clientSecret: 'c110fe37a840a4133f1470ed107de921584bf2fa',
+      repo        : 'gitment-of-blog',
+      owner       : 'GeminiLight',
+      admin       : ['GeminiLight'],
+      id          : '59464c3ed962c6bd138c7dc7d74e4db2',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

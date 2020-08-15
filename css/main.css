@@ -3283,6 +3283,9 @@ mark.search-keyword {
 .category-list-link {
   border-bottom: 0;
 }
+.post-block {
+  background: #c2e9fb;
+}
 .post-button {
   margin-top: 30px;
   text-align: center;

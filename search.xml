@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>P-N-1-Numpy简介</title>
-    <url>/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/</url>
+    <title>data analysis</title>
+    <url>/2019/08/22/da-introduction/</url>
+    <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
+<h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
+<li>Numpy</li>
+<li>pandas</li>
+<li>Scipy</li>
+<li>matplotlib</li>
+</ul>
+]]></content>
+      <categories>
+        <category>DA - 数据分析</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Numpy简介</title>
+    <url>/2019/08/19/da-numpy/</url>
     <content><![CDATA[<h3 id="Numpy简史："><a href="#Numpy简史：" class="headerlink" title="Numpy简史："></a>Numpy简史：</h3><ul>
 <li>Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。</li>
 <li>2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。</li>
@@ -18,60 +37,18 @@
 <li>导入Numpy模块<br>  <code>&gt;&gt;&gt; import numpy as np</code></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>DA - 数据分析</category>
+      </categories>
       <tags>
-        <tag>数据分析</tag>
         <tag>Python</tag>
+        <tag>数据分析</tag>
         <tag>Numpy</tag>
       </tags>
   </entry>
   <entry>
-    <title>data analysis</title>
-    <url>/2019/08/22/data-analysis/</url>
-    <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p>Python</p>
-<p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
-<h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
-<li>Numpy</li>
-<li>pandas</li>
-<li>matplotlib</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Start the Journey of My Blog</title>
-    <url>/2019/08/03/start/</url>
-    <content><![CDATA[<h2 id="Welcome-to-My-Programming-World"><a href="#Welcome-to-My-Programming-World" class="headerlink" title="Welcome to My Programming World"></a>Welcome to My Programming World</h2><p>  有趣的灵魂终将相遇<br> 欢迎来到我的博客<br> 希望你能在这里找到对你有帮助的东西</p>
-<h2 id="Self-Introduction"><a href="#Self-Introduction" class="headerlink" title="Self Introduction"></a>Self Introduction</h2><p>Gemini向光性<br>一个困在双子星座的流浪旅人<br>目前就读于重庆大学软件工程专业<br>在这里，我会记录下自己学习与生活的痕迹</p>
-<p><strong>座右铭：热爱code，渴望better</strong></p>
-<h2 id="Major-Language"><a href="#Major-Language" class="headerlink" title="Major Language"></a>Major Language</h2><p>博客主要会涉及以下语言：</p>
-<ul>
-<li><p>C</p>
-</li>
-<li><p>C++</p>
-</li>
-<li><p>Python</p>
-</li>
-<li><p>Web前端（HTML/ CSS/ JS等）</p>
-<p>当然，之后也会涉及其他语言的</p>
-</li>
-</ul>
-<p><span class="exturl" data-url="aHR0cDovL3d3dy5iYWlkdS5jb20=">百度<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>简介</tag>
-        <tag>历程</tag>
-        <tag>愿望</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深度学习概念</title>
-    <url>/2019/08/22/DL%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/</url>
+    <url>/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/</url>
     <content><![CDATA[<h2 id="Python数据分析"><a href="#Python数据分析" class="headerlink" title="Python数据分析"></a>Python数据分析</h2><p>Python</p>
 <p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
 <h3 id="涉及模块："><a href="#涉及模块：" class="headerlink" title="涉及模块："></a>涉及模块：</h3><ul>
@@ -84,13 +61,13 @@
         <category>DL 深度学习</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
         <tag>Python</tag>
+        <tag>数据分析</tag>
       </tags>
   </entry>
   <entry>
     <title>Python之with语句详解</title>
-    <url>/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/</url>
+    <url>/2020/08/14/PL%20-%20Python/Python-with/</url>
     <content><![CDATA[<p>在我们使用Python的时候，常使用到如下的代码块:</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件读取</span></span><br><span class="line"><span class="keyword">with</span> open(file, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度计算</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> g:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br></pre></td></tr></table></figure>
 
@@ -139,10 +116,39 @@
 </blockquote>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>PL - Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Start the Journey of My Blog</title>
+    <url>/2019/08/03/MY%20-%20%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/start-my-blog/</url>
+    <content><![CDATA[<h2 id="Welcome-to-My-Programming-World"><a href="#Welcome-to-My-Programming-World" class="headerlink" title="Welcome to My Programming World"></a>Welcome to My Programming World</h2><p>  有趣的灵魂终将相遇<br> 欢迎来到我的博客<br> 希望你能在这里找到对你有帮助的东西</p>
+<h2 id="Self-Introduction"><a href="#Self-Introduction" class="headerlink" title="Self Introduction"></a>Self Introduction</h2><p>Gemini向光性<br>一个困在双子星座的流浪旅人<br>目前就读于重庆大学软件工程专业<br>在这里，我会记录下自己学习与生活的痕迹</p>
+<p><strong>座右铭：热爱code，渴望better</strong></p>
+<h2 id="Major-Language"><a href="#Major-Language" class="headerlink" title="Major Language"></a>Major Language</h2><p>博客主要会涉及以下语言：</p>
+<ul>
+<li><p>C</p>
+</li>
+<li><p>C++</p>
+</li>
+<li><p>Python</p>
+</li>
+<li><p>Web前端（HTML/ CSS/ JS等）</p>
+<p>当然，之后也会涉及其他语言的</p>
+</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5iYWlkdS5jb20=">百度<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>MY - 生活随笔</category>
+      </categories>
+      <tags>
+        <tag>简介</tag>
+        <tag>历程</tag>
+        <tag>愿望</tag>
       </tags>
   </entry>
 </search>
