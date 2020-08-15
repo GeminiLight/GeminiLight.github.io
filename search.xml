@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>数据分析简介</title>
-    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
-    <content><![CDATA[<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
-<h2 id="相关模块简介"><a href="#相关模块简介" class="headerlink" title="相关模块简介"></a>相关模块简介</h2><h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><h3 id="pandas"><a href="#pandas" class="headerlink" title="pandas"></a>pandas</h3><h3 id="Scipy"><a href="#Scipy" class="headerlink" title="Scipy"></a>Scipy</h3><h3 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h3>]]></content>
-      <categories>
-        <category>DA - 数据分析</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Numpy模块入门</title>
     <url>/2019/08/19/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-numpy/</url>
     <content><![CDATA[<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><ul>
@@ -35,9 +22,22 @@
         <category>DA - 数据分析</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>数据分析</tag>
+        <tag>Python</tag>
         <tag>Numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据分析简介</title>
+    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
+    <content><![CDATA[<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><p><img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty"></p>
+<h2 id="相关模块简介"><a href="#相关模块简介" class="headerlink" title="相关模块简介"></a>相关模块简介</h2><h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><h3 id="pandas"><a href="#pandas" class="headerlink" title="pandas"></a>pandas</h3><h3 id="Scipy"><a href="#Scipy" class="headerlink" title="Scipy"></a>Scipy</h3><h3 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h3>]]></content>
+      <categories>
+        <category>DA - 数据分析</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -56,6 +56,33 @@
       <tags>
         <tag>Python</tag>
         <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Start the Journey of My Blog</title>
+    <url>/2019/08/03/MY%20-%20%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/start-my-blog/</url>
+    <content><![CDATA[<h2 id="Welcome-to-My-Programming-World"><a href="#Welcome-to-My-Programming-World" class="headerlink" title="Welcome to My Programming World"></a>Welcome to My Programming World</h2><p>有趣的灵魂终将相遇<br>欢迎来到我的博客<br>希望你能在这里找到对你有帮助的东西</p>
+<h2 id="Self-Introduction"><a href="#Self-Introduction" class="headerlink" title="Self Introduction"></a>Self Introduction</h2><p>Gemini向光性<br>一个困在双子星座的流浪旅人<br>目前就读于重庆大学软件工程专业<br>在这里，我会记录下自己学习与生活的痕迹</p>
+<h2 id="Major-Language"><a href="#Major-Language" class="headerlink" title="Major Language"></a>Major Language</h2><p>博客主要会涉及以下语言：</p>
+<ul>
+<li><p>C</p>
+</li>
+<li><p>C++</p>
+</li>
+<li><p>Python</p>
+</li>
+<li><p>Java</p>
+</li>
+<li><p>Web前端（HTML/ CSS/ JS等）</p>
+<p>当然，之后也会涉及其他语言的</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>MY - 生活随笔</category>
+      </categories>
+      <tags>
+        <tag>个人简介</tag>
       </tags>
   </entry>
   <entry>
@@ -114,33 +141,6 @@
       <tags>
         <tag>Python</tag>
         <tag>语法进阶</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Start the Journey of My Blog</title>
-    <url>/2019/08/03/MY%20-%20%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/start-my-blog/</url>
-    <content><![CDATA[<h2 id="Welcome-to-My-Programming-World"><a href="#Welcome-to-My-Programming-World" class="headerlink" title="Welcome to My Programming World"></a>Welcome to My Programming World</h2><p>有趣的灵魂终将相遇<br>欢迎来到我的博客<br>希望你能在这里找到对你有帮助的东西</p>
-<h2 id="Self-Introduction"><a href="#Self-Introduction" class="headerlink" title="Self Introduction"></a>Self Introduction</h2><p>Gemini向光性<br>一个困在双子星座的流浪旅人<br>目前就读于重庆大学软件工程专业<br>在这里，我会记录下自己学习与生活的痕迹</p>
-<h2 id="Major-Language"><a href="#Major-Language" class="headerlink" title="Major Language"></a>Major Language</h2><p>博客主要会涉及以下语言：</p>
-<ul>
-<li><p>C</p>
-</li>
-<li><p>C++</p>
-</li>
-<li><p>Python</p>
-</li>
-<li><p>Java</p>
-</li>
-<li><p>Web前端（HTML/ CSS/ JS等）</p>
-<p>当然，之后也会涉及其他语言的</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>MY - 生活随笔</category>
-      </categories>
-      <tags>
-        <tag>个人简介</tag>
       </tags>
   </entry>
 </search>
