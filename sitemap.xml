@@ -2,91 +2,91 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.blog.geminilight.cn/404.html</loc>
+    <loc>https://geminilight.cn/404.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/404/custom_404.html</loc>
+    <loc>https://geminilight.cn/404/custom_404.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/google8b51d02836dd4446.html</loc>
+    <loc>https://geminilight.cn/google8b51d02836dd4446.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/about/index.html</loc>
+    <loc>https://geminilight.cn/about/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/2019/08/03/start/</loc>
+    <loc>https://geminilight.cn/2019/08/03/start/</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/photos/index.html</loc>
+    <loc>https://geminilight.cn/photos/index.html</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/2019/08/22/DL%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/</loc>
+    <loc>https://geminilight.cn/2019/08/22/DL%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/data-analysis/</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/</loc>
+    <loc>https://geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/</loc>
     
     <lastmod>2020-08-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/categories/index.html</loc>
+    <loc>https://geminilight.cn/categories/index.html</loc>
     
     <lastmod>2020-08-13</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/README.html</loc>
+    <loc>https://geminilight.cn/README.html</loc>
     
     <lastmod>2020-08-13</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/tags/index.html</loc>
+    <loc>https://geminilight.cn/tags/index.html</loc>
     
     <lastmod>2020-08-13</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/2019/08/22/data-analysis/</loc>
+    <loc>https://geminilight.cn/2019/08/22/data-analysis/</loc>
     
     <lastmod>2019-08-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/</loc>
+    <loc>https://geminilight.cn/2020/08/13/PN1-Numpy%E7%AE%80%E4%BB%8B/</loc>
     
     <lastmod>2019-08-22</lastmod>
     
@@ -94,7 +94,7 @@
   
 
   <url>
-    <loc>https://www.blog.geminilight.cn/</loc>
+    <loc>https://geminilight.cn/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -102,42 +102,42 @@
 
   
   <url>
-    <loc>https://www.blog.geminilight.cn/tags/%E7%AE%80%E4%BB%8B/</loc>
+    <loc>https://geminilight.cn/tags/%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/tags/%E5%8E%86%E7%A8%8B/</loc>
+    <loc>https://geminilight.cn/tags/%E5%8E%86%E7%A8%8B/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/tags/%E6%84%BF%E6%9C%9B/</loc>
+    <loc>https://geminilight.cn/tags/%E6%84%BF%E6%9C%9B/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
+    <loc>https://geminilight.cn/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/tags/Python/</loc>
+    <loc>https://geminilight.cn/tags/Python/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/tags/Numpy/</loc>
+    <loc>https://geminilight.cn/tags/Numpy/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -146,21 +146,21 @@
 
   
   <url>
-    <loc>https://www.blog.geminilight.cn/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://geminilight.cn/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/categories/DL-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://geminilight.cn/categories/DL-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.blog.geminilight.cn/categories/Python/</loc>
+    <loc>https://geminilight.cn/categories/Python/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
