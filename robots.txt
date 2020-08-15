@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /home/
+Allow: /about/
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+
+Sitemap: http://www.geminilight.cn/sitemap.xml
+Sitemap: http://www.geminilight.cn/baidusitemap.xml
