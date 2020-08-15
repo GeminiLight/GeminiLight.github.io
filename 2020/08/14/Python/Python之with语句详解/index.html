@@ -20,13 +20,13 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="在我们使用Python的时候，常使用到如下的代码块: 1234567# 文件读取with open(file, &amp;#x27;r&amp;#x27;) as f:    # CODE BLOCK ## 梯度计算with tf.GradientTape() as g:    # CODE BLOCK #  在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try&#x2F;fina">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python之with语句详解">
-<meta property="og:url" content="https://geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:url" content="https://www.geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Gemini向光性">
 <meta property="og:description" content="在我们使用Python的时候，常使用到如下的代码块: 1234567# 文件读取with open(file, &amp;#x27;r&amp;#x27;) as f:    # CODE BLOCK ## 梯度计算with tf.GradientTape() as g:    # CODE BLOCK #  在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try&#x2F;fina">
 <meta property="og:locale" content="zh_CN">
@@ -39,7 +39,7 @@
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/991157/1597208515088-0b99ba87-9eb4-4792-8ded-64b5463a6531.png#align=left&display=inline&height=224&margin=%5Bobject%20Object%5D&name=image.png&originHeight=333&originWidth=1151&size=119002&status=done&style=none&width=773">
 
 
-<link rel="canonical" href="https://geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/">
+<link rel="canonical" href="https://www.geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/">
 
 
 <script class="page-configurations">
@@ -570,7 +570,7 @@ if(canvas.getContext){
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/">
+    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -692,7 +692,7 @@ if(canvas.getContext){
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/" title="Python之with语句详解">https://geminilight.cn/2020/08/14/Python/Python之with语句详解/</a>
+    <a href="https://www.geminilight.cn/2020/08/14/Python/Python%E4%B9%8Bwith%E8%AF%AD%E5%8F%A5%E8%AF%A6%E8%A7%A3/" title="Python之with语句详解">https://www.geminilight.cn/2020/08/14/Python/Python之with语句详解/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
