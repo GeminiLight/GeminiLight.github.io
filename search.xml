@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数据分析简介</title>
+    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
+    <content><![CDATA[<h2 id="数据分析">数据分析</h2>
+<figure>
+<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
+</figure>
+<h2 id="相关模块简介">相关模块简介</h2>
+<h3 id="numpy">Numpy</h3>
+<h3 id="pandas">pandas</h3>
+<h3 id="scipy">Scipy</h3>
+<h3 id="matplotlib">matplotlib</h3>
+]]></content>
+      <categories>
+        <category>DA - 数据分析</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Numpy模块入门</title>
     <url>/2019/08/19/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-numpy/</url>
     <content><![CDATA[<h3 id="数据">数据</h3>
@@ -26,30 +47,9 @@
         <category>DA - 数据分析</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
         <tag>Python</tag>
+        <tag>数据分析</tag>
         <tag>Numpy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据分析简介</title>
-    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
-    <content><![CDATA[<h2 id="数据分析">数据分析</h2>
-<figure>
-<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
-</figure>
-<h2 id="相关模块简介">相关模块简介</h2>
-<h3 id="numpy">Numpy</h3>
-<h3 id="pandas">pandas</h3>
-<h3 id="scipy">Scipy</h3>
-<h3 id="matplotlib">matplotlib</h3>
-]]></content>
-      <categories>
-        <category>DA - 数据分析</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -77,7 +77,7 @@
   <entry>
     <title>论文精读之Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
     <url>/2020/08/16/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
-    <content><![CDATA[<p>本篇论文将强化学习中梯度策略算法与图卷积神经网络相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。 <a id="more"></a></p>
+    <content><![CDATA[<p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。 <a id="more"></a></p>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
 <strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
@@ -87,7 +87,7 @@
 <strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
 <span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="问题定义">问题定义</h2>
-<h3 id="相关词汇">相关词汇</h3>
+<h3 id="专业词汇">专业词汇</h3>
 <table>
 <thead>
 <tr class="header">
@@ -149,10 +149,35 @@
       </categories>
       <tags>
         <tag>论文精读</tag>
-        <tag>虚拟网络</tag>
+        <tag>VNE</tag>
         <tag>强化学习</tag>
-        <tag>图神经网络</tag>
+        <tag>GNN</tag>
         <tag>GCN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Start the Journey of My Blog</title>
+    <url>/2019/08/03/MY%20-%20%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/start-my-blog/</url>
+    <content><![CDATA[<h2 id="welcome-to-my-programming-world">Welcome to My Programming World</h2>
+<p>有趣的灵魂终将相遇 欢迎来到我的博客 希望你能在这里找到对你有帮助的东西</p>
+<h2 id="self-introduction">Self Introduction</h2>
+<p>Gemini向光性 一个困在双子星座的流浪旅人 目前就读于重庆大学软件工程专业 在这里，我会记录下自己学习与生活的痕迹</p>
+<h2 id="major-language">Major Language</h2>
+<p>博客主要会涉及以下语言：</p>
+<ul>
+<li>C</li>
+<li>C++</li>
+<li>Python</li>
+<li>Java</li>
+<li>Web前端（HTML/ CSS/ JS等）</li>
+</ul>
+<p>当然，之后也会涉及其他语言的</p>
+]]></content>
+      <categories>
+        <category>MY - 生活随笔</category>
+      </categories>
+      <tags>
+        <tag>个人简介</tag>
       </tags>
   </entry>
   <entry>
@@ -214,31 +239,6 @@
       <tags>
         <tag>Python</tag>
         <tag>语法进阶</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Start the Journey of My Blog</title>
-    <url>/2019/08/03/MY%20-%20%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/start-my-blog/</url>
-    <content><![CDATA[<h2 id="welcome-to-my-programming-world">Welcome to My Programming World</h2>
-<p>有趣的灵魂终将相遇 欢迎来到我的博客 希望你能在这里找到对你有帮助的东西</p>
-<h2 id="self-introduction">Self Introduction</h2>
-<p>Gemini向光性 一个困在双子星座的流浪旅人 目前就读于重庆大学软件工程专业 在这里，我会记录下自己学习与生活的痕迹</p>
-<h2 id="major-language">Major Language</h2>
-<p>博客主要会涉及以下语言：</p>
-<ul>
-<li>C</li>
-<li>C++</li>
-<li>Python</li>
-<li>Java</li>
-<li>Web前端（HTML/ CSS/ JS等）</li>
-</ul>
-<p>当然，之后也会涉及其他语言的</p>
-]]></content>
-      <categories>
-        <category>MY - 生活随笔</category>
-      </categories>
-      <tags>
-        <tag>个人简介</tag>
       </tags>
   </entry>
 </search>
