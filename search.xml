@@ -53,6 +53,28 @@
       </tags>
   </entry>
   <entry>
+    <title>深度学习概念</title>
+    <url>/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
+    <content><![CDATA[<h2 id="python数据分析">Python数据分析</h2>
+<figure>
+<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
+</figure>
+<h3 id="涉及模块">涉及模块</h3>
+<ul>
+<li>Numpy</li>
+<li>pandas</li>
+<li>matplotlib</li>
+</ul>
+]]></content>
+      <categories>
+        <category>DL - 深度学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【游戏人生】双子Gemini</title>
     <url>/2017/08/07/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/game-gemini/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -189,28 +211,6 @@
       <tags>
         <tag>Python</tag>
         <tag>语法进阶</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习概念</title>
-    <url>/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
-    <content><![CDATA[<h2 id="python数据分析">Python数据分析</h2>
-<figure>
-<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
-</figure>
-<h3 id="涉及模块">涉及模块</h3>
-<ul>
-<li>Numpy</li>
-<li>pandas</li>
-<li>matplotlib</li>
-</ul>
-]]></content>
-      <categories>
-        <category>DL - 深度学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
