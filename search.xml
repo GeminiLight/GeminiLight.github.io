@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>数据分析简介</title>
-    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
-    <content><![CDATA[<h2 id="数据分析">数据分析</h2>
-<figure>
-<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
-</figure>
-<h2 id="相关模块简介">相关模块简介</h2>
-<h3 id="numpy">Numpy</h3>
-<h3 id="pandas">pandas</h3>
-<h3 id="scipy">Scipy</h3>
-<h3 id="matplotlib">matplotlib</h3>
-]]></content>
-      <categories>
-        <category>DA - 数据分析</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Numpy模块入门</title>
     <url>/2019/08/19/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-numpy/</url>
     <content><![CDATA[<h3 id="数据">数据</h3>
@@ -47,9 +26,30 @@
         <category>DA - 数据分析</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>数据分析</tag>
+        <tag>Python</tag>
         <tag>Numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据分析简介</title>
+    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
+    <content><![CDATA[<h2 id="数据分析">数据分析</h2>
+<figure>
+<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
+</figure>
+<h2 id="相关模块简介">相关模块简介</h2>
+<h3 id="numpy">Numpy</h3>
+<h3 id="pandas">pandas</h3>
+<h3 id="scipy">Scipy</h3>
+<h3 id="matplotlib">matplotlib</h3>
+]]></content>
+      <categories>
+        <category>DA - 数据分析</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -72,6 +72,69 @@
       <tags>
         <tag>Python</tag>
         <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文精读之Automatic Virtual Network Embedding - A Deep Reinforcement Learning Approach with Graph Convolutional Networks</title>
+    <url>/2020/08/16/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
+    <content><![CDATA[<p>本篇论文将强化学习中梯度策略算法与图卷积神经网络相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。 <a id="more"></a></p>
+<h2 id="论文简介">论文简介</h2>
+<p>论文名称：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
+论文作者：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
+发表期刊：JSAC-2020 (CCF-A)<br />
+研究方向：虚拟网络嵌入<br />
+关键技术：Network Virtualization, Virtual Network Embedding, Reinforcement Learning, Graph Convolutional Network<br />
+主要创新：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
+<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="问题定义">问题定义</h2>
+<h3 id="相关词汇">相关词汇</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">缩写</th>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">VNE</td>
+<td>虚拟网络嵌入</td>
+<td>Virtual Network Embedding</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RL</td>
+<td>强化学习</td>
+<td>Reinforcement Learning</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">GCN</td>
+<td>图卷积神经网络</td>
+<td>Graph Convolutional Network</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">A3C</td>
+<td></td>
+<td>Asynchronous Advantage Actor-Critic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题描述">问题描述</h3>
+<h2 id="算法模型">算法模型</h2>
+<h2 id="实验结果">实验结果</h2>
+<h3 id="评估设置">评估设置</h3>
+<p>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑，该网络具有100个结点和500条边（模拟一个中型的ISP）。同时，随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</p>
+<h2 id="总结思考">总结思考</h2>
+]]></content>
+      <categories>
+        <category>RP - 科研论文</category>
+      </categories>
+      <tags>
+        <tag>论文精读</tag>
+        <tag>虚拟网络</tag>
+        <tag>强化学习</tag>
+        <tag>图神经网络</tag>
+        <tag>GCN</tag>
       </tags>
   </entry>
   <entry>
@@ -158,69 +221,6 @@
       </categories>
       <tags>
         <tag>个人简介</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>论文精读之Automatic Virtual Network Embedding - A Deep Reinforcement Learning Approach with Graph Convolutional Networks</title>
-    <url>/2020/08/16/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
-    <content><![CDATA[<p>本篇论文将强化学习中梯度策略算法与图卷积神经网络相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。 <a id="more"></a></p>
-<h2 id="论文简介">论文简介</h2>
-<p>论文名称：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
-论文作者：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
-发表期刊：JSAC-2020 (CCF-A)<br />
-研究方向：虚拟网络嵌入<br />
-关键技术：Network Virtualization, Virtual Network Embedding, Reinforcement Learning, Graph Convolutional Network<br />
-主要创新：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
-<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="问题定义">问题定义</h2>
-<h3 id="相关词汇">相关词汇</h3>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">缩写</th>
-<th>中文</th>
-<th>英文</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">VNE</td>
-<td>虚拟网络嵌入</td>
-<td>Virtual Network Embedding</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">RL</td>
-<td>强化学习</td>
-<td>Reinforcement Learning</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">GCN</td>
-<td>图卷积神经网络</td>
-<td>Graph Convolutional Network</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">A3C</td>
-<td></td>
-<td>Asynchronous Advantage Actor-Critic</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题描述">问题描述</h3>
-<h2 id="算法模型">算法模型</h2>
-<h2 id="实验结果">实验结果</h2>
-<h3 id="评估设置">评估设置</h3>
-<p>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑，该网络具有100个结点和500条边（模拟一个中型的ISP）。同时，随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</p>
-<h2 id="总结思考">总结思考</h2>
-]]></content>
-      <categories>
-        <category>RP - 科研论文</category>
-      </categories>
-      <tags>
-        <tag>论文精读</tag>
-        <tag>虚拟网络</tag>
-        <tag>强化学习</tag>
-        <tag>图神经网络</tag>
-        <tag>GCN</tag>
       </tags>
   </entry>
 </search>
