@@ -101,7 +101,7 @@
   </entry>
   <entry>
     <title>Python之with语句原理</title>
-    <url>/2020/08/14/PL%20-%20Python/pl-python-with/</url>
+    <url>/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/</url>
     <content><![CDATA[<p>在我们使用Python的时候，常使用到如下的代码块:</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件读取</span></span><br><span class="line"><span class="keyword">with</span> open(file, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度计算</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> g:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br></pre></td></tr></table></figure>
 <p>在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try/finally模式的简化。它原理上是利用了上下文管理器，下文简要介绍将对其执行原理和自定义的方法。<a id="more"></a></p>
@@ -153,7 +153,7 @@
 </blockquote>
 ]]></content>
       <categories>
-        <category>PL - Python</category>
+        <category>PL - 编程语言</category>
       </categories>
       <tags>
         <tag>Python</tag>
