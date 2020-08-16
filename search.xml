@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数据分析简介</title>
+    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
+    <content><![CDATA[<h2 id="数据分析">数据分析</h2>
+<figure>
+<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
+</figure>
+<h2 id="相关模块简介">相关模块简介</h2>
+<h3 id="numpy">Numpy</h3>
+<h3 id="pandas">pandas</h3>
+<h3 id="scipy">Scipy</h3>
+<h3 id="matplotlib">matplotlib</h3>
+]]></content>
+      <categories>
+        <category>DA - 数据分析</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【Numpy】入门</title>
     <url>/2019/08/19/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-numpy/</url>
     <content><![CDATA[<h3 id="数据">数据</h3>
@@ -26,30 +47,31 @@
         <category>DA - 数据分析</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
         <tag>Python</tag>
+        <tag>数据分析</tag>
         <tag>Numpy</tag>
       </tags>
   </entry>
   <entry>
-    <title>数据分析简介</title>
-    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
-    <content><![CDATA[<h2 id="数据分析">数据分析</h2>
+    <title>深度学习概念</title>
+    <url>/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
+    <content><![CDATA[<h2 id="python数据分析">Python数据分析</h2>
 <figure>
 <img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
 </figure>
-<h2 id="相关模块简介">相关模块简介</h2>
-<h3 id="numpy">Numpy</h3>
-<h3 id="pandas">pandas</h3>
-<h3 id="scipy">Scipy</h3>
-<h3 id="matplotlib">matplotlib</h3>
+<h3 id="涉及模块">涉及模块</h3>
+<ul>
+<li>Numpy</li>
+<li>pandas</li>
+<li>matplotlib</li>
+</ul>
 ]]></content>
       <categories>
-        <category>DA - 数据分析</category>
+        <category>DL - 深度学习</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
         <tag>Python</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -59,7 +81,7 @@
 <p>“我们都在寻找着 某个人”——《你的名字。》</p>
 
 </blockquote>
-<p>暗夜中的荧树依旧沉睡着，它已经很久很久没有发过光了，久的人们都早已忘记了那个传说……<a id="more"></a></p>
+<p>暗夜中的荧树依旧沉睡着，它已经很久很久没有发过光了，久的人们都早已忘记了那个传说...... <a id="more"></a></p>
 <h2 id="一相遇前尘如是">一、相遇：前尘如是</h2>
 <p>少了星光的装点，夜空暗淡了许多。我心有所念地张望着四周，却又不知在找寻着谁。明明毫无目的地来这儿，却又诚惶诚恐地害怕着错过。空荡荡的心将无神的目光映向不远处沉眠的荧树，然后莫名其妙地叹息。准备离开时的回眸，让我们的目光在朦胧的暮色下交错，我似乎懂了，懂得了命运织缠的意义。</p>
 <p><img src="/resource/images/game-gemini-1.png" /></p>
@@ -104,6 +126,29 @@
       </categories>
       <tags>
         <tag>游戏人生</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Start the Journey of My Blog</title>
+    <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/start-my-blog/</url>
+    <content><![CDATA[<h2 id="welcome-to-my-programming-world">Welcome to My Programming World</h2>
+<p>有趣的灵魂终将相遇 欢迎来到我的博客 希望你能在这里找到对你有帮助的东西</p>
+<h2 id="self-introduction">Self Introduction</h2>
+<p>Gemini向光性 困在双子星座的流浪旅人</p>
+<h2 id="involved-fields">Involved Fields</h2>
+<p>博客主要会涉及以下内容：</p>
+<ul>
+<li>机器学习：传统机器学习、深度学习、强化学习</li>
+<li>数据分析：Numpy、Pandas、Scipy、Matlibplot</li>
+<li>全栈开发：Vue、jQuery、MySQL、SpringBoot、Django</li>
+<li>编程语言：Python、C/C++、Java、JS/TS</li>
+</ul>
+]]></content>
+      <categories>
+        <category>MY - 感悟随笔</category>
+      </categories>
+      <tags>
+        <tag>博客简介</tag>
       </tags>
   </entry>
   <entry>
@@ -165,51 +210,6 @@
       <tags>
         <tag>Python</tag>
         <tag>语法进阶</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Start the Journey of My Blog</title>
-    <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/start-my-blog/</url>
-    <content><![CDATA[<h2 id="welcome-to-my-programming-world">Welcome to My Programming World</h2>
-<p>有趣的灵魂终将相遇 欢迎来到我的博客 希望你能在这里找到对你有帮助的东西</p>
-<h2 id="self-introduction">Self Introduction</h2>
-<p>Gemini向光性 困在双子星座的流浪旅人</p>
-<h2 id="involved-fields">Involved Fields</h2>
-<p>博客主要会涉及以下内容：</p>
-<ul>
-<li>机器学习：传统机器学习、深度学习、强化学习</li>
-<li>数据分析：Numpy、Pandas、Scipy、Matlibplot</li>
-<li>全栈开发：Vue、jQuery、MySQL、SpringBoot、Django</li>
-<li>编程语言：Python、C/C++、Java、JS/TS</li>
-</ul>
-]]></content>
-      <categories>
-        <category>MY - 感悟随笔</category>
-      </categories>
-      <tags>
-        <tag>博客简介</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习概念</title>
-    <url>/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
-    <content><![CDATA[<h2 id="python数据分析">Python数据分析</h2>
-<figure>
-<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
-</figure>
-<h3 id="涉及模块">涉及模块</h3>
-<ul>
-<li>Numpy</li>
-<li>pandas</li>
-<li>matplotlib</li>
-</ul>
-]]></content>
-      <categories>
-        <category>DL - 深度学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
