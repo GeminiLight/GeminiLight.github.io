@@ -92,8 +92,8 @@
 <thead>
 <tr class="header">
 <th style="text-align: center;">缩写</th>
-<th>中文</th>
-<th>英文</th>
+<th>描述</th>
+<th>全名</th>
 </tr>
 </thead>
 <tbody>
@@ -103,16 +103,21 @@
 <td>Virtual Network Embedding</td>
 </tr>
 <tr class="even">
+<td style="text-align: center;">VNR</td>
+<td>虚拟网络请求</td>
+<td>Virtual Network Request</td>
+</tr>
+<tr class="odd">
 <td style="text-align: center;">RL</td>
 <td>强化学习</td>
 <td>Reinforcement Learning</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;">GCN</td>
 <td>图卷积神经网络</td>
 <td>Graph Convolutional Network</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;">A3C</td>
 <td></td>
 <td>Asynchronous Advantage Actor-Critic</td>
@@ -123,7 +128,20 @@
 <h2 id="算法模型">算法模型</h2>
 <h2 id="实验结果">实验结果</h2>
 <h3 id="评估设置">评估设置</h3>
-<p>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑，该网络具有100个结点和500条边（模拟一个中型的ISP）。同时，随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</p>
+<ul>
+<li>底层网络拓扑
+<ul>
+<li>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑</li>
+<li>该网络具有100个结点和500条边（模拟一个中型的ISP）。</li>
+<li>随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</li>
+</ul></li>
+<li>虚拟网络请求
+<ul>
+<li>随机生成VNR时满足Possion process（泊松分布），预期抵达率为每100个时间单位4个</li>
+<li>每个VRN的生成周期满足平均值为500的指数分布</li>
+<li>每个VNR的数量均匀分布在2~10之间</li>
+</ul></li>
+</ul>
 <h2 id="总结思考">总结思考</h2>
 ]]></content>
       <categories>
