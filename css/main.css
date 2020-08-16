@@ -3311,6 +3311,13 @@ mjx-container[display="true"] + br {
   color: #fff;
   background: #69f;
 }
+.post-copyright {
+  border-left: 3px solid #fb9;
+  background-color: #edf;
+}
+figcaption {
+  text-align: center;
+}
 .href {
   color: #87daff;
 }
