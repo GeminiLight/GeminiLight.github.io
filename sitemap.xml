@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.geminilight.cn/notes/index.html</loc>
+    
+    <lastmod>2020-08-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/movies/index.html</loc>
+    
+    <lastmod>2020-08-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/links/index.html</loc>
+    
+    <lastmod>2020-08-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/books/index.html</loc>
+    
+    <lastmod>2020-08-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/plan/index.html</loc>
+    
+    <lastmod>2020-08-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.geminilight.cn/2020/08/14/PL%20-%20Python/pl-python-with/</loc>
     
     <lastmod>2020-08-16</lastmod>
@@ -16,42 +51,7 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/plan/index.html</loc>
-    
-    <lastmod>2020-08-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/movie/index.html</loc>
-    
-    <lastmod>2020-08-16</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.geminilight.cn/music/index.html</loc>
-    
-    <lastmod>2020-08-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/note/index.html</loc>
-    
-    <lastmod>2020-08-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/link/index.html</loc>
-    
-    <lastmod>2020-08-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/book/index.html</loc>
     
     <lastmod>2020-08-16</lastmod>
     
