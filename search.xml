@@ -165,7 +165,13 @@
     <url>/2020/08/16/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
     <content><![CDATA[<p>本篇论文将强化学习中梯度策略算法与图卷积神经网络相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。 <a id="more"></a></p>
 <h2 id="论文简介">论文简介</h2>
-<p>论文名称：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks 论文作者：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li 发表期刊：JSAC-2020 (CCF-A) 研究方向：虚拟网络嵌入 关键技术：Network Virtualization, Virtual Network Embedding, Reinforcement Learning, Graph Convolutional Network 主要创新：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数 <span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<p>论文名称：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
+论文作者：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
+发表期刊：JSAC-2020 (CCF-A)<br />
+研究方向：虚拟网络嵌入<br />
+关键技术：Network Virtualization, Virtual Network Embedding, Reinforcement Learning, Graph Convolutional Network<br />
+主要创新：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
+<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="问题定义">问题定义</h2>
 <h3 id="相关词汇">相关词汇</h3>
 <table>
