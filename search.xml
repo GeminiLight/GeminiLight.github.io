@@ -83,7 +83,8 @@
 <strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
 <strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br />
 <strong>研究方向</strong>：虚拟网络嵌入<br />
-<strong>关键技术</strong>：虚拟网络嵌入, 强化学习, 图卷积神经网络 <strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
+<strong>关键技术</strong>：虚拟网络嵌入, 强化学习, 图卷积神经网络<br />
+<strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
 <span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="问题定义">问题定义</h2>
 <h3 id="相关词汇">相关词汇</h3>
