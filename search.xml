@@ -25,7 +25,8 @@
   <entry>
     <title>【Numpy】入门</title>
     <url>/2019/08/19/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-numpy/</url>
-    <content><![CDATA[<h3 id="数据">数据</h3>
+    <content><![CDATA[<a id="more"></a>
+<h3 id="数据">数据</h3>
 <ul>
 <li>Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。</li>
 <li>2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。</li>
