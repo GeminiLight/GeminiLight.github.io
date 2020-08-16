@@ -126,7 +126,7 @@
 </ul>
 <h2 id="with语句执行过程">with语句执行过程</h2>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#   EXP: 表达式</span></span><br><span class="line"><span class="comment">#   VAR: 变量名，[as VAR][可选]</span></span><br><span class="line"><span class="comment"># BlOCK: 代码块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> EXP <span class="keyword">as</span> VAR:</span><br><span class="line">    BLOCK</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/991157/1597208515088-0b99ba87-9eb4-4792-8ded-64b5463a6531.png" alt="with语句执行流程" width="100%" /></p>
+<p><img src="/images/pl-python-with.png" width="100%" /></p>
 <ol type="1">
 <li>执行代码时，先执行 <code>EXPR</code> 语句，生成上下文管理器对象 context_manager；</li>
 <li>获取上下文管理器的 <code>__exit()__</code> 方法，并保存起来用于之后的调用；</li>
