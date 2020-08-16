@@ -22,28 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>深度学习概念</title>
-    <url>/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
-    <content><![CDATA[<h2 id="python数据分析">Python数据分析</h2>
-<figure>
-<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
-</figure>
-<h3 id="涉及模块">涉及模块</h3>
-<ul>
-<li>Numpy</li>
-<li>pandas</li>
-<li>matplotlib</li>
-</ul>
-]]></content>
-      <categories>
-        <category>DL - 深度学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Numpy模块入门</title>
     <url>/2019/08/19/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-numpy/</url>
     <content><![CDATA[<h3 id="数据">数据</h3>
@@ -75,28 +53,25 @@
       </tags>
   </entry>
   <entry>
-    <title>Start the Journey of My Blog</title>
-    <url>/2019/08/03/MY%20-%20%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/start-my-blog/</url>
-    <content><![CDATA[<h2 id="welcome-to-my-programming-world">Welcome to My Programming World</h2>
-<p>有趣的灵魂终将相遇 欢迎来到我的博客 希望你能在这里找到对你有帮助的东西</p>
-<h2 id="self-introduction">Self Introduction</h2>
-<p>Gemini向光性 一个困在双子星座的流浪旅人 目前就读于重庆大学软件工程专业 在这里，我会记录下自己学习与生活的痕迹</p>
-<h2 id="major-language">Major Language</h2>
-<p>博客主要会涉及以下语言：</p>
+    <title>深度学习概念</title>
+    <url>/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
+    <content><![CDATA[<h2 id="python数据分析">Python数据分析</h2>
+<figure>
+<img src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="pretty" /><figcaption>pretty</figcaption>
+</figure>
+<h3 id="涉及模块">涉及模块</h3>
 <ul>
-<li>C</li>
-<li>C++</li>
-<li>Python</li>
-<li>Java</li>
-<li>Web前端（HTML/ CSS/ JS等）</li>
+<li>Numpy</li>
+<li>pandas</li>
+<li>matplotlib</li>
 </ul>
-<p>当然，之后也会涉及其他语言的</p>
 ]]></content>
       <categories>
-        <category>MY - 生活随笔</category>
+        <category>DL - 深度学习</category>
       </categories>
       <tags>
-        <tag>个人简介</tag>
+        <tag>Python</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -158,6 +133,31 @@
       <tags>
         <tag>Python</tag>
         <tag>语法进阶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Start the Journey of My Blog</title>
+    <url>/2019/08/03/MY%20-%20%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/start-my-blog/</url>
+    <content><![CDATA[<h2 id="welcome-to-my-programming-world">Welcome to My Programming World</h2>
+<p>有趣的灵魂终将相遇 欢迎来到我的博客 希望你能在这里找到对你有帮助的东西</p>
+<h2 id="self-introduction">Self Introduction</h2>
+<p>Gemini向光性 一个困在双子星座的流浪旅人 目前就读于重庆大学软件工程专业 在这里，我会记录下自己学习与生活的痕迹</p>
+<h2 id="major-language">Major Language</h2>
+<p>博客主要会涉及以下语言：</p>
+<ul>
+<li>C</li>
+<li>C++</li>
+<li>Python</li>
+<li>Java</li>
+<li>Web前端（HTML/ CSS/ JS等）</li>
+</ul>
+<p>当然，之后也会涉及其他语言的</p>
+]]></content>
+      <categories>
+        <category>MY - 生活随笔</category>
+      </categories>
+      <tags>
+        <tag>个人简介</tag>
       </tags>
   </entry>
 </search>
