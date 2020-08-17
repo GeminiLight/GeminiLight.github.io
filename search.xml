@@ -732,10 +732,11 @@
       </tags>
   </entry>
   <entry>
-    <title>【Blog】定制Hexo博客NexT主题</title>
+    <title>【Blog】深度美化和定制Hexo和NexT方法</title>
     <url>/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next/</url>
     <content><![CDATA[<p>[更新中...]虽然通过搜索引擎我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。</p>
 <a id="more"></a>
+<h2 id="简介">简介</h2>
 <h2 id="自定义css">自定义CSS</h2>
 <p>如<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoZW1lLXNldHRpbmdzL2N1c3RvbS1maWxlcy5odG1s">NexT 8 文档<i class="fa fa-external-link-alt"></i></span>中所说，</p>
 <blockquote>
@@ -757,8 +758,29 @@
 <li>在<code>layout.njk</code>等其他会被自动渲染的文件中引入</li>
 </ol>
 <p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/custom-about.styl&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="覆盖默认样式">覆盖默认样式</h3>
+<p>我们可以在<code>styles.styl</code>等文件中来定义class新的样式，最简单的方式就是通过<code>F12</code>来查看网页资源，然后选择想要修改的元素，查看元素所带的class，然后在<code>styles.styl</code>中重写即可。</p>
+<h3 id="自定义图标">自定义图标</h3>
+<p>NexT的默认图标库是Font Awesome，它并不包括很多国内主流网站的图标，比如Bilibili、知乎等。但我们可以通过自定义的方式来增加对这些图标的支持。下面以Bilibili为例</p>
+<ol type="1">
+<li>下载<code>bilibili.svg</code>，保存到<code>theme/next/source/images/bilibili.svg</code></li>
+<li>在<code>theme/next/source/_data/styles.styl</code>添加样式</li>
+</ol>
+<p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.fab</span><span class="selector-class">.fa-bilibili</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(/images/bilibili.svg);</span><br><span class="line">  <span class="attribute">background-position</span>: <span class="number">50%</span> <span class="number">75%</span>;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1rem</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol start="3" type="1">
+<li>确保已经在<code>next/_config.xml</code>中开启了自定义文件路径</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>在<code>next/_config.xml</code>配置相应图标</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line">  Bilibili: https:&#x2F;&#x2F;space.bilibili.com&#x2F;userid&#x2F; || fab fa-bilibili</span><br></pre></td></tr></table></figure>
 <h2 id="自定义js">自定义JS</h2>
 <p>同CSS。</p>
+<h2 id="自定义markdown">自定义Markdown</h2>
+<p>作为标记语言，Markdown在某些场景下支持对HTML、CSS和JS的扩展，即我们可以在Markdown中写入HTML语法，甚至可以内嵌CSS和JS。以下为我的博客404页面的示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 404</span><br><span class="line">date: 2020-01-09 13:25:01</span><br><span class="line">layout: false</span><br><span class="line">commit: false</span><br><span class="line">permalink: /404</span><br><span class="line">---</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;title&gt;404&lt;/title&gt;</span></span><br><span class="line"><span class="code">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/404/style.css&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;/head&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">  &lt;body style=&quot;margin: 0px&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-6 align-self-center&quot;&gt;&lt;img src=&quot;/404/404.svg&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;div class=&quot;col-md-6 align-self-center&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;h1&gt;404&lt;/h1&gt;&lt;h2&gt;UH OH! 页面丢失&lt;/h2&gt;&lt;p&gt;您所寻找的页面不存在。你可以点击下面的按钮，返回主页。&lt;/p&gt;</span></span><br><span class="line"><span class="code">  &lt;a href=&quot;https://www.geminilight.cn/&quot;&gt;&lt;button class=&quot;btn blue&quot;&gt;返回首页&lt;/button&gt;&lt;/a&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/body&gt;</span></span><br><span class="line"><span class="code">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，在hexo渲染时，对markdown的缩进有较高的要求。至少在我实际操作过程中，如果HTML标签前有超过4个空格的缩进，便会被渲染为全文字。</p>
 <h2 id="自定义页面">自定义页面</h2>
 <h3 id="不含博客框架的页面">不含博客框架的页面</h3>
 <p>这种类型的页面指完全自定义的，即整个页面不会出现博客的header、sidebar、footer等。比如，我们可以定制一个小游戏的404界面。这里以完全自定义的xxx页面为例，创建流程如下：</p>
@@ -782,10 +804,9 @@
 </ol>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/xxx.css&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- content --&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;xxx.js&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <h3 id="含博客框架的子页面">含博客框架的子页面</h3>
-<p>这种方式可以依赖于主题的css样式和js样式 新建页面</p>
+<p>这种类型的页面指依赖于hexo生成的博客页面主框架，比如我们的Tags标签页、Categories分类页等。这种页面并非完全定制的，这也会带来一个优点：我们可以利用Hexo和NexT主题附带的样式和JS来制作的页面。</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo new page xxx</span><br></pre></td></tr></table></figure>
-<h2 id="自定义html">自定义html</h2>
-<h3 id="njk文件">njk文件</h3>
+<h2 id="总结">总结</h2>
 ]]></content>
       <categories>
         <category>ST - 软件工具</category>

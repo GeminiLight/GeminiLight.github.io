@@ -26,13 +26,13 @@
 
   <meta name="description" content="[更新中...]虽然通过搜索引擎我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Blog】定制Hexo博客NexT主题">
+<meta property="og:title" content="【Blog】深度美化和定制Hexo和NexT方法">
 <meta property="og:url" content="https://www.geminilight.cn/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next/index.html">
 <meta property="og:site_name" content="Gemini向光性">
 <meta property="og:description" content="[更新中...]虽然通过搜索引擎我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-15T19:21:59.000Z">
-<meta property="article:modified_time" content="2020-08-17T14:42:12.110Z">
+<meta property="article:modified_time" content="2020-08-17T15:27:57.078Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="Blog">
 <meta property="article:tag" content="Hexo">
@@ -53,7 +53,7 @@
   };
 </script>
 
-  <title>【Blog】定制Hexo博客NexT主题 | Gemini向光性</title>
+  <title>【Blog】深度美化和定制Hexo和NexT方法 | Gemini向光性</title>
   
 
 
@@ -229,7 +229,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89css"><span class="nav-number">1.</span> <span class="nav-text">自定义CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89js"><span class="nav-number">2.</span> <span class="nav-text">自定义JS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.</span> <span class="nav-text">自定义页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%90%AB%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.1.</span> <span class="nav-text">不含博客框架的页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AB%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E7%9A%84%E5%AD%90%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.2.</span> <span class="nav-text">含博客框架的子页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89html"><span class="nav-number">4.</span> <span class="nav-text">自定义html</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#njk%E6%96%87%E4%BB%B6"><span class="nav-number">4.1.</span> <span class="nav-text">njk文件</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89css"><span class="nav-number">2.</span> <span class="nav-text">自定义CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%86%E7%9B%96%E9%BB%98%E8%AE%A4%E6%A0%B7%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">覆盖默认样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87"><span class="nav-number">2.2.</span> <span class="nav-text">自定义图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89js"><span class="nav-number">3.</span> <span class="nav-text">自定义JS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89markdown"><span class="nav-number">4.</span> <span class="nav-text">自定义Markdown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2"><span class="nav-number">5.</span> <span class="nav-text">自定义页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%90%AB%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="nav-number">5.1.</span> <span class="nav-text">不含博客框架的页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AB%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E7%9A%84%E5%AD%90%E9%A1%B5%E9%9D%A2"><span class="nav-number">5.2.</span> <span class="nav-text">含博客框架的子页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -606,7 +606,7 @@ if(canvas.getContext){
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【Blog】定制Hexo博客NexT主题
+          【Blog】深度美化和定制Hexo和NexT方法
         </h1>
 
         <div class="post-meta">
@@ -634,14 +634,14 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
+              <span>4.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -653,6 +653,7 @@ if(canvas.getContext){
     <div class="post-body" itemprop="articleBody">
         <p>[更新中...]虽然通过搜索引擎我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。</p>
 <a id="more"></a>
+<h2 id="简介">简介</h2>
 <h2 id="自定义css">自定义CSS</h2>
 <p>如<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoZW1lLXNldHRpbmdzL2N1c3RvbS1maWxlcy5odG1s">NexT 8 文档<i class="fa fa-external-link-alt"></i></span>中所说，</p>
 <blockquote>
@@ -674,8 +675,29 @@ if(canvas.getContext){
 <li>在<code>layout.njk</code>等其他会被自动渲染的文件中引入</li>
 </ol>
 <p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/custom-about.styl&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="覆盖默认样式">覆盖默认样式</h3>
+<p>我们可以在<code>styles.styl</code>等文件中来定义class新的样式，最简单的方式就是通过<code>F12</code>来查看网页资源，然后选择想要修改的元素，查看元素所带的class，然后在<code>styles.styl</code>中重写即可。</p>
+<h3 id="自定义图标">自定义图标</h3>
+<p>NexT的默认图标库是Font Awesome，它并不包括很多国内主流网站的图标，比如Bilibili、知乎等。但我们可以通过自定义的方式来增加对这些图标的支持。下面以Bilibili为例</p>
+<ol type="1">
+<li>下载<code>bilibili.svg</code>，保存到<code>theme/next/source/images/bilibili.svg</code></li>
+<li>在<code>theme/next/source/_data/styles.styl</code>添加样式</li>
+</ol>
+<p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.fab</span><span class="selector-class">.fa-bilibili</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(/images/bilibili.svg);</span><br><span class="line">  <span class="attribute">background-position</span>: <span class="number">50%</span> <span class="number">75%</span>;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1rem</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol start="3" type="1">
+<li>确保已经在<code>next/_config.xml</code>中开启了自定义文件路径</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>在<code>next/_config.xml</code>配置相应图标</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  Bilibili: https:&#x2F;&#x2F;space.bilibili.com&#x2F;userid&#x2F; || fab fa-bilibili</span><br></pre></td></tr></table></figure>
 <h2 id="自定义js">自定义JS</h2>
 <p>同CSS。</p>
+<h2 id="自定义markdown">自定义Markdown</h2>
+<p>作为标记语言，Markdown在某些场景下支持对HTML、CSS和JS的扩展，即我们可以在Markdown中写入HTML语法，甚至可以内嵌CSS和JS。以下为我的博客404页面的示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 404</span><br><span class="line">date: 2020-01-09 13:25:01</span><br><span class="line">layout: false</span><br><span class="line">commit: false</span><br><span class="line">permalink: /404</span><br><span class="line">---</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;title&gt;404&lt;/title&gt;</span></span><br><span class="line"><span class="code">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/404/style.css&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;/head&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">  &lt;body style=&quot;margin: 0px&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-6 align-self-center&quot;&gt;&lt;img src=&quot;/404/404.svg&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;div class=&quot;col-md-6 align-self-center&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;h1&gt;404&lt;/h1&gt;&lt;h2&gt;UH OH! 页面丢失&lt;/h2&gt;&lt;p&gt;您所寻找的页面不存在。你可以点击下面的按钮，返回主页。&lt;/p&gt;</span></span><br><span class="line"><span class="code">  &lt;a href=&quot;https://www.geminilight.cn/&quot;&gt;&lt;button class=&quot;btn blue&quot;&gt;返回首页&lt;/button&gt;&lt;/a&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/body&gt;</span></span><br><span class="line"><span class="code">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，在hexo渲染时，对markdown的缩进有较高的要求。至少在我实际操作过程中，如果HTML标签前有超过4个空格的缩进，便会被渲染为全文字。</p>
 <h2 id="自定义页面">自定义页面</h2>
 <h3 id="不含博客框架的页面">不含博客框架的页面</h3>
 <p>这种类型的页面指完全自定义的，即整个页面不会出现博客的header、sidebar、footer等。比如，我们可以定制一个小游戏的404界面。这里以完全自定义的xxx页面为例，创建流程如下：</p>
@@ -699,10 +721,9 @@ if(canvas.getContext){
 </ol>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/xxx.css&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- content --&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;xxx.js&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <h3 id="含博客框架的子页面">含博客框架的子页面</h3>
-<p>这种方式可以依赖于主题的css样式和js样式 新建页面</p>
+<p>这种类型的页面指依赖于hexo生成的博客页面主框架，比如我们的Tags标签页、Categories分类页等。这种页面并非完全定制的，这也会带来一个优点：我们可以利用Hexo和NexT主题附带的样式和JS来制作的页面。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page xxx</span><br></pre></td></tr></table></figure>
-<h2 id="自定义html">自定义html</h2>
-<h3 id="njk文件">njk文件</h3>
+<h2 id="总结">总结</h2>
 
     </div>
 
@@ -720,7 +741,7 @@ if(canvas.getContext){
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.geminilight.cn/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next/" title="【Blog】定制Hexo博客NexT主题">https://www.geminilight.cn/2020/08/16/ST - 软件工具/st-hexo-next/</a>
+    <a href="https://www.geminilight.cn/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next/" title="【Blog】深度美化和定制Hexo和NexT方法">https://www.geminilight.cn/2020/08/16/ST - 软件工具/st-hexo-next/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -805,12 +826,12 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">14k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">13 分钟</span>
 </div>
 
       
