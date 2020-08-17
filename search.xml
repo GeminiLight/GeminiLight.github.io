@@ -284,6 +284,12 @@
 <h4 id="state">State</h4>
 <h4 id="action">Action</h4>
 <h4 id="rewords">Rewords</h4>
+<ul>
+<li>动作反馈 action feedback</li>
+<li>成本效益 cost-efficient</li>
+<li>负载均衡 Load balancing</li>
+<li>资格痕迹 eligibility trace</li>
+</ul>
 <h2 id="性能评估">性能评估</h2>
 <h3 id="设计实验">设计实验</h3>
 <ul>
@@ -372,7 +378,12 @@
 <li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
 </ul>
 <p><img src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
-<h2 id="创新">创新</h2>
+<h2 id="主要创新">主要创新</h2>
+<ul>
+<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
+<li>并行的策略梯度训练方法</li>
+<li>多指标的奖励函数</li>
+</ul>
 <h2 id="总结思考">总结思考</h2>
 ]]></content>
       <categories>
