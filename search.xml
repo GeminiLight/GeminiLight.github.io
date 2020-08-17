@@ -226,7 +226,7 @@
   </entry>
   <entry>
     <title>【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
-    <url>/2020/08/16/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
+    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
     <content><![CDATA[<p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。 <a id="more"></a></p>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
@@ -279,7 +279,7 @@
 <h3 id="dl-a3c">DL-A3C</h3>
 <h3 id="gcn">GCN</h3>
 <h3 id="a3c-gcn">A3C + GCN</h3>
-<h2 id="实验结果">实验结果</h2>
+<h2 id="性能评估">性能评估</h2>
 <h3 id="设计实验">设计实验</h3>
 <ul>
 <li>底层网络拓扑
