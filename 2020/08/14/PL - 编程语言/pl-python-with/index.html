@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="在我们使用Python的时候，常使用到如下的代码块: 1234567# 文件读取with open(file, &amp;#x27;r&amp;#x27;) as f:    # CODE BLOCK ## 梯度计算with tf.GradientTape() as g:    # CODE BLOCK # 在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try&#x2F;fin">
@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/pl-python-with.png">
 <meta property="article:published_time" content="2020-08-13T16:00:00.000Z">
 <meta property="article:modified_time" content="2020-08-16T19:05:22.284Z">
-<meta property="article:author" content="GeminiLight&#39; Blog">
+<meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="语法进阶">
 <meta name="twitter:card" content="summary">
@@ -236,10 +236,10 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="GeminiLight' Blog"
+    <img class="site-author-image" itemprop="image" alt="GeminiLight"
       src="/images/avatar.png">
-  <p class="site-author-name" itemprop="name">GeminiLight' Blog</p>
-  <div class="site-description" itemprop="description"></div>
+  <p class="site-author-name" itemprop="name">GeminiLight</p>
+  <div class="site-description" itemprop="description">GeminiLight</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -595,8 +595,8 @@ if(canvas.getContext){
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="GeminiLight' Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="GeminiLight">
+      <meta itemprop="description" content="GeminiLight">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -630,6 +630,20 @@ if(canvas.getContext){
             </span>
 
           
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
 
         </div>
       </header>
@@ -662,7 +676,7 @@ if(canvas.getContext){
 </ul>
 <h2 id="with语句执行过程">with语句执行过程</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#   EXP: 表达式</span></span><br><span class="line"><span class="comment">#   VAR: 变量名，[as VAR][可选]</span></span><br><span class="line"><span class="comment"># BlOCK: 代码块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> EXP <span class="keyword">as</span> VAR:</span><br><span class="line">    BLOCK</span><br></pre></td></tr></table></figure>
-<p><img src="/resource/images/pl-python-with.png" width="100%" /></p>
+<p><img data-src="/resource/images/pl-python-with.png" width="100%" /></p>
 <ol type="1">
 <li>执行代码时，先执行 <code>EXPR</code> 语句，生成上下文管理器对象 context_manager；</li>
 <li>获取上下文管理器的 <code>__exit()__</code> 方法，并保存起来用于之后的调用；</li>
@@ -700,10 +714,10 @@ if(canvas.getContext){
       <div class="popular-posts-title"><a href="\2019\01\11\PL - 编程语言\pl-python-fundamental-syntax\" rel="bookmark">【Python】基础语法总结</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2019\08\22\DA - 数据分析\da-introduction\" rel="bookmark">数据分析知识体系</a></div>
+      <div class="popular-posts-title"><a href="\2019\08\19\DA - 数据分析\da-numpy\" rel="bookmark">【Numpy】入门</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2019\08\19\DA - 数据分析\da-numpy\" rel="bookmark">【Numpy】入门</a></div>
+      <div class="popular-posts-title"><a href="\2019\08\22\DA - 数据分析\da-introduction\" rel="bookmark">数据分析知识体系</a></div>
     </li>
   </ul>
 
@@ -795,7 +809,17 @@ if(canvas.getContext){
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">GeminiLight' Blog</span>
+  <span class="author" itemprop="copyrightHolder">GeminiLight</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">9k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8 分钟</span>
 </div>
 
       
@@ -812,6 +836,7 @@ if(canvas.getContext){
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

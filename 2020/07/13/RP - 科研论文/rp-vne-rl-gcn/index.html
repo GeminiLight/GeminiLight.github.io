@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。">
@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-7.png">
 <meta property="article:published_time" content="2020-07-12T16:00:00.000Z">
 <meta property="article:modified_time" content="2020-08-17T05:50:51.354Z">
-<meta property="article:author" content="GeminiLight&#39; Blog">
+<meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="论文精读">
 <meta property="article:tag" content="VNE">
 <meta property="article:tag" content="强化学习">
@@ -245,10 +245,10 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="GeminiLight' Blog"
+    <img class="site-author-image" itemprop="image" alt="GeminiLight"
       src="/images/avatar.png">
-  <p class="site-author-name" itemprop="name">GeminiLight' Blog</p>
-  <div class="site-description" itemprop="description"></div>
+  <p class="site-author-name" itemprop="name">GeminiLight</p>
+  <div class="site-description" itemprop="description">GeminiLight</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -604,8 +604,8 @@ if(canvas.getContext){
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="GeminiLight' Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="GeminiLight">
+      <meta itemprop="description" content="GeminiLight">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -639,6 +639,20 @@ if(canvas.getContext){
             </span>
 
           
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
 
         </div>
       </header>
@@ -757,7 +771,7 @@ if(canvas.getContext){
 <h4 id="vnr-到达率测试">VNR 到达率测试</h4>
 <p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br />
 实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
-<p><img src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
 <p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
 <h4 id="资源请求率测试">资源请求率测试</h4>
 <p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
@@ -766,12 +780,12 @@ if(canvas.getContext){
 <li>而通信密集型任务需要更多的链路资源（带宽）</li>
 </ul>
 <p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
-<p><img src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
 <p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
 <h4 id="节点数量扩展性测试">节点数量扩展性测试</h4>
 <p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br />
 实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
-<p><img src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
 <p>结果分析：算法优明显</p>
 <ul>
 <li>下降原因：
@@ -782,22 +796,22 @@ if(canvas.getContext){
 </ul>
 <h4 id="平均运行时间统计">平均运行时间统计</h4>
 <p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
-<p><img src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
 <h3 id="验证测试">验证测试</h3>
 <p>与其他基于RL的算法相比较</p>
 <h4 id="训练效率及收敛性">训练效率及收敛性</h4>
 <h4 id="资源请求测试验证">资源请求测试验证</h4>
-<p><img src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
 <h3 id="其他参数下模型的可行性研究">其他参数下模型的可行性研究</h3>
 <h4 id="附加网络拓扑和参数">附加网络拓扑和参数</h4>
 <p>基于CSTNET（中国网络运营商）</p>
-<p><img src="/resource/images/rp-vne-rl-gcn-6.png" /></p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-6.png" /></p>
 <h4 id="其他指标">其他指标</h4>
 <ul>
 <li>节点资源利用率：VNRs使用的节点基板资源量/资源总量</li>
 <li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
 </ul>
-<p><img src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
 <h2 id="主要创新">主要创新</h2>
 <ul>
 <li>基于RL+GCN的自动虚拟网络嵌入算法</li>
@@ -904,7 +918,17 @@ if(canvas.getContext){
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">GeminiLight' Blog</span>
+  <span class="author" itemprop="copyrightHolder">GeminiLight</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">9k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8 分钟</span>
 </div>
 
       
@@ -921,6 +945,7 @@ if(canvas.getContext){
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
