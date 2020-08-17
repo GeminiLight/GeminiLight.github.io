@@ -24,15 +24,15 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="自定义CSS 可以在 自定义的 custom.styl 中，写入相应的样式，记得定要合理引入  njk文件 md文件  引入JS特效 在custom文件夹中自定义js文件，并在合理的html页面引入 构建自定义页面 不含整体框架 layout: false ！跳过渲染skip-render 因为该页面并不会利用主题的文件夹下的layout中的各种样式 所以需要完全自定义css和">
+  <meta name="description" content="自定义CSS 可以在 自定义的 custom.styl 中，写入相应的样式，记得定要合理引入  njk文件 md文件  引入JS特效 在custom文件夹中自定义js文件，并在合理的html页面引入 构建自定义页面 不含整体框架 layout: false ！跳过渲染skip-render 因为该页面并不会利用主题的文件夹下的layout中的各种样式，所以需要完全自定义css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Hexo NexT】定制Hexo博客NexT主题">
 <meta property="og:url" content="https://www.geminilight.cn/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="自定义CSS 可以在 自定义的 custom.styl 中，写入相应的样式，记得定要合理引入  njk文件 md文件  引入JS特效 在custom文件夹中自定义js文件，并在合理的html页面引入 构建自定义页面 不含整体框架 layout: false ！跳过渲染skip-render 因为该页面并不会利用主题的文件夹下的layout中的各种样式 所以需要完全自定义css和">
+<meta property="og:description" content="自定义CSS 可以在 自定义的 custom.styl 中，写入相应的样式，记得定要合理引入  njk文件 md文件  引入JS特效 在custom文件夹中自定义js文件，并在合理的html页面引入 构建自定义页面 不含整体框架 layout: false ！跳过渲染skip-render 因为该页面并不会利用主题的文件夹下的layout中的各种样式，所以需要完全自定义css">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-15T19:21:59.000Z">
-<meta property="article:modified_time" content="2020-08-17T03:43:51.661Z">
+<meta property="article:modified_time" content="2020-08-17T03:45:47.363Z">
 <meta property="article:author" content="GeminiLight&#39; Blog">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="NexT">
@@ -646,9 +646,19 @@ if(canvas.getContext){
 <p>在custom文件夹中自定义js文件，并在合理的html页面引入</p>
 <h2 id="构建自定义页面">构建自定义页面</h2>
 <h3 id="不含整体框架-layout-false">不含整体框架 layout: false</h3>
-<p>！跳过渲染skip-render 因为该页面并不会利用主题的文件夹下的layout中的各种样式 所以需要完全自定义css和js，可以用外链文件的方式引入到md文件中 新建页面 hexo new page xxx 文件夹新建js和css文件</p>
+<p>！跳过渲染skip-render<br />
+因为该页面并不会利用主题的文件夹下的layout中的各种样式，所以需要完全自定义css和js，可以用外链文件的方式引入到md文件中</p>
+<ol type="1">
+<li>新建页面</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page xxx</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>文件夹新建js和css文件</li>
+</ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|</span><br><span class="line">|-- xxx.md</span><br><span class="line">|-- a.js</span><br><span class="line">|-- b.css</span><br></pre></td></tr></table></figure>
-<p>编辑xxx.md文件</p>
+<ol start="3" type="1">
+<li>编辑xxx.md文件</li>
+</ol>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: xxx</span><br><span class="line">type: xxx</span><br><span class="line">layout: false</span><br></pre></td></tr></table></figure>
 <h3 id="含框架blog子页面">含框架blog子页面</h3>
 <p>这种方式可以依赖于主题的css样式和js样式 新建页面</p>
