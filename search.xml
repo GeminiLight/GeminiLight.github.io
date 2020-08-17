@@ -352,7 +352,7 @@
 <h4 id="平均运行时间统计">平均运行时间统计</h4>
 <p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
 <p><img src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
-<h4 id="验证测试">验证测试</h4>
+<h3 id="验证测试">验证测试</h3>
 <h4 id="训练效率及收敛性">训练效率及收敛性</h4>
 <h4 id="资源请求测试验证">资源请求测试验证</h4>
 <p><img src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
