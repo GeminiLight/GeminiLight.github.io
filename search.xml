@@ -569,9 +569,11 @@
       </tags>
   </entry>
   <entry>
-    <title>【Hexo NexT】定制Hexo博客NexT主题</title>
+    <title>【Blog】定制Hexo博客NexT主题</title>
     <url>/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next/</url>
-    <content><![CDATA[<h2 id="自定义css">自定义CSS</h2>
+    <content><![CDATA[<p>[Updating]</p>
+<a id="more"></a>
+<h2 id="自定义css">自定义CSS</h2>
 <p>可以在 自定义的 custom.styl 中，写入相应的样式，记得定要合理引入</p>
 <h2 id="引入js特效">引入JS特效</h2>
 <p>在custom文件夹中自定义js文件，并在合理的html页面引入</p>
@@ -604,6 +606,7 @@
       <tags>
         <tag>Hexo</tag>
         <tag>NexT</tag>
+        <tag>Blog</tag>
       </tags>
   </entry>
   <entry>
