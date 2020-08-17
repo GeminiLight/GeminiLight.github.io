@@ -24,15 +24,15 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="[Updating]">
+  <meta name="description" content="[更新中...]虽然通过搜索引擎我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Blog】定制Hexo博客NexT主题">
 <meta property="og:url" content="https://www.geminilight.cn/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="[Updating]">
+<meta property="og:description" content="[更新中...]虽然通过搜索引擎我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-15T19:21:59.000Z">
-<meta property="article:modified_time" content="2020-08-17T12:50:56.222Z">
+<meta property="article:modified_time" content="2020-08-17T14:42:12.110Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="Blog">
 <meta property="article:tag" content="Hexo">
@@ -229,7 +229,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89css"><span class="nav-number">1.</span> <span class="nav-text">自定义CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%85%A5js%E7%89%B9%E6%95%88"><span class="nav-number">2.</span> <span class="nav-text">引入JS特效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.</span> <span class="nav-text">构建自定义页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%90%AB%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B6-layout-false"><span class="nav-number">3.1.</span> <span class="nav-text">不含整体框架 layout: false</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AB%E6%A1%86%E6%9E%B6blog%E5%AD%90%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.2.</span> <span class="nav-text">含框架blog子页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89html"><span class="nav-number">4.</span> <span class="nav-text">自定义html</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#njk%E6%96%87%E4%BB%B6"><span class="nav-number">4.1.</span> <span class="nav-text">njk文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#md%E6%96%87%E4%BB%B6"><span class="nav-number">4.2.</span> <span class="nav-text">md文件</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89css"><span class="nav-number">1.</span> <span class="nav-text">自定义CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89js"><span class="nav-number">2.</span> <span class="nav-text">自定义JS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.</span> <span class="nav-text">自定义页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%90%AB%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.1.</span> <span class="nav-text">不含博客框架的页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AB%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E7%9A%84%E5%AD%90%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.2.</span> <span class="nav-text">含博客框架的子页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89html"><span class="nav-number">4.</span> <span class="nav-text">自定义html</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#njk%E6%96%87%E4%BB%B6"><span class="nav-number">4.1.</span> <span class="nav-text">njk文件</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -634,14 +634,14 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>366</span>
+              <span>2.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -651,34 +651,58 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>[Updating]</p>
+        <p>[更新中...]虽然通过搜索引擎我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。</p>
 <a id="more"></a>
 <h2 id="自定义css">自定义CSS</h2>
-<p>可以在 自定义的 custom.styl 中，写入相应的样式，记得定要合理引入</p>
-<h2 id="引入js特效">引入JS特效</h2>
-<p>在custom文件夹中自定义js文件，并在合理的html页面引入</p>
-<h2 id="构建自定义页面">构建自定义页面</h2>
-<h3 id="不含整体框架-layout-false">不含整体框架 layout: false</h3>
-<p>！跳过渲染skip-render<br />
-因为该页面并不会利用主题的文件夹下的layout中的各种样式，所以需要完全自定义css和js，可以用外链文件的方式引入到md文件中</p>
+<p>如<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoZW1lLXNldHRpbmdzL2N1c3RvbS1maWxlcy5odG1s">NexT 8 文档<i class="fa fa-external-link-alt"></i></span>中所说，</p>
+<blockquote>
+<p>As with Data Files, you can place all custom layouts or styles in a specific location (for example: hexo/source/_data). Add the custom file to hexo/source/_data and uncomment the content under the custom_file_path section in the theme config file.</p>
+</blockquote>
+<p>我们可以在<code>hexo/source/_data</code>文件夹中自定义CSS/JS文件。如果想让hexo在渲染时自动引入这些文件，我们只需在<code>next/_config.yml</code>，将相应文件的注释取消。<br />
+有个有趣的事情是在next主题目录文件夹下也有一个_data文件夹：<code>hexo/theme/next/source/_data</code>，官方没有给出具体介绍，如果我们将<code>next/_config.yml</code>的<code>custom_file_path</code>前加上<code>theme/next</code>也基本与<code>hexo/source/_data</code>目录等效，故这些不再赘述。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="comment">#style: source/_data/styles.styl</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># 定位到 hexo/theme/next/source/_data</span></span><br><span class="line">  <span class="comment">#style: theme/nextsource/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+<p>此时，hexo再进行渲染时，也会引入这些文件，当其中的样式与默认样式冲突时，自定义样式优先级高，便会覆盖默认样式。但我们会发现，这种方式只能自动引入与上述文件重名的自定义文件，所以，我们可以将所有修改或者新添的样式写入<code>styles.styl</code>等文件。但是，这样的方法有些确定就是不方便管理。比如，我们打算自定义一个<code>custom-about.styl</code>文件来专门优化“关于”页面，这时我们就要手动的把该文件引入。有以下几种方法可供参考：</p>
 <ol type="1">
-<li>新建页面</li>
+<li>在<code>styles.styl</code>文件中引入</li>
+</ol>
+<p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;custom-about.styl&quot;</span></span><br></pre></td></tr></table></figure></p>
+<ol start="2" type="1">
+<li>在<code>about.md</code>文件中引入</li>
+</ol>
+<p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 注意文件路径是否正确 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/custom-about.styl&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<ol start="3" type="1">
+<li>在<code>layout.njk</code>等其他会被自动渲染的文件中引入</li>
+</ol>
+<p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/custom-about.styl&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="自定义js">自定义JS</h2>
+<p>同CSS。</p>
+<h2 id="自定义页面">自定义页面</h2>
+<h3 id="不含博客框架的页面">不含博客框架的页面</h3>
+<p>这种类型的页面指完全自定义的，即整个页面不会出现博客的header、sidebar、footer等。比如，我们可以定制一个小游戏的404界面。这里以完全自定义的xxx页面为例，创建流程如下：</p>
+<p>！跳过渲染skip-render</p>
+<ol type="1">
+<li>在hexo主目录文件夹下，输入命令：</li>
 </ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page xxx</span><br></pre></td></tr></table></figure>
+<p>该命令会自动在<code>hexo/source</code>下创建<code>xxx/xxx.md</code>文件夹和md文件。</p>
 <ol start="2" type="1">
-<li>文件夹新建js和css文件</li>
-</ol>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|</span><br><span class="line">|-- xxx.md</span><br><span class="line">|-- a.js</span><br><span class="line">|-- b.css</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>编辑xxx.md文件</li>
+<li>编辑<code>xxx.md</code>，添加<code>layout: false</code>属性</li>
 </ol>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: xxx</span><br><span class="line">type: xxx</span><br><span class="line">layout: false</span><br></pre></td></tr></table></figure>
-<h3 id="含框架blog子页面">含框架blog子页面</h3>
+<p>设置<code>layout: false</code>会使hexo在渲染页面时，不自动为页面渲染基本的导航栏、侧边栏等，所以该页面需要完全自定义css和js。我们可以既可以完全在md中写js和css（并不推荐），也可以单独创建相应的JS和CSS文件再引入到md文件中，下面只对后者进行介绍。</p>
+<ol start="3" type="1">
+<li>在<code>hexo/_data</code>文件夹中新建js和css文件</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">|</span><br><span class="line">|-- xxx.js</span><br><span class="line">|-- xxx.css</span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>在<code>xxx.md</code>中引入</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/xxx.css&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- content --&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;xxx.js&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="含博客框架的子页面">含博客框架的子页面</h3>
 <p>这种方式可以依赖于主题的css样式和js样式 新建页面</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page xxx</span><br></pre></td></tr></table></figure>
 <h2 id="自定义html">自定义html</h2>
 <h3 id="njk文件">njk文件</h3>
-<h3 id="md文件">md文件</h3>
 
     </div>
 
@@ -781,12 +805,12 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">12k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
 </div>
 
       
