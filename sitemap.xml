@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.geminilight.cn/more/plan/index.html</loc>
+    <loc>https://www.geminilight.cn/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/ad-ppt-conclusion-18-20/</loc>
     
     <lastmod>2020-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/2020/08/17/AD%20-%20%E8%89%BA%E6%9C%AF%E8%AE%BE%E8%AE%A1/ad-ppt-conclusion-18-20/</loc>
+    <loc>https://www.geminilight.cn/more/plan/index.html</loc>
     
     <lastmod>2020-08-17</lastmod>
     
@@ -335,13 +335,6 @@
 
   
   <url>
-    <loc>https://www.geminilight.cn/categories/AD-%E8%89%BA%E6%9C%AF%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.geminilight.cn/categories/DL-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -378,6 +371,13 @@
   
   <url>
     <loc>https://www.geminilight.cn/categories/ST-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/categories/GD-%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
