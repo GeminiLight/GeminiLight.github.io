@@ -641,9 +641,23 @@
 <h2 id="结构设计">结构设计</h2>
 <h3 id="首页">首页</h3>
 <figure>
-<img data-src="/resource/images/ad-ppt-18-wps-office-1.png" alt="2018/11/20-大计基答辩" /><figcaption>2018/11/20-大计基答辩</figcaption>
+<embed src="/resource/images/ad-ppt-18-wps-office-1.webp" /><figcaption>2018/11/20-大计基答辩</figcaption>
 </figure>
-<h3 id="目录页">目录页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-1.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<h3 id="图像页">图像页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-4.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<h3 id="分点页">分点页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-3.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<h3 id="数据页">数据页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-2.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
 <h3 id="对比页">对比页</h3>
 <figure>
 <img data-src="/resource/images/ad-ppt-18-wps-office-2.png" alt="2018/11/20-大计基答辩" /><figcaption>2018/11/20-大计基答辩</figcaption>
