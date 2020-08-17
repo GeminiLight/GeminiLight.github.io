@@ -274,11 +274,16 @@
 </tr>
 </tbody>
 </table>
-<h3 id="问题描述">问题描述</h3>
+<h3 id="vne">VNE</h3>
 <h2 id="算法模型">算法模型</h2>
 <h3 id="dl-a3c">DL-A3C</h3>
 <h3 id="gcn">GCN</h3>
 <h3 id="a3c-gcn">A3C + GCN</h3>
+<h4 id="environment">Environment</h4>
+<h4 id="agent">Agent</h4>
+<h4 id="state">State</h4>
+<h4 id="action">Action</h4>
+<h4 id="rewords">Rewords</h4>
 <h2 id="性能评估">性能评估</h2>
 <h3 id="设计实验">设计实验</h3>
 <ul>
@@ -353,6 +358,7 @@
 <p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
 <p><img src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
 <h3 id="验证测试">验证测试</h3>
+<p>与其他基于RL的算法相比较</p>
 <h4 id="训练效率及收敛性">训练效率及收敛性</h4>
 <h4 id="资源请求测试验证">资源请求测试验证</h4>
 <p><img src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
@@ -366,7 +372,7 @@
 <li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
 </ul>
 <p><img src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
-<h2 id="主要贡献">主要贡献</h2>
+<h2 id="创新">创新</h2>
 <h2 id="总结思考">总结思考</h2>
 ]]></content>
       <categories>
