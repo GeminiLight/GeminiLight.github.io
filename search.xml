@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数据分析知识体系</title>
+    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
+    <content><![CDATA[<p>数据分析</p>
+<a id="more"></a>
+<h2 id="数据分析">数据分析</h2>
+<h2 id="python模块">Python模块</h2>
+<h3 id="numpy">Numpy</h3>
+<h3 id="pandas">pandas</h3>
+<h3 id="scipy">Scipy</h3>
+<h3 id="matplotlib">matplotlib</h3>
+<figure>
+<img data-src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="test" /><figcaption>test</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>DA - 数据分析</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>深度学习知识体系</title>
     <url>/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
     <content><![CDATA[<p>深度学习</p>
@@ -30,29 +53,6 @@
       </categories>
       <tags>
         <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据分析知识体系</title>
-    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
-    <content><![CDATA[<p>数据分析</p>
-<a id="more"></a>
-<h2 id="数据分析">数据分析</h2>
-<h2 id="python模块">Python模块</h2>
-<h3 id="numpy">Numpy</h3>
-<h3 id="pandas">pandas</h3>
-<h3 id="scipy">Scipy</h3>
-<h3 id="matplotlib">matplotlib</h3>
-<figure>
-<img data-src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="test" /><figcaption>test</figcaption>
-</figure>
-]]></content>
-      <categories>
-        <category>DA - 数据分析</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -89,166 +89,52 @@
       </tags>
   </entry>
   <entry>
-    <title>【PPT设计】大一大二时期个人PPT设计风格总结</title>
-    <url>/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/</url>
-    <content><![CDATA[<p>[更新中] 时光总若即若离，不觉将至大三。回望已逝的两年大学生活，发现自己已经做了不少的PPT，有关社团、有关学术、有关技术等等，但只勤于做事，罔顾总结，收获总是浅薄地。于是，今天将两年来所作PPT汇总整理，分析个人的风格，以寻求进步和突破。 <a id="more"></a></p>
-<h2 id="前言">前言</h2>
-<p>PPT设计所涉及到的结构和元素繁多，于是文章将按时间顺序分别从结构设计、元素和动画设计三方面来介绍。</p>
-<h2 id="结构设计">结构设计</h2>
-<h3 id="首页">首页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-18-wps-office-1.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-1.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-1.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-1.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-english-pre-ai-1.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-1.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<h3 id="目录页">目录页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-2.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-2.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-2.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<h3 id="图示页">图示页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-3.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-4.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-4.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-6.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-12.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-english-pre-ai-2.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-english-pre-ai-5.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-3.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-4.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-train-cquse-1.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
-</figure>
-<h3 id="分点页">分点页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-4.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-5.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-8.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-3.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-5.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-7.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-9.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-6.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-train-cquse-2.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-train-cquse-3.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-train-cquse-4.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
-</figure>
-<h3 id="数据页">数据页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-6.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-7.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-2.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-10.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-13.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<h3 id="对比页">对比页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-18-wps-office-2.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-8.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-english-pre-ai-3.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
-</figure>
-<h3 id="人物页">人物页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-11.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<h3 id="时间轴">时间轴</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-14.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-5.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<h3 id="结尾页">结尾页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-5.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-9.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-15.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<h2 id="元素设计">元素设计</h2>
-<h3 id="配色">配色</h3>
-<h3 id="背景">背景</h3>
-<h3 id="标题">标题</h3>
-<h2 id="动画设计">动画设计</h2>
-<h2 id="总结">总结</h2>
+    <title>【讲座收获】潘复生院士谈科学创新</title>
+    <url>/2019/09/22/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-academician-pan-fu-sheng/</url>
+    <content><![CDATA[<p>潘复生院士关于科学创新的讲座</p>
+<a id="more"></a>
+<h2 id="科学发展现状">科学发展现状</h2>
+<p>资源匮乏<br />
+信息科技依赖<br />
+生物科学<br />
+学科交叉对知识要求越来越高</p>
+<h3 id="我国发展现状">我国发展现状</h3>
+<p>16个重大专项</p>
+<p>科技实力低于美国<br />
+科技投入远低于发达国家<br />
+基础研究待加强<br />
+科学素养低（官员政策制定）科普</p>
+<h2 id="创新素质培养">创新素质培养</h2>
+<h3 id="学会合作">学会合作</h3>
+<p>团结他人（比自己优秀的和略差与自己的）</p>
+<h3 id="学会放弃">学会放弃</h3>
+<p>（选择自己最喜欢的方向）</p>
+<h3 id="学会学习">学会学习</h3>
+<p>（ 知识学习能力远比知识记忆或积累能力更重要<br />
+学习能力比死记硬背更重要<br />
+基本工具一定要好（英语，计算机）<br />
+学会忘记有时比学会记住更重要 ）</p>
+<h3 id="学会分析和怀疑提问问题">学会分析和怀疑+提问问题</h3>
+<p>（不鼓励小中学生瞎猜怀疑=》知识积累+理解世界）<br />
+大学生学会怀疑</p>
+<h3 id="学会表达">学会表达</h3>
+<p>（让他人理解，好的表达扬长避短，站在对方角度来表达）</p>
+<h2 id="科研技巧">科研技巧</h2>
+<ol type="1">
+<li>重视偶然性才有必然性</li>
+<li>交流和讨论（潘与汉诺丁-英欧支持+国家支持）</li>
+<li>仿生学（创新启示）</li>
+<li>做多数人喜欢的事情（做好不喜欢的事，做自己喜欢的事做的会更好）</li>
+<li>逆向思维是成功的捷径</li>
+</ol>
+<h2 id="我的感悟">我的感悟</h2>
 ]]></content>
       <categories>
-        <category>GD - 平面设计</category>
+        <category>MY - 感悟随笔</category>
       </categories>
       <tags>
-        <tag>PPT设计</tag>
-        <tag>大学生活</tag>
+        <tag>院士讲座</tag>
+        <tag>创新思维</tag>
       </tags>
   </entry>
   <entry>
@@ -303,6 +189,30 @@
       </categories>
       <tags>
         <tag>游戏人生</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Start the Journey of My Blog</title>
+    <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/start-my-blog/</url>
+    <content><![CDATA[<h2 id="welcome-to-my-blog">Welcome to My Blog</h2>
+<p>Gemini向光性<br />
+困在双子星座的流浪旅人<br />
+<a href="/about">了解更多</a></p>
+<a id="more"></a>
+<h2 id="involved-fields">Involved Fields</h2>
+<p>博客主要会涉及以下内容：</p>
+<ul>
+<li>机器学习：传统机器学习、深度学习、强化学习</li>
+<li>数据分析：Numpy、Pandas、Scipy、Matlibplot</li>
+<li>全栈开发：Vue、jQuery、MySQL、SpringBoot、Django</li>
+<li>编程语言：Python、C/C++、Java、JS/TS</li>
+</ul>
+]]></content>
+      <categories>
+        <category>MY - 感悟随笔</category>
+      </categories>
+      <tags>
+        <tag>博客简介</tag>
       </tags>
   </entry>
   <entry>
@@ -445,153 +355,6 @@
         <tag>学术讲座</tag>
         <tag>大数据</tag>
         <tag>数据可视化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Start the Journey of My Blog</title>
-    <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/start-my-blog/</url>
-    <content><![CDATA[<h2 id="welcome-to-my-blog">Welcome to My Blog</h2>
-<p>Gemini向光性<br />
-困在双子星座的流浪旅人<br />
-<a href="/about">了解更多</a></p>
-<a id="more"></a>
-<h2 id="involved-fields">Involved Fields</h2>
-<p>博客主要会涉及以下内容：</p>
-<ul>
-<li>机器学习：传统机器学习、深度学习、强化学习</li>
-<li>数据分析：Numpy、Pandas、Scipy、Matlibplot</li>
-<li>全栈开发：Vue、jQuery、MySQL、SpringBoot、Django</li>
-<li>编程语言：Python、C/C++、Java、JS/TS</li>
-</ul>
-]]></content>
-      <categories>
-        <category>MY - 感悟随笔</category>
-      </categories>
-      <tags>
-        <tag>博客简介</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Python】基础语法总结</title>
-    <url>/2019/01/11/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-fundamental-syntax/</url>
-    <content><![CDATA[
-]]></content>
-      <categories>
-        <category>PL - 编程语言</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>语法进阶</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【讲座收获】潘复生院士谈科学创新</title>
-    <url>/2019/09/22/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-academician-pan-fu-sheng/</url>
-    <content><![CDATA[<p>潘复生院士关于科学创新的讲座</p>
-<a id="more"></a>
-<h2 id="科学发展现状">科学发展现状</h2>
-<p>资源匮乏<br />
-信息科技依赖<br />
-生物科学<br />
-学科交叉对知识要求越来越高</p>
-<h3 id="我国发展现状">我国发展现状</h3>
-<p>16个重大专项</p>
-<p>科技实力低于美国<br />
-科技投入远低于发达国家<br />
-基础研究待加强<br />
-科学素养低（官员政策制定）科普</p>
-<h2 id="创新素质培养">创新素质培养</h2>
-<h3 id="学会合作">学会合作</h3>
-<p>团结他人（比自己优秀的和略差与自己的）</p>
-<h3 id="学会放弃">学会放弃</h3>
-<p>（选择自己最喜欢的方向）</p>
-<h3 id="学会学习">学会学习</h3>
-<p>（ 知识学习能力远比知识记忆或积累能力更重要<br />
-学习能力比死记硬背更重要<br />
-基本工具一定要好（英语，计算机）<br />
-学会忘记有时比学会记住更重要 ）</p>
-<h3 id="学会分析和怀疑提问问题">学会分析和怀疑+提问问题</h3>
-<p>（不鼓励小中学生瞎猜怀疑=》知识积累+理解世界）<br />
-大学生学会怀疑</p>
-<h3 id="学会表达">学会表达</h3>
-<p>（让他人理解，好的表达扬长避短，站在对方角度来表达）</p>
-<h2 id="科研技巧">科研技巧</h2>
-<ol type="1">
-<li>重视偶然性才有必然性</li>
-<li>交流和讨论（潘与汉诺丁-英欧支持+国家支持）</li>
-<li>仿生学（创新启示）</li>
-<li>做多数人喜欢的事情（做好不喜欢的事，做自己喜欢的事做的会更好）</li>
-<li>逆向思维是成功的捷径</li>
-</ol>
-<h2 id="我的感悟">我的感悟</h2>
-]]></content>
-      <categories>
-        <category>MY - 感悟随笔</category>
-      </categories>
-      <tags>
-        <tag>院士讲座</tag>
-        <tag>创新思维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Python】with语句原理</title>
-    <url>/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/</url>
-    <content><![CDATA[<p>在我们使用Python的时候，常使用到如下的代码块:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件读取</span></span><br><span class="line"><span class="keyword">with</span> open(file, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度计算</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> g:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br></pre></td></tr></table></figure>
-<p>在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try/finally模式的简化。它原理上是利用了上下文管理器，下文简要介绍将对其执行原理和自定义的方法。<a id="more"></a></p>
-<h2 id="上下文管理器概念">上下文管理器概念</h2>
-<h3 id="上下文管理协议context-management-protocol">上下文管理协议（Context Management Protocol）</h3>
-<p>包含方法 <code>__enter__()</code> 和 <code>__exit__()</code> ，支持该协议的对象要实现这两个方法。</p>
-<h3 id="上下文管理器context-manager">上下文管理器（Context Manager）</h3>
-<p>支持上下文管理协议的对象，这种对象必须实现 <code>__enter__()</code> 和 <code>__exit__()</code> 方法。 上下文管理器定义执行with语句时要建立的运行时上下文，负责执行with语句块上下文中的进入与退出操作。 通常使用with语句调用上下文管理器，也可以通过直接调用其方法来使用。</p>
-<ul>
-<li><strong><code>__enter__()</code></strong>
-<ul>
-<li>with语句执行时，先获取上下文管理器对象，随后调用其 <code>__enter__()</code></li>
-<li>若有 <code>as var</code> 语句，则将返回值赋给变量var</li>
-<li>可以返回上下文管理器对象本身，也可以是其他相关对象</li>
-</ul></li>
-<li><strong><code>__exit__()</code></strong>
-<ul>
-<li>带有三个参数 <code>exc_type, exc_val, exc_tb</code></li>
-<li>若上下文管理器对象执行无异常，则三个参数均为 <code>None</code></li>
-<li>若发生异常，则三个参数分别为 异常类型，异常值和tracback信息</li>
-</ul></li>
-</ul>
-<h2 id="with语句执行过程">with语句执行过程</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#   EXP: 表达式</span></span><br><span class="line"><span class="comment">#   VAR: 变量名，[as VAR][可选]</span></span><br><span class="line"><span class="comment"># BlOCK: 代码块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> EXP <span class="keyword">as</span> VAR:</span><br><span class="line">    BLOCK</span><br></pre></td></tr></table></figure>
-<p><img data-src="/resource/images/pl-python-with.png" width="100%" /></p>
-<ol type="1">
-<li>执行代码时，先执行 <code>EXPR</code> 语句，生成上下文管理器对象 context_manager；</li>
-<li>获取上下文管理器的 <code>__exit()__</code> 方法，并保存起来用于之后的调用；</li>
-<li>调用上下文管理器的 <code>__enter__()</code> 方法，且可将返回值赋给as语句变量；</li>
-<li>执行BLOCK中的表达式；</li>
-<li>不管是否执行过程中是否发生了异常，执行上下文管理器的 <code>__exit__()</code> 方法， 执行“清理”工作，如释放资源等。
-<ol type="1">
-<li>如果执行过程中没有出现异常，或者语句体中执行了语句 <code>break</code> / <code>continue</code> / <code>return</code> ，则以 <code>None</code> 作为参数调用 <code>__exit__(None, None, None)</code> ；</li>
-<li>如果执行过程中出现异常，则使用sys.exc_info得到的异常信息为参数调用 <code>__exit__(exc_type, exc_value, exc_traceback)</code> ；</li>
-</ol></li>
-<li>出现异常时，如果 <code>__exit__(type, value, traceback)</code> 返回 <code>False</code> ，则会重新抛出异常，让with之外的语句逻辑来处理异常，这也是通用做法；如果返回True，则忽略异常，不再对异常进行处理。</li>
-</ol>
-<h2 id="自定义上下文管理器">自定义上下文管理器</h2>
-<ul>
-<li>它使代码更简练，可以简化try/finally模式</li>
-<li>当代码异常产生时，<code>__exit__()</code> 会执行清理工作</li>
-<li>可以对软件系统中的资源进行管理，比如数据库连接、共享资源的访问控制等<br /></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding = utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上下文管理器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestWith</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;进入with语句的时候被调用</span></span><br><span class="line"><span class="string">           并将返回值赋给as语句的变量名</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__enter__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;var&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span>(<span class="params">self, exc_type, exc_val, exc_tb</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;离开with的时候被with调用&quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__exit__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># with后面必须跟一个上下文管理器</span></span><br><span class="line"><span class="comment"># 如果使用了as，则是把上下文管理器的 __enter__() 方法的返回值赋值给 target</span></span><br><span class="line"><span class="comment"># target 可以是单个变量，或者由“()”括起来的元组（不能是仅仅由“,”分隔的变量列表，必须加“()”）</span></span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;main&#x27;</span>:</span><br><span class="line">    <span class="keyword">with</span> TestWith() <span class="keyword">as</span> var:</span><br><span class="line">        print(var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行结果</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">__enter__</span></span><br><span class="line"><span class="string">var</span></span><br><span class="line"><span class="string">__exit__</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>本例仅对应代码正常执行的流程，其他特殊情况不再一一列举，有兴趣可单独实验。</p>
-<h2 id="参考">参考</h2>
-<blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuaWJtLmNvbS96aC9hcnRpY2xlcy9vcy1jbi1weXRob253aXRoLw==">浅谈 Python 的 with 语句<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vcHl0aG9uYmFvL3AvMTEyMTEzNDcuaHRtbA==">Python中with用法详解<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC83NDU1Mjg3Nw==">Python中with使用<i class="fa fa-external-link-alt"></i></span> <br /></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>PL - 编程语言</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>语法进阶</tag>
       </tags>
   </entry>
   <entry>
@@ -768,6 +531,161 @@
       </tags>
   </entry>
   <entry>
+    <title>高效的机器学习研究者</title>
+    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-effictive-ml-researcher/</url>
+    <content><![CDATA[<p>△ 高效的机器学习研究者 | 彻底的自我管理能力 + 坚持到底的决心<br />
+☆ John Schulman &amp; 吴恩达  </p>
+<a id="more"></a>
+<hr />
+<h2 id="笔记">笔记</h2>
+<h3 id="挑选研究问题">1. 挑选研究问题</h3>
+<h4 id="提升研究品位">（1）提升研究品位</h4>
+<ul>
+<li><strong>阅读论文</strong> - 认真评论与探讨</li>
+<li><strong>研究小组</strong> - 吸收他人研究经验</li>
+<li><strong>同行建议</strong> - 吸收他人的看法</li>
+<li><strong>成果产出</strong> - 思考最有可能产出成果的研究方向/问题</li>
+</ul>
+<h4 id="研究的原动力">（2）研究的原动力</h4>
+<ul>
+<li><strong>想法驱动 - 测试某些想法</strong></li>
+</ul>
+<p>深刻理解研究主题以获得更多突破，避免与其他研究者想法相似</p>
+<ul>
+<li><strong>目标驱动 - 实现某些功能</strong></li>
+</ul>
+<p>注重通用性，将自己定义在通用解决方案中<br />
+△ 任何领域的机器学习的新想法都与某些目标有关</p>
+<h4 id="研究目标高远">（3）研究目标高远</h4>
+<p>10% 的改善 OR  10 倍的提升？</p>
+<ul>
+<li>较大的目标下：增量研究（10% 的提升）是最有效的</li>
+<li>增加的复杂性：取决于增量研究的性能提升</li>
+</ul>
+<h3 id="研究是条旅途">2. 研究是条旅途</h3>
+<p>在不清楚终点的旅途中，不断朝着更好地结果前进：</p>
+<h4 id="记录笔记">（1）记录笔记</h4>
+<p>每日总结 &amp; 每周总结 = 事情 + 想法 + 成果</p>
+<ul>
+<li>记录想法</li>
+<li>整理收获</li>
+<li>时间管理</li>
+</ul>
+<h4 id="是否换坑">（2）是否换坑？</h4>
+<p>过于频繁地切换想法比呆在原地不动的故障概率更高<br />
+可以设置固定的时间去尝试那些新想法以拓宽知识面</p>
+<h3 id="发展目光长远">3. 发展目光长远</h3>
+<h4 id="走出舒适区充实机器学习领域知识">走出舒适区，充实机器学习领域知识</h4>
+<ul>
+<li><strong>教材书</strong>： 集中的方式来吸取知识，巩固基础</li>
+<li><strong>学位论文</strong>：了解研究方向的背景、现状和展望</li>
+<li><strong>前沿论文：</strong>关注领域前沿，并自己复现对比</li>
+</ul>
+<h3 id="读论文的建议">4. 读论文的建议</h3>
+<h4 id="阅读进度法">（1）阅读进度法</h4>
+<p>  每一篇列一行，表示从 0 到 100 的阅读进度</p>
+<ul>
+<li>很重要：仔细读到进度100%</li>
+<li>不想要：10%确定是否放弃阅读</li>
+</ul>
+<h4 id="多次浏览法">（2）多次浏览法</h4>
+<ul>
+<li><strong>第一遍 标题、摘要和图表</strong>  - 论文讲什么</li>
+<li><strong>第二遍 前言、结语和图表</strong>  - 论文主要思想</li>
+<li><strong>第三遍 纵览论文主体</strong>      - 把握整体脉络（数学推导可跳过）</li>
+<li><strong>第四遍 阅读所有内容</strong>      - 遇难可跳过以后攻坚</li>
+</ul>
+<h3 id="团队合作">5. 团队合作</h3>
+<h4 id="多与同学同事交流">多与同学/同事交流</h4>
+<p><strong>途径</strong>：向他们解释不理解的观点或算法，并说明自己尝试做的东西<br />
+<strong>目的</strong>：更容易地发现错误和潜在问题，吸收其他人提出的想法</p>
+<hr />
+<h2 id="我的收获">我的收获</h2>
+<ol type="1">
+<li>研究方向和问题的确定是研究的第一步，选择合适且“有品位”的问题</li>
+<li>确定了研究目标就要坚持不懈地阅读和实验，且实验的想法和目标很重要</li>
+<li>要培养有效的研究习惯，如记好笔记、坚持不懈等</li>
+<li>目标长远，走出舒适区，丰富领域各方面知识</li>
+<li>论文阅读要讲求阅读方法以提高研究效率</li>
+<li>研究不是单打独斗，要注重团队合作，从团队交流中收获新的想法</li>
+</ol>
+<blockquote>
+<p>来源： <span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUU1ETktDMC1zWnU1cDhMZE1JVUxmZw==">机器之心公众号<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>RP - 科研论文</category>
+      </categories>
+      <tags>
+        <tag>论文精读</tag>
+        <tag>VNE</tag>
+        <tag>强化学习</tag>
+        <tag>GNN</tag>
+        <tag>GCN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Python】with语句原理</title>
+    <url>/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/</url>
+    <content><![CDATA[<p>在我们使用Python的时候，常使用到如下的代码块:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件读取</span></span><br><span class="line"><span class="keyword">with</span> open(file, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度计算</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> g:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br></pre></td></tr></table></figure>
+<p>在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try/finally模式的简化。它原理上是利用了上下文管理器，下文简要介绍将对其执行原理和自定义的方法。<a id="more"></a></p>
+<h2 id="上下文管理器概念">上下文管理器概念</h2>
+<h3 id="上下文管理协议context-management-protocol">上下文管理协议（Context Management Protocol）</h3>
+<p>包含方法 <code>__enter__()</code> 和 <code>__exit__()</code> ，支持该协议的对象要实现这两个方法。</p>
+<h3 id="上下文管理器context-manager">上下文管理器（Context Manager）</h3>
+<p>支持上下文管理协议的对象，这种对象必须实现 <code>__enter__()</code> 和 <code>__exit__()</code> 方法。 上下文管理器定义执行with语句时要建立的运行时上下文，负责执行with语句块上下文中的进入与退出操作。 通常使用with语句调用上下文管理器，也可以通过直接调用其方法来使用。</p>
+<ul>
+<li><strong><code>__enter__()</code></strong>
+<ul>
+<li>with语句执行时，先获取上下文管理器对象，随后调用其 <code>__enter__()</code></li>
+<li>若有 <code>as var</code> 语句，则将返回值赋给变量var</li>
+<li>可以返回上下文管理器对象本身，也可以是其他相关对象</li>
+</ul></li>
+<li><strong><code>__exit__()</code></strong>
+<ul>
+<li>带有三个参数 <code>exc_type, exc_val, exc_tb</code></li>
+<li>若上下文管理器对象执行无异常，则三个参数均为 <code>None</code></li>
+<li>若发生异常，则三个参数分别为 异常类型，异常值和tracback信息</li>
+</ul></li>
+</ul>
+<h2 id="with语句执行过程">with语句执行过程</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#   EXP: 表达式</span></span><br><span class="line"><span class="comment">#   VAR: 变量名，[as VAR][可选]</span></span><br><span class="line"><span class="comment"># BlOCK: 代码块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> EXP <span class="keyword">as</span> VAR:</span><br><span class="line">    BLOCK</span><br></pre></td></tr></table></figure>
+<p><img data-src="/resource/images/pl-python-with.png" width="100%" /></p>
+<ol type="1">
+<li>执行代码时，先执行 <code>EXPR</code> 语句，生成上下文管理器对象 context_manager；</li>
+<li>获取上下文管理器的 <code>__exit()__</code> 方法，并保存起来用于之后的调用；</li>
+<li>调用上下文管理器的 <code>__enter__()</code> 方法，且可将返回值赋给as语句变量；</li>
+<li>执行BLOCK中的表达式；</li>
+<li>不管是否执行过程中是否发生了异常，执行上下文管理器的 <code>__exit__()</code> 方法， 执行“清理”工作，如释放资源等。
+<ol type="1">
+<li>如果执行过程中没有出现异常，或者语句体中执行了语句 <code>break</code> / <code>continue</code> / <code>return</code> ，则以 <code>None</code> 作为参数调用 <code>__exit__(None, None, None)</code> ；</li>
+<li>如果执行过程中出现异常，则使用sys.exc_info得到的异常信息为参数调用 <code>__exit__(exc_type, exc_value, exc_traceback)</code> ；</li>
+</ol></li>
+<li>出现异常时，如果 <code>__exit__(type, value, traceback)</code> 返回 <code>False</code> ，则会重新抛出异常，让with之外的语句逻辑来处理异常，这也是通用做法；如果返回True，则忽略异常，不再对异常进行处理。</li>
+</ol>
+<h2 id="自定义上下文管理器">自定义上下文管理器</h2>
+<ul>
+<li>它使代码更简练，可以简化try/finally模式</li>
+<li>当代码异常产生时，<code>__exit__()</code> 会执行清理工作</li>
+<li>可以对软件系统中的资源进行管理，比如数据库连接、共享资源的访问控制等<br /></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding = utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上下文管理器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestWith</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;进入with语句的时候被调用</span></span><br><span class="line"><span class="string">           并将返回值赋给as语句的变量名</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__enter__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;var&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span>(<span class="params">self, exc_type, exc_val, exc_tb</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;离开with的时候被with调用&quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__exit__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># with后面必须跟一个上下文管理器</span></span><br><span class="line"><span class="comment"># 如果使用了as，则是把上下文管理器的 __enter__() 方法的返回值赋值给 target</span></span><br><span class="line"><span class="comment"># target 可以是单个变量，或者由“()”括起来的元组（不能是仅仅由“,”分隔的变量列表，必须加“()”）</span></span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;main&#x27;</span>:</span><br><span class="line">    <span class="keyword">with</span> TestWith() <span class="keyword">as</span> var:</span><br><span class="line">        print(var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行结果</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">__enter__</span></span><br><span class="line"><span class="string">var</span></span><br><span class="line"><span class="string">__exit__</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>本例仅对应代码正常执行的流程，其他特殊情况不再一一列举，有兴趣可单独实验。</p>
+<h2 id="参考">参考</h2>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuaWJtLmNvbS96aC9hcnRpY2xlcy9vcy1jbi1weXRob253aXRoLw==">浅谈 Python 的 with 语句<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vcHl0aG9uYmFvL3AvMTEyMTEzNDcuaHRtbA==">Python中with用法详解<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC83NDU1Mjg3Nw==">Python中with使用<i class="fa fa-external-link-alt"></i></span> <br /></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>PL - 编程语言</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>语法进阶</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【Blog】深度美化和定制Hexo和NexT方法</title>
     <url>/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next-custom/</url>
     <content><![CDATA[<p>[更新中...]虽然我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。</p>
@@ -851,6 +769,182 @@
         <tag>Blog</tag>
         <tag>Hexo</tag>
         <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Python】基础语法总结</title>
+    <url>/2019/01/11/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-fundamental-syntax/</url>
+    <content><![CDATA[
+]]></content>
+      <categories>
+        <category>PL - 编程语言</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>语法进阶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【PPT设计】大一大二时期个人PPT设计风格总结</title>
+    <url>/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/</url>
+    <content><![CDATA[<p>[更新中] 时光总若即若离，不觉将至大三。回望已逝的两年大学生活，发现自己已经做了不少的PPT，有关社团、有关学术、有关技术等等，但只勤于做事，罔顾总结，收获总是浅薄地。于是，今天将两年来所作PPT汇总整理，分析个人的风格，以寻求进步和突破。 <a id="more"></a></p>
+<h2 id="前言">前言</h2>
+<p>PPT设计所涉及到的结构和元素繁多，于是文章将按时间顺序分别从结构设计、元素和动画设计三方面来介绍。</p>
+<h2 id="结构设计">结构设计</h2>
+<h3 id="首页">首页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-18-wps-office-1.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-1.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-1.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-1.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-english-pre-ai-1.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-1.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<h3 id="目录页">目录页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-2.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-2.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-2.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<h3 id="图示页">图示页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-3.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-4.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-4.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-6.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-12.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-english-pre-ai-2.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-english-pre-ai-5.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-3.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-4.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-train-cquse-1.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+</figure>
+<h3 id="分点页">分点页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-4.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-5.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-8.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-3.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-5.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-7.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-9.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-6.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-train-cquse-2.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-train-cquse-3.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-train-cquse-4.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+</figure>
+<h3 id="数据页">数据页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-6.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-7.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-2.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-10.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-13.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<h3 id="对比页">对比页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-18-wps-office-2.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-8.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-english-pre-ai-3.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+</figure>
+<h3 id="人物页">人物页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-11.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<h3 id="时间轴">时间轴</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-14.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-5.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<h3 id="结尾页">结尾页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-5.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-9.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-15.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<h2 id="元素设计">元素设计</h2>
+<h3 id="配色">配色</h3>
+<h3 id="背景">背景</h3>
+<h3 id="标题">标题</h3>
+<h2 id="动画设计">动画设计</h2>
+<h2 id="总结">总结</h2>
+]]></content>
+      <categories>
+        <category>GD - 平面设计</category>
+      </categories>
+      <tags>
+        <tag>PPT设计</tag>
+        <tag>大学生活</tag>
       </tags>
   </entry>
 </search>
