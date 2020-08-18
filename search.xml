@@ -177,7 +177,8 @@
 <li>黑色边为1Gb带宽的链路</li>
 <li>边的权重：平均传输延迟 average transmission latency（毫秒），</li>
 </ul>
-<p>对比算法：Noderank 实验设计：</p>
+<p>对比算法：Noderank<br />
+实验设计：</p>
 <ul>
 <li>模拟了一些随机的点对点的数据传输任务</li>
 <li>数据传输速率为 [500Mbps,3Gbps] 的均匀分布</li>
@@ -200,7 +201,7 @@
 </ul>
 <h2 id="总结思考">总结思考</h2>
 <ul>
-<li>GCN较CNN可以更好地提前非欧数据的特征</li>
+<li>GCN较CNN可以更好地提取非欧数据的特征</li>
 <li>A3C算法较其他RL算法性能表现更佳</li>
 <li>并行的梯度训练策略更适应于实际场景</li>
 <li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
