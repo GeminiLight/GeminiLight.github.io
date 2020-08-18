@@ -499,6 +499,7 @@
 <p><img data-src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
 <h3 id="验证测试">验证测试</h3>
 <p>在相同条件下，与其他基于强化学习的VNE算法进行比较</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-8.png" /></p>
 <h4 id="训练效率及收敛性">训练效率及收敛性</h4>
 <p>不同算法在相同实验条件下的训练效果对比，见下图(a)<br />
 实验结果：可以发现，在这组实验中，平均收益的优势要比接受率的明显<br />
