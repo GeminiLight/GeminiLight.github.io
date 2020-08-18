@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-32x32.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.ico">
+  <link rel="mask-icon" href="/images/favicon-32x32.ico" color="#222">
+  <meta name="google-site-verification" content="RrL9pY7_YVrRxyUv7G4ksTPRGYJmECxw-uI8iVOz7vI">
+  <meta name="baidu-site-verification" content="AozFAayi1Z">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="numpy.sparse 稀疏矩阵 sparse matrix     numpy.ndarray 密集矩阵 array matrix   numpy.matrix 密集矩阵 dense matrix    稀疏矩阵简介 稀疏矩阵  稀疏矩阵  具有少量非零项的矩阵 - Number of Non-Zero (NNZ) &lt; 0.5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【SciPy】Sparse稀疏矩阵主要存储格式总结">
+<meta property="og:url" content="https://www.geminilight.cn/2020/08/18/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-scipy-sparse/index.html">
+<meta property="og:site_name" content="Gemini向光性">
+<meta property="og:description" content="numpy.sparse 稀疏矩阵 sparse matrix     numpy.ndarray 密集矩阵 array matrix   numpy.matrix 密集矩阵 dense matrix    稀疏矩阵简介 稀疏矩阵  稀疏矩阵  具有少量非零项的矩阵 - Number of Non-Zero (NNZ) &lt; 0.5">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/da-scipy-sparse-dense.gif">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/da-scipy-sparse-coo.gif">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/da-scipy-sparse-csr.gif">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/da-scipy-sparse-csc.gif">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/da-scipy-sparse-lil.gif">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/da-scipy-sparse-dia.gif">
+<meta property="article:published_time" content="2020-08-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-08-18T11:07:32.018Z">
+<meta property="article:author" content="GeminiLight">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="SciPy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/da-scipy-sparse-dense.gif">
+
+
+<link rel="canonical" href="https://www.geminilight.cn/2020/08/18/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-scipy-sparse/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【SciPy】Sparse稀疏矩阵主要存储格式总结 | Gemini向光性</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?81607a4529b9e096ccf0ac76663fbc7c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  <script>
+    !function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/2.1/gio.js","gio");
+    gio('init', 'UA-175467019-1', {});
+    gio('send');
+  </script>
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Gemini向光性</h1>
+      <i class="logo-line"></i>
+    </a>
+    
+      <p class="site-subtitle" itemprop="description">The light never goes on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">稀疏矩阵简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5"><span class="nav-number">1.1.</span> <span class="nav-text">稀疏矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8"><span class="nav-number">1.2.</span> <span class="nav-text">压缩存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E5%B1%9E%E6%80%A7"><span class="nav-number">1.3.</span> <span class="nav-text">矩阵属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.4.</span> <span class="nav-text">通用方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E5%88%86%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">稀疏矩阵分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#coo---coo_matrix"><span class="nav-number">2.1.</span> <span class="nav-text">1. COO - coo_matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#coordinate-matrix-%E5%AF%B9%E8%A7%92%E5%AD%98%E5%82%A8%E7%9F%A9%E9%98%B5"><span class="nav-number">2.1.1.</span> <span class="nav-text">Coordinate Matrix 对角存储矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.1.2.</span> <span class="nav-text">适用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">2.1.3.</span> <span class="nav-text">优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">①优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">②缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.4.</span> <span class="nav-text">实例化方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.5.</span> <span class="nav-text">特殊属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">2.1.6.</span> <span class="nav-text">代码示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#csr---csr_matrix"><span class="nav-number">2.2.</span> <span class="nav-text">2. CSR - csr_matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#compressed-sparse-row-matrix-%E5%8E%8B%E7%BC%A9%E7%A8%80%E7%96%8F%E8%A1%8C%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.2.1.</span> <span class="nav-text">Compressed Sparse Row Matrix 压缩稀疏行格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">适用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BC%98%E7%82%B9-1"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">①优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9-1"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">②缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96"><span class="nav-number">2.2.4.</span> <span class="nav-text">实例化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%B1%9E%E6%80%A7-1"><span class="nav-number">2.2.5.</span> <span class="nav-text">特殊属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#csc---csc_matrix"><span class="nav-number">2.3.</span> <span class="nav-text">3. CSC - csc_matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#compressed-sparse-column-matrix-%E5%8E%8B%E7%BC%A9%E7%A8%80%E7%96%8F%E5%88%97%E7%9F%A9%E9%98%B5"><span class="nav-number">2.3.1.</span> <span class="nav-text">Compressed Sparse Column Matrix 压缩稀疏列矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.3.2.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9-2"><span class="nav-number">2.3.3.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96-1"><span class="nav-number">2.3.4.</span> <span class="nav-text">实例化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%B1%9E%E6%80%A7-2"><span class="nav-number">2.3.5.</span> <span class="nav-text">特殊属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bsr---bsr_matrix"><span class="nav-number">2.4.</span> <span class="nav-text">4. BSR - bsr_matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#block-sparse-row-matrix-%E5%88%86%E5%9D%97%E5%8E%8B%E7%BC%A9%E7%A8%80%E7%96%8F%E8%A1%8C%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.4.1.</span> <span class="nav-text">Block Sparse Row Matrix 分块压缩稀疏行格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96-2"><span class="nav-number">2.4.2.</span> <span class="nav-text">实例化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%B1%9E%E6%80%A7-3"><span class="nav-number">2.4.3.</span> <span class="nav-text">特殊属性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-1"><span class="nav-number">2.4.3.1.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9-3"><span class="nav-number">2.4.3.2.</span> <span class="nav-text">优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BC%98%E7%82%B9-2"><span class="nav-number">2.4.3.2.1.</span> <span class="nav-text">①优点</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dok--dok_matrix"><span class="nav-number">2.5.</span> <span class="nav-text">4. DOK- dok_matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dictionary-of-keys-matrix-%E6%8C%89%E9%94%AE%E5%AD%97%E5%85%B8%E7%9F%A9%E9%98%B5"><span class="nav-number">2.5.1.</span> <span class="nav-text">Dictionary of Keys Matrix 按键字典矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF-2"><span class="nav-number">2.5.2.</span> <span class="nav-text">适用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%96%B9%E6%B3%95-1"><span class="nav-number">2.5.3.</span> <span class="nav-text">实例化方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9-4"><span class="nav-number">2.5.4.</span> <span class="nav-text">优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BC%98%E7%82%B9-3"><span class="nav-number">2.5.4.1.</span> <span class="nav-text">①优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9-2"><span class="nav-number">2.5.4.2.</span> <span class="nav-text">②缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-2"><span class="nav-number">2.5.5.</span> <span class="nav-text">代码示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lil---lil_matrix"><span class="nav-number">2.6.</span> <span class="nav-text">5. LIL - lil_matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF-3"><span class="nav-number">2.6.1.</span> <span class="nav-text">适用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9-5"><span class="nav-number">2.6.2.</span> <span class="nav-text">优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BC%98%E7%82%B9-4"><span class="nav-number">2.6.2.1.</span> <span class="nav-text">①优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9-3"><span class="nav-number">2.6.2.2.</span> <span class="nav-text">②缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%96%B9%E6%B3%95-2"><span class="nav-number">2.6.3.</span> <span class="nav-text">实例化方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%B1%9E%E6%80%A7-4"><span class="nav-number">2.6.4.</span> <span class="nav-text">特殊属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-3"><span class="nav-number">2.6.5.</span> <span class="nav-text">代码示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dia---dia_matrix"><span class="nav-number">2.7.</span> <span class="nav-text">6. DIA - dia_matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%96%B9%E6%B3%95-3"><span class="nav-number">2.7.1.</span> <span class="nav-text">实例化方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%B1%9E%E6%80%A7-5"><span class="nav-number">2.7.2.</span> <span class="nav-text">特殊属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-4"><span class="nav-number">2.7.3.</span> <span class="nav-text">代码示例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E6%A0%BC%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="nav-number">3.</span> <span class="nav-text">矩阵格式对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E5%AD%98%E5%8F%96"><span class="nav-number">4.</span> <span class="nav-text">稀疏矩阵存取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8---save_npz"><span class="nav-number">4.1.</span> <span class="nav-text">存储 - save_npz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96---load_npz"><span class="nav-number">4.2.</span> <span class="nav-text">读取 - load_npz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%A4%A7%E5%B0%8F%E6%AF%94%E8%BE%83"><span class="nav-number">4.3.</span> <span class="nav-text">存储大小比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GeminiLight"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">GeminiLight</p>
+  <div class="site-description" itemprop="description">GeminiLight</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlbWluaWxpZ2h0" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;geminilight"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnd0Zmx5MjAxOEAxNjMuY29t" title="E-Mail → mailto:wtfly2018@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9nZW1pbmlfbGlnaHQ=" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;gemini_light"><i class="fa fa-book fa-fw"></i>ZhiHu</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTc1Mzg2MDMz" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;175386033"><i class="fa fa-tv fa-fw"></i>BiliBili</span>
+      </span>
+  </div>
+
+
+
+
+
+
+  <div class="links-of-blogroll animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2Jvb2tzL3NoYXJlLzhlZTc2OTRiLTFiMjgtNDE3Yy05MjFmLTQ1YWY0Zjg0ZDcwYz8jIOOAik1MIC0g5py65Zmo5a2m5Lmg44CL" title="https:&#x2F;&#x2F;www.yuque.com&#x2F;books&#x2F;share&#x2F;8ee7694b-1b28-417c-921f-45af4f84d70c?# 《ML - 机器学习》">我的机器学习笔记</span>
+        </li>
+    </ul>
+  </div>
+
+      </section>
+
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%; margin: 20px 0 0 0;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2020/08/18/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-scipy-sparse/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="GeminiLight">
+      <meta itemprop="description" content="GeminiLight">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gemini向光性">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【SciPy】Sparse稀疏矩阵主要存储格式总结
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-18 00:00:00" itemprop="dateCreated datePublished" datetime="2020-08-18T00:00:00+08:00">2020-08-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DA-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">DA - 数据分析</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>12k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>22 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <table>
+<thead>
+<tr class="header">
+<th><em>numpy.sparse</em></th>
+<th>稀疏矩阵</th>
+<th>sparse matrix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>numpy.ndarray</em></td>
+<td>密集矩阵</td>
+<td>array matrix</td>
+</tr>
+<tr class="even">
+<td><em>numpy.matrix</em></td>
+<td>密集矩阵</td>
+<td>dense matrix</td>
+</tr>
+</tbody>
+</table>
+<h2 id="稀疏矩阵简介">稀疏矩阵简介</h2>
+<h3 id="稀疏矩阵">稀疏矩阵</h3>
+<ul>
+<li>稀疏矩阵
+<ul>
+<li>具有少量非零项的矩阵 - <strong>N</strong>umber of <strong>N</strong>on-<strong>Z</strong>ero (<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL2dlbmVyYXRlZC9zY2lweS5zcGFyc2Uuc3BtYXRyaXguZ2V0bm56Lmh0bWw=">NNZ<i class="fa fa-external-link-alt"></i></span>) &lt; 0.5</li>
+<li>（在矩阵中，若数值0的元素数目远多于非0元素的数目，并且非0元素分布没有规律）</li>
+</ul></li>
+<li>矩阵的稠密度
+<ul>
+<li>非零元素的总数比上矩阵所有元素的总数为矩阵的稠密度。</li>
+</ul></li>
+</ul>
+<figure>
+<img data-src="/resource/images/da-scipy-sparse-dense.gif" alt="By Matt" /><figcaption><span class="exturl" data-url="aHR0cHM6Ly9tYXR0ZWRpbmcuZ2l0aHViLmlvLzIwMTkvMDQvMjUvc3BhcnNlLW1hdHJpY2VzLw==">By Matt<i class="fa fa-external-link-alt"></i></span></figcaption>
+</figure>
+<h3 id="压缩存储">压缩存储</h3>
+<p>存储矩阵的一般方法是采用二维数组，其优点是可以随机地访问每一个元素，因而能够容易实现矩阵的各种运算。<br />
+对于稀疏矩阵，它通常具有很大的维度，有时甚大到整个矩阵（零元素）占用了绝大部分内存<br />
+采用二维数组的存储方法既浪费大量的存储单元来存放零元素，又要在运算中浪费大量的时间来进行零元素的无效运算。因此必须考虑对稀疏矩阵进行压缩存储（只存储非零元素）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> sparse</span><br><span class="line">help(sparse)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Sparse Matrix Storage Formats</span></span><br><span class="line"><span class="string">There are seven available sparse matrix types:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        1. csc_matrix: Compressed Sparse Column format</span></span><br><span class="line"><span class="string">        2. csr_matrix: Compressed Sparse Row format</span></span><br><span class="line"><span class="string">        3. bsr_matrix: Block Sparse Row format</span></span><br><span class="line"><span class="string">        4. lil_matrix: List of Lists format</span></span><br><span class="line"><span class="string">        5. dok_matrix: Dictionary of Keys format</span></span><br><span class="line"><span class="string">        6. coo_matrix: COOrdinate format (aka IJV, triplet format)</span></span><br><span class="line"><span class="string">        7. dia_matrix: DIAgonal format</span></span><br><span class="line"><span class="string">        8. spmatrix: Sparse matrix base clas</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="矩阵属性">矩阵属性</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.sparse <span class="keyword">import</span> csr_matrix</span><br><span class="line"></span><br><span class="line"><span class="comment">### 共有属性</span></span><br><span class="line">mat.shape  <span class="comment"># 矩阵形状</span></span><br><span class="line">mat.dtype  <span class="comment"># 数据类型</span></span><br><span class="line">mat.ndim  <span class="comment"># 矩阵维度</span></span><br><span class="line">mat.nnz   <span class="comment"># 非零个数</span></span><br><span class="line">mat.data  <span class="comment"># 非零值, 一维数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### COO 特有的</span></span><br><span class="line">coo.row  <span class="comment"># 矩阵行索引</span></span><br><span class="line">coo.col  <span class="comment"># 矩阵列索引</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### CSR\CSC\BSR 特有的</span></span><br><span class="line">bsr.indices    <span class="comment"># 索引数组</span></span><br><span class="line">bsr.indptr     <span class="comment"># 指针数组</span></span><br><span class="line">bsr.has_sorted_indices  <span class="comment"># 索引是否排序</span></span><br><span class="line">bsr.blocksize  <span class="comment"># BSR矩阵块大小</span></span><br></pre></td></tr></table></figure>
+<h3 id="通用方法">通用方法</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy.sparse <span class="keyword">as</span> sp</span><br><span class="line"></span><br><span class="line"><span class="comment">### 转换矩阵格式</span></span><br><span class="line">tobsr()、tocsr()、to_csc()、to_dia()、to_dok()、to_lil()</span><br><span class="line">mat.toarray()  <span class="comment"># 转为array</span></span><br><span class="line">mat.todense()  <span class="comment"># 转为dense</span></span><br><span class="line"><span class="comment"># 返回给定格式的稀疏矩阵</span></span><br><span class="line">mat.asformat(format)</span><br><span class="line"><span class="comment"># 返回给定元素格式的稀疏矩阵</span></span><br><span class="line">mat.astype(t)  </span><br><span class="line"></span><br><span class="line"><span class="comment">### 检查矩阵格式</span></span><br><span class="line">issparse、isspmatrix_lil、isspmatrix_csc、isspmatrix_csr</span><br><span class="line">sp.issparse(mat)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 获取矩阵数据</span></span><br><span class="line">mat.getcol(j)  <span class="comment"># 返回矩阵列j的一个拷贝，作为一个(mx 1) 稀疏矩阵 (列向量)</span></span><br><span class="line">mat.getrow(i)  <span class="comment"># 返回矩阵行i的一个拷贝，作为一个(1 x n)  稀疏矩阵 (行向量)</span></span><br><span class="line">mat.nonzero()  <span class="comment"># 非0元索引</span></span><br><span class="line">mat.diagonal()   <span class="comment"># 返回矩阵主对角元素</span></span><br><span class="line">mat.max([axis])  <span class="comment"># 给定轴的矩阵最大元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 矩阵运算</span></span><br><span class="line">mat += mat     <span class="comment"># 加</span></span><br><span class="line">mat = mat * <span class="number">5</span>  <span class="comment"># 乘</span></span><br><span class="line">mat.dot(other)  <span class="comment"># 坐标点积</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">resize(self, *shape)</span><br><span class="line">transpose(self[, axes, copy])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="稀疏矩阵分类">稀疏矩阵分类</h2>
+<h3 id="coo---coo_matrix">1. COO - <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL2dlbmVyYXRlZC9zY2lweS5zcGFyc2UuY29vX21hdHJpeC5odG1s">coo_matrix<i class="fa fa-external-link-alt"></i></span></h3>
+<h4 id="coordinate-matrix-对角存储矩阵">Coordinate Matrix 对角存储矩阵</h4>
+<ul>
+<li>采用三元组<code>(row, col, data)</code>(或称为ijv format)的形式来存储矩阵中非零元素的信息</li>
+<li>三个数组 <code>row</code> 、<code>col</code> 和 <code>data</code> 分别保存非零元素的行下标、列下标与值（一般长度相同）</li>
+<li>故 <code>coo[row[k]][col[k]] = data[k]</code> ，即矩阵的第 <code>row[k]</code> 行、第 <code>col[k]</code> 列的值为 <code>data[k]</code> </li>
+</ul>
+<p><img data-src="/resource/images/da-scipy-sparse-coo.gif" /></p>
+<ul>
+<li>当 <code>row[0] = 1</code> , <code>column[0] = 1</code> 时， <code>data[0] = 2</code> ，故 <code>coo[1][1] = 2</code></li>
+<li>当 <code>row[3] = 0</code> , <code>column[3] = 2</code> 时， <code>data[3] = 9</code> ，故 <code>coo[0][3] = 9</code></li>
+</ul>
+<h4 id="适用场景">适用场景</h4>
+<ul>
+<li>主要用来创建矩阵，因为coo_matrix无法对矩阵的元素进行增删改等操作</li>
+<li>一旦创建之后，除了将之转换成其它格式的矩阵，几乎无法对其做任何操作和矩阵运算</li>
+</ul>
+<h4 id="优缺点">优缺点</h4>
+<h5 id="优点">①优点</h5>
+<ul>
+<li>转换成其它存储格式很快捷简便（<code>tobsr()</code>、<code>tocsr()</code>、<code>to_csc()</code>、<code>to_dia()</code>、<code>to_dok()</code>、<code>to_lil()</code>）</li>
+<li>能与CSR / CSC格式的快速转换</li>
+<li>允许重复的索引（例如在1行1列处存了值2.0，又在1行1列处存了值3.0，则转换成其它矩阵时就是2.0+3.0=5.0）</li>
+</ul>
+<h5 id="缺点">②缺点</h5>
+<ul>
+<li>不支持切片和算术运算操作</li>
+<li>如果稀疏矩阵<strong>仅包含非0元素的对角线</strong>，则对角存储格式(DIA)可以减少非0元素定位的信息量</li>
+<li>这种存储格式对有限元素或者有限差分离散化的矩阵尤其有效</li>
+</ul>
+<h4 id="实例化方法">实例化方法</h4>
+<ul>
+<li><code>coo_matrix(D)</code>：D代表密集矩阵；</li>
+<li><code>coo_matrix(S)</code>：S代表其他类型稀疏矩阵</li>
+<li><code>coo_matrix((M, N), [dtype])</code>：构建一个shape为M*N的空矩阵，默认数据类型是<code>d</code>，</li>
+<li><code>coo_matrix((data, (i, j)), [shape=(M, N)]))</code>：三元组初始化
+<ul>
+<li><code>i[:]</code> : 行索引</li>
+<li><code>j[:]</code> : 列索引</li>
+<li><code>A[i[k], j[k]]=data[k]</code></li>
+</ul></li>
+</ul>
+<h4 id="特殊属性">特殊属性</h4>
+<ul>
+<li><code>data</code>：稀疏矩阵存储的值，是一个一维数组</li>
+<li><code>row</code>：与<code>data</code>同等长度的一维数组，表征<code>data</code>中每个元素的行号</li>
+<li><code>col</code>：与<code>data</code>同等长度的一维数组，表征<code>data</code>中每个元素的列号</li>
+</ul>
+<h4 id="代码示例">代码示例</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据</span></span><br><span class="line">row = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>]</span><br><span class="line">col = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">data = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成coo格式的矩阵</span></span><br><span class="line"><span class="comment"># &lt;class &#x27;scipy.sparse.coo.coo_matrix&#x27;&gt;</span></span><br><span class="line">coo_mat = sparse.coo_matrix((data, (row, col)), shape=(<span class="number">4</span>, <span class="number">4</span>),  dtype=np.int)</span><br><span class="line"></span><br><span class="line"><span class="comment"># coordinate-value format</span></span><br><span class="line">print(coo)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">(0, 0)        1</span></span><br><span class="line"><span class="string">(1, 1)        2</span></span><br><span class="line"><span class="string">(2, 2)        3</span></span><br><span class="line"><span class="string">(3, 3)        4</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看数据</span></span><br><span class="line">coo.data</span><br><span class="line">coo.row</span><br><span class="line">coo.col</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转化array</span></span><br><span class="line"><span class="comment"># &lt;class &#x27;numpy.ndarray&#x27;&gt;</span></span><br><span class="line">coo_mat.toarray()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[1, 0, 0, 0],</span></span><br><span class="line"><span class="string">       [0, 2, 0, 0],</span></span><br><span class="line"><span class="string">       [0, 0, 3, 4],</span></span><br><span class="line"><span class="string">       [0, 0, 0, 0]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="csr---csr_matrix">2. CSR - <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL2dlbmVyYXRlZC9zY2lweS5zcGFyc2UuY3NyX21hdHJpeC5odG1s">csr_matrix<i class="fa fa-external-link-alt"></i></span></h3>
+<h4 id="compressed-sparse-row-matrix-压缩稀疏行格式">Compressed Sparse Row Matrix 压缩稀疏行格式</h4>
+<ul>
+<li>csr_matrix是按行对矩阵进行压缩的</li>
+<li>通过 <code>indices</code>, <code>indptr</code>，<code>data</code> 来确定矩阵。
+<ul>
+<li><code>data</code> 表示矩阵中的非零数据</li>
+<li>对于第 <code>i</code> 行而言，该行中非零元素的列索引为 <code>indices[indptr[i]:indptr[i+1]]</code></li>
+<li>可以将 <code>indptr</code> 理解成利用其自身索引 <code>i</code> 来指向第 <code>i</code> 行元素的列索引</li>
+<li>根据<code>[indptr[i]:indptr[i+1]]</code>，我就得到了该行中的非零元素个数，如
+<ul>
+<li>若 <code>index[i] = 3</code> 且 <code>index[i+1] = 3</code> ，则第 <code>i</code> 行的没有非零元素</li>
+<li>若 <code>index[j] = 6</code> 且 <code>index[j+1] = 7</code> ，则第 <code>j</code> 行的非零元素的列索引为 <code>indices[6:7]</code></li>
+</ul></li>
+<li>得到了行索引、列索引，相应的数据存放在： <code>data[indptr[i]:indptr[i+1]]</code></li>
+</ul></li>
+</ul>
+<p><img data-src="/resource/images/da-scipy-sparse-csr.gif" /></p>
+<ul>
+<li>对于矩阵第 <code>0</code> 行，我们需要先得到其非零元素列索引
+<ul>
+<li>由 <code>indptr[0] = 0</code> 和 <code>indptr[1] = 2</code> 可知，第 <code>0</code> 行有两个非零元素。</li>
+<li>它们的列索引为 <code>indices[0:2] = [0, 2]</code> ，且存放的数据为 <code>data[0] = 8</code> ， <code>data[1] = 2</code> </li>
+<li>因此矩阵第 <code>0</code> 行的非零元素 <code>csr[0][0] = 8</code> 和 <code>csr[0][2] = 2</code> </li>
+</ul></li>
+<li>对于矩阵第 <code>4</code> 行，同样我们需要先计算其非零元素列索引
+<ul>
+<li>由 <code>indptr[4] = 3</code> 和 <code>indptr[5] = 6</code> 可知，第 <code>4</code> 行有3个非零元素。</li>
+<li>它们的列索引为 <code>indices[3:6] = [2, 3，4]</code> ，且存放的数据为 <code>data[3] = 7</code> ，<code>data[4] = 1</code> ，<code>data[5] = 2</code></li>
+<li>因此矩阵第 <code>4</code> 行的非零元素 <code>csr[4][2] = 7</code> ， <code>csr[4][3] = 1</code> 和 <code>csr[4][4] = 2</code></li>
+</ul></li>
+</ul>
+<h4 id="适用场景-1">适用场景</h4>
+<ul>
+<li>常用于读入数据后进行稀疏矩阵计算，运算高效</li>
+</ul>
+<h4 id="优缺点-1">优缺点</h4>
+<h5 id="优点-1">①优点</h5>
+<ul>
+<li>高效的稀疏矩阵算术运算</li>
+<li>高效的行切片</li>
+<li>快速地矩阵矢量积运算</li>
+</ul>
+<h5 id="缺点-1">②缺点</h5>
+<ul>
+<li>较慢地列切片操作（可以考虑CSC）</li>
+<li>转换到稀疏结构代价较高（可以考虑LIL，DOK）</li>
+</ul>
+<h4 id="实例化">实例化</h4>
+<ul>
+<li><code>csr_matrix(D)</code>：D代表密集矩阵；</li>
+<li><code>csr_matrix(S)</code>：S代表其他类型稀疏矩阵</li>
+<li><code>csr_matrix((M, N), [dtype])</code>：构建一个shape为M*N的空矩阵，默认数据类型是<code>d</code>，</li>
+<li><code>csr_matrix((data, (row_ind, col_ind)), [shape=(M, N)]))</code>
+<ul>
+<li>三者关系：<code>a[row_ind[k], col_ind[k]] = data[k]</code></li>
+</ul></li>
+<li><code>csr_matrix((data, indices, indptr), [shape=(M, N)])</code>
+<ul>
+<li>第i行的列索引存储在其中<code>indices[indptr[i]:indptr[i+1]]</code></li>
+<li>其对应值存储在中<code>data[indptr[i]:indptr[i+1]]</code></li>
+</ul></li>
+</ul>
+<h4 id="特殊属性-1">特殊属性</h4>
+<ul>
+<li><code>data</code> ：稀疏矩阵存储的值，一维数组</li>
+<li><code>indices</code> ：存储矩阵有有非零值的列索引</li>
+<li><code>indptr</code> ：类似指向列索引的指针数组</li>
+<li><code>[has_sorted_indices](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.bsr_matrix.has_sorted_indices.html#scipy.sparse.bsr_matrix.has_sorted_indices)</code>：索引 <code>indices</code> 是否排序</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成数据</span></span><br><span class="line">indptr = np.array([<span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">7</span>])</span><br><span class="line">indices = np.array([<span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>])</span><br><span class="line">data = np.array([<span class="number">8</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">9</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建矩阵</span></span><br><span class="line">csr = sparse.csr_matrix((data, indices, indptr))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为array</span></span><br><span class="line">csr.toarray()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[1, 0, 2],</span></span><br><span class="line"><span class="string">       [0, 0, 3],</span></span><br><span class="line"><span class="string">       [4, 5, 6]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 按row行来压缩</span></span><br><span class="line"><span class="comment"># 对于第i行，非0数据列是indices[indptr[i]:indptr[i+1]] 数据是data[indptr[i]:indptr[i+1]]</span></span><br><span class="line"><span class="comment"># 在本例中</span></span><br><span class="line"><span class="comment"># 第0行，有非0的数据列是indices[indptr[0]:indptr[1]] = indices[0:2] = [0,2]</span></span><br><span class="line"><span class="comment"># 数据是data[indptr[0]:indptr[1]] = data[0:2] = [1,2],所以在第0行第0列是1，第2列是2</span></span><br><span class="line"><span class="comment"># 第1行，有非0的数据列是indices[indptr[1]:indptr[2]] = indices[2:3] = [2]</span></span><br><span class="line"><span class="comment"># 数据是data[indptr[1]:indptr[2] = data[2:3] = [3],所以在第1行第2列是3</span></span><br><span class="line"><span class="comment"># 第2行，有非0的数据列是indices[indptr[2]:indptr[3]] = indices[3:6] = [0,1,2]</span></span><br><span class="line"><span class="comment"># 数据是data[indptr[2]:indptr[3]] = data[3:6] = [4,5,6],所以在第2行第0列是4，第1列是5,第2列是6</span></span><br></pre></td></tr></table></figure>
+<h3 id="csc---csc_matrix">3. CSC - <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL2dlbmVyYXRlZC9zY2lweS5zcGFyc2UuY3NjX21hdHJpeC5odG1s">csc_matrix<i class="fa fa-external-link-alt"></i></span></h3>
+<h4 id="compressed-sparse-column-matrix-压缩稀疏列矩阵">Compressed Sparse Column Matrix 压缩稀疏列矩阵</h4>
+<ul>
+<li>csc_matrix是按列对矩阵进行压缩的</li>
+<li>通过 <code>indices</code>, <code>indptr</code>，<code>data</code> 来确定矩阵，可以对比CSR
+<ul>
+<li><code>data</code> 表示矩阵中的非零数据</li>
+<li>对于第 <code>i</code> 列而言，该行中非零元素的行索引为<code>indices[indptr[i]:indptr[i+1]]</code></li>
+<li>可以将 <code>indptr</code> 理解成利用其自身索引 <code>i</code> 来指向第 <code>i</code> 列元素的列索引</li>
+<li>根据<code>[indptr[i]:indptr[i+1]]</code>，我就得到了该行中的非零元素个数，如
+<ul>
+<li>若 <code>index[i] = 1</code> 且 <code>index[i+1] = 1</code> ，则第 <code>i</code> 列的没有非零元素</li>
+<li>若 <code>index[j] = 4</code> 且 <code>index[j+1] = 6</code> ，则第 <code>j</code>列的非零元素的行索引为 <code>indices[4:6]</code></li>
+</ul></li>
+<li>得到了列索引、行索引，相应的数据存放在： <code>data[indptr[i]:indptr[i+1]]</code></li>
+</ul></li>
+</ul>
+<p><img data-src="/resource/images/da-scipy-sparse-csc.gif" /></p>
+<ul>
+<li>对于矩阵第 <code>0</code> 列，我们需要先得到其非零元素行索引
+<ul>
+<li>由 <code>indptr[0] = 0</code> 和 <code>indptr[1] = 1</code> 可知，第 <code>0</code>列行有1个非零元素。</li>
+<li>它们的行索引为 <code>indices[0:1] = [0]</code> ，且存放的数据为 <code>data[0] = 8</code></li>
+<li>因此矩阵第 <code>0</code> 行的非零元素 <code>csc[0][0] = 8</code></li>
+</ul></li>
+<li>对于矩阵第 <code>3</code> 列，同样我们需要先计算其非零元素行索引
+<ul>
+<li>由 <code>indptr[3] = 4</code> 和 <code>indptr[4] = 6</code> 可知，第 <code>4</code> 行有2个非零元素。</li>
+<li>它们的行索引为 <code>indices[4:6] = [4, 6]</code> ，且存放的数据为 <code>data[4] = 1</code> ，<code>data[5] = 9</code></li>
+<li>因此矩阵第 <code>i</code> 行的非零元素 <code>csr[4][3] = 1</code> ， <code>csr[6][3] = 9</code></li>
+</ul></li>
+</ul>
+<h4 id="应用场景">应用场景</h4>
+<p>参考CSR</p>
+<h4 id="优缺点-2">优缺点</h4>
+<p>对比参考CSR</p>
+<h4 id="实例化-1">实例化</h4>
+<ul>
+<li><code>csc_matrix(D)</code>：D代表密集矩阵；</li>
+<li><code>csc_matrix(S)</code>：S代表其他类型稀疏矩阵</li>
+<li><code>csc_matrix((M, N), [dtype])</code>：构建一个shape为M*N的空矩阵，默认数据类型是<code>d</code>，</li>
+<li><code>csc_matrix((data, (row_ind, col_ind)), [shape=(M, N)]))</code>
+<ul>
+<li>三者关系：<code>a[row_ind[k], col_ind[k]] = data[k]</code></li>
+</ul></li>
+<li><code>csc_matrix((data, indices, indptr), [shape=(M, N)])</code>
+<ul>
+<li>第i列的列索引存储在其中<code>indices[indptr[i]:indptr[i+1]]</code></li>
+<li>其对应值存储在中<code>data[indptr[i]:indptr[i+1]]</code></li>
+</ul></li>
+</ul>
+<h4 id="特殊属性-2">特殊属性</h4>
+<ul>
+<li><code>data</code> ：稀疏矩阵存储的值，一维数组</li>
+<li><code>indices</code> ：存储矩阵有有非零值的行索引</li>
+<li><code>indptr</code> ：类似指向列索引的指针数组</li>
+<li><code>[has_sorted_indices](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.bsr_matrix.has_sorted_indices.html#scipy.sparse.bsr_matrix.has_sorted_indices)</code>：索引 <code>indices</code> 是否排序</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成数据</span></span><br><span class="line">row = np.array([<span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line">col = np.array([<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>])</span><br><span class="line">data = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建矩阵</span></span><br><span class="line">csc = sparse.csc_matrix((data, (row, col)), shape=(<span class="number">3</span>, <span class="number">3</span>)).toarray()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为array</span></span><br><span class="line">csc.toarray()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[1, 0, 4],</span></span><br><span class="line"><span class="string">       [0, 0, 5],</span></span><br><span class="line"><span class="string">       [2, 3, 6]], dtype=int64)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 按col列来压缩</span></span><br><span class="line"><span class="comment"># 对于第i列，非0数据行是indices[indptr[i]:indptr[i+1]] 数据是data[indptr[i]:indptr[i+1]]</span></span><br><span class="line"><span class="comment"># 在本例中</span></span><br><span class="line"><span class="comment"># 第0列，有非0的数据行是indices[indptr[0]:indptr[1]] = indices[0:2] = [0,2]</span></span><br><span class="line"><span class="comment"># 数据是data[indptr[0]:indptr[1]] = data[0:2] = [1,2],所以在第0列第0行是1，第2行是2</span></span><br><span class="line"><span class="comment"># 第1行，有非0的数据行是indices[indptr[1]:indptr[2]] = indices[2:3] = [2]</span></span><br><span class="line"><span class="comment"># 数据是data[indptr[1]:indptr[2] = data[2:3] = [3],所以在第1列第2行是3</span></span><br><span class="line"><span class="comment"># 第2行，有非0的数据行是indices[indptr[2]:indptr[3]] = indices[3:6] = [0,1,2]</span></span><br><span class="line"><span class="comment"># 数据是data[indptr[2]:indptr[3]] = data[3:6] = [4,5,6],所以在第2列第0行是4，第1行是5,第2行是6</span></span><br></pre></td></tr></table></figure>
+<h3 id="bsr---bsr_matrix">4. BSR - <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL2dlbmVyYXRlZC9zY2lweS5zcGFyc2UuYnNyX21hdHJpeC5odG1s">bsr_matrix<i class="fa fa-external-link-alt"></i></span></h3>
+<h4 id="block-sparse-row-matrix-分块压缩稀疏行格式">Block Sparse Row Matrix 分块压缩稀疏行格式</h4>
+<ul>
+<li>基于行的块压缩，与csr类似，都是通过<code>data</code>，<code>indices</code>，<code>indptr</code>来确定矩阵</li>
+<li>与csr相比，只是data中的元数据由0维的数变为了一个矩阵（块），其余完全相同</li>
+<li>块大小 <code>blocksize</code>
+<ul>
+<li>块大小 <code>(R, C)</code> 必须均匀划分矩阵 <code>(M, N)</code> 的形状。</li>
+<li>R和C必须满足关系：<code>M % R = 0</code> 和 <code>N % C = 0</code></li>
+</ul></li>
+<li>适用场景及优点参考csr</li>
+</ul>
+<h4 id="实例化-2">实例化</h4>
+<ul>
+<li><code>bsr_matrix(D)</code>：D代表密集矩阵；</li>
+<li><code>bsr_matrix(S)</code>：S代表其他类型稀疏矩阵</li>
+<li><code>bsr_matrix((M, N), [blocksize =(R,C), [dtype])</code>：构建一个shape为M*N的空矩阵，默认数据类型是<code>d</code>，</li>
+<li><code>(data, ij), [blocksize=(R,C), shape=(M, N)]</code>
+<ul>
+<li>两者关系：<code>a[ij[0,k], ij[1,k]] = data[k]]</code></li>
+</ul></li>
+<li><code>bsr_matrix((data, indices, indptr), [shape=(M, N)])</code>
+<ul>
+<li>第i行的块索引存储在其中<code>indices[indptr[i]:indptr[i+1]]</code></li>
+<li>其相应块值存储在中<code>data[indptr[i]:indptr[i+1]]</code></li>
+</ul></li>
+</ul>
+<h4 id="特殊属性-3">特殊<strong>属性</strong></h4>
+<ul>
+<li><code>data</code> ：稀疏矩阵存储的值，一维数组</li>
+<li><code>indices</code> ：存储矩阵有有非零值的列索引</li>
+<li><code>indptr</code> ：类似指向列索引的指针数组</li>
+<li><code>blocksize</code> ：矩阵的块大小</li>
+<li><code>[has_sorted_indices](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.bsr_matrix.has_sorted_indices.html#scipy.sparse.bsr_matrix.has_sorted_indices)</code>：索引 <code>indices</code> 是否排序</li>
+</ul>
+<h5 id="代码示例-1">代码示例</h5>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成数据</span></span><br><span class="line">indptr = np.array([<span class="number">0</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">6</span>])</span><br><span class="line">indices = np.array([<span class="number">0</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">data = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]).repeat(<span class="number">4</span>).reshape(<span class="number">6</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建矩阵</span></span><br><span class="line">bsr = bsr_matrix((data, indices, indptr), shape=(<span class="number">6</span>,<span class="number">6</span>)).todense()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为array</span></span><br><span class="line">bsr.todense()</span><br><span class="line">matrix([[<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>],</span><br><span class="line">        [<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>],</span><br><span class="line">        [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">3</span>],</span><br><span class="line">        [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">3</span>],</span><br><span class="line">        [<span class="number">4</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">6</span>],</span><br><span class="line">        [<span class="number">4</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
+<h5 id="优缺点-3">优缺点</h5>
+<h6 id="优点-2">①优点</h6>
+<ul>
+<li>与csr很类似</li>
+<li>更适合于适用于具有密集子矩阵的稀疏矩阵</li>
+<li>在某些情况下比csr和csc计算更高效。</li>
+</ul>
+<h3 id="dok--dok_matrix">4. DOK- <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL2dlbmVyYXRlZC9zY2lweS5zcGFyc2UuZG9rX21hdHJpeC5odG1s">dok_matrix<i class="fa fa-external-link-alt"></i></span></h3>
+<h4 id="dictionary-of-keys-matrix-按键字典矩阵">Dictionary of Keys Matrix 按键字典矩阵</h4>
+<ul>
+<li>采用字典来记录矩阵中不为0的元素</li>
+<li>字典的 <code>key</code> 存的是记录元素的位置信息的元组， <code>value</code> 是记录元素的具体值</li>
+</ul>
+<h4 id="适用场景-2">适用场景</h4>
+<ul>
+<li>逐渐添加矩阵的元素</li>
+</ul>
+<h4 id="实例化方法-1">实例化方法</h4>
+<ul>
+<li><code>dok_matrix(D)</code>：D代表密集矩阵；</li>
+<li><code>dok_matrix(S)</code>：S代表其他类型稀疏矩阵</li>
+<li><code>dok_matrix((M, N), [dtype])</code>：构建一个shape为M*N的空矩阵，默认数据类型是<code>d</code>，</li>
+</ul>
+<h4 id="优缺点-4">优缺点</h4>
+<h5 id="优点-3">①优点</h5>
+<ul>
+<li>对于递增的构建稀疏矩阵很高效，比如定义该矩阵后，想进行每行每列更新值，可用该矩阵。</li>
+<li>可以高效访问单个元素，只需要O(1)</li>
+</ul>
+<h5 id="缺点-2">②缺点</h5>
+<ul>
+<li>不允许重复索引（coo中适用），但可以很高效的转换成coo后进行重复索引</li>
+</ul>
+<h4 id="代码示例-2">代码示例</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">dok = sparse.dok_matrix((<span class="number">5</span>, <span class="number">5</span>), dtype=np.float32)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">        dok[i,j] = i+j    <span class="comment"># 更新元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># zero elements are accessible</span></span><br><span class="line">dok[(<span class="number">0</span>, <span class="number">0</span>)]  <span class="comment"># = 0</span></span><br><span class="line"></span><br><span class="line">dok.keys()</span><br><span class="line"><span class="comment"># &#123;(0, 0), ..., (4, 4)&#125;</span></span><br><span class="line"></span><br><span class="line">dok.toarray()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[0. 1. 2. 3. 4.]</span></span><br><span class="line"><span class="string"> [1. 2. 3. 4. 5.]</span></span><br><span class="line"><span class="string"> [2. 3. 4. 5. 6.]</span></span><br><span class="line"><span class="string"> [3. 4. 5. 6. 7.]</span></span><br><span class="line"><span class="string"> [4. 5. 6. 7. 8.]]</span></span><br><span class="line"><span class="string"> &#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="lil---lil_matrix">5. LIL - <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL2dlbmVyYXRlZC9zY2lweS5zcGFyc2UubGlsX21hdHJpeC5odG1s">lil_matrix<i class="fa fa-external-link-alt"></i></span></h3>
+<p>Linked List Matrix 链表矩阵</p>
+<ul>
+<li>使用两个列表存储非0元素data</li>
+<li>rows保存非零元素所在的列</li>
+<li>可以使用列表赋值来添加元素，如 <code>lil[(0, 0)] = 8</code> </li>
+</ul>
+<p><img data-src="/resource/images/da-scipy-sparse-lil.gif" /></p>
+<ul>
+<li><code>lil[(0, -1)] = 4</code> ：第0行的最后一列元素为4</li>
+<li><code>lil[(4, 2)] = 5</code> ：第4行第2列的元素为5</li>
+</ul>
+<h4 id="适用场景-3">适用场景</h4>
+<ul>
+<li>适用的场景是逐渐添加矩阵的元素（且能快速获取行相关的数据）</li>
+<li>需要注意的是，该方法插入一个元素最坏情况下可能导致线性时间的代价，所以要确保对每个元素的索引进行预排序</li>
+</ul>
+<h4 id="优缺点-5">优缺点</h4>
+<h5 id="优点-4">①优点</h5>
+<ul>
+<li>适合递增的构建成矩阵</li>
+<li>转换成其它存储方式很高效</li>
+<li>支持灵活的切片</li>
+</ul>
+<h5 id="缺点-3">②缺点</h5>
+<ul>
+<li>当矩阵很大时，考虑用coo</li>
+<li>算术操作，列切片，矩阵向量内积操作慢</li>
+</ul>
+<h4 id="实例化方法-2">实例化方法</h4>
+<ul>
+<li><code>lil_matrix(D)</code>：D代表密集矩阵；</li>
+<li><code>lil_matrix(S)</code>：S代表其他类型稀疏矩阵</li>
+<li><code>lil_matrix((M, N), [dtype])</code>：构建一个shape为M*N的空矩阵，默认数据类型是<code>d</code></li>
+</ul>
+<h4 id="特殊属性-4">特殊属性</h4>
+<ul>
+<li><strong><code>data</code></strong>：存储矩阵中的非零数据</li>
+<li><strong><code>rows</code></strong>：存储每个非零元素所在的列（行信息为列表中索引所表示）</li>
+</ul>
+<h4 id="代码示例-3">代码示例</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建矩阵</span></span><br><span class="line">lil = sparse.lil_matrix((<span class="number">6</span>, <span class="number">5</span>), dtype=int)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置数值</span></span><br><span class="line"><span class="comment"># set individual point</span></span><br><span class="line">lil[(<span class="number">0</span>, <span class="number">-1</span>)] = <span class="number">-1</span></span><br><span class="line"><span class="comment"># set two points</span></span><br><span class="line">lil[<span class="number">3</span>, (<span class="number">0</span>, <span class="number">4</span>)] = [<span class="number">-2</span>] * <span class="number">2</span></span><br><span class="line"><span class="comment"># set main diagonal</span></span><br><span class="line">lil.setdiag(<span class="number">8</span>, k=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># set entire column</span></span><br><span class="line">lil[:, <span class="number">2</span>] = np.arange(lil.shape[<span class="number">0</span>]).reshape(<span class="number">-1</span>, <span class="number">1</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为array</span></span><br><span class="line">lil.toarray()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[ 8,  0,  1,  0, -1],</span></span><br><span class="line"><span class="string">       [ 0,  8,  2,  0,  0],</span></span><br><span class="line"><span class="string">       [ 0,  0,  3,  0,  0],</span></span><br><span class="line"><span class="string">       [-2,  0,  4,  8, -2],</span></span><br><span class="line"><span class="string">       [ 0,  0,  5,  0,  8],</span></span><br><span class="line"><span class="string">       [ 0,  0,  6,  0,  0]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看数据</span></span><br><span class="line">lil.data</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([list([0, 2, 4]), list([1, 2]), list([2]), list([0, 2, 3, 4]),</span></span><br><span class="line"><span class="string">       list([2, 4]), list([2])], dtype=object)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">lil.rows</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[list([8, 1, -1])],</span></span><br><span class="line"><span class="string">       [list([8, 2])],</span></span><br><span class="line"><span class="string">       [list([3])],</span></span><br><span class="line"><span class="string">       [list([-2, 4, 8, -2])],</span></span><br><span class="line"><span class="string">       [list([5, 8])],</span></span><br><span class="line"><span class="string">       [list([6])]], dtype=object)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="dia---dia_matrix">6. DIA - <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL2dlbmVyYXRlZC9zY2lweS5zcGFyc2UuZGlhX21hdHJpeC5odG1s">dia_matrix<i class="fa fa-external-link-alt"></i></span></h3>
+<p>Diagonal Matrix 对角存储格式</p>
+<ul>
+<li>最适合对角矩阵的存储方式</li>
+<li>dia_matrix通过两个数组确定： <code>data</code> 和 <code>offsets</code> 
+<ul>
+<li><code>data</code> ：对角线元素的值</li>
+<li><code>offsets</code> ：第 <code>i</code> 个 <code>offsets</code> 是当前第 <code>i</code> 个对角线和主对角线的距离</li>
+<li><code>data[k:]</code> 存储了 <code>offsets[k]</code> 对应的对角线的全部元素</li>
+</ul></li>
+</ul>
+<p><img data-src="/resource/images/da-scipy-sparse-dia.gif" /></p>
+<ul>
+<li>当 <code>offsets[0] = 0</code> 时，表示该对角线即是主对角线，相应的值为 <code>[1, 2, 3, 4, 5]</code> </li>
+<li>当 <code>offsets[2] = 2</code> 时，表示该对角线为主对角线向上偏移2个单位，相应的值为 <code>[11, 12, 13, 14, 15]</code>
+<ul>
+<li>但该对角线上元素仅有三个 ，于是采用先出现的元素无效的原则</li>
+<li>即前两个元素对构造矩阵无效，故该对角线上的元素为 <code>[13, 14, 15]</code> </li>
+</ul></li>
+</ul>
+<h4 id="实例化方法-3">实例化方法</h4>
+<ul>
+<li><code>dia_matrix(D)</code>：D代表密集矩阵；</li>
+<li><code>dia_matrix(S)</code>：S代表其他类型稀疏矩阵</li>
+<li><code>dia_matrix((M, N), [dtype])</code>：构建一个shape为M*N的空矩阵，默认数据类型是<code>d</code>，</li>
+<li><code>dia_matrix((data, offsets)), [shape=(M, N)]))</code>：
+<ul>
+<li><code>data[k,:]</code> 存储着对角偏移量为 <code>offset[k]</code> 的对角值</li>
+</ul></li>
+</ul>
+<h4 id="特殊属性-5">特殊属性</h4>
+<ul>
+<li><code>data</code>：存储DIA对角值的数组</li>
+<li><code>offsets</code>：存储DIA对角偏移量的数组</li>
+</ul>
+<h4 id="代码示例-4">代码示例</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成数据</span></span><br><span class="line">data = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]])</span><br><span class="line">offsets = np.array([<span class="number">0</span>, <span class="number">-2</span>, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建矩阵</span></span><br><span class="line">dia = sparse.dia_matrix((data, offsets), shape=(<span class="number">4</span>, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看数据</span></span><br><span class="line"><span class="comment"># replace cutoff data</span></span><br><span class="line">dia.data.ravel()[<span class="number">9</span>:<span class="number">12</span>] = <span class="number">0</span></span><br><span class="line">dia.data</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[ 1,  2,  3,  4,  5],</span></span><br><span class="line"><span class="string">       [ 6,  7,  8,  9,  0],</span></span><br><span class="line"><span class="string">       [ 0,  0, 13, 14, 15]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为array</span></span><br><span class="line">dia.toarray()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[1, 7, 0, 0],</span></span><br><span class="line"><span class="string">       [0, 2, 8, 0],</span></span><br><span class="line"><span class="string">       [5, 0, 3, 9],</span></span><br><span class="line"><span class="string">       [0, 6, 0, 4]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="矩阵格式对比">矩阵格式对比</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;"><strong>COO</strong></th>
+<th style="text-align: left;"><strong>DOK</strong></th>
+<th style="text-align: left;"><strong>LIL</strong></th>
+<th style="text-align: left;"><strong>CSR</strong></th>
+<th style="text-align: left;"><strong>CSC</strong></th>
+<th style="text-align: left;"><strong>BSR</strong></th>
+<th style="text-align: left;"><strong>DIA</strong></th>
+<th style="text-align: left;"><strong>Dense</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>indexing</strong></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no†</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>“write-only”</strong></td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>“read-only”</strong></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>low memory‡</strong></td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>PyData sparse</strong></td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="稀疏矩阵存取">稀疏矩阵存取</h2>
+<h3 id="存储---save_npz">存储 - <code>save_npz</code></h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scipy.sparse.save_npz(<span class="string">&#x27;sparse_matrix.npz&#x27;</span>, sparse_matrix)</span><br><span class="line">sparse_matrix = scipy.sparse.load_npz(<span class="string">&#x27;sparse_matrix.npz&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="读取---load_npz">读取 - <code>load_npz</code></h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从npz文件中读取</span></span><br><span class="line">test_x = sparse.load_npz(<span class="string">&#x27;./data/npz/test_x.npz&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="存储大小比较">存储大小比较</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">100000</span>).reshape(<span class="number">1000</span>,<span class="number">100</span>)</span><br><span class="line">a[<span class="number">10</span>: <span class="number">300</span>] = <span class="number">0</span></span><br><span class="line">b = sparse.csr_matrix(a)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 稀疏矩阵压缩存储到npz文件</span></span><br><span class="line">sparse.save_npz(<span class="string">&#x27;b_compressed.npz&#x27;</span>, b, <span class="literal">True</span>)  <span class="comment"># 文件大小：100KB</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 稀疏矩阵不压缩存储到npz文件</span></span><br><span class="line">sparse.save_npz(<span class="string">&#x27;b_uncompressed.npz&#x27;</span>, b, <span class="literal">False</span>)  <span class="comment"># 文件大小：560KB</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 存储到普通的npy文件</span></span><br><span class="line">np.save(<span class="string">&#x27;a.npy&#x27;</span>, a)  <span class="comment"># 文件大小：391KB</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 存储到压缩的npz文件</span></span><br><span class="line">np.savez_compressed(<span class="string">&#x27;a_compressed.npz&#x27;</span>, a=a)  <span class="comment"># 文件大小：97KB• 1</span></span><br></pre></td></tr></table></figure>
+<p>对于存储到npz文件中的CSR格式的稀疏矩阵，内容为：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data.npy</span><br><span class="line">format.npy</span><br><span class="line">indices.npy</span><br><span class="line">indptr.npy</span><br><span class="line">shape.npy</span><br></pre></td></tr></table></figure>
+<h2 id="参考">参考</h2>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL3NwYXJzZS5odG1s">Sparse matrices (scipy.sparse)<i class="fa fa-external-link-alt"></i></span><br />
+<span class="exturl" data-url="aHR0cHM6Ly9tYXR0ZWRpbmcuZ2l0aHViLmlvLzIwMTkvMDQvMjUvc3BhcnNlLW1hdHJpY2VzLw==">Sparse Matrices<i class="fa fa-external-link-alt"></i></span><br />
+<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dpbnljZy9hcnRpY2xlL2RldGFpbHMvODA5NjcxMTI=">python稀疏矩阵的存储与表示<i class="fa fa-external-link-alt"></i></span><br />
+<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2plZmZlcnkwMjA3L2FydGljbGUvZGV0YWlscy8xMDAwNjQ2MDI=">python scipy 稀疏矩阵详解<i class="fa fa-external-link-alt"></i></span><br />
+<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpcGlzb3JyeS9hcnRpY2xlL2RldGFpbHMvNDE3NjI5NDU=">SciPy教程 - 稀疏矩阵库scipy.sparse<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2019\08\22\DA - 数据分析\da-introduction\" rel="bookmark">数据分析知识体系</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2019\08\19\DA - 数据分析\da-numpy\" rel="bookmark">【NumPy】入门</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\08\14\PL - 编程语言\pl-python-with\" rel="bookmark">【Python】with语句原理</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2019\01\11\PL - 编程语言\pl-python-fundamental-syntax\" rel="bookmark">【Python】基础语法总结</a></div>
+    </li>
+  </ul>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Gemini向光性
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.geminilight.cn/2020/08/18/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-scipy-sparse/" title="【SciPy】Sparse稀疏矩阵主要存储格式总结">https://www.geminilight.cn/2020/08/18/DA - 数据分析/da-scipy-sparse/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"># 数据分析</a>
+              <a href="/tags/SciPy/" rel="tag"># SciPy</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/" rel="prev" title="【PPT设计】大一大二时期个人PPT设计风格总结">
+                  <i class="fa fa-chevron-left"></i> 【PPT设计】大一大二时期个人PPT设计风格总结
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+      
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GeminiLight</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">28k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">51 分钟</span>
+</div>
+
+      
+
+
+
+
+
+
+
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      const script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ec28f6e4cd300bb646a0',
+      clientSecret: 'c110fe37a840a4133f1470ed107de921584bf2fa',
+      repo        : 'gitment-of-blog',
+      owner       : 'GeminiLight',
+      admin       : ['GeminiLight'],
+      id          : 'd2d21272a1a16cfc82088a675a0d6b65',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
+
+
+<script async type="text/javascript" src="/js/custom/linkcard.js"></script>
+
+
+
+  <script async type="text/javascript" src="/js/custom/cursor-firework.js"></script>
+
