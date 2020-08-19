@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.geminilight.cn/2020/08/19/CN%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/cn-vne/</loc>
+    
+    <lastmod>2020-08-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.geminilight.cn/2020/08/18/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-scipy-sparse/</loc>
     
     <lastmod>2020-08-19</lastmod>
@@ -360,6 +367,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://www.geminilight.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2020-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -406,6 +420,13 @@
   
   <url>
     <loc>https://www.geminilight.cn/categories/ST-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/categories/CN-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2020-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
