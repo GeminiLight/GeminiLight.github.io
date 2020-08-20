@@ -295,7 +295,7 @@
   </entry>
   <entry>
     <title>【论文精读】VNF placement optimization with DLR</title>
-    <url>/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vnf-placement-optimization-drl%20/</url>
+    <url>/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vnf-placement-optimization-drl/</url>
     <content><![CDATA[<p>本篇论文对资源消耗成本最小化的强化学习Policy Gradient算法，结合Seq2Seq模型，提出了一种虚拟网络服务放置的优化算法。 <a id="more"></a></p>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Virtual Network Function placement optimization with Deep Reinforcement Learning<br />
