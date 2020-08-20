@@ -220,6 +220,123 @@
       </tags>
   </entry>
   <entry>
+    <title>【论文精读】VNF placement optimization with DLR</title>
+    <url>/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vnf-placement-optimization-drl/</url>
+    <content><![CDATA[<p>本篇论文对资源消耗成本最小化的强化学习Policy Gradient算法，结合Seq2Seq模型，提出了一种虚拟网络服务放置的优化算法。 <a id="more"></a></p>
+<h2 id="论文简介">论文简介</h2>
+<p><strong>论文名称</strong>：Virtual Network Function placement optimization with Deep Reinforcement Learning<br />
+<strong>论文作者</strong>：Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal<br />
+<strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br />
+<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
+<strong>关键技术</strong>：NFV 网络功能虚拟化, RL 强化学习, Seq2Seq<br />
+<strong>主要创新</strong>：以最小化资源消耗为目标，并用策略梯度算法结合Seq2Seq来搭建模型 <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5NDUyOTE=">论文地址<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="问题定义">问题定义</h2>
+<h3 id="专业词汇">专业词汇</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">缩写</th>
+<th>描述</th>
+<th>全名</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">NFV</td>
+<td>网络功能虚拟化</td>
+<td>Network Function Virtualization</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">VNF</td>
+<td>虚拟网络请求</td>
+<td>Virtual Network Functions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">NS</td>
+<td>网络服务</td>
+<td>Network Service</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">VNF-FGE</td>
+<td>VNF正向图嵌入问题</td>
+<td>VNF Forward Graph Embedding problem</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vnf-fge">VNF-FGE</h3>
+<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-1.webp" /></p>
+<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-2.webp" /></p>
+<p>对于一组网络服务，</p>
+<ul>
+<li>它必须被最优地被放置在一组主机服务器上，即 <span class="math inline">\(h \in H\)</span></li>
+<li>满足主机服务器在计算、存储链路容量等方面的现在，即 <span class="math inline">\(s \in S\)</span></li>
+</ul>
+<p>问题目的：最小化对底层资源的消耗</p>
+<p><span class="math inline">\(H = \{ h_1, h_2, \dots, h_n \}\)</span> 主机服务器<br />
+<span class="math inline">\(V\)</span> 可用的VNF<br />
+<span class="math inline">\(m \in \{1, \dots, M\}\)</span> 一系列VNF组成的网络服务 <span class="math inline">\(s \in \{f_1, f_2, \dots, f_m \}\)</span> ，且<span class="math inline">\(f \in M\)</span> 一条服务链<br />
+<span class="math inline">\(S\)</span> 所有的服务链组合</p>
+<p><span class="math inline">\(x \in \{0, 1\}^{m\times n}\)</span></p>
+<ul>
+<li><span class="math inline">\(x_{fh}\)</span> 表示功能 <span class="math inline">\(f \in V\)</span> 是否被放置在主机 <span class="math inline">\(h \in H\)</span> 中（1放置，0未放置）</li>
+</ul>
+<p>动作搜索路径：<span class="math inline">\(\Omega = \{0,1\}^{m \times n}\)</span> s.t. <span class="math inline">\(\left.\sum_{h} x_{f h}=1 \forall f \in s\right\}\)</span></p>
+<ul>
+<li>对于一条服务链，它只能放置在一个主机一次</li>
+</ul>
+<p>辅助变量</p>
+<ul>
+<li><span class="math inline">\(y_h \in \{0,1\}\)</span>：服务器激活变量。1代表服务器正在执行VNF，0反之</li>
+<li><span class="math inline">\(g_i \in \{0,1\}\)</span>：链路激活变量。1代表链路正在承载流量，0反之</li>
+</ul>
+<p>功耗相关</p>
+<ul>
+<li>服务器主机功耗 <span class="math inline">\(W_h^{cpu}\)</span>
+<ul>
+<li>激活运行时（<span class="math inline">\(y_h = 1\)</span>）的最低功耗为 <span class="math inline">\(W_h^{min}\)</span></li>
+<li>功耗随着VNF的CPU需求总和而增加（线性增长）</li>
+</ul></li>
+<li>链路消耗 <span class="math inline">\(W_{net}\)</span>
+<ul>
+<li>带宽利用量 x 单位成本</li>
+</ul></li>
+</ul>
+<p>可用资源 <span class="math inline">\(r \in R\)</span></p>
+<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-3.webp" /></p>
+<h2 id="算法模型">算法模型</h2>
+<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-4.webp" /></p>
+<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-5.webp" /></p>
+<h2 id="性能评估">性能评估</h2>
+<h3 id="设计实验">设计实验</h3>
+<h3 id="对比算法">对比算法</h3>
+<h3 id="评估指标">评估指标</h3>
+<h2 id="主要创新">主要创新</h2>
+<ul>
+<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
+<li>并行的策略梯度训练方法</li>
+<li>多指标的奖励函数</li>
+</ul>
+<h2 id="总结思考">总结思考</h2>
+<ul>
+<li>GCN较CNN可以更好地提取非欧数据的特征</li>
+<li>A3C算法较其他RL算法性能表现更佳</li>
+<li>并行的梯度训练策略更适应于实际场景</li>
+<li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
+<li>在模型评估部分，实验的设计比较完善</li>
+</ul>
+]]></content>
+      <categories>
+        <category>RP - 科研论文</category>
+      </categories>
+      <tags>
+        <tag>论文精读</tag>
+        <tag>VNE</tag>
+        <tag>强化学习</tag>
+        <tag>GNN</tag>
+        <tag>GCN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【数据结构】数组和字符串</title>
     <url>/2020/08/20/AD%20-%20%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1/ad-array-and-string/</url>
     <content><![CDATA[<p>数据结构之数组和字符串</p>
@@ -291,123 +408,6 @@
       <tags>
         <tag>VNE</tag>
         <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【论文精读】VNF placement optimization with DLR</title>
-    <url>/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vnf-placement-optimization-drl/</url>
-    <content><![CDATA[<p>本篇论文对资源消耗成本最小化的强化学习Policy Gradient算法，结合Seq2Seq模型，提出了一种虚拟网络服务放置的优化算法。 <a id="more"></a></p>
-<h2 id="论文简介">论文简介</h2>
-<p><strong>论文名称</strong>：Virtual Network Function placement optimization with Deep Reinforcement Learning<br />
-<strong>论文作者</strong>：Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal<br />
-<strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br />
-<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
-<strong>关键技术</strong>：NFV 网络功能虚拟化, RL 强化学习, Seq2Seq<br />
-<strong>主要创新</strong>：以最小化资源消耗为目标，并用策略梯度算法结合Seq2Seq来搭建模型 <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5NDUyOTE=">论文地址<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="问题定义">问题定义</h2>
-<h3 id="专业词汇">专业词汇</h3>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">缩写</th>
-<th>描述</th>
-<th>全名</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">NFV</td>
-<td>网络功能虚拟化</td>
-<td>Network Function Virtualization</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">VNF</td>
-<td>虚拟网络请求</td>
-<td>Virtual Network Functions</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">NS</td>
-<td>网络服务</td>
-<td>Network Service</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">VNF-FGE</td>
-<td>VNF正向图嵌入问题</td>
-<td>VNF Forward Graph Embedding problem</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vnf-fge">VNF-FGE</h3>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-1.wepb" /></p>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-2.wepb" /></p>
-<p>对于一组网络服务，</p>
-<ul>
-<li>它必须被最优地被放置在一组主机服务器上，即 <span class="math inline">\(h \in H\)</span></li>
-<li>满足主机服务器在计算、存储链路容量等方面的现在，即 <span class="math inline">\(s \in S\)</span></li>
-</ul>
-<p>问题目的：最小化对底层资源的消耗</p>
-<p><span class="math inline">\(H = \{ h_1, h_2, \dots, h_n \}\)</span> 主机服务器<br />
-<span class="math inline">\(V\)</span> 可用的VNF<br />
-<span class="math inline">\(m \in \{1, \dots, M\}\)</span> 一系列VNF组成的网络服务 <span class="math inline">\(s \in \{f_1, f_2, \dots, f_m \}\)</span> ，且<span class="math inline">\(f \in M\)</span> 一条服务链<br />
-<span class="math inline">\(S\)</span> 所有的服务链组合</p>
-<p><span class="math inline">\(x \in \{0, 1\}^{m\times n}\)</span></p>
-<ul>
-<li><span class="math inline">\(x_{fh}\)</span> 表示功能 <span class="math inline">\(f \in V\)</span> 是否被放置在主机 <span class="math inline">\(h \in H\)</span> 中（1放置，0未放置）</li>
-</ul>
-<p>动作搜索路径：<span class="math inline">\(\Omega = \{0,1\}^{m \times n}\)</span> s.t. <span class="math inline">\(\left.\sum_{h} x_{f h}=1 \forall f \in s\right\}\)</span></p>
-<ul>
-<li>对于一条服务链，它只能放置在一个主机一次</li>
-</ul>
-<p>辅助变量</p>
-<ul>
-<li><span class="math inline">\(y_h \in \{0,1\}\)</span>：服务器激活变量。1代表服务器正在执行VNF，0反之</li>
-<li><span class="math inline">\(g_i \in \{0,1\}\)</span>：链路激活变量。1代表链路正在承载流量，0反之</li>
-</ul>
-<p>功耗相关</p>
-<ul>
-<li>服务器主机功耗 <span class="math inline">\(W_h^{cpu}\)</span>
-<ul>
-<li>激活运行时（<span class="math inline">\(y_h = 1\)</span>）的最低功耗为 <span class="math inline">\(W_h^{min}\)</span></li>
-<li>功耗随着VNF的CPU需求总和而增加（线性增长）</li>
-</ul></li>
-<li>链路消耗 <span class="math inline">\(W_{net}\)</span>
-<ul>
-<li>带宽利用量 x 单位成本</li>
-</ul></li>
-</ul>
-<p>可用资源 <span class="math inline">\(r \in R\)</span></p>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-3.wepb" /></p>
-<h2 id="算法模型">算法模型</h2>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-4.wepb" /></p>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-5.wepb" /></p>
-<h2 id="性能评估">性能评估</h2>
-<h3 id="设计实验">设计实验</h3>
-<h3 id="对比算法">对比算法</h3>
-<h3 id="评估指标">评估指标</h3>
-<h2 id="主要创新">主要创新</h2>
-<ul>
-<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
-<li>并行的策略梯度训练方法</li>
-<li>多指标的奖励函数</li>
-</ul>
-<h2 id="总结思考">总结思考</h2>
-<ul>
-<li>GCN较CNN可以更好地提取非欧数据的特征</li>
-<li>A3C算法较其他RL算法性能表现更佳</li>
-<li>并行的梯度训练策略更适应于实际场景</li>
-<li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
-<li>在模型评估部分，实验的设计比较完善</li>
-</ul>
-]]></content>
-      <categories>
-        <category>RP - 科研论文</category>
-      </categories>
-      <tags>
-        <tag>论文精读</tag>
-        <tag>VNE</tag>
-        <tag>强化学习</tag>
-        <tag>GNN</tag>
-        <tag>GCN</tag>
       </tags>
   </entry>
   <entry>
