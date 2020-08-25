@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://www.geminilight.cn/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-introduction/</loc>
+    
+    <lastmod>2020-08-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.geminilight.cn/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/start-my-blog/</loc>
     
     <lastmod>2020-08-25</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://www.geminilight.cn/2020/03/21/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-zju-professor-chenwei-date-visonlization/</loc>
     
     <lastmod>2020-08-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/dl-introduction/</loc>
-    
-    <lastmod>2020-08-17</lastmod>
     
   </url>
   
@@ -398,13 +398,6 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/categories/DL-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2020-08-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.geminilight.cn/categories/GD-%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2020-08-25</lastmod>
     <changefreq>daily</changefreq>
@@ -441,6 +434,13 @@
   
   <url>
     <loc>https://www.geminilight.cn/categories/CN-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2020-08-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/categories/ML-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

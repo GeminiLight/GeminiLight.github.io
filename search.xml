@@ -222,10 +222,17 @@
   <entry>
     <title>【随笔】为什么重启博客——记假期生活</title>
     <url>/2020/08/25/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/why-restart-my-blog/</url>
-    <content><![CDATA[<p>谈一谈自己这个暑假的收获和对博客的一些新认识</p>
-<!--  -->
-<p>日历翻至八月，空气日渐升温。在这个特殊的年份，暑假的宿舍只余下我一人——这也是我自出生以来，第一次独自在远离家乡的“专属”空间中“自由”生活。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+    <div id="aplayer-UcoVVclo" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="000ycaRl2V0Ojm" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
+    ></div>
+<p>日历翻至八月，空气日渐升温。在这个特殊的年份，暑假的宿舍只余下我一人——这也是我第一次独自在远离家乡的“专属”空间中“自由”生活。</p>
+<a id="more"></a>
+<h2 id="始">始</h2>
 <p>新颖的事物总能在最初的时刻吸引好奇的目光，但即便它再精致华丽，也大都因日久生乏味而迎来退散的人潮。最后一位舍友拉着行李走出了宿舍，作为初试者的自己也如全然不知接下来的40天会有怎样的故事来填充生活，只是想到可以体验“真正”的成年人的生活就满心欢喜。机械键盘随意地敲出节奏，音响外放着喜欢的音乐，灯光只按自己的时间表作息。宿舍的整个空间都飘满了自由，我身处其中，随性而活。生活循环往复，曾以为的趣事给予多巴胺也似乎在线性消淡。思维总爱东奔西跑，它也开始忧心自己未来的生活是否也是这样“无趣”。</p>
+<p>惊慌把储蓄数天的存乐罐打翻，忧虑把原本红色的神经染成蓝色，难道始终有趣事物只是海市蜃楼般存在吗？</p>
+<h2 id="思">思</h2>
+<h2 id="行">行</h2>
 ]]></content>
       <categories>
         <category>MY - 感悟随笔</category>
@@ -1496,8 +1503,8 @@
   </entry>
   <entry>
     <title>深度学习知识体系</title>
-    <url>/2019/08/22/DL%20-%20%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
-    <content><![CDATA[<p>深度学习</p>
+    <url>/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>深度学习</p>
 <a id="more"></a>
 <h3 id="基础网络">基础网络</h3>
 <ul>
@@ -1520,7 +1527,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>DL - 深度学习</category>
+        <category>ML - 机器学习</category>
       </categories>
       <tags>
         <tag>深度学习</tag>
