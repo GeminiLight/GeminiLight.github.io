@@ -3154,6 +3154,21 @@ mjx-container[display="true"] + br {
     margin: 8px 0 0;
   }
 }
+.heading-anchor {
+  display: none;
+  margin-left: 7px;
+}
+.heading-anchor:before {
+  content: '#';
+}
+.heading-control:hover .heading-anchor {
+  display: inline-block;
+}
+a.heading-anchor {
+  color: #0e83cd;
+  line-height: 0;
+  border-bottom: none;
+}
 .hobits-label {
   height: 30px;
   line-height: 30px;
@@ -3314,79 +3329,6 @@ mjx-container[display="true"] + br {
 }
 figcaption {
   text-align: center;
-}
-.post-body {
-  counter-reset: h2;
-}
-.post-body h1 {
-  counter-reset: h2;
-}
-.post-body h2 {
-  counter-reset: h3;
-}
-.post-body h3 {
-  counter-reset: h4;
-}
-.post-body h4 {
-  counter-reset: h5;
-}
-.post-body h5 {
-  counter-reset: h6;
-}
-.post-body h2:before {
-  counter-increment: h2;
-  content: counter(h2) '. ';
-}
-.post-body h3:before {
-  counter-increment: h3;
-  content: counter(h2) '.' counter(h3) '. ';
-}
-.post-body h4:before {
-  counter-increment: h4;
-  content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
-}
-.post-body h5:before {
-  counter-increment: h5;
-  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
-}
-.post-body h6:before {
-  counter-increment: h6;
-  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
-}
-.nav .nav-item.nav-level-1 {
-  counter-reset: h2;
-}
-.nav .nav-item.nav-level-2 {
-  counter-reset: h3;
-}
-.nav .nav-item.nav-level-3 {
-  counter-reset: h4;
-}
-.nav .nav-item.nav-level-4 {
-  counter-reset: h5;
-}
-.nav .nav-item.nav-level-5 {
-  counter-reset: h6;
-}
-.nav .nav-item.nav-level-1 ol .nav-item.nav-level-2 a span:before {
-  counter-increment: h2;
-  content: counter(h2) '. ';
-}
-.nav .nav-item.nav-level-2 ol .nav-item.nav-level-3 a span:before {
-  counter-increment: h3;
-  content: counter(h2) '.' counter(h3) '. ';
-}
-.nav .nav-item.nav-level-3 ol .nav-item.nav-level-4 a span:before {
-  counter-increment: h4;
-  content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
-}
-.nav .nav-item.nav-level-4 ol .nav-item.nav-level-5 a span:before {
-  counter-increment: h5;
-  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
-}
-.nav .nav-item.nav-level-5 ol .nav-item.nav-level-6 a span:before {
-  counter-increment: h6;
-  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
 }
 .href {
   color: #87daff;

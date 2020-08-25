@@ -656,9 +656,9 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
+        <html><head></head><body><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
 <a id="more"></a>
-<h2><span id="01-论文简介">0.1. 论文简介</span></h2>
+<h2 class="heading-control"><span id="01-论文简介">0.1. 论文简介</span></h2>
 <p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br>
 <strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br>
 <strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br>
@@ -666,8 +666,8 @@ if(canvas.getContext){
 <strong>关键技术</strong>：虚拟网络嵌入, 强化学习, 图卷积神经网络<br>
 <strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br>
 <span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
-<h2><span id="02-问题定义">0.2. 问题定义</span></h2>
-<h3><span id="021-专业词汇">0.2.1. 专业词汇</span></h3>
+<h2 class="heading-control"><span id="02-问题定义">0.2. 问题定义</span></h2>
+<h3 class="heading-control"><span id="021-专业词汇">0.2.1. 专业词汇</span></h3>
 <table>
 <thead>
 <tr class="header">
@@ -704,22 +704,22 @@ if(canvas.getContext){
 </tr>
 </tbody>
 </table>
-<h3><span id="022-vne">0.2.2. VNE</span></h3>
-<h2><span id="03-算法模型">0.3. 算法模型</span></h2>
-<h3><span id="031-dl-a3c">0.3.1. DL-A3C</span></h3>
-<h3><span id="032-gcn">0.3.2. GCN</span></h3>
-<h3><span id="033-a3c-gcn">0.3.3. A3C + GCN</span></h3>
-<h4><span id="0331-环境-environment">0.3.3.1. 环境 Environment</span></h4>
-<h4><span id="0332-代理-agent">0.3.3.2. 代理 Agent</span></h4>
-<h4><span id="0333-状态-state">0.3.3.3. 状态 State</span></h4>
-<h4><span id="0334-动作-action">0.3.3.4. 动作 Action</span></h4>
-<h4><span id="0335-奖励-rewords">0.3.3.5. 奖励 Rewords</span></h4>
+<h3 class="heading-control"><span id="022-vne">0.2.2. VNE</span></h3>
+<h2 class="heading-control"><span id="03-算法模型">0.3. 算法模型</span></h2>
+<h3 class="heading-control"><span id="031-dl-a3c">0.3.1. DL-A3C</span></h3>
+<h3 class="heading-control"><span id="032-gcn">0.3.2. GCN</span></h3>
+<h3 class="heading-control"><span id="033-a3c-gcn">0.3.3. A3C + GCN</span></h3>
+<h4 class="heading-control"><span id="0331-环境-environment">0.3.3.1. 环境 Environment</span></h4>
+<h4 class="heading-control"><span id="0332-代理-agent">0.3.3.2. 代理 Agent</span></h4>
+<h4 class="heading-control"><span id="0333-状态-state">0.3.3.3. 状态 State</span></h4>
+<h4 class="heading-control"><span id="0334-动作-action">0.3.3.4. 动作 Action</span></h4>
+<h4 class="heading-control"><span id="0335-奖励-rewords">0.3.3.5. 奖励 Rewords</span></h4>
 <ul>
 <li>动作反馈 action feedback</li>
 </ul>
 <p><span class="math display">\[r_{a}=\left\{\begin{array}{cl}
-  100 \gamma_{a} &amp; a_{t} \text {is successful} \\
-  -100 \gamma_{a} &amp;  \text {otherwise}
+  100 \gamma_{a} & a_{t} \text {is successful} \\
+  -100 \gamma_{a} &  \text {otherwise}
 \end{array}\right.\]</span></p>
 <ul>
 <li>成本效益 cost-efficient</li>
@@ -733,13 +733,13 @@ if(canvas.getContext){
 <li>资格痕迹 eligibility trace</li>
 </ul>
 <p><span class="math display">\[e g b_{-}{trace}_{t}[i]=\left\{\begin{array}{cl}
-  \gamma_{e}\left(e g b_{-}{trace}_{t-1}[i]+1\right) &amp; i==a_{t} \\
-  \gamma_{e} {egb}_{-} {trace}_{t-1}[i] &amp; \text { otherwise }
+  \gamma_{e}\left(e g b_{-}{trace}_{t-1}[i]+1\right) & i==a_{t} \\
+  \gamma_{e} {egb}_{-} {trace}_{t-1}[i] & \text { otherwise }
 \end{array}\right.\]</span></p>
 <p>故最终对于动作<span class="math inline">\(a{t}\)</span>奖励函数（Reward Function）为</p>
 <p><span class="math display">\[Reward[a_{t}]=\frac{r_{a} r_{c} r_{s}}{e g b{-}trace[a_{t}]+\epsilon}\]</span></p>
-<h2><span id="04-性能评估">0.4. 性能评估</span></h2>
-<h3><span id="041-设计实验">0.4.1. 设计实验</span></h3>
+<h2 class="heading-control"><span id="04-性能评估">0.4. 性能评估</span></h2>
+<h3 class="heading-control"><span id="041-设计实验">0.4.1. 设计实验</span></h3>
 <ul>
 <li>底层网络拓扑
 <ul>
@@ -767,7 +767,7 @@ if(canvas.getContext){
 <li>该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR</li>
 </ul></li>
 </ul>
-<h3><span id="042-对比算法">0.4.2. 对比算法</span></h3>
+<h3 class="heading-control"><span id="042-对比算法">0.4.2. 对比算法</span></h3>
 <ul>
 <li>R-ViNE<br>
 使用基于确定的取整（rounding-based）的方法来获得与VNE问题对应的MIP的线性规划松弛（linear programming relaxation），以最小化VNR的成本</li>
@@ -781,13 +781,13 @@ if(canvas.getContext){
 一种节点排序算法，灵感来自与Google的PageRank算法</li>
 </ul>
 <p>它们基本覆盖了当前大部分算法的观点</p>
-<h3><span id="043-评估指标">0.4.3. 评估指标</span></h3>
-<h4><span id="0431-vnr-到达率测试">0.4.3.1. VNR 到达率测试</span></h4>
+<h3 class="heading-control"><span id="043-评估指标">0.4.3. 评估指标</span></h3>
+<h4 class="heading-control"><span id="0431-vnr-到达率测试">0.4.3.1. VNR 到达率测试</span></h4>
 <p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br>
 实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
 <p><img data-src="/resource/images/rp-vne-rl-gcn-1.png"></p>
 <p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
-<h4><span id="0432-资源请求测试">0.4.3.2. 资源请求测试</span></h4>
+<h4 class="heading-control"><span id="0432-资源请求测试">0.4.3.2. 资源请求测试</span></h4>
 <p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
 <ul>
 <li>计算密集型任务需要更多的节点资源（CPU）</li>
@@ -796,7 +796,7 @@ if(canvas.getContext){
 <p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
 <p><img data-src="/resource/images/rp-vne-rl-gcn-2.png"></p>
 <p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
-<h4><span id="0433-节点数量扩展性测试">0.4.3.3. 节点数量扩展性测试</span></h4>
+<h4 class="heading-control"><span id="0433-节点数量扩展性测试">0.4.3.3. 节点数量扩展性测试</span></h4>
 <p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br>
 实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
 <p><img data-src="/resource/images/rp-vne-rl-gcn-3.png"></p>
@@ -806,23 +806,23 @@ if(canvas.getContext){
 <li>因为每个VNR都必须作为一个整体成功地嵌入；一个更大的VNR意味着在嵌入的中间步骤中失败的机会更多；</li>
 <li>因为同一VNR中的两个虚拟节点不能共享一个特定的基板节点，单个VNR中的更多节点限制了候选动作空间</li>
 </ul>
-<h4><span id="0434-平均运行时间统计">0.4.3.4. 平均运行时间统计</span></h4>
+<h4 class="heading-control"><span id="0434-平均运行时间统计">0.4.3.4. 平均运行时间统计</span></h4>
 <p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
 <p><img data-src="/resource/images/rp-vne-rl-gcn-4.png"></p>
-<h3><span id="044-验证测试">0.4.4. 验证测试</span></h3>
+<h3 class="heading-control"><span id="044-验证测试">0.4.4. 验证测试</span></h3>
 <p>在相同条件下，与其他基于强化学习的VNE算法进行比较</p>
 <p><img data-src="/resource/images/rp-vne-rl-gcn-8.png"></p>
-<h4><span id="0441-训练效率及收敛性">0.4.4.1. 训练效率及收敛性</span></h4>
+<h4 class="heading-control"><span id="0441-训练效率及收敛性">0.4.4.1. 训练效率及收敛性</span></h4>
 <p>不同算法在相同实验条件下的训练效果对比，见下图(a)<br>
 实验结果：可以发现，在这组实验中，平均收益的优势要比接受率的明显<br>
 原因分析：当VNR的节点数量较少时，所有算法都可以有很好的表现；但当节点增多后，该算法可以带来更多的潜在收益（多指标的Reward）。</p>
-<h4><span id="0442-资源请求测试验证">0.4.4.2. 资源请求测试验证</span></h4>
+<h4 class="heading-control"><span id="0442-资源请求测试验证">0.4.4.2. 资源请求测试验证</span></h4>
 <p>在不同的资源请求情况下，对这些算法进行测试，见下图(b)</p>
 <p><img data-src="/resource/images/rp-vne-rl-gcn-5.png"></p>
 <p>实验结果：在不同数量的资源请求情况下，该算法的接受率均是最优的；此外，可以发现CNN的性能表现始终是最差的<br>
 原因分析：用GCN代替传统的CNN进行特征提取可以带来更好地性能。</p>
-<h3><span id="045-其他参数下模型的可行性研究">0.4.5. 其他参数下模型的可行性研究</span></h3>
-<h4><span id="0451-附加网络拓扑和参数">0.4.5.1. 附加网络拓扑和参数</span></h4>
+<h3 class="heading-control"><span id="045-其他参数下模型的可行性研究">0.4.5. 其他参数下模型的可行性研究</span></h3>
+<h4 class="heading-control"><span id="0451-附加网络拓扑和参数">0.4.5.1. 附加网络拓扑和参数</span></h4>
 <p>CSTNET：中国网络运营商，见下图(a)</p>
 <ul>
 <li>红色边为100Gb带宽的链路</li>
@@ -839,7 +839,7 @@ if(canvas.getContext){
 </ul>
 <p><img data-src="/resource/images/rp-vne-rl-gcn-6.png"></p>
 <p>实验结果：A3C+GCN 模型的延迟更少</p>
-<h4><span id="0452-其他指标">0.4.5.2. 其他指标</span></h4>
+<h4 class="heading-control"><span id="0452-其他指标">0.4.5.2. 其他指标</span></h4>
 <ul>
 <li>节点资源利用率：VNRs使用的节点基板资源量/资源总量</li>
 <li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
@@ -847,13 +847,13 @@ if(canvas.getContext){
 <p>实验设计：同平均到达率测试</p>
 <p><img data-src="/resource/images/rp-vne-rl-gcn-7.png"></p>
 <p>实验结果：A3C+GCN算法的这两项指标均为最佳</p>
-<h2><span id="05-主要创新">0.5. 主要创新</span></h2>
+<h2 class="heading-control"><span id="05-主要创新">0.5. 主要创新</span></h2>
 <ul>
 <li>基于RL+GCN的自动虚拟网络嵌入算法</li>
 <li>并行的策略梯度训练方法</li>
 <li>多指标的奖励函数</li>
 </ul>
-<h2><span id="06-总结思考">0.6. 总结思考</span></h2>
+<h2 class="heading-control"><span id="06-总结思考">0.6. 总结思考</span></h2>
 <ul>
 <li>GCN较CNN可以更好地提取非欧数据的特征</li>
 <li>A3C算法较其他RL算法性能表现更佳</li>
@@ -861,7 +861,7 @@ if(canvas.getContext){
 <li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
 <li>在模型评估部分，实验的设计比较完善</li>
 </ul>
-
+</body></html>
     </div>
 
     
