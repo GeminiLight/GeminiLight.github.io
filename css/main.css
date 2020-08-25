@@ -3154,21 +3154,6 @@ mjx-container[display="true"] + br {
     margin: 8px 0 0;
   }
 }
-.heading-anchor {
-  display: none;
-  margin-left: 7px;
-}
-.heading-anchor:before {
-  content: '#';
-}
-.heading-control:hover .heading-anchor {
-  display: inline-block;
-}
-a.heading-anchor {
-  color: #0e83cd;
-  line-height: 0;
-  border-bottom: none;
-}
 .hobits-label {
   height: 30px;
   line-height: 30px;
