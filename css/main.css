@@ -3315,6 +3315,24 @@ mjx-container[display="true"] + br {
 figcaption {
   text-align: center;
 }
+.post-body {
+  counter-reset: h2;
+}
+.post-body h1 {
+  counter-reset: h2;
+}
+.post-body h2 {
+  counter-reset: h3;
+}
+.post-body h3 {
+  counter-reset: h4;
+}
+.post-body h4 {
+  counter-reset: h5;
+}
+.post-body h5 {
+  counter-reset: h6;
+}
 .post-body h2:before {
   counter-increment: h2;
   content: counter(h2) '. ';
