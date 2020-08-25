@@ -1,225 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
-    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。 <a id="more"></a></p>
-<h2 id="论文简介">论文简介</h2>
-<p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
-<strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
-<strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br />
-<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
-<strong>关键技术</strong>：虚拟网络嵌入, 强化学习, 图卷积神经网络<br />
-<strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
-<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="问题定义">问题定义</h2>
-<h3 id="专业词汇">专业词汇</h3>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">缩写</th>
-<th>描述</th>
-<th>全名</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">VNE</td>
-<td>虚拟网络嵌入</td>
-<td>Virtual Network Embedding</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">VNR</td>
-<td>虚拟网络请求</td>
-<td>Virtual Network Request</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">RL</td>
-<td>强化学习</td>
-<td>Reinforcement Learning</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">GCN</td>
-<td>图卷积神经网络</td>
-<td>Graph Convolutional Network</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">A3C</td>
-<td></td>
-<td>Asynchronous Advantage Actor-Critic</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vne">VNE</h3>
-<h2 id="算法模型">算法模型</h2>
-<h3 id="dl-a3c">DL-A3C</h3>
-<h3 id="gcn">GCN</h3>
-<h3 id="a3c-gcn">A3C + GCN</h3>
-<h4 id="环境-environment">环境 Environment</h4>
-<h4 id="代理-agent">代理 Agent</h4>
-<h4 id="状态-state">状态 State</h4>
-<h4 id="动作-action">动作 Action</h4>
-<h4 id="奖励-rewords">奖励 Rewords</h4>
-<ul>
-<li>动作反馈 action feedback</li>
-</ul>
-<p><span class="math display">\[r_{a}=\left\{\begin{array}{cl}
-  100 \gamma_{a} &amp; a_{t} \text {is successful} \\
-  -100 \gamma_{a} &amp;  \text {otherwise}
-\end{array}\right.\]</span></p>
-<ul>
-<li>成本效益 cost-efficient</li>
-</ul>
-<p><span class="math display">\[r_{c} =  \frac{\delta(revenue)}{\delta(cost)}\]</span></p>
-<ul>
-<li>负载均衡 Load balancing</li>
-</ul>
-<p><span class="math display">\[r_{s} = \frac{S_CPU_Remaining[a]}{S_CPU_Max[a]}\]</span></p>
-<ul>
-<li>资格痕迹 eligibility trace</li>
-</ul>
-<p><span class="math display">\[e g b_{-}{trace}_{t}[i]=\left\{\begin{array}{cl}
-  \gamma_{e}\left(e g b_{-}{trace}_{t-1}[i]+1\right) &amp; i==a_{t} \\
-  \gamma_{e} {egb}_{-} {trace}_{t-1}[i] &amp; \text { otherwise }
-\end{array}\right.\]</span></p>
-<p>故最终对于动作<span class="math inline">\(a{t}\)</span>奖励函数（Reward Function）为</p>
-<p><span class="math display">\[Reward[a_{t}]=\frac{r_{a} r_{c} r_{s}}{e g b{-}trace[a_{t}]+\epsilon}\]</span></p>
-<h2 id="性能评估">性能评估</h2>
-<h3 id="设计实验">设计实验</h3>
-<ul>
-<li>底层网络拓扑
-<ul>
-<li>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑</li>
-<li>该网络具有100个结点和500条边（模拟一个中型的ISP）。</li>
-<li>随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</li>
-</ul></li>
-<li>虚拟网络请求
-<ul>
-<li>随机生成VNR时满足Possion process（泊松分布），每组评估持续50000个时间单位</li>
-<li>即当VNR预期到达率为4个/100个时间单位时，则约有2000个VNR</li>
-<li>每个VRN的生成周期满足平均值为500的指数分布</li>
-<li>每个VNR的数量均匀分布在2~10之间</li>
-<li>初始化VNR中的节点CPU需求和链路带宽需求为0~30的均匀分布</li>
-<li>每对节点有50%的可能性形成边</li>
-</ul></li>
-<li>动态设置参数
-<ul>
-<li>VNR的到达率、节点及链路资源的分配、每个VNR的节点数量</li>
-<li>我们可以通过调节这三个参数来评估各种VNE场景</li>
-</ul></li>
-<li>测试阶段
-<ul>
-<li>学习代理仅使用actor网络生成嵌入策略，来从底层网络拓扑中选择合适的节点托管当前的虚拟节点</li>
-<li>该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR</li>
-</ul></li>
-</ul>
-<h3 id="对比算法">对比算法</h3>
-<ul>
-<li>R-ViNE<br />
-使用基于确定的取整（rounding-based）的方法来获得与VNE问题对应的MIP的线性规划松弛（linear programming relaxation），以最小化VNR的成本</li>
-<li>D-ViNE<br />
-和RR-ViNE，但特殊在其取整方法是随机的</li>
-<li>GRC<br />
-一种基于全局资源容量管理的节点排序算法</li>
-<li>MCVNE<br />
-一种基于强化学习的 Monte-Carlo MCTS 动作空间搜索算法</li>
-<li>NodeRank<br />
-一种节点排序算法，灵感来自与Google的PageRank算法</li>
-</ul>
-<p>它们基本覆盖了当前大部分算法的观点</p>
-<h3 id="评估指标">评估指标</h3>
-<h4 id="vnr-到达率测试">VNR 到达率测试</h4>
-<p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br />
-实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
-<p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
-<h4 id="资源请求测试">资源请求测试</h4>
-<p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
-<ul>
-<li>计算密集型任务需要更多的节点资源（CPU）</li>
-<li>而通信密集型任务需要更多的链路资源（带宽）</li>
-</ul>
-<p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
-<p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
-<h4 id="节点数量扩展性测试">节点数量扩展性测试</h4>
-<p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br />
-实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
-<p>结果分析：该算法优势明显，但可以发现当节点逐渐增加时，接受率下降明显</p>
-<p>原因分析：</p>
-<ul>
-<li>因为每个VNR都必须作为一个整体成功地嵌入；一个更大的VNR意味着在嵌入的中间步骤中失败的机会更多；</li>
-<li>因为同一VNR中的两个虚拟节点不能共享一个特定的基板节点，单个VNR中的更多节点限制了候选动作空间</li>
-</ul>
-<h4 id="平均运行时间统计">平均运行时间统计</h4>
-<p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
-<h3 id="验证测试">验证测试</h3>
-<p>在相同条件下，与其他基于强化学习的VNE算法进行比较</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-8.png" /></p>
-<h4 id="训练效率及收敛性">训练效率及收敛性</h4>
-<p>不同算法在相同实验条件下的训练效果对比，见下图(a)<br />
-实验结果：可以发现，在这组实验中，平均收益的优势要比接受率的明显<br />
-原因分析：当VNR的节点数量较少时，所有算法都可以有很好的表现；但当节点增多后，该算法可以带来更多的潜在收益（多指标的Reward）。</p>
-<h4 id="资源请求测试验证">资源请求测试验证</h4>
-<p>在不同的资源请求情况下，对这些算法进行测试，见下图(b)</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
-<p>实验结果：在不同数量的资源请求情况下，该算法的接受率均是最优的；此外，可以发现CNN的性能表现始终是最差的<br />
-原因分析：用GCN代替传统的CNN进行特征提取可以带来更好地性能。</p>
-<h3 id="其他参数下模型的可行性研究">其他参数下模型的可行性研究</h3>
-<h4 id="附加网络拓扑和参数">附加网络拓扑和参数</h4>
-<p>CSTNET：中国网络运营商，见下图(a)</p>
-<ul>
-<li>红色边为100Gb带宽的链路</li>
-<li>绿色边为10Gb带宽的链路</li>
-<li>橙色边为2.5Gb带宽的链路</li>
-<li>黑色边为1Gb带宽的链路</li>
-<li>边的权重：平均传输延迟 average transmission latency（毫秒），</li>
-</ul>
-<p>对比算法：Noderank<br />
-实验设计：</p>
-<ul>
-<li>模拟了一些随机的点对点的数据传输任务</li>
-<li>数据传输速率为 [500Mbps,3Gbps] 的均匀分布</li>
-</ul>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-6.png" /></p>
-<p>实验结果：A3C+GCN 模型的延迟更少</p>
-<h4 id="其他指标">其他指标</h4>
-<ul>
-<li>节点资源利用率：VNRs使用的节点基板资源量/资源总量</li>
-<li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
-</ul>
-<p>实验设计：同平均到达率测试</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
-<p>实验结果：A3C+GCN算法的这两项指标均为最佳</p>
-<h2 id="主要创新">主要创新</h2>
-<ul>
-<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
-<li>并行的策略梯度训练方法</li>
-<li>多指标的奖励函数</li>
-</ul>
-<h2 id="总结思考">总结思考</h2>
-<ul>
-<li>GCN较CNN可以更好地提取非欧数据的特征</li>
-<li>A3C算法较其他RL算法性能表现更佳</li>
-<li>并行的梯度训练策略更适应于实际场景</li>
-<li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
-<li>在模型评估部分，实验的设计比较完善</li>
-</ul>
-]]></content>
-      <categories>
-        <category>RP - 科研论文</category>
-      </categories>
-      <tags>
-        <tag>VNE</tag>
-        <tag>论文精读</tag>
-        <tag>强化学习</tag>
-        <tag>GNN</tag>
-        <tag>GCN</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【随笔】时光刻痕——为什么重启博客</title>
     <url>/2020/08/25/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-record-our-moments/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
@@ -1212,6 +993,225 @@
       <tags>
         <tag>Python</tag>
         <tag>语法进阶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
+    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。 <a id="more"></a></p>
+<h2 id="论文简介">论文简介</h2>
+<p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
+<strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
+<strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br />
+<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
+<strong>关键技术</strong>：虚拟网络嵌入, 强化学习, 图卷积神经网络<br />
+<strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
+<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="问题定义">问题定义</h2>
+<h3 id="专业词汇">专业词汇</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">缩写</th>
+<th>描述</th>
+<th>全名</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">VNE</td>
+<td>虚拟网络嵌入</td>
+<td>Virtual Network Embedding</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">VNR</td>
+<td>虚拟网络请求</td>
+<td>Virtual Network Request</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RL</td>
+<td>强化学习</td>
+<td>Reinforcement Learning</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">GCN</td>
+<td>图卷积神经网络</td>
+<td>Graph Convolutional Network</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">A3C</td>
+<td></td>
+<td>Asynchronous Advantage Actor-Critic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vne">VNE</h3>
+<h2 id="算法模型">算法模型</h2>
+<h3 id="dl-a3c">DL-A3C</h3>
+<h3 id="gcn">GCN</h3>
+<h3 id="a3c-gcn">A3C + GCN</h3>
+<h4 id="环境-environment">环境 Environment</h4>
+<h4 id="代理-agent">代理 Agent</h4>
+<h4 id="状态-state">状态 State</h4>
+<h4 id="动作-action">动作 Action</h4>
+<h4 id="奖励-rewords">奖励 Rewords</h4>
+<ul>
+<li>动作反馈 action feedback</li>
+</ul>
+<p><span class="math display">\[r_{a}=\left\{\begin{array}{cl}
+  100 \gamma_{a} &amp; a_{t} \text {is successful} \\
+  -100 \gamma_{a} &amp;  \text {otherwise}
+\end{array}\right.\]</span></p>
+<ul>
+<li>成本效益 cost-efficient</li>
+</ul>
+<p><span class="math display">\[r_{c} =  \frac{\delta(revenue)}{\delta(cost)}\]</span></p>
+<ul>
+<li>负载均衡 Load balancing</li>
+</ul>
+<p><span class="math display">\[r_{s} = \frac{S_CPU_Remaining[a]}{S_CPU_Max[a]}\]</span></p>
+<ul>
+<li>资格痕迹 eligibility trace</li>
+</ul>
+<p><span class="math display">\[e g b_{-}{trace}_{t}[i]=\left\{\begin{array}{cl}
+  \gamma_{e}\left(e g b_{-}{trace}_{t-1}[i]+1\right) &amp; i==a_{t} \\
+  \gamma_{e} {egb}_{-} {trace}_{t-1}[i] &amp; \text { otherwise }
+\end{array}\right.\]</span></p>
+<p>故最终对于动作<span class="math inline">\(a{t}\)</span>奖励函数（Reward Function）为</p>
+<p><span class="math display">\[Reward[a_{t}]=\frac{r_{a} r_{c} r_{s}}{e g b{-}trace[a_{t}]+\epsilon}\]</span></p>
+<h2 id="性能评估">性能评估</h2>
+<h3 id="设计实验">设计实验</h3>
+<ul>
+<li>底层网络拓扑
+<ul>
+<li>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑</li>
+<li>该网络具有100个结点和500条边（模拟一个中型的ISP）。</li>
+<li>随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</li>
+</ul></li>
+<li>虚拟网络请求
+<ul>
+<li>随机生成VNR时满足Possion process（泊松分布），每组评估持续50000个时间单位</li>
+<li>即当VNR预期到达率为4个/100个时间单位时，则约有2000个VNR</li>
+<li>每个VRN的生成周期满足平均值为500的指数分布</li>
+<li>每个VNR的数量均匀分布在2~10之间</li>
+<li>初始化VNR中的节点CPU需求和链路带宽需求为0~30的均匀分布</li>
+<li>每对节点有50%的可能性形成边</li>
+</ul></li>
+<li>动态设置参数
+<ul>
+<li>VNR的到达率、节点及链路资源的分配、每个VNR的节点数量</li>
+<li>我们可以通过调节这三个参数来评估各种VNE场景</li>
+</ul></li>
+<li>测试阶段
+<ul>
+<li>学习代理仅使用actor网络生成嵌入策略，来从底层网络拓扑中选择合适的节点托管当前的虚拟节点</li>
+<li>该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR</li>
+</ul></li>
+</ul>
+<h3 id="对比算法">对比算法</h3>
+<ul>
+<li>R-ViNE<br />
+使用基于确定的取整（rounding-based）的方法来获得与VNE问题对应的MIP的线性规划松弛（linear programming relaxation），以最小化VNR的成本</li>
+<li>D-ViNE<br />
+和RR-ViNE，但特殊在其取整方法是随机的</li>
+<li>GRC<br />
+一种基于全局资源容量管理的节点排序算法</li>
+<li>MCVNE<br />
+一种基于强化学习的 Monte-Carlo MCTS 动作空间搜索算法</li>
+<li>NodeRank<br />
+一种节点排序算法，灵感来自与Google的PageRank算法</li>
+</ul>
+<p>它们基本覆盖了当前大部分算法的观点</p>
+<h3 id="评估指标">评估指标</h3>
+<h4 id="vnr-到达率测试">VNR 到达率测试</h4>
+<p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br />
+实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
+<p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
+<h4 id="资源请求测试">资源请求测试</h4>
+<p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
+<ul>
+<li>计算密集型任务需要更多的节点资源（CPU）</li>
+<li>而通信密集型任务需要更多的链路资源（带宽）</li>
+</ul>
+<p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
+<p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
+<h4 id="节点数量扩展性测试">节点数量扩展性测试</h4>
+<p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br />
+实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
+<p>结果分析：该算法优势明显，但可以发现当节点逐渐增加时，接受率下降明显</p>
+<p>原因分析：</p>
+<ul>
+<li>因为每个VNR都必须作为一个整体成功地嵌入；一个更大的VNR意味着在嵌入的中间步骤中失败的机会更多；</li>
+<li>因为同一VNR中的两个虚拟节点不能共享一个特定的基板节点，单个VNR中的更多节点限制了候选动作空间</li>
+</ul>
+<h4 id="平均运行时间统计">平均运行时间统计</h4>
+<p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
+<h3 id="验证测试">验证测试</h3>
+<p>在相同条件下，与其他基于强化学习的VNE算法进行比较</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-8.png" /></p>
+<h4 id="训练效率及收敛性">训练效率及收敛性</h4>
+<p>不同算法在相同实验条件下的训练效果对比，见下图(a)<br />
+实验结果：可以发现，在这组实验中，平均收益的优势要比接受率的明显<br />
+原因分析：当VNR的节点数量较少时，所有算法都可以有很好的表现；但当节点增多后，该算法可以带来更多的潜在收益（多指标的Reward）。</p>
+<h4 id="资源请求测试验证">资源请求测试验证</h4>
+<p>在不同的资源请求情况下，对这些算法进行测试，见下图(b)</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
+<p>实验结果：在不同数量的资源请求情况下，该算法的接受率均是最优的；此外，可以发现CNN的性能表现始终是最差的<br />
+原因分析：用GCN代替传统的CNN进行特征提取可以带来更好地性能。</p>
+<h3 id="其他参数下模型的可行性研究">其他参数下模型的可行性研究</h3>
+<h4 id="附加网络拓扑和参数">附加网络拓扑和参数</h4>
+<p>CSTNET：中国网络运营商，见下图(a)</p>
+<ul>
+<li>红色边为100Gb带宽的链路</li>
+<li>绿色边为10Gb带宽的链路</li>
+<li>橙色边为2.5Gb带宽的链路</li>
+<li>黑色边为1Gb带宽的链路</li>
+<li>边的权重：平均传输延迟 average transmission latency（毫秒），</li>
+</ul>
+<p>对比算法：Noderank<br />
+实验设计：</p>
+<ul>
+<li>模拟了一些随机的点对点的数据传输任务</li>
+<li>数据传输速率为 [500Mbps,3Gbps] 的均匀分布</li>
+</ul>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-6.png" /></p>
+<p>实验结果：A3C+GCN 模型的延迟更少</p>
+<h4 id="其他指标">其他指标</h4>
+<ul>
+<li>节点资源利用率：VNRs使用的节点基板资源量/资源总量</li>
+<li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
+</ul>
+<p>实验设计：同平均到达率测试</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
+<p>实验结果：A3C+GCN算法的这两项指标均为最佳</p>
+<h2 id="主要创新">主要创新</h2>
+<ul>
+<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
+<li>并行的策略梯度训练方法</li>
+<li>多指标的奖励函数</li>
+</ul>
+<h2 id="总结思考">总结思考</h2>
+<ul>
+<li>GCN较CNN可以更好地提取非欧数据的特征</li>
+<li>A3C算法较其他RL算法性能表现更佳</li>
+<li>并行的梯度训练策略更适应于实际场景</li>
+<li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
+<li>在模型评估部分，实验的设计比较完善</li>
+</ul>
+]]></content>
+      <categories>
+        <category>RP - 科研论文</category>
+      </categories>
+      <tags>
+        <tag>VNE</tag>
+        <tag>论文精读</tag>
+        <tag>强化学习</tag>
+        <tag>GNN</tag>
+        <tag>GCN</tag>
       </tags>
   </entry>
   <entry>
