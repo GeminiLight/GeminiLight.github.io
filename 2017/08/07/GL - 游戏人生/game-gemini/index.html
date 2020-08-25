@@ -24,24 +24,34 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="在我们使用Python的时候，常使用到如下的代码块: 1234567# 文件读取with open(file, &amp;#x27;r&amp;#x27;) as f:    # CODE BLOCK ## 梯度计算with tf.GradientTape() as g:    # CODE BLOCK # 在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try&#x2F;fin">
+  <meta name="description" content="“我们都在寻找着 某个人”——《你的名字。》   暗夜中的荧树依旧沉睡着，它已经很久很久没有发过光了，久的人们都早已忘记了那个传说......">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Python】with语句原理">
-<meta property="og:url" content="https://www.geminilight.cn/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/index.html">
+<meta property="og:title" content="【游戏人生】双子Gemini">
+<meta property="og:url" content="https://www.geminilight.cn/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="在我们使用Python的时候，常使用到如下的代码块: 1234567# 文件读取with open(file, &amp;#x27;r&amp;#x27;) as f:    # CODE BLOCK ## 梯度计算with tf.GradientTape() as g:    # CODE BLOCK # 在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try&#x2F;fin">
+<meta property="og:description" content="“我们都在寻找着 某个人”——《你的名字。》   暗夜中的荧树依旧沉睡着，它已经很久很久没有发过光了，久的人们都早已忘记了那个传说......">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/pl-python-with.png">
-<meta property="article:published_time" content="2020-08-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-16T19:05:22.284Z">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-1.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-2.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-3.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-4.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-6.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-14.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-15.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-16.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-17.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-19.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-12.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/game-gemini-13.png">
+<meta property="article:published_time" content="2017-08-06T16:19:26.000Z">
+<meta property="article:modified_time" content="2020-08-25T06:35:28.495Z">
 <meta property="article:author" content="GeminiLight">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="语法进阶">
+<meta property="article:tag" content="游戏人生">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/pl-python-with.png">
+<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/game-gemini-1.png">
 
 
-<link rel="canonical" href="https://www.geminilight.cn/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/">
+<link rel="canonical" href="https://www.geminilight.cn/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/">
 
 
 <script class="page-configurations">
@@ -54,7 +64,7 @@
   };
 </script>
 
-  <title>【Python】with语句原理 | Gemini向光性</title>
+  <title>【游戏人生】双子Gemini | Gemini向光性</title>
   
 
 
@@ -230,7 +240,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">上下文管理器概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%8D%8F%E8%AE%AEcontext-management-protocol"><span class="nav-number">1.1.</span> <span class="nav-text">上下文管理协议（Context Management Protocol）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8context-manager"><span class="nav-number">1.2.</span> <span class="nav-text">上下文管理器（Context Manager）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#with%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">with语句执行过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">自定义上下文管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%9B%B8%E9%81%87%E5%89%8D%E5%B0%98%E5%A6%82%E6%98%AF"><span class="nav-number">1.</span> <span class="nav-text">一、相遇：前尘如是</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%88%AB%E7%A6%BB%E5%BF%83%E6%81%B8%E5%B9%BD%E6%80%9D"><span class="nav-number">2.</span> <span class="nav-text">二、别离：心恸幽思</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E8%BF%BD%E5%BF%86%E5%BF%B5%E6%97%A7%E9%A1%BE%E9%80%9D"><span class="nav-number">3.</span> <span class="nav-text">三、追忆：念旧顾逝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E8%BE%89%E7%85%8C%E6%98%9F%E5%A4%9C%E5%A6%82%E6%96%AF"><span class="nav-number">4.</span> <span class="nav-text">四、辉煌：星夜如斯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E6%9D%A5%E4%B8%96%E6%83%85%E7%BC%98%E4%BD%95%E5%8E%BB"><span class="nav-number">5.</span> <span class="nav-text">五、来世：情缘何去</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -591,7 +601,7 @@ if(canvas.getContext){
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/">
+    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -607,7 +617,7 @@ if(canvas.getContext){
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【Python】with语句原理
+          【游戏人生】双子Gemini
         </h1>
 
         <div class="post-meta">
@@ -618,7 +628,7 @@ if(canvas.getContext){
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-14 00:00:00" itemprop="dateCreated datePublished" datetime="2020-08-14T00:00:00+08:00">2020-08-14</time>
+              <time title="创建时间：2017-08-07 00:19:26" itemprop="dateCreated datePublished" datetime="2017-08-07T00:19:26+08:00">2017-08-07</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -626,7 +636,7 @@ if(canvas.getContext){
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/PL-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">PL - 编程语言</span></a>
+                  <a href="/categories/MY-%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">MY - 感悟随笔</span></a>
                 </span>
             </span>
 
@@ -636,14 +646,14 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -653,54 +663,50 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在我们使用Python的时候，常使用到如下的代码块:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文件读取</span></span><br><span class="line"><span class="keyword">with</span> open(file, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度计算</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> g:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br></pre></td></tr></table></figure>
-<p>在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try/finally模式的简化。它原理上是利用了上下文管理器，下文简要介绍将对其执行原理和自定义的方法。<a id="more"></a></p>
-<h2 id="上下文管理器概念">上下文管理器概念</h2>
-<h3 id="上下文管理协议context-management-protocol">上下文管理协议（Context Management Protocol）</h3>
-<p>包含方法 <code>__enter__()</code> 和 <code>__exit__()</code> ，支持该协议的对象要实现这两个方法。</p>
-<h3 id="上下文管理器context-manager">上下文管理器（Context Manager）</h3>
-<p>支持上下文管理协议的对象，这种对象必须实现 <code>__enter__()</code> 和 <code>__exit__()</code> 方法。 上下文管理器定义执行with语句时要建立的运行时上下文，负责执行with语句块上下文中的进入与退出操作。 通常使用with语句调用上下文管理器，也可以通过直接调用其方法来使用。</p>
-<ul>
-<li><strong><code>__enter__()</code></strong>
-<ul>
-<li>with语句执行时，先获取上下文管理器对象，随后调用其 <code>__enter__()</code></li>
-<li>若有 <code>as var</code> 语句，则将返回值赋给变量var</li>
-<li>可以返回上下文管理器对象本身，也可以是其他相关对象</li>
-</ul></li>
-<li><strong><code>__exit__()</code></strong>
-<ul>
-<li>带有三个参数 <code>exc_type, exc_val, exc_tb</code></li>
-<li>若上下文管理器对象执行无异常，则三个参数均为 <code>None</code></li>
-<li>若发生异常，则三个参数分别为 异常类型，异常值和tracback信息</li>
-</ul></li>
-</ul>
-<h2 id="with语句执行过程">with语句执行过程</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#   EXP: 表达式</span></span><br><span class="line"><span class="comment">#   VAR: 变量名，[as VAR][可选]</span></span><br><span class="line"><span class="comment"># BlOCK: 代码块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> EXP <span class="keyword">as</span> VAR:</span><br><span class="line">    BLOCK</span><br></pre></td></tr></table></figure>
-<p><img data-src="/resource/images/pl-python-with.png" width="100%" /></p>
-<ol type="1">
-<li>执行代码时，先执行 <code>EXPR</code> 语句，生成上下文管理器对象 context_manager；</li>
-<li>获取上下文管理器的 <code>__exit()__</code> 方法，并保存起来用于之后的调用；</li>
-<li>调用上下文管理器的 <code>__enter__()</code> 方法，且可将返回值赋给as语句变量；</li>
-<li>执行BLOCK中的表达式；</li>
-<li>不管是否执行过程中是否发生了异常，执行上下文管理器的 <code>__exit__()</code> 方法， 执行“清理”工作，如释放资源等。
-<ol type="1">
-<li>如果执行过程中没有出现异常，或者语句体中执行了语句 <code>break</code> / <code>continue</code> / <code>return</code> ，则以 <code>None</code> 作为参数调用 <code>__exit__(None, None, None)</code> ；</li>
-<li>如果执行过程中出现异常，则使用sys.exc_info得到的异常信息为参数调用 <code>__exit__(exc_type, exc_value, exc_traceback)</code> ；</li>
-</ol></li>
-<li>出现异常时，如果 <code>__exit__(type, value, traceback)</code> 返回 <code>False</code> ，则会重新抛出异常，让with之外的语句逻辑来处理异常，这也是通用做法；如果返回True，则忽略异常，不再对异常进行处理。</li>
-</ol>
-<h2 id="自定义上下文管理器">自定义上下文管理器</h2>
-<ul>
-<li>它使代码更简练，可以简化try/finally模式</li>
-<li>当代码异常产生时，<code>__exit__()</code> 会执行清理工作</li>
-<li>可以对软件系统中的资源进行管理，比如数据库连接、共享资源的访问控制等<br /></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding = utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上下文管理器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestWith</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;进入with语句的时候被调用</span></span><br><span class="line"><span class="string">           并将返回值赋给as语句的变量名</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__enter__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;var&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span>(<span class="params">self, exc_type, exc_val, exc_tb</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;离开with的时候被with调用&quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__exit__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># with后面必须跟一个上下文管理器</span></span><br><span class="line"><span class="comment"># 如果使用了as，则是把上下文管理器的 __enter__() 方法的返回值赋值给 target</span></span><br><span class="line"><span class="comment"># target 可以是单个变量，或者由“()”括起来的元组（不能是仅仅由“,”分隔的变量列表，必须加“()”）</span></span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;main&#x27;</span>:</span><br><span class="line">    <span class="keyword">with</span> TestWith() <span class="keyword">as</span> var:</span><br><span class="line">        print(var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行结果</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">__enter__</span></span><br><span class="line"><span class="string">var</span></span><br><span class="line"><span class="string">__exit__</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>本例仅对应代码正常执行的流程，其他特殊情况不再一一列举，有兴趣可单独实验。</p>
-<h2 id="参考">参考</h2>
-<blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuaWJtLmNvbS96aC9hcnRpY2xlcy9vcy1jbi1weXRob253aXRoLw==">浅谈 Python 的 with 语句<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vcHl0aG9uYmFvL3AvMTEyMTEzNDcuaHRtbA==">Python中with用法详解<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC83NDU1Mjg3Nw==">Python中with使用<i class="fa fa-external-link-alt"></i></span> <br /></p>
+        <blockquote class="blockquote-center">
+<p>“我们都在寻找着 某个人”——《你的名字。》</p>
+
+</blockquote>
+<p>暗夜中的荧树依旧沉睡着，它已经很久很久没有发过光了，久的人们都早已忘记了那个传说...... <a id="more"></a></p>
+<h2 id="一相遇前尘如是">一、相遇：前尘如是</h2>
+<p>少了星光的装点，夜空暗淡了许多。我心有所念地张望着四周，却又不知在找寻着谁。明明毫无目的地来这儿，却又诚惶诚恐地害怕着错过。空荡荡的心将无神的目光映向不远处沉眠的荧树，然后莫名其妙地叹息。准备离开时的回眸，让我们的目光在朦胧的暮色下交错，我似乎懂了，懂得了命运织缠的意义。</p>
+<p><img data-src="/resource/images/game-gemini-1.png" /></p>
+<p>时间放佛在那一刻停格，空气也随之凝滞，任由荧树的年轮刻录下心动和心悸： 你尚未出现时，我的生命平静，轩昂阔步行走，动辄料事如神；如今惶乱，怯弱，像冰融的春水，一流就流向你，又不知你在何处（木心）。可明明你就在我面前，我却又不知所措。</p>
+<p><img data-src="/resource/images/game-gemini-2.png" /></p>
+<p>空气不再沉默——似乎有种引力牵引着我慢步走向了你。脚步声在寂寥的夜空中徘徊，你退回荧树枝下，等候着我的到来。但当手被牵起时，你却皱了皱眉，有些许心痛，却又不知痛从何而来。彼此只手相依，只手迎风，曼舞空凉。执子之手，挥洒荧光。古树开始苏醒，重现荧光，夜空渐被点亮，直至整个银河宛若天堂。</p>
+<h2 id="二别离心恸幽思">二、别离：心恸幽思</h2>
+<p><img data-src="/resource/images/game-gemini-3.png" /></p>
+<p>面前是无数陨石阻隔，彼岸即是梦寐以求的星河。无数次的碰撞，无数次的跌倒，无数次的逃亡。看着身旁遍体鳞伤的你，我心如刀割。头脑开始眩晕，身体开始麻木，但始终未停止撞击。终于，你，停了下来，慢慢下坠。此时，我，早已泪眼婆娑，椎心泣血。抱紧昏倒的你，看着你迂回的伤痕，痛恨自己的无力。</p>
+<p><img data-src="/resource/images/game-gemini-4.png" /></p>
+<p>恸哭一声——微光亦可昼亮，化作流星花火，划破无边银河。天空被渲染成晨曦般的颜色，陨石被狠狠撞碎坠落，星际被灿烂夺去轮廓。我回首望向了你，微笑着轻抚了一下，拭去你眼角的泪花。凝视着你，沉默，却又更多话语。回顾此生，路途虽险，却不惧混沌黑夜，不畏疾风骤雨，只因有你相伴左右，不曾离弃。</p>
+<p><img data-src="/resource/images/game-gemini-6.png" /></p>
+<p>原谅我，不再陪你，望这最后一星余晖燃尽守护你；<br />
+失去我，日月如常，世上最美的星云就在前方；<br />
+答应我，生活下去，未来你会有更好的相遇。</p>
+<p>星辉殆尽，堙灭散落，银河再归混沌，我已一别永年。就这样，我离开了你，无声无息，了无痕迹。</p>
+<h2 id="三追忆念旧顾逝">三、追忆：念旧顾逝</h2>
+<p>最后一丝星火被黑夜淹没，前方不再有陨石阻隔，她向前扑去，想要如往常般依偎着他，却痛痛地跌倒在地。眼泪肆意挥霍着，润湿了瞳孔，模糊了每个角落；打在了心口，放任痛楚清晰地游走，倒带往昔彼此依偎的甜蜜：</p>
+<p><img data-src="/resource/images/game-gemini-14.png" /> <img data-src="/resource/images/game-gemini-15.png" /> <img data-src="/resource/images/game-gemini-16.png" /> <img data-src="/resource/images/game-gemini-17.png" /> <img data-src="/resource/images/game-gemini-19.png" /></p>
+<p>荧树下他许诺让她看到世间最美的星云，带她浪迹天涯。 黎明的曙光照亮孤寂的夜空，驱赶着不羁的黑暗，他们双手相牵，追赶着晨曦，一起见证日出的那一抹微光。正午的太阳愈渐熠亮，他们在风中嬉戏，在路旁依靠，感受着对方的呼吸，心透着无声的默契。黄昏悄悄降临，彩霞中奔跑的身影停下了脚步，最浪漫不过彼此并肩欣赏夕阳。</p>
+<p>时而细雨微作，他们轻歌慢步；时而骤风忽起，他们依偎拥抱。他们在文明废墟中相伴而游，见证希望；在极地冰川中相依而行，战克风霜；在富丽殿堂中相视而笑，共享荣光。音符弹奏着甜蜜，图腾印刻下笑容。</p>
+<p>日出日落，朝暮共同分享，无惧颠簸跌宕；<br />
+路途遥远，同游山高水长，风景彼此共赏。</p>
+<p>而这一切已成过往……</p>
+<h2 id="四辉煌星夜如斯">四、辉煌：星夜如斯</h2>
+<p>任何一种环境或一个人，初次见面就预感到离别的隐痛时，你必定是爱上他了。（黄永玉）她明白了初遇时的心悸，不是青涩，亦不是恐惧，而是她早已预见他们命中注定要分离。 霓虹渐显倪端，微光开始蔓延，泪花随风飘落，伊人难以忘怀。星光映在她的脸庞，尽是泪行。手紧紧的攥着，慢步向前，她的眼神中少了悲伤，多了空灵，即使面前魂牵梦绕的星云也扬不起她嘴角的一丝微笑。</p>
+<p>景虽美，光虽亮，可，泪已尽，心已灰。</p>
+<p>没有形单影只的倾诉，没有感天动地的恸哭，甚至没有了恋人别离的苦楚，她走向星云的中央，目光死死的盯着他星辉散尽的方向，双臂展开，静静释怀……</p>
+<p><img data-src="/resource/images/game-gemini-12.png" /></p>
+<p>混沌银河骤然生光，星云再次燃起辉亮——她竭尽星辉在祈愿，不求时间重返，只求来世重逢。那一刻，宇宙听到了她的心声，苍穹为之感染。夜空灰暗千年，不再寂寥，星辉绚丽，占据每一寸黑暗。她最后一次俯瞰世间，不再有任何羁绊，微微一笑，随风消散。</p>
+<p><img data-src="/resource/images/game-gemini-13.png" /></p>
+<p>周边的星辰说那是他们一生中见过的最美最亮的星辉：冰冷中透着暖意，凄美却又不失灿烂，那不是悲伤，而是诠释，是渴盼，是希望。 言语停了下来，荧树又重归于暗淡... ...</p>
+<h2 id="五来世情缘何去">五、来世：情缘何去</h2>
+<p>银河浩渺无垠，星辰繁若樱花，来生相距光年十万，抑或咫尺之遥，可否会重逢再会？如若他日于星海偶遇，你我会擦肩而过，彼此不识，还是会心动如昔，情缘再续？ 命运最神秘的不是变幻莫测无人知晓，而是冥冥之中自有定向。</p>
+<hr />
+<p>荧树沉寂了万年，传说不再被流传，但至今仍会有人说：</p>
+<blockquote class="blockquote-center">
+<p>一次告别 天上就会有颗星 又熄灭</p>
+
 </blockquote>
 
     </div>
@@ -709,21 +715,6 @@ if(canvas.getContext){
     
     
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2019\01\11\PL - 编程语言\pl-python-fundamental-syntax\" rel="bookmark">【Python】基础语法总结</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\08\18\DA - 数据分析\da-scipy-sparse\" rel="bookmark">【SciPy】Sparse稀疏矩阵主要存储格式总结</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2019\08\22\DA - 数据分析\da-introduction\" rel="bookmark">数据分析知识体系</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2019\08\19\DA - 数据分析\da-numpy\" rel="bookmark">【NumPy】入门</a></div>
-    </li>
-  </ul>
 
         
 
@@ -734,7 +725,7 @@ if(canvas.getContext){
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.geminilight.cn/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/" title="【Python】with语句原理">https://www.geminilight.cn/2020/08/14/PL - 编程语言/pl-python-with/</a>
+    <a href="https://www.geminilight.cn/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/" title="【游戏人生】双子Gemini">https://www.geminilight.cn/2017/08/07/GL - 游戏人生/game-gemini/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -745,21 +736,17 @@ if(canvas.getContext){
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"># Python</a>
-              <a href="/tags/%E8%AF%AD%E6%B3%95%E8%BF%9B%E9%98%B6/" rel="tag"># 语法进阶</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/" rel="tag"># 游戏人生</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/" rel="prev" title="【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN">
-                  <i class="fa fa-chevron-left"></i> 【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN
-                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next-custom/" rel="next" title="【Blog】深度美化和定制Hexo和NexT方法">
-                  【Blog】深度美化和定制Hexo和NexT方法 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/01/11/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-fundamental-syntax/" rel="next" title="【Python】基础语法总结">
+                  【Python】基础语法总结 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -938,7 +925,7 @@ NexT.utils.loadComments('#gitalk-container', () => {
       repo        : 'gitment-of-blog',
       owner       : 'GeminiLight',
       admin       : ['GeminiLight'],
-      id          : '61b94960af23fa0e3964b3405848b509',
+      id          : '2f5a156ea6cc263d5e69c6325c886ca7',
         language: 'zh-CN',
       distractionFreeMode: true
     });
