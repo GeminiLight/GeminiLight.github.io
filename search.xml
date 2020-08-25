@@ -4,18 +4,9 @@
     <title>【随笔】时光刻痕——为什么重启博客</title>
     <url>/2020/08/25/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-record-our-moments/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-zVNwVNQD" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="000ycaRl2V0Ojm" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-jgwqEBOv" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="000ycaRl2V0Ojm" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 <p>日历翻至八月，空气日渐升温。在这个特殊的年份，暑假的宿舍只余下我一人——这也是我第一次独自在远离家乡的“专属”空间中“自由”生活。</p>
 <a id="more"></a>
-<!-- toc -->
-<ul>
-<li><a href="#始">始</a></li>
-<li><a href="#思">思</a></li>
-<li><a href="#悟">悟</a></li>
-<li><a href="#行">行</a></li>
-<li><a href="#愿">愿</a></li>
-</ul>
-<!-- tocstop -->
 <h2><span id="01-始">0.1. 始</span></h2>
 <p>新颖的事物总能在最初的时刻吸引好奇的目光，但即便它再精致华丽，也大都会因日久生乏味而迎来退散的人潮。</p>
 <p>最后一位舍友拉着行李走出了宿舍，作为初试者的自己也全然不知接下来的40天会有怎样的故事来填充生活，只是想到可以体验“真正”的成年人独居生活就满心欢喜。机械键盘随意地敲出节奏，音响外放着喜欢的音乐，灯光只按自己的时间表作息。狭小的寝室空间里挤满了自由的字样，我身处其中，随性而活。</p>
@@ -186,105 +177,6 @@
     <url>/2020/08/18/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-scipy-sparse/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>在数据科学和深度学习等领域常会采用矩阵格式来存储数据，但当矩阵较为庞大且非零元素较少时，运算效率和存储有效率并不高。所以，通常我们采用Sparse稀疏矩阵的方式来存储矩阵，提高存储和运算效率。下面将对SciPy中七种常见的存储方式（COO/ CSR/ CSC/ BSR/ DOK/ LIL/ DIA）的概念和用法进行介绍和对比总结。</p>
 <a id="more"></a>
-<!-- toc -->
-<ul>
-<li><a href="#稀疏矩阵简介">稀疏矩阵简介</a>
-<ul>
-<li><a href="#稀疏矩阵">稀疏矩阵</a></li>
-<li><a href="#压缩存储">压缩存储</a></li>
-<li><a href="#矩阵属性">矩阵属性</a></li>
-<li><a href="#通用方法">通用方法</a></li>
-</ul></li>
-<li><a href="#稀疏矩阵分类">稀疏矩阵分类</a>
-<ul>
-<li><a href="#coo-coo_matrixhttpsdocsscipyorgdocscipyreferencegeneratedscipysparsecoo_matrixhtml">COO - [coo_matrix](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.coo_matrix.html)</a>
-<ul>
-<li><a href="#coordinate-matrix-对角存储矩阵">Coordinate Matrix 对角存储矩阵</a></li>
-<li><a href="#适用场景">适用场景</a></li>
-<li><a href="#优缺点">优缺点</a>
-<ul>
-<li><a href="#1优点">①优点</a></li>
-<li><a href="#2缺点">②缺点</a></li>
-</ul></li>
-<li><a href="#实例化方法">实例化方法</a></li>
-<li><a href="#特殊属性">特殊属性</a></li>
-<li><a href="#代码示例">代码示例</a></li>
-</ul></li>
-<li><a href="#csr-csr_matrixhttpsdocsscipyorgdocscipyreferencegeneratedscipysparsecsr_matrixhtml">CSR - [csr_matrix](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html)</a>
-<ul>
-<li><a href="#compressed-sparse-row-matrix-压缩稀疏行格式">Compressed Sparse Row Matrix 压缩稀疏行格式</a></li>
-<li><a href="#适用场景-1">适用场景</a></li>
-<li><a href="#优缺点-1">优缺点</a>
-<ul>
-<li><a href="#1优点-1">①优点</a></li>
-<li><a href="#2缺点-1">②缺点</a></li>
-</ul></li>
-<li><a href="#实例化">实例化</a></li>
-<li><a href="#特殊属性-1">特殊属性</a></li>
-</ul></li>
-<li><a href="#csc-csc_matrixhttpsdocsscipyorgdocscipyreferencegeneratedscipysparsecsc_matrixhtml">CSC - [csc_matrix](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csc_matrix.html)</a>
-<ul>
-<li><a href="#compressed-sparse-column-matrix-压缩稀疏列矩阵">Compressed Sparse Column Matrix 压缩稀疏列矩阵</a></li>
-<li><a href="#应用场景">应用场景</a></li>
-<li><a href="#优缺点-2">优缺点</a></li>
-<li><a href="#实例化-1">实例化</a></li>
-<li><a href="#特殊属性-2">特殊属性</a></li>
-</ul></li>
-<li><a href="#bsr-bsr_matrixhttpsdocsscipyorgdocscipyreferencegeneratedscipysparsebsr_matrixhtml">BSR - [bsr_matrix](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.bsr_matrix.html)</a>
-<ul>
-<li><a href="#block-sparse-row-matrix-分块压缩稀疏行格式">Block Sparse Row Matrix 分块压缩稀疏行格式</a></li>
-<li><a href="#实例化-2">实例化</a></li>
-<li><a href="#特殊属性">特殊<strong>属性</strong></a></li>
-<li><a href="#代码示例-1">代码示例</a></li>
-<li><a href="#优缺点-3">优缺点</a>
-<ul>
-<li><a href="#1优点-2">①优点</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#dok-dok_matrixhttpsdocsscipyorgdocscipyreferencegeneratedscipysparsedok_matrixhtml">DOK- [dok_matrix](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.dok_matrix.html)</a>
-<ul>
-<li><a href="#dictionary-of-keys-matrix-按键字典矩阵">Dictionary of Keys Matrix 按键字典矩阵</a></li>
-<li><a href="#适用场景-2">适用场景</a></li>
-<li><a href="#实例化方法-1">实例化方法</a></li>
-<li><a href="#优缺点-4">优缺点</a>
-<ul>
-<li><a href="#1优点-3">①优点</a></li>
-<li><a href="#2缺点-2">②缺点</a></li>
-</ul></li>
-<li><a href="#代码示例-2">代码示例</a></li>
-</ul></li>
-<li><a href="#lil-lil_matrixhttpsdocsscipyorgdocscipyreferencegeneratedscipysparselil_matrixhtml">LIL - [lil_matrix](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.lil_matrix.html)</a>
-<ul>
-<li><a href="#linked-list-matrix-链表矩阵">Linked List Matrix 链表矩阵</a></li>
-<li><a href="#适用场景-3">适用场景</a></li>
-<li><a href="#优缺点-5">优缺点</a>
-<ul>
-<li><a href="#1优点-4">①优点</a></li>
-<li><a href="#2缺点-3">②缺点</a></li>
-</ul></li>
-<li><a href="#实例化方法-2">实例化方法</a></li>
-<li><a href="#特殊属性-3">特殊属性</a></li>
-<li><a href="#代码示例-3">代码示例</a></li>
-</ul></li>
-<li><a href="#dia-dia_matrixhttpsdocsscipyorgdocscipyreferencegeneratedscipysparsedia_matrixhtml">DIA - [dia_matrix](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.dia_matrix.html)</a>
-<ul>
-<li><a href="#diagonal-matrix-对角存储格式">Diagonal Matrix 对角存储格式</a></li>
-<li><a href="#适用场景-4">适用场景</a></li>
-<li><a href="#实例化方法-3">实例化方法</a></li>
-<li><a href="#特殊属性-4">特殊属性</a></li>
-<li><a href="#代码示例-4">代码示例</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#矩阵格式对比">矩阵格式对比</a></li>
-<li><a href="#稀疏矩阵存取">稀疏矩阵存取</a>
-<ul>
-<li><a href="#存储-save_npz">存储 - <code>save_npz</code></a></li>
-<li><a href="#读取-load_npz">读取 - <code>load_npz</code></a></li>
-<li><a href="#存储大小比较">存储大小比较</a></li>
-</ul></li>
-<li><a href="#参考">参考</a></li>
-</ul>
-<!-- tocstop -->
 <h2><span id="01-稀疏矩阵简介">0.1. 稀疏矩阵简介</span></h2>
 <h3><span id="011-稀疏矩阵">0.1.1. 稀疏矩阵</span></h3>
 <table>
@@ -774,31 +666,6 @@
     <url>/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>[更新中] 时光总若即若离，不觉将至大三。回望已逝的两年大学生活，发现自己已经做了不少的PPT，有关社团、有关学术、有关技术等等。于是，今天将两年来所作PPT汇总整理，来分析个人的风格，以寻求进步。</p>
 <a id="more"></a>
-<!-- toc -->
-<ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#结构设计">结构设计</a>
-<ul>
-<li><a href="#首页">首页</a></li>
-<li><a href="#目录页">目录页</a></li>
-<li><a href="#图示页">图示页</a></li>
-<li><a href="#分点页">分点页</a></li>
-<li><a href="#数据页">数据页</a></li>
-<li><a href="#对比页">对比页</a></li>
-<li><a href="#人物页">人物页</a></li>
-<li><a href="#时间轴">时间轴</a></li>
-<li><a href="#结尾页">结尾页</a></li>
-</ul></li>
-<li><a href="#元素设计">元素设计</a>
-<ul>
-<li><a href="#配色">配色</a></li>
-<li><a href="#背景">背景</a></li>
-<li><a href="#标题">标题</a></li>
-</ul></li>
-<li><a href="#动画设计">动画设计</a></li>
-<li><a href="#总结">总结</a></li>
-</ul>
-<!-- tocstop -->
 <h2><span id="01-前言">0.1. 前言</span></h2>
 <p>PPT设计所涉及到的结构和元素繁多，于是文章将按时间顺序分别从结构设计、元素和动画设计三方面来介绍。</p>
 <h2><span id="02-结构设计">0.2. 结构设计</span></h2>
@@ -1734,7 +1601,7 @@
     <title>Start the Journey of My Blog</title>
     <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-SUyqaFPw" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="0046Ze2d2A7jeA" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-aZXcaURX" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="0046Ze2d2A7jeA" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 <h2><span id="01-welcome-to-my-blog">0.1. Welcome to My Blog</span></h2>
 <p>Gemini向光性<br>
 困在双子星座的流浪旅人<br>
@@ -1798,12 +1665,13 @@
     <title>【游戏人生】双子Gemini——我们都在寻找着某个人</title>
     <url>/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-dayReBqQ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="0004CQiv4NUbmR" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-FSkrrsYI" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="0004CQiv4NUbmR" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 <blockquote class="blockquote-center">
 <p>“我们都在寻找着 某个人”——《你的名字。》</p>
 
 </blockquote>
-<p>暗夜中的荧树依旧沉睡着，它已经很久很久没有发过光了，久的人们都早已忘记了那个传说...... <a id="more"></a></p>
+<p>暗夜中的荧树依旧沉睡着，它已经很久很久没有发过光了，久的人们都早已忘记了那个传说......</p>
+<a id="more"></a>
 <h2><span id="01-一-相遇前尘如是">0.1. 一、相遇：前尘如是</span></h2>
 <p>少了星光的装点，夜空暗淡了许多。我心有所念地张望着四周，却又不知在找寻着谁。明明毫无目的地来这儿，却又诚惶诚恐地害怕着错过。空荡荡的心将无神的目光映向不远处沉眠的荧树，然后莫名其妙地叹息。准备离开时的回眸，让我们的目光在朦胧的暮色下交错，我似乎懂了，懂得了命运织缠的意义。</p>
 <p><img data-src="/resource/images/game-gemini-1.png"></p>
