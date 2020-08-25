@@ -1163,53 +1163,7 @@
     <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
     <content><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script></head><body><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
 <a id="more"></a>
-<!-- toc -->
-<ul>
-<li><a href="#论文简介">论文简介</a></li>
-<li><a href="#问题定义">问题定义</a>
-<ul>
-<li><a href="#专业词汇">专业词汇</a></li>
-<li><a href="#vne">VNE</a></li>
-</ul></li>
-<li><a href="#算法模型">算法模型</a>
-<ul>
-<li><a href="#dl-a3c">DL-A3C</a></li>
-<li><a href="#gcn">GCN</a></li>
-<li><a href="#a3c-gcn">A3C + GCN</a>
-<ul>
-<li><a href="#环境-environment">环境 Environment</a></li>
-<li><a href="#代理-agent">代理 Agent</a></li>
-<li><a href="#状态-state">状态 State</a></li>
-<li><a href="#动作-action">动作 Action</a></li>
-<li><a href="#奖励-rewords">奖励 Rewords</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#性能评估">性能评估</a>
-<ul>
-<li><a href="#设计实验">设计实验</a></li>
-<li><a href="#对比算法">对比算法</a></li>
-<li><a href="#评估指标">评估指标</a>
-<ul>
-<li><a href="#vnr-到达率测试">VNR 到达率测试</a></li>
-<li><a href="#资源请求测试">资源请求测试</a></li>
-<li><a href="#节点数量扩展性测试">节点数量扩展性测试</a></li>
-<li><a href="#平均运行时间统计">平均运行时间统计</a></li>
-</ul></li>
-<li><a href="#验证测试">验证测试</a>
-<ul>
-<li><a href="#训练效率及收敛性">训练效率及收敛性</a></li>
-<li><a href="#资源请求测试验证">资源请求测试验证</a></li>
-</ul></li>
-<li><a href="#其他参数下模型的可行性研究">其他参数下模型的可行性研究</a>
-<ul>
-<li><a href="#附加网络拓扑和参数">附加网络拓扑和参数</a></li>
-<li><a href="#其他指标">其他指标</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#主要创新">主要创新</a></li>
-<li><a href="#总结思考">总结思考</a></li>
-</ul>
-<!-- tocstop -->
+<p>[toc]</p>
 <h2 class="heading-control"><span id="论文简介">论文简介</span></h2>
 <p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br>
 <strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br>
