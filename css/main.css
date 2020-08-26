@@ -3261,7 +3261,7 @@ mjx-container[display="true"] + br {
   min-width: 200px;
   text-align: left;
   display: inline-block;
-  background: $lavender;
+  background: #cdf;
   box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
 .category-all-page .category-list-count {
@@ -3310,7 +3310,7 @@ mjx-container[display="true"] + br {
 }
 .post-copyright {
   border-left: 3px solid #fb9;
-  background-color: $purple-bright;
+  background-color: #cdf;
 }
 figcaption {
   text-align: center;
