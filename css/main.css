@@ -3261,7 +3261,7 @@ mjx-container[display="true"] + br {
   min-width: 200px;
   text-align: left;
   display: inline-block;
-  background: #cdf;
+  background: $lavender;
   box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
 .category-all-page .category-list-count {
@@ -3310,10 +3310,100 @@ mjx-container[display="true"] + br {
 }
 .post-copyright {
   border-left: 3px solid #fb9;
-  background-color: #edf;
+  background-color: $purple-bright;
 }
 figcaption {
   text-align: center;
+}
+.post-body {
+  counter-reset: h2;
+}
+.post-body h1 {
+  counter-reset: h2;
+}
+.post-body h2 {
+  counter-reset: h3;
+}
+.post-body h3 {
+  counter-reset: h4;
+}
+.post-body h4 {
+  counter-reset: h5;
+}
+.post-body h5 {
+  counter-reset: h6;
+}
+.post-body h2:before {
+  counter-increment: h2;
+  content: counter(h2) '. ';
+}
+.post-body h3:before {
+  counter-increment: h3;
+  content: counter(h2) '.' counter(h3) '. ';
+}
+.post-body h4:before {
+  counter-increment: h4;
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
+}
+.post-body h5:before {
+  counter-increment: h5;
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
+}
+.post-body h6:before {
+  counter-increment: h6;
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
+}
+.nav {
+  counter-reset: h2;
+}
+.nav .nav-item.nav-level-1 {
+  counter-reset: h2;
+}
+.nav .nav-item.nav-level-2 {
+  counter-reset: h3;
+}
+.nav .nav-item.nav-level-3 {
+  counter-reset: h4;
+}
+.nav .nav-item.nav-level-4 {
+  counter-reset: h5;
+}
+.nav .nav-item.nav-level-5 {
+  counter-reset: h6;
+}
+.nav .nav-item.nav-level-2 a span:before {
+  counter-increment: h2;
+  content: counter(h2) '. ';
+}
+.nav .nav-item.nav-level-3 a span:before {
+  counter-increment: h3;
+  content: counter(h2) '.' counter(h3) '. ';
+}
+.nav .nav-item.nav-level-4 a span:before {
+  counter-increment: h4;
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
+}
+.nav .nav-item.nav-level-5 a span:before {
+  counter-increment: h5;
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
+}
+.nav .nav-item.nav-level-6 a span:before {
+  counter-increment: h6;
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
+}
+h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6 {
+  color: #69f;
+}
+.posts-expand .post-title-link {
+  color: #69f;
+}
+.posts-expand .post-title-link::before {
+  background: #69f;
 }
 .href {
   color: #87daff;
