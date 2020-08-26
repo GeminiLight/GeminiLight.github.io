@@ -1,501 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>数据分析知识体系</title>
-    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>数据分析</p>
-<a id="more"></a>
-<h2 id="数据分析">数据分析</h2>
-<h2 id="python模块">Python模块</h2>
-<h3 id="numpy">Numpy</h3>
-<h3 id="pandas">pandas</h3>
-<h3 id="scipy">Scipy</h3>
-<h3 id="matplotlib">matplotlib</h3>
-<figure>
-<img data-src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="test" /><figcaption>test</figcaption>
-</figure>
-]]></content>
-      <categories>
-        <category>DA - 数据分析</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【SDN】VNE 虚拟网络嵌入技术</title>
-    <url>/2020/08/19/CN%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/cn-vne/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><a id="more"></a>
-]]></content>
-      <categories>
-        <category>CN - 计算机网络</category>
-      </categories>
-      <tags>
-        <tag>VNE</tag>
-        <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【NumPy】入门</title>
-    <url>/2019/08/19/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-numpy/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>NumPy</p>
-<a id="more"></a>
-<h3 id="数据">数据</h3>
-<ul>
-<li>Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。</li>
-<li>2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。</li>
-<li>如今，Numpy广泛应用于计算多维数组和大型数组等方面。此外，它还提供多个函数，操作起数组来效率很高，还可用来实现高级数学运算。</li>
-<li>当前，NumPy是开源项目，使用BSD许可证。</li>
-</ul>
-<h3 id="numpy-pandas">Numpy &amp; pandas</h3>
-<ul>
-<li>NumPy是用Python进行科学计算，尤其是数据分析时，所用到的一个基础库。 它是大量Python数学和科学计算包的基础，比如pandas库就用到了NumPy。</li>
-<li>pandas库专门用于数据分析，充分借鉴了Python标准库NumPy的相关概念。</li>
-</ul>
-<h3 id="numpy的安装">Numpy的安装</h3>
-<ul>
-<li>Windows： <code>pip install numpy</code> 若下载慢导致失败，可指定国内pip源（加上-i参数，指定pip源） <code>pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple</code><br />
-</li>
-<li>导入Numpy模块 <code>&gt;&gt;&gt; import numpy as np</code></li>
-</ul>
-]]></content>
-      <categories>
-        <category>DA - 数据分析</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>数据分析</tag>
-        <tag>NumPy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【PPT设计】大一大二时期个人PPT设计风格总结</title>
-    <url>/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>[更新中] 时光总若即若离，不觉将至大三。回望已逝的两年大学生活，发现自己已经做了不少的PPT，有关社团、有关学术、有关技术等等。于是，今天将两年来所作PPT汇总整理，来分析个人的风格，以寻求进步。</p>
-<a id="more"></a>
-<h2 id="前言">前言</h2>
-<p>PPT设计所涉及到的结构和元素繁多，于是文章将按时间顺序分别从结构设计、元素和动画设计三方面来介绍。</p>
-<h2 id="结构设计">结构设计</h2>
-<h3 id="首页">首页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-18-wps-office-1.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
-</figure>
-<ul>
-<li>描述：这个PPT做的时间还是比较早的，当时为了契合WPS和OFFICE对比的主题，于是做的颜色和动画比较花哨</li>
-<li>想法：颜色多而且都是重色彩的，过浓而影响视觉重心，可以减少些装饰元素未出现或不搭的颜色如粉、紫等等，再减少些颜色的饱和度，或许会改善些。</li>
-</ul>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-1.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<ul>
-<li>描述：大概是第一次复现这副封面，比较适合首页信息密度较高的构图</li>
-<li>想法：背景颜色稍微亮了些，右部分的构图不太稳</li>
-</ul>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-1.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-1.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-english-pre-ai-1.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-1.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<h3 id="目录页">目录页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-2.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-2.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-2.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<h3 id="图示页">图示页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-3.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-4.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-4.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-6.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-12.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-english-pre-ai-2.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-english-pre-ai-5.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-3.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-4.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-train-cquse-1.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
-</figure>
-<h3 id="分点页">分点页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-4.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-5.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-8.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-3.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-5.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-7.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-9.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-6.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-train-cquse-2.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-train-cquse-3.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-train-cquse-4.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
-</figure>
-<h3 id="数据页">数据页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-6.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-7.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-2.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-10.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-13.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<h3 id="对比页">对比页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-18-wps-office-2.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-8.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-english-pre-ai-3.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
-</figure>
-<h3 id="人物页">人物页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-11.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<h3 id="时间轴">时间轴</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-14.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2020-innovte-5.webp" /><figcaption>2020/06/24-市创立项</figcaption>
-</figure>
-<h3 id="结尾页">结尾页</h3>
-<figure>
-<embed src="/resource/images/ad-ppt-19-srtp-5.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-2019-train-4399-9.webp" /><figcaption>2019/08/30-实训结题</figcaption>
-</figure>
-<figure>
-<embed src="/resource/images/ad-ppt-19-hl-b-s-15.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
-</figure>
-<h2 id="元素设计">元素设计</h2>
-<h3 id="配色">配色</h3>
-<h3 id="背景">背景</h3>
-<h3 id="标题">标题</h3>
-<h2 id="动画设计">动画设计</h2>
-<h2 id="总结">总结</h2>
-]]></content>
-      <categories>
-        <category>GD - 平面设计</category>
-      </categories>
-      <tags>
-        <tag>PPT设计</tag>
-        <tag>大学生活</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【游戏人生】双子Gemini——我们都在寻找着某个人</title>
-    <url>/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-QJhiqRBN" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="0004CQiv4NUbmR" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
-    ></div>
-<blockquote class="blockquote-center">
-<p>“我们都在寻找着 某个人”——《你的名字。》</p>
-
-</blockquote>
-<p>暗夜中的荧树依旧沉睡着，它已经很久很久没有发过光了，久的人们都早已忘记了那个传说......</p>
-<a id="more"></a>
-<h2 id="一相遇前尘如是">一、相遇：前尘如是</h2>
-<p>少了星光的装点，夜空暗淡了许多。我心有所念地张望着四周，却又不知在找寻着谁。明明毫无目的地来这儿，却又诚惶诚恐地害怕着错过。空荡荡的心将无神的目光映向不远处沉眠的荧树，然后莫名其妙地叹息。准备离开时的回眸，让我们的目光在朦胧的暮色下交错，我似乎懂了，懂得了命运织缠的意义。</p>
-<p><img data-src="/resource/images/game-gemini-1.png" /></p>
-<p>时间放佛在那一刻停格，空气也随之凝滞，任由荧树的年轮刻录下心动和心悸： 你尚未出现时，我的生命平静，轩昂阔步行走，动辄料事如神；如今惶乱，怯弱，像冰融的春水，一流就流向你，又不知你在何处（木心）。可明明你就在我面前，我却又不知所措。</p>
-<p><img data-src="/resource/images/game-gemini-2.png" /></p>
-<p>空气不再沉默——似乎有种引力牵引着我慢步走向了你。脚步声在寂寥的夜空中徘徊，你退回荧树枝下，等候着我的到来。但当手被牵起时，你却皱了皱眉，有些许心痛，却又不知痛从何而来。彼此只手相依，只手迎风，曼舞空凉。执子之手，挥洒荧光。古树开始苏醒，重现荧光，夜空渐被点亮，直至整个银河宛若天堂。</p>
-<h2 id="二别离心恸幽思">二、别离：心恸幽思</h2>
-<p><img data-src="/resource/images/game-gemini-3.png" /></p>
-<p>面前是无数陨石阻隔，彼岸即是梦寐以求的星河。无数次的碰撞，无数次的跌倒，无数次的逃亡。看着身旁遍体鳞伤的你，我心如刀割。头脑开始眩晕，身体开始麻木，但始终未停止撞击。终于，你，停了下来，慢慢下坠。此时，我，早已泪眼婆娑，椎心泣血。抱紧昏倒的你，看着你迂回的伤痕，痛恨自己的无力。</p>
-<p><img data-src="/resource/images/game-gemini-4.png" /></p>
-<p>恸哭一声——微光亦可昼亮，化作流星花火，划破无边银河。天空被渲染成晨曦般的颜色，陨石被狠狠撞碎坠落，星际被灿烂夺去轮廓。我回首望向了你，微笑着轻抚了一下，拭去你眼角的泪花。凝视着你，沉默，却又更多话语。回顾此生，路途虽险，却不惧混沌黑夜，不畏疾风骤雨，只因有你相伴左右，不曾离弃。</p>
-<p><img data-src="/resource/images/game-gemini-6.png" /></p>
-<p>原谅我，不再陪你，望这最后一星余晖燃尽守护你；<br />
-失去我，日月如常，世上最美的星云就在前方；<br />
-答应我，生活下去，未来你会有更好的相遇。</p>
-<p>星辉殆尽，堙灭散落，银河再归混沌，我已一别永年。就这样，我离开了你，无声无息，了无痕迹。</p>
-<h2 id="三追忆念旧顾逝">三、追忆：念旧顾逝</h2>
-<p>最后一丝星火被黑夜淹没，前方不再有陨石阻隔，她向前扑去，想要如往常般依偎着他，却痛痛地跌倒在地。眼泪肆意挥霍着，润湿了瞳孔，模糊了每个角落；打在了心口，放任痛楚清晰地游走，倒带往昔彼此依偎的甜蜜：</p>
-<p><img data-src="/resource/images/game-gemini-14.png" /> <img data-src="/resource/images/game-gemini-15.png" /> <img data-src="/resource/images/game-gemini-16.png" /> <img data-src="/resource/images/game-gemini-17.png" /> <img data-src="/resource/images/game-gemini-19.png" /></p>
-<p>荧树下他许诺让她看到世间最美的星云，带她浪迹天涯。 黎明的曙光照亮孤寂的夜空，驱赶着不羁的黑暗，他们双手相牵，追赶着晨曦，一起见证日出的那一抹微光。正午的太阳愈渐熠亮，他们在风中嬉戏，在路旁依靠，感受着对方的呼吸，心透着无声的默契。黄昏悄悄降临，彩霞中奔跑的身影停下了脚步，最浪漫不过彼此并肩欣赏夕阳。</p>
-<p>时而细雨微作，他们轻歌慢步；时而骤风忽起，他们依偎拥抱。他们在文明废墟中相伴而游，见证希望；在极地冰川中相依而行，战克风霜；在富丽殿堂中相视而笑，共享荣光。音符弹奏着甜蜜，图腾印刻下笑容。</p>
-<p>日出日落，朝暮共同分享，无惧颠簸跌宕；<br />
-路途遥远，同游山高水长，风景彼此共赏。</p>
-<p>而这一切已成过往……</p>
-<h2 id="四辉煌星夜如斯">四、辉煌：星夜如斯</h2>
-<p>任何一种环境或一个人，初次见面就预感到离别的隐痛时，你必定是爱上他了。（黄永玉）她明白了初遇时的心悸，不是青涩，亦不是恐惧，而是她早已预见他们命中注定要分离。 霓虹渐显倪端，微光开始蔓延，泪花随风飘落，伊人难以忘怀。星光映在她的脸庞，尽是泪行。手紧紧的攥着，慢步向前，她的眼神中少了悲伤，多了空灵，即使面前魂牵梦绕的星云也扬不起她嘴角的一丝微笑。</p>
-<p>景虽美，光虽亮，可，泪已尽，心已灰。</p>
-<p>没有形单影只的倾诉，没有感天动地的恸哭，甚至没有了恋人别离的苦楚，她走向星云的中央，目光死死的盯着他星辉散尽的方向，双臂展开，静静释怀……</p>
-<p><img data-src="/resource/images/game-gemini-12.png" /></p>
-<p>混沌银河骤然生光，星云再次燃起辉亮——她竭尽星辉在祈愿，不求时间重返，只求来世重逢。那一刻，宇宙听到了她的心声，苍穹为之感染。夜空灰暗千年，不再寂寥，星辉绚丽，占据每一寸黑暗。她最后一次俯瞰世间，不再有任何羁绊，微微一笑，随风消散。</p>
-<p><img data-src="/resource/images/game-gemini-13.png" /></p>
-<p>周边的星辰说那是他们一生中见过的最美最亮的星辉：冰冷中透着暖意，凄美却又不失灿烂，那不是悲伤，而是诠释，是渴盼，是希望。 言语停了下来，荧树又重归于暗淡... ...</p>
-<h2 id="五来世情缘何去">五、来世：情缘何去</h2>
-<p>银河浩渺无垠，星辰繁若樱花，来生相距光年十万，抑或咫尺之遥，可否会重逢再会？如若他日于星海偶遇，你我会擦肩而过，彼此不识，还是会心动如昔，情缘再续？ 命运最神秘的不是变幻莫测无人知晓，而是冥冥之中自有定向。</p>
-<hr />
-<p>荧树沉寂了万年，传说不再被流传，但至今仍会有人说：</p>
-<blockquote class="blockquote-center">
-<p>一次告别 天上就会有颗星 又熄灭</p>
-
-</blockquote>
-]]></content>
-      <categories>
-        <category>MY - 感悟随笔</category>
-      </categories>
-      <tags>
-        <tag>游戏人生</tag>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【讲座收获】潘复生院士谈科学创新</title>
-    <url>/2019/09/22/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-academician-pan-fu-sheng/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>潘复生院士关于科学创新的讲座</p>
-<a id="more"></a>
-<h2 id="科学发展现状">科学发展现状</h2>
-<p>资源匮乏<br />
-信息科技依赖<br />
-生物科学<br />
-学科交叉对知识要求越来越高</p>
-<h3 id="我国发展现状">我国发展现状</h3>
-<p>16个重大专项</p>
-<p>科技实力低于美国<br />
-科技投入远低于发达国家<br />
-基础研究待加强<br />
-科学素养低（官员政策制定）科普</p>
-<h2 id="创新素质培养">创新素质培养</h2>
-<h3 id="学会合作">学会合作</h3>
-<p>团结他人（比自己优秀的和略差与自己的）</p>
-<h3 id="学会放弃">学会放弃</h3>
-<p>（选择自己最喜欢的方向）</p>
-<h3 id="学会学习">学会学习</h3>
-<p>（ 知识学习能力远比知识记忆或积累能力更重要<br />
-学习能力比死记硬背更重要<br />
-基本工具一定要好（英语，计算机）<br />
-学会忘记有时比学会记住更重要 ）</p>
-<h3 id="学会分析和怀疑提问问题">学会分析和怀疑+提问问题</h3>
-<p>（不鼓励小中学生瞎猜怀疑=》知识积累+理解世界）<br />
-大学生学会怀疑</p>
-<h3 id="学会表达">学会表达</h3>
-<p>（让他人理解，好的表达扬长避短，站在对方角度来表达）</p>
-<h2 id="科研技巧">科研技巧</h2>
-<ol type="1">
-<li>重视偶然性才有必然性</li>
-<li>交流和讨论（潘与汉诺丁-英欧支持+国家支持）</li>
-<li>仿生学（创新启示）</li>
-<li>做多数人喜欢的事情（做好不喜欢的事，做自己喜欢的事做的会更好）</li>
-<li>逆向思维是成功的捷径</li>
-</ol>
-<h2 id="我的感悟">我的感悟</h2>
-]]></content>
-      <categories>
-        <category>MY - 感悟随笔</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-        <tag>创新思维</tag>
-        <tag>科研思维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【讲座收获】ZJU 陈为教授：大数据与可视化技术</title>
-    <url>/2020/03/21/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-zju-professor-chenwei-date-visonlization/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>浙江大学陈为教授关于大数据与可视化技术及其应用的讲座。</p>
-<a id="more"></a>
-<h2 id="大数据思维">大数据思维</h2>
-<h3 id="一数据核心原理">一、数据核心原理</h3>
-<p>从“流程”核心转变为“数据”核心</p>
-<h3 id="二数据价值原理">二、数据价值原理</h3>
-<p>由功能即价值转变为数据即价值</p>
-<h3 id="三全样本原理">三、全样本原理</h3>
-<p>从抽样转变为需要全部数据样本</p>
-<h3 id="四关注效率原理">四、关注效率原理</h3>
-<p>由关注精确度转变为关注效率</p>
-<h3 id="五利用相关性取代因果关系">五、利用相关性取代因果关系</h3>
-<p>不需要知道为什么</p>
-<h3 id="六从采样到全样本">六、从采样到全样本</h3>
-<p>抽样 != 全样</p>
-<h3 id="七从精确到模糊">七、从精确到模糊</h3>
-<p>大数据简单算法比小数据复杂性算法更有效</p>
-<h3 id="八安迪比尔定律">八、安迪·比尔定律</h3>
-<p>软件硬件相互要求<br />
-大数据时代生产越来越过剩<br />
-大数据分析应用的三个层次<br />
-描述性分析-&gt; 预测性分析 -&gt; 指导性分析</p>
-<ol type="1">
-<li>关注发生了什么，呈现事物</li>
-<li>关注“可能发生什么”，呈现趋势</li>
-<li>关注“选择做什么”，呈现不同决策的后果</li>
-</ol>
-<h2 id="数据可视化">数据可视化</h2>
-<h3 id="概念原理">概念原理</h3>
-<p>创建并研究数据的<strong>视觉表达 (Visual Representation)</strong></p>
-<ul>
-<li>输入：数据（data）</li>
-<li>输出：视觉形式（visual form）</li>
-<li>目标：深入理解（insight）</li>
-</ul>
-<p><img data-src="/resource/images/lecture-zju-chenwei-data-visualization-1.png" /></p>
-<h3 id="主要任务">主要任务</h3>
-<ul>
-<li>表示数据 - Represent</li>
-<li>分析数据 - Analyze</li>
-<li>交流数据 - Communicate</li>
-</ul>
-<p><img data-src="/resource/images/lecture-zju-chenwei-data-visualization-2.png" /></p>
-<p>思维系统</p>
-<p><img data-src="/resource/images/lecture-zju-chenwei-data-visualization-3.png" /></p>
-<h3 id="重要应用">重要应用</h3>
-<p><img data-src="/resource/images/lecture-zju-chenwei-data-visualization-4.png" /></p>
-<h4 id="科学研究">科学研究</h4>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553101983-592e3de3-6399-4d7e-94fd-5520cb5d7436.jpeg" alt="Screenshot_2020-03-21-19-29-04-321_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-29-04-321_com.tencent.mm.jpg</figcaption>
-</figure>
-<h4 id="物联网与智慧城市">物联网与智慧城市</h4>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553093853-82ae1835-1ee9-446e-a9d7-1062ec4bd990.jpeg" alt="Screenshot_2020-03-21-19-31-43-189_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-31-43-189_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553096563-2e705eda-f52a-4d9d-8501-56e8d9f4a20b.jpeg" alt="Screenshot_2020-03-21-19-31-00-805_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-31-00-805_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553100901-44982283-79e6-4f40-bbde-844fd79a9312.jpeg" alt="Screenshot_2020-03-21-19-32-44-746_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-32-44-746_com.tencent.mm.jpg</figcaption>
-</figure>
-<h4 id="互联网与社交媒体">互联网与社交媒体</h4>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553116198-c5ab1e00-48c1-40e4-91cf-f4946189fef8.jpeg" alt="Screenshot_2020-03-21-19-33-59-913_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-33-59-913_com.tencent.mm.jpg</figcaption>
-</figure>
-<h4 id="可视化战役">可视化战役</h4>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553117639-2c9b41bf-e710-47fe-a845-1127481da915.jpeg" alt="Screenshot_2020-03-21-19-22-01-271_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-22-01-271_com.tencent.mm.jpg</figcaption>
-</figure>
-<h4 id="可视化技术原理">可视化技术原理</h4>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553108397-496f8771-8244-4a14-b3e0-1de3c4f563a7.jpeg" alt="Screenshot_2020-03-21-19-36-29-829_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-36-29-829_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553107177-df65738b-5da3-4e12-97b4-41634e49bb05.jpeg#" alt="Screenshot_2020-03-21-19-38-51-711_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-38-51-711_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553103214-3be220b5-f82b-449a-8236-99179c056d5f.jpeg" alt="Screenshot_2020-03-21-19-39-35-005_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-39-35-005_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553113310-36dfe174-5469-4332-9562-dd2342328f4c.jpeg" alt="Screenshot_2020-03-21-19-41-55-010_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-41-55-010_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553106046-4592657f-b6db-40c6-b015-1c8295265d90.jpeg" alt="Screenshot_2020-03-21-19-43-19-126_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-43-19-126_com.tencent.mm.jpg</figcaption>
-</figure>
-<h4 id="疫情可视化成果">疫情可视化成果</h4>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553104562-2fdc936c-d4fc-4389-b45c-3bcf70f540e0.jpeg" alt="Screenshot_2020-03-21-19-43-50-613_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-43-50-613_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553122434-af75c7be-d6a2-4b55-aadb-78466962b343.jpeg" alt="Screenshot_2020-03-21-19-46-02-513_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-46-02-513_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553118922-106f8ca6-72a4-45b4-b1c1-1f273a7f4ab4.jpeg" alt="Screenshot_2020-03-21-19-46-10-852_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-46-10-852_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553110693-67c79c0d-856c-4a8d-b443-0737a958a752.jpeg" alt="Screenshot_2020-03-21-19-47-49-742_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-47-49-742_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553095086-c642ff91-c59c-4f2c-be98-f46d2c27eb4b.jpeg" alt="Screenshot_2020-03-21-19-48-35-127_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-48-35-127_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553121370-dc268ad9-7e44-489e-88aa-6a7eecfaa959.jpeg" alt="Screenshot_2020-03-21-19-50-08-299_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-50-08-299_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553099079-0f2287d6-5f6f-4672-929b-dbc8ced4c212.jpeg" alt="Screenshot_2020-03-21-19-52-23-743_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-52-23-743_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553123618-26a9e0b7-8519-488b-9ae0-507597ec0127.jpeg" alt="Screenshot_2020-03-21-19-55-31-803_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-55-31-803_com.tencent.mm.jpg</figcaption>
-</figure>
-<h5 id="疫情可视化公益活动">疫情可视化公益活动</h5>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553097863-0e4f4174-04d5-4d15-98a1-e662a8316425.jpeg" alt="Screenshot_2020-03-21-19-55-47-774_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-55-47-774_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553109583-ae8af672-4d48-4d36-a56e-bb5906c69f87.jpeg" alt="Screenshot_2020-03-21-20-04-33-705_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-20-04-33-705_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553114681-a682bc1d-6485-4060-b11c-9caf09c55fcb.jpeg" alt="Screenshot_2020-03-21-20-08-01-604_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-20-08-01-604_com.tencent.mm.jpg</figcaption>
-</figure>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553111955-ea479654-ba5b-4a85-828c-a786583d293b.jpeg" alt="Screenshot_2020-03-21-20-11-09-734_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-20-11-09-734_com.tencent.mm.jpg</figcaption>
-</figure>
-<h2 id="拓展阅读">拓展阅读</h2>
-<blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlxaXpoaXhpbi5jb20vYXJ0aWNsZXMvMjAxOS0wNC0xMS0z">浙江大学陈为“大数据可视化”<i class="fa fa-external-link-alt"></i></span><br />
-<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yMDkyOTcwNw==">彻底颠覆你认知的10条大数据思维<i class="fa fa-external-link-alt"></i></span></p>
-</blockquote>
-<h2 id="我的心得">我的心得</h2>
-]]></content>
-      <categories>
-        <category>MY - 感悟随笔</category>
-      </categories>
-      <tags>
-        <tag>学术讲座</tag>
-        <tag>大数据</tag>
-        <tag>数据可视化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【随笔】时光刻痕——为什么重启博客</title>
     <url>/2020/08/25/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-record-our-moments/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
@@ -535,476 +40,6 @@
       <tags>
         <tag>随笔</tag>
         <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Start the Journey of My Blog</title>
-    <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-mlnrVrJz" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="0046Ze2d2A7jeA" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
-    ></div>
-<h2 id="welcome-to-my-blog">Welcome to My Blog</h2>
-<p>Gemini向光性<br />
-困在双子星座的流浪旅人<br />
-<a href="/about">了解更多</a></p>
-<a id="more"></a>
-<h2 id="involved-fields">Involved Fields</h2>
-<p>博客计划主要涉及以下内容：</p>
-<h3 id="技术">技术</h3>
-<ul>
-<li>机器学习：传统机器学习、深度学习、强化学习</li>
-<li>数据分析：Numpy、Pandas、Scipy、Matlibplot</li>
-<li>全栈开发：Vue、jQuery、MySQL、SpringBoot、Django</li>
-<li>编程语言：Python、C/C++、Java、JS/TS</li>
-</ul>
-<h3 id="金融">金融</h3>
-<ul>
-<li>宏观经济</li>
-<li>微观经济</li>
-<li>企业分析</li>
-<li>金融分析</li>
-</ul>
-<h3 id="设计">设计</h3>
-<ul>
-<li>PPT设计</li>
-<li>平面设计</li>
-<li>视频剪辑</li>
-</ul>
-<h3 id="生活">生活</h3>
-<ul>
-<li>随笔</li>
-<li>音乐</li>
-<li>摄影</li>
-<li>影视</li>
-<li>游戏</li>
-<li>烹饪</li>
-</ul>
-<p>但深知自己才疏博浅且臻爱原创，又不愿随波逐流，故更新进度随缘。</p>
-]]></content>
-      <categories>
-        <category>MY - 感悟随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习知识体系</title>
-    <url>/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>深度学习</p>
-<a id="more"></a>
-<h3 id="基础网络">基础网络</h3>
-<ul>
-<li>CNN</li>
-<li>RNN</li>
-<li>GNN</li>
-</ul>
-<h3 id="应用场景">应用场景</h3>
-<ul>
-<li>CV 计算机视觉</li>
-<li>NLP 自然语言处理</li>
-<li>KG 知识图谱</li>
-</ul>
-<h3 id="主流框架">主流框架</h3>
-<ul>
-<li>TensorFlow</li>
-<li>PyTorch</li>
-<li>PaddlePaddle</li>
-<li>MindSpore</li>
-</ul>
-]]></content>
-      <categories>
-        <category>ML - 机器学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Python】基础语法总结</title>
-    <url>/2019/01/11/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-fundamental-syntax/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-]]></content>
-      <categories>
-        <category>PL - 编程语言</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>语法进阶</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Python】with语句原理</title>
-    <url>/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>在我们使用Python的时候，常使用到如下的代码块:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件读取</span></span><br><span class="line"><span class="keyword">with</span> open(file, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度计算</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> g:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br></pre></td></tr></table></figure>
-<p>在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try/finally模式的简化。它原理上是利用了上下文管理器，下文简要介绍将对其执行原理和自定义的方法。<a id="more"></a></p>
-<h2 id="上下文管理器概念">上下文管理器概念</h2>
-<h3 id="上下文管理协议context-management-protocol">上下文管理协议（Context Management Protocol）</h3>
-<p>包含方法 <code>__enter__()</code> 和 <code>__exit__()</code> ，支持该协议的对象要实现这两个方法。</p>
-<h3 id="上下文管理器context-manager">上下文管理器（Context Manager）</h3>
-<p>支持上下文管理协议的对象，这种对象必须实现 <code>__enter__()</code> 和 <code>__exit__()</code> 方法。 上下文管理器定义执行with语句时要建立的运行时上下文，负责执行with语句块上下文中的进入与退出操作。 通常使用with语句调用上下文管理器，也可以通过直接调用其方法来使用。</p>
-<ul>
-<li><strong><code>__enter__()</code></strong>
-<ul>
-<li>with语句执行时，先获取上下文管理器对象，随后调用其 <code>__enter__()</code></li>
-<li>若有 <code>as var</code> 语句，则将返回值赋给变量var</li>
-<li>可以返回上下文管理器对象本身，也可以是其他相关对象</li>
-</ul></li>
-<li><strong><code>__exit__()</code></strong>
-<ul>
-<li>带有三个参数 <code>exc_type, exc_val, exc_tb</code></li>
-<li>若上下文管理器对象执行无异常，则三个参数均为 <code>None</code></li>
-<li>若发生异常，则三个参数分别为 异常类型，异常值和tracback信息</li>
-</ul></li>
-</ul>
-<h2 id="with语句执行过程">with语句执行过程</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#   EXP: 表达式</span></span><br><span class="line"><span class="comment">#   VAR: 变量名，[as VAR][可选]</span></span><br><span class="line"><span class="comment"># BlOCK: 代码块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> EXP <span class="keyword">as</span> VAR:</span><br><span class="line">    BLOCK</span><br></pre></td></tr></table></figure>
-<p><img data-src="/resource/images/pl-python-with.png" width="100%" /></p>
-<ol type="1">
-<li>执行代码时，先执行 <code>EXPR</code> 语句，生成上下文管理器对象 context_manager；</li>
-<li>获取上下文管理器的 <code>__exit()__</code> 方法，并保存起来用于之后的调用；</li>
-<li>调用上下文管理器的 <code>__enter__()</code> 方法，且可将返回值赋给as语句变量；</li>
-<li>执行BLOCK中的表达式；</li>
-<li>不管是否执行过程中是否发生了异常，执行上下文管理器的 <code>__exit__()</code> 方法， 执行“清理”工作，如释放资源等。
-<ol type="1">
-<li>如果执行过程中没有出现异常，或者语句体中执行了语句 <code>break</code> / <code>continue</code> / <code>return</code> ，则以 <code>None</code> 作为参数调用 <code>__exit__(None, None, None)</code> ；</li>
-<li>如果执行过程中出现异常，则使用sys.exc_info得到的异常信息为参数调用 <code>__exit__(exc_type, exc_value, exc_traceback)</code> ；</li>
-</ol></li>
-<li>出现异常时，如果 <code>__exit__(type, value, traceback)</code> 返回 <code>False</code> ，则会重新抛出异常，让with之外的语句逻辑来处理异常，这也是通用做法；如果返回True，则忽略异常，不再对异常进行处理。</li>
-</ol>
-<h2 id="自定义上下文管理器">自定义上下文管理器</h2>
-<ul>
-<li>它使代码更简练，可以简化try/finally模式</li>
-<li>当代码异常产生时，<code>__exit__()</code> 会执行清理工作</li>
-<li>可以对软件系统中的资源进行管理，比如数据库连接、共享资源的访问控制等<br /></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding = utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上下文管理器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestWith</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;进入with语句的时候被调用</span></span><br><span class="line"><span class="string">           并将返回值赋给as语句的变量名</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__enter__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;var&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span>(<span class="params">self, exc_type, exc_val, exc_tb</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;离开with的时候被with调用&quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__exit__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># with后面必须跟一个上下文管理器</span></span><br><span class="line"><span class="comment"># 如果使用了as，则是把上下文管理器的 __enter__() 方法的返回值赋值给 target</span></span><br><span class="line"><span class="comment"># target 可以是单个变量，或者由“()”括起来的元组（不能是仅仅由“,”分隔的变量列表，必须加“()”）</span></span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;main&#x27;</span>:</span><br><span class="line">    <span class="keyword">with</span> TestWith() <span class="keyword">as</span> var:</span><br><span class="line">        print(var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行结果</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">__enter__</span></span><br><span class="line"><span class="string">var</span></span><br><span class="line"><span class="string">__exit__</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>本例仅对应代码正常执行的流程，其他特殊情况不再一一列举，有兴趣可单独实验。</p>
-<h2 id="参考">参考</h2>
-<blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuaWJtLmNvbS96aC9hcnRpY2xlcy9vcy1jbi1weXRob253aXRoLw==">浅谈 Python 的 with 语句<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vcHl0aG9uYmFvL3AvMTEyMTEzNDcuaHRtbA==">Python中with用法详解<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC83NDU1Mjg3Nw==">Python中with使用<i class="fa fa-external-link-alt"></i></span> <br /></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>PL - 编程语言</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>语法进阶</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【科研思维】高效的机器学习研究者</title>
-    <url>/2020/02/25/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-effictive-ml-researcher/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>△ 高效的机器学习研究者 | 彻底的自我管理能力 + 坚持到底的决心<br />
-☆ John Schulman &amp; 吴恩达  </p>
-<a id="more"></a>
-<hr />
-<h2 id="笔记">笔记</h2>
-<h3 id="挑选研究问题">1. 挑选研究问题</h3>
-<h4 id="提升研究品位">（1）提升研究品位</h4>
-<ul>
-<li><strong>阅读论文</strong> - 认真评论与探讨</li>
-<li><strong>研究小组</strong> - 吸收他人研究经验</li>
-<li><strong>同行建议</strong> - 吸收他人的看法</li>
-<li><strong>成果产出</strong> - 思考最有可能产出成果的研究方向/问题</li>
-</ul>
-<h4 id="研究的原动力">（2）研究的原动力</h4>
-<ul>
-<li><strong>想法驱动 - 测试某些想法</strong></li>
-</ul>
-<p>深刻理解研究主题以获得更多突破，避免与其他研究者想法相似</p>
-<ul>
-<li><strong>目标驱动 - 实现某些功能</strong></li>
-</ul>
-<p>注重通用性，将自己定义在通用解决方案中<br />
-△ 任何领域的机器学习的新想法都与某些目标有关</p>
-<h4 id="研究目标高远">（3）研究目标高远</h4>
-<p>10% 的改善 OR  10 倍的提升？</p>
-<ul>
-<li>较大的目标下：增量研究（10% 的提升）是最有效的</li>
-<li>增加的复杂性：取决于增量研究的性能提升</li>
-</ul>
-<h3 id="研究是条旅途">2. 研究是条旅途</h3>
-<p>在不清楚终点的旅途中，不断朝着更好地结果前进：</p>
-<h4 id="记录笔记">（1）记录笔记</h4>
-<p>每日总结 &amp; 每周总结 = 事情 + 想法 + 成果</p>
-<ul>
-<li>记录想法</li>
-<li>整理收获</li>
-<li>时间管理</li>
-</ul>
-<h4 id="是否换坑">（2）是否换坑？</h4>
-<p>过于频繁地切换想法比呆在原地不动的故障概率更高<br />
-可以设置固定的时间去尝试那些新想法以拓宽知识面</p>
-<h3 id="发展目光长远">3. 发展目光长远</h3>
-<h4 id="走出舒适区充实机器学习领域知识">走出舒适区，充实机器学习领域知识</h4>
-<ul>
-<li><strong>教材书</strong>： 集中的方式来吸取知识，巩固基础</li>
-<li><strong>学位论文</strong>：了解研究方向的背景、现状和展望</li>
-<li><strong>前沿论文：</strong>关注领域前沿，并自己复现对比</li>
-</ul>
-<h3 id="读论文的建议">4. 读论文的建议</h3>
-<h4 id="阅读进度法">（1）阅读进度法</h4>
-<p>  每一篇列一行，表示从 0 到 100 的阅读进度</p>
-<ul>
-<li>很重要：仔细读到进度100%</li>
-<li>不想要：10%确定是否放弃阅读</li>
-</ul>
-<h4 id="多次浏览法">（2）多次浏览法</h4>
-<ul>
-<li><strong>第一遍 标题、摘要和图表</strong>  - 论文讲什么</li>
-<li><strong>第二遍 前言、结语和图表</strong>  - 论文主要思想</li>
-<li><strong>第三遍 纵览论文主体</strong>      - 把握整体脉络（数学推导可跳过）</li>
-<li><strong>第四遍 阅读所有内容</strong>      - 遇难可跳过以后攻坚</li>
-</ul>
-<h3 id="团队合作">5. 团队合作</h3>
-<h4 id="多与同学同事交流">多与同学/同事交流</h4>
-<p><strong>途径</strong>：向他们解释不理解的观点或算法，并说明自己尝试做的东西<br />
-<strong>目的</strong>：更容易地发现错误和潜在问题，吸收其他人提出的想法</p>
-<hr />
-<h2 id="我的收获">我的收获</h2>
-<ol type="1">
-<li>研究方向和问题的确定是研究的第一步，选择合适且“有品位”的问题</li>
-<li>确定了研究目标就要坚持不懈地阅读和实验，且实验的想法和目标很重要</li>
-<li>要培养有效的研究习惯，如记好笔记、坚持不懈等</li>
-<li>目标长远，走出舒适区，丰富领域各方面知识</li>
-<li>论文阅读要讲求阅读方法以提高研究效率</li>
-<li>研究不是单打独斗，要注重团队合作，从团队交流中收获新的想法</li>
-</ol>
-<blockquote>
-<p>来源： <span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUU1ETktDMC1zWnU1cDhMZE1JVUxmZw==">机器之心公众号<i class="fa fa-external-link-alt"></i></span></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>RP - 科研论文</category>
-      </categories>
-      <tags>
-        <tag>科研思维</tag>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
-    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
-<a id="more"></a>
-<h2 id="论文简介">论文简介</h2>
-<p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
-<strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
-<strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br />
-<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
-<strong>关键技术</strong>：虚拟网络嵌入, 强化学习, 图卷积神经网络<br />
-<strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
-<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="问题定义">问题定义</h2>
-<h3 id="专业词汇">专业词汇</h3>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">缩写</th>
-<th>描述</th>
-<th>全名</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">VNE</td>
-<td>虚拟网络嵌入</td>
-<td>Virtual Network Embedding</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">VNR</td>
-<td>虚拟网络请求</td>
-<td>Virtual Network Request</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">RL</td>
-<td>强化学习</td>
-<td>Reinforcement Learning</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">GCN</td>
-<td>图卷积神经网络</td>
-<td>Graph Convolutional Network</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">A3C</td>
-<td></td>
-<td>Asynchronous Advantage Actor-Critic</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vne">VNE</h3>
-<h2 id="算法模型">算法模型</h2>
-<h3 id="dl-a3c">DL-A3C</h3>
-<h3 id="gcn">GCN</h3>
-<h3 id="a3c-gcn">A3C + GCN</h3>
-<h4 id="环境-environment">环境 Environment</h4>
-<h4 id="代理-agent">代理 Agent</h4>
-<h4 id="状态-state">状态 State</h4>
-<h4 id="动作-action">动作 Action</h4>
-<h4 id="奖励-rewords">奖励 Rewords</h4>
-<ul>
-<li>动作反馈 action feedback</li>
-</ul>
-<p><span class="math display">\[r_{a}=\left\{\begin{array}{cl}
-  100 \gamma_{a} &amp; a_{t} \text {is successful} \\
-  -100 \gamma_{a} &amp;  \text {otherwise}
-\end{array}\right.\]</span></p>
-<ul>
-<li>成本效益 cost-efficient</li>
-</ul>
-<p><span class="math display">\[r_{c} =  \frac{\delta(revenue)}{\delta(cost)}\]</span></p>
-<ul>
-<li>负载均衡 Load balancing</li>
-</ul>
-<p><span class="math display">\[r_{s} = \frac{S_CPU_Remaining[a]}{S_CPU_Max[a]}\]</span></p>
-<ul>
-<li>资格痕迹 eligibility trace</li>
-</ul>
-<p><span class="math display">\[e g b_{-}{trace}_{t}[i]=\left\{\begin{array}{cl}
-  \gamma_{e}\left(e g b_{-}{trace}_{t-1}[i]+1\right) &amp; i==a_{t} \\
-  \gamma_{e} {egb}_{-} {trace}_{t-1}[i] &amp; \text { otherwise }
-\end{array}\right.\]</span></p>
-<p>故最终对于动作<span class="math inline">\(a{t}\)</span>奖励函数（Reward Function）为</p>
-<p><span class="math display">\[Reward[a_{t}]=\frac{r_{a} r_{c} r_{s}}{e g b{-}trace[a_{t}]+\epsilon}\]</span></p>
-<h2 id="性能评估">性能评估</h2>
-<h3 id="设计实验">设计实验</h3>
-<ul>
-<li>底层网络拓扑
-<ul>
-<li>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑</li>
-<li>该网络具有100个结点和500条边（模拟一个中型的ISP）。</li>
-<li>随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</li>
-</ul></li>
-<li>虚拟网络请求
-<ul>
-<li>随机生成VNR时满足Possion process（泊松分布），每组评估持续50000个时间单位</li>
-<li>即当VNR预期到达率为4个/100个时间单位时，则约有2000个VNR</li>
-<li>每个VRN的生成周期满足平均值为500的指数分布</li>
-<li>每个VNR的数量均匀分布在2~10之间</li>
-<li>初始化VNR中的节点CPU需求和链路带宽需求为0~30的均匀分布</li>
-<li>每对节点有50%的可能性形成边</li>
-</ul></li>
-<li>动态设置参数
-<ul>
-<li>VNR的到达率、节点及链路资源的分配、每个VNR的节点数量</li>
-<li>我们可以通过调节这三个参数来评估各种VNE场景</li>
-</ul></li>
-<li>测试阶段
-<ul>
-<li>学习代理仅使用actor网络生成嵌入策略，来从底层网络拓扑中选择合适的节点托管当前的虚拟节点</li>
-<li>该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR</li>
-</ul></li>
-</ul>
-<h3 id="对比算法">对比算法</h3>
-<ul>
-<li>R-ViNE<br />
-使用基于确定的取整（rounding-based）的方法来获得与VNE问题对应的MIP的线性规划松弛（linear programming relaxation），以最小化VNR的成本</li>
-<li>D-ViNE<br />
-和RR-ViNE，但特殊在其取整方法是随机的</li>
-<li>GRC<br />
-一种基于全局资源容量管理的节点排序算法</li>
-<li>MCVNE<br />
-一种基于强化学习的 Monte-Carlo MCTS 动作空间搜索算法</li>
-<li>NodeRank<br />
-一种节点排序算法，灵感来自与Google的PageRank算法</li>
-</ul>
-<p>它们基本覆盖了当前大部分算法的观点</p>
-<h3 id="评估指标">评估指标</h3>
-<h4 id="vnr-到达率测试">VNR 到达率测试</h4>
-<p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br />
-实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
-<p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
-<h4 id="资源请求测试">资源请求测试</h4>
-<p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
-<ul>
-<li>计算密集型任务需要更多的节点资源（CPU）</li>
-<li>而通信密集型任务需要更多的链路资源（带宽）</li>
-</ul>
-<p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
-<p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
-<h4 id="节点数量扩展性测试">节点数量扩展性测试</h4>
-<p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br />
-实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
-<p>结果分析：该算法优势明显，但可以发现当节点逐渐增加时，接受率下降明显</p>
-<p>原因分析：</p>
-<ul>
-<li>因为每个VNR都必须作为一个整体成功地嵌入；一个更大的VNR意味着在嵌入的中间步骤中失败的机会更多；</li>
-<li>因为同一VNR中的两个虚拟节点不能共享一个特定的基板节点，单个VNR中的更多节点限制了候选动作空间</li>
-</ul>
-<h4 id="平均运行时间统计">平均运行时间统计</h4>
-<p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
-<h3 id="验证测试">验证测试</h3>
-<p>在相同条件下，与其他基于强化学习的VNE算法进行比较</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-8.png" /></p>
-<h4 id="训练效率及收敛性">训练效率及收敛性</h4>
-<p>不同算法在相同实验条件下的训练效果对比，见下图(a)<br />
-实验结果：可以发现，在这组实验中，平均收益的优势要比接受率的明显<br />
-原因分析：当VNR的节点数量较少时，所有算法都可以有很好的表现；但当节点增多后，该算法可以带来更多的潜在收益（多指标的Reward）。</p>
-<h4 id="资源请求测试验证">资源请求测试验证</h4>
-<p>在不同的资源请求情况下，对这些算法进行测试，见下图(b)</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
-<p>实验结果：在不同数量的资源请求情况下，该算法的接受率均是最优的；此外，可以发现CNN的性能表现始终是最差的<br />
-原因分析：用GCN代替传统的CNN进行特征提取可以带来更好地性能。</p>
-<h3 id="其他参数下模型的可行性研究">其他参数下模型的可行性研究</h3>
-<h4 id="附加网络拓扑和参数">附加网络拓扑和参数</h4>
-<p>CSTNET：中国网络运营商，见下图(a)</p>
-<ul>
-<li>红色边为100Gb带宽的链路</li>
-<li>绿色边为10Gb带宽的链路</li>
-<li>橙色边为2.5Gb带宽的链路</li>
-<li>黑色边为1Gb带宽的链路</li>
-<li>边的权重：平均传输延迟 average transmission latency（毫秒），</li>
-</ul>
-<p>对比算法：Noderank<br />
-实验设计：</p>
-<ul>
-<li>模拟了一些随机的点对点的数据传输任务</li>
-<li>数据传输速率为 [500Mbps,3Gbps] 的均匀分布</li>
-</ul>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-6.png" /></p>
-<p>实验结果：A3C+GCN 模型的延迟更少</p>
-<h4 id="其他指标">其他指标</h4>
-<ul>
-<li>节点资源利用率：VNRs使用的节点基板资源量/资源总量</li>
-<li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
-</ul>
-<p>实验设计：同平均到达率测试</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
-<p>实验结果：A3C+GCN算法的这两项指标均为最佳</p>
-<h2 id="主要创新">主要创新</h2>
-<ul>
-<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
-<li>并行的策略梯度训练方法</li>
-<li>多指标的奖励函数</li>
-</ul>
-<h2 id="总结思考">总结思考</h2>
-<ul>
-<li>GCN较CNN可以更好地提取非欧数据的特征</li>
-<li>A3C算法较其他RL算法性能表现更佳</li>
-<li>并行的梯度训练策略更适应于实际场景</li>
-<li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
-<li>在模型评估部分，实验的设计比较完善</li>
-</ul>
-]]></content>
-      <categories>
-        <category>RP - 科研论文</category>
-      </categories>
-      <tags>
-        <tag>VNE</tag>
-        <tag>论文精读</tag>
-        <tag>强化学习</tag>
-        <tag>GNN</tag>
-        <tag>GCN</tag>
       </tags>
   </entry>
   <entry>
@@ -1127,103 +162,16 @@
       </tags>
   </entry>
   <entry>
-    <title>【Blog】深度美化和定制Hexo和NexT方法</title>
-    <url>/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next-custom/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>虽然我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。</p>
-<a id="more"></a>
-<h2 id="简介">简介</h2>
-<p>Hexo的NexT主题采用njk来作为HTML预处理器，使用styl来扩展css，所以可以简单的理解成 <span class="math inline">\(html\subset njk\)</span> ，<span class="math inline">\(css \subset styl\)</span>。它们扩充了相应的功能和语法支持来更加高效的架构网页，当然，我们也完全可以使用html和css的语法来美化我们的网页。</p>
-<h2 id="自定义css">自定义CSS</h2>
-<p>如<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoZW1lLXNldHRpbmdzL2N1c3RvbS1maWxlcy5odG1s">NexT 8 文档<i class="fa fa-external-link-alt"></i></span>中所说，</p>
-<blockquote>
-<p>As with Data Files, you can place all custom layouts or styles in a specific location (for example: hexo/source/_data). Add the custom file to hexo/source/_data and uncomment the content under the custom_file_path section in the theme config file.</p>
-</blockquote>
-<p>我们可以在<code>hexo/source/_data</code>文件夹中自定义CSS/JS文件。如果想让hexo在渲染时自动引入这些文件，我们只需在<code>next/_config.yml</code>，将相应文件的注释取消。<br />
-有个有趣的事情是在next主题目录文件夹下也有一个_data文件夹：<code>hexo/theme/next/source/_data</code>，官方没有给出具体介绍，如果我们将<code>next/_config.yml</code>的<code>custom_file_path</code>前加上<code>theme/next</code>也基本与<code>hexo/source/_data</code>目录等效，故这些不再赘述。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="comment">#style: source/_data/styles.styl</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># 定位到 hexo/theme/next/source/_data</span></span><br><span class="line">  <span class="comment">#style: theme/nextsource/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
-<p>此时，hexo再进行渲染时，也会引入这些文件，当其中的样式与默认样式冲突时，自定义样式优先级高，便会覆盖默认样式。但我们会发现，这种方式只能自动引入与上述文件重名的自定义文件，所以，我们可以将所有修改或者新添的样式写入<code>styles.styl</code>等文件。但是，这样的方法有些确定就是不方便管理。比如，我们打算自定义一个<code>custom-about.styl</code>文件来专门优化“关于”页面，这时我们就要手动的把该文件引入。有以下几种方法可供参考：</p>
-<ol type="1">
-<li>在<code>styles.styl</code>文件中引入</li>
-</ol>
-<p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;custom-about.styl&quot;</span></span><br></pre></td></tr></table></figure></p>
-<ol start="2" type="1">
-<li>在<code>about.md</code>文件中引入</li>
-</ol>
-<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 注意文件路径是否正确 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/custom-about.styl&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<ol start="3" type="1">
-<li>在<code>layout.njk</code>等其他会被自动渲染的文件中引入</li>
-</ol>
-<p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/custom-about.styl&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="覆盖默认样式">覆盖默认样式</h3>
-<p>我们可以在<code>styles.styl</code>等文件中来定义class新的样式，最简单的方式就是通过<code>F12</code>来查看网页资源，然后选择想要修改的元素，查看元素所带的class，然后在<code>styles.styl</code>中重写即可。</p>
-<h3 id="自定义图标">自定义图标</h3>
-<p>NexT的默认图标库是Font Awesome，它并不包括很多国内主流网站的图标，比如Bilibili、知乎等。但我们可以通过自定义的方式来增加对这些图标的支持。下面以Bilibili为例</p>
-<ol type="1">
-<li>下载<code>bilibili.svg</code>，保存到<code>theme/next/source/images/bilibili.svg</code></li>
-<li>在<code>theme/next/source/_data/styles.styl</code>添加样式</li>
-</ol>
-<p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.fab</span><span class="selector-class">.fa-bilibili</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(/images/bilibili.svg);</span><br><span class="line">  <span class="attribute">background-position</span>: <span class="number">50%</span> <span class="number">75%</span>;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1rem</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ol start="3" type="1">
-<li>确保已经在<code>next/_config.xml</code>中开启了自定义文件路径</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
-<ol start="4" type="1">
-<li>在<code>next/_config.xml</code>配置相应图标</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line">  Bilibili: https:&#x2F;&#x2F;space.bilibili.com&#x2F;userid&#x2F; || fab fa-bilibili</span><br></pre></td></tr></table></figure>
-<h2 id="自定义js">自定义JS</h2>
-<p>类比CSS。</p>
-<h2 id="自定义markdown">自定义Markdown</h2>
-<h3 id="markdown内嵌html">Markdown内嵌HTML</h3>
-<p>作为标记语言，Markdown在某些场景下支持对HTML、CSS和JS的扩展，即我们可以在Markdown中写入HTML语法，甚至可以内嵌CSS和JS。以下为我的博客404页面的示例：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 404</span><br><span class="line">date: 2020-01-09 13:25:01</span><br><span class="line">layout: false</span><br><span class="line">commit: false</span><br><span class="line">permalink: /404</span><br><span class="line">---</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;title&gt;404&lt;/title&gt;</span></span><br><span class="line"><span class="code">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/404/style.css&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;/head&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">  &lt;body style=&quot;margin: 0px&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-6 align-self-center&quot;&gt;&lt;img src=&quot;/404/404.svg&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;div class=&quot;col-md-6 align-self-center&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;h1&gt;404&lt;/h1&gt;&lt;h2&gt;UH OH! 页面丢失&lt;/h2&gt;&lt;p&gt;您所寻找的页面不存在。你可以点击下面的按钮，返回主页。&lt;/p&gt;</span></span><br><span class="line"><span class="code">  &lt;a href=&quot;https://www.geminilight.cn/&quot;&gt;&lt;button class=&quot;btn blue&quot;&gt;返回首页&lt;/button&gt;&lt;/a&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/body&gt;</span></span><br><span class="line"><span class="code">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
-<p>需要注意的是，在hexo渲染时，对markdown的缩进有较高的要求。至少在我实际操作过程中，如果HTML标签前有超过4个空格的缩进，便会被渲染为全文字。</p>
-<h3 id="markdown渲染外部html文件">Markdown渲染外部html文件</h3>
-<p>我们也可以在外部新建一个完整的html页面，然后在md文件中引入，并加入相应标签来引入渲染</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;width:100%; height:260;border:none;text-align:center&quot;</span>&gt;</span></span> </span><br><span class="line"><span class="code">  &lt;iframe allowtransparency=&quot;yes&quot; frameborder=&quot;0&quot; width=&quot;100%&quot; height=&quot;88&quot; src=&quot;url&quot;&gt;</span></span><br><span class="line"><span class="code"> &lt;/iframe&gt;</span></span><br><span class="line"><span class="code">&lt;/span&gt;</span></span><br></pre></td></tr></table></figure>
-<p>url 指向的是独立的 HTML 文件的路径，可以直接放在我们的md文件下。<br />
-此外，为了避免html文件被编译而被嵌套主题样式，我们配置主题的<code>_config.xml</code>来跳过对该文件的渲染：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 跳过渲染</span></span><br><span class="line"><span class="attr">skip-render:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">README.md</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">xxx.html</span>  <span class="comment"># 禁止渲染xxx.html文件</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">*.html</span>    <span class="comment"># 禁止渲染所有html文件</span></span><br></pre></td></tr></table></figure>
-<h2 id="自定义页面">自定义页面</h2>
-<h3 id="不含博客框架的页面">不含博客框架的页面</h3>
-<p>这种类型的页面指完全自定义的，即整个页面不会出现博客的header、sidebar、footer等。比如，我们可以定制一个小游戏的404界面。这里以完全自定义的xxx页面为例，创建流程如下：</p>
-<ol type="1">
-<li>在hexo主目录文件夹下，输入命令：</li>
-</ol>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo new page xxx</span><br></pre></td></tr></table></figure>
-<p>该命令会自动在<code>hexo/source</code>下创建<code>xxx/xxx.md</code>文件夹和md文件。</p>
-<ol start="2" type="1">
-<li>编辑<code>xxx.md</code>，添加<code>layout: false</code>属性</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: xxx</span><br><span class="line">type: xxx</span><br><span class="line">layout: false</span><br></pre></td></tr></table></figure>
-<p>设置<code>layout: false</code>会使hexo在渲染页面时，不自动为页面渲染基本的导航栏、侧边栏等，所以该页面需要完全自定义css和js。我们可以既可以完全在md中写js和css（并不推荐），也可以单独创建相应的JS和CSS文件再引入到md文件中，下面只对后者进行介绍。</p>
-<ol start="3" type="1">
-<li>在<code>hexo/_data</code>文件夹中新建js和css文件</li>
-</ol>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">|</span><br><span class="line">|-- xxx.js</span><br><span class="line">|-- xxx.css</span><br></pre></td></tr></table></figure>
-<ol start="4" type="1">
-<li>在<code>xxx.md</code>中引入</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/xxx.css&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- content --&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;xxx.js&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="含博客框架的子页面">含博客框架的子页面</h3>
-<p>这种类型的页面指依赖于hexo生成的博客页面主框架，比如我们的Tags标签页、Categories分类页等。这种页面并非完全定制的，这也会带来一个优点：我们可以利用Hexo和NexT主题附带的样式和JS来制作的页面。</p>
-<ol type="1">
-<li>在hexo主目录文件夹下，输入命令：</li>
-</ol>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo new page xxx</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>同自定义css方法，可在<code>hexo/_data</code>编辑相应文件并引入渲染</li>
-</ol>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">|</span><br><span class="line">|-- xxx.js</span><br><span class="line">|-- xxx.css</span><br></pre></td></tr></table></figure>
-<h2 id="总结">总结</h2>
+    <title>【SDN】VNE 虚拟网络嵌入技术</title>
+    <url>/2020/08/19/CN%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/cn-vne/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><a id="more"></a>
 ]]></content>
       <categories>
-        <category>ST - 软件工具</category>
+        <category>CN - 计算机网络</category>
       </categories>
       <tags>
-        <tag>Blog</tag>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
+        <tag>VNE</tag>
+        <tag>计算机网络</tag>
       </tags>
   </entry>
   <entry>
@@ -1713,6 +661,1058 @@
         <tag>Python</tag>
         <tag>数据分析</tag>
         <tag>SciPy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【PPT设计】大一大二时期个人PPT设计风格总结</title>
+    <url>/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>[更新中] 时光总若即若离，不觉将至大三。回望已逝的两年大学生活，发现自己已经做了不少的PPT，有关社团、有关学术、有关技术等等。于是，今天将两年来所作PPT汇总整理，来分析个人的风格，以寻求进步。</p>
+<a id="more"></a>
+<h2 id="前言">前言</h2>
+<p>PPT设计所涉及到的结构和元素繁多，于是文章将按时间顺序分别从结构设计、元素和动画设计三方面来介绍。</p>
+<h2 id="结构设计">结构设计</h2>
+<h3 id="首页">首页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-18-wps-office-1.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
+</figure>
+<ul>
+<li>描述：这个PPT做的时间还是比较早的，当时为了契合WPS和OFFICE对比的主题，于是做的颜色和动画比较花哨</li>
+<li>想法：颜色多而且都是重色彩的，过浓而影响视觉重心，可以减少些装饰元素未出现或不搭的颜色如粉、紫等等，再减少些颜色的饱和度，或许会改善些。</li>
+</ul>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-1.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<ul>
+<li>描述：大概是第一次复现这副封面，比较适合首页信息密度较高的构图</li>
+<li>想法：背景颜色稍微亮了些，右部分的构图不太稳</li>
+</ul>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-1.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-1.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-english-pre-ai-1.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-1.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<h3 id="目录页">目录页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-2.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-2.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-2.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<h3 id="图示页">图示页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-3.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-4.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-4.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-6.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-12.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-english-pre-ai-2.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-english-pre-ai-5.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-3.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-4.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-train-cquse-1.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+</figure>
+<h3 id="分点页">分点页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-4.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-5.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-8.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-3.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-5.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-7.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-9.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-6.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-train-cquse-2.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-train-cquse-3.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-train-cquse-4.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+</figure>
+<h3 id="数据页">数据页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-6.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-7.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-2.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-10.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-13.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<h3 id="对比页">对比页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-18-wps-office-2.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-8.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-english-pre-ai-3.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+</figure>
+<h3 id="人物页">人物页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-11.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<h3 id="时间轴">时间轴</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-14.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2020-innovte-5.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+</figure>
+<h3 id="结尾页">结尾页</h3>
+<figure>
+<embed src="/resource/images/ad-ppt-19-srtp-5.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-2019-train-4399-9.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+</figure>
+<figure>
+<embed src="/resource/images/ad-ppt-19-hl-b-s-15.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+</figure>
+<h2 id="元素设计">元素设计</h2>
+<h3 id="配色">配色</h3>
+<h3 id="背景">背景</h3>
+<h3 id="标题">标题</h3>
+<h2 id="动画设计">动画设计</h2>
+<h2 id="总结">总结</h2>
+]]></content>
+      <categories>
+        <category>GD - 平面设计</category>
+      </categories>
+      <tags>
+        <tag>PPT设计</tag>
+        <tag>大学生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Blog】深度美化和定制Hexo和NexT方法</title>
+    <url>/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next-custom/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>虽然我们可以搜索到许多关于Hexo博客及NexT 8主题配置和美化的教程，但是，很多文章大都聚焦于某一些常用页面的优化和定制。随着版本更迭等情况导致框架可能出现调整时，这些聚焦于某一场景的方法可能会不再适用。本文将尽可能详细描述多个场景下的hexo及nexT定制方法并且提供通用的高度自定义方案。</p>
+<a id="more"></a>
+<h2 id="简介">简介</h2>
+<p>Hexo的NexT主题采用njk来作为HTML预处理器，使用styl来扩展css，所以可以简单的理解成 <span class="math inline">\(html\subset njk\)</span> ，<span class="math inline">\(css \subset styl\)</span>。它们扩充了相应的功能和语法支持来更加高效的架构网页，当然，我们也完全可以使用html和css的语法来美化我们的网页。</p>
+<h2 id="自定义css">自定义CSS</h2>
+<p>如<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoZW1lLXNldHRpbmdzL2N1c3RvbS1maWxlcy5odG1s">NexT 8 文档<i class="fa fa-external-link-alt"></i></span>中所说，</p>
+<blockquote>
+<p>As with Data Files, you can place all custom layouts or styles in a specific location (for example: hexo/source/_data). Add the custom file to hexo/source/_data and uncomment the content under the custom_file_path section in the theme config file.</p>
+</blockquote>
+<p>我们可以在<code>hexo/source/_data</code>文件夹中自定义CSS/JS文件。如果想让hexo在渲染时自动引入这些文件，我们只需在<code>next/_config.yml</code>，将相应文件的注释取消。<br />
+有个有趣的事情是在next主题目录文件夹下也有一个_data文件夹：<code>hexo/theme/next/source/_data</code>，官方没有给出具体介绍，如果我们将<code>next/_config.yml</code>的<code>custom_file_path</code>前加上<code>theme/next</code>也基本与<code>hexo/source/_data</code>目录等效，故这些不再赘述。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="comment">#style: source/_data/styles.styl</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># 定位到 hexo/theme/next/source/_data</span></span><br><span class="line">  <span class="comment">#style: theme/nextsource/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+<p>此时，hexo再进行渲染时，也会引入这些文件，当其中的样式与默认样式冲突时，自定义样式优先级高，便会覆盖默认样式。但我们会发现，这种方式只能自动引入与上述文件重名的自定义文件，所以，我们可以将所有修改或者新添的样式写入<code>styles.styl</code>等文件。但是，这样的方法有些确定就是不方便管理。比如，我们打算自定义一个<code>custom-about.styl</code>文件来专门优化“关于”页面，这时我们就要手动的把该文件引入。有以下几种方法可供参考：</p>
+<ol type="1">
+<li>在<code>styles.styl</code>文件中引入</li>
+</ol>
+<p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;custom-about.styl&quot;</span></span><br></pre></td></tr></table></figure></p>
+<ol start="2" type="1">
+<li>在<code>about.md</code>文件中引入</li>
+</ol>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 注意文件路径是否正确 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/custom-about.styl&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<ol start="3" type="1">
+<li>在<code>layout.njk</code>等其他会被自动渲染的文件中引入</li>
+</ol>
+<p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/custom-about.styl&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="覆盖默认样式">覆盖默认样式</h3>
+<p>我们可以在<code>styles.styl</code>等文件中来定义class新的样式，最简单的方式就是通过<code>F12</code>来查看网页资源，然后选择想要修改的元素，查看元素所带的class，然后在<code>styles.styl</code>中重写即可。</p>
+<h3 id="自定义图标">自定义图标</h3>
+<p>NexT的默认图标库是Font Awesome，它并不包括很多国内主流网站的图标，比如Bilibili、知乎等。但我们可以通过自定义的方式来增加对这些图标的支持。下面以Bilibili为例</p>
+<ol type="1">
+<li>下载<code>bilibili.svg</code>，保存到<code>theme/next/source/images/bilibili.svg</code></li>
+<li>在<code>theme/next/source/_data/styles.styl</code>添加样式</li>
+</ol>
+<p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.fab</span><span class="selector-class">.fa-bilibili</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(/images/bilibili.svg);</span><br><span class="line">  <span class="attribute">background-position</span>: <span class="number">50%</span> <span class="number">75%</span>;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1rem</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol start="3" type="1">
+<li>确保已经在<code>next/_config.xml</code>中开启了自定义文件路径</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>在<code>next/_config.xml</code>配置相应图标</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line">  Bilibili: https:&#x2F;&#x2F;space.bilibili.com&#x2F;userid&#x2F; || fab fa-bilibili</span><br></pre></td></tr></table></figure>
+<h2 id="自定义js">自定义JS</h2>
+<p>类比CSS。</p>
+<h2 id="自定义markdown">自定义Markdown</h2>
+<h3 id="markdown内嵌html">Markdown内嵌HTML</h3>
+<p>作为标记语言，Markdown在某些场景下支持对HTML、CSS和JS的扩展，即我们可以在Markdown中写入HTML语法，甚至可以内嵌CSS和JS。以下为我的博客404页面的示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 404</span><br><span class="line">date: 2020-01-09 13:25:01</span><br><span class="line">layout: false</span><br><span class="line">commit: false</span><br><span class="line">permalink: /404</span><br><span class="line">---</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;title&gt;404&lt;/title&gt;</span></span><br><span class="line"><span class="code">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/404/style.css&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;/head&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">  &lt;body style=&quot;margin: 0px&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-6 align-self-center&quot;&gt;&lt;img src=&quot;/404/404.svg&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;div class=&quot;col-md-6 align-self-center&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;h1&gt;404&lt;/h1&gt;&lt;h2&gt;UH OH! 页面丢失&lt;/h2&gt;&lt;p&gt;您所寻找的页面不存在。你可以点击下面的按钮，返回主页。&lt;/p&gt;</span></span><br><span class="line"><span class="code">  &lt;a href=&quot;https://www.geminilight.cn/&quot;&gt;&lt;button class=&quot;btn blue&quot;&gt;返回首页&lt;/button&gt;&lt;/a&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/body&gt;</span></span><br><span class="line"><span class="code">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，在hexo渲染时，对markdown的缩进有较高的要求。至少在我实际操作过程中，如果HTML标签前有超过4个空格的缩进，便会被渲染为全文字。</p>
+<h3 id="markdown渲染外部html文件">Markdown渲染外部html文件</h3>
+<p>我们也可以在外部新建一个完整的html页面，然后在md文件中引入，并加入相应标签来引入渲染</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;width:100%; height:260;border:none;text-align:center&quot;</span>&gt;</span></span> </span><br><span class="line"><span class="code">  &lt;iframe allowtransparency=&quot;yes&quot; frameborder=&quot;0&quot; width=&quot;100%&quot; height=&quot;88&quot; src=&quot;url&quot;&gt;</span></span><br><span class="line"><span class="code"> &lt;/iframe&gt;</span></span><br><span class="line"><span class="code">&lt;/span&gt;</span></span><br></pre></td></tr></table></figure>
+<p>url 指向的是独立的 HTML 文件的路径，可以直接放在我们的md文件下。<br />
+此外，为了避免html文件被编译而被嵌套主题样式，我们配置主题的<code>_config.xml</code>来跳过对该文件的渲染：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 跳过渲染</span></span><br><span class="line"><span class="attr">skip-render:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">README.md</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">xxx.html</span>  <span class="comment"># 禁止渲染xxx.html文件</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">*.html</span>    <span class="comment"># 禁止渲染所有html文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="自定义页面">自定义页面</h2>
+<h3 id="不含博客框架的页面">不含博客框架的页面</h3>
+<p>这种类型的页面指完全自定义的，即整个页面不会出现博客的header、sidebar、footer等。比如，我们可以定制一个小游戏的404界面。这里以完全自定义的xxx页面为例，创建流程如下：</p>
+<ol type="1">
+<li>在hexo主目录文件夹下，输入命令：</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo new page xxx</span><br></pre></td></tr></table></figure>
+<p>该命令会自动在<code>hexo/source</code>下创建<code>xxx/xxx.md</code>文件夹和md文件。</p>
+<ol start="2" type="1">
+<li>编辑<code>xxx.md</code>，添加<code>layout: false</code>属性</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: xxx</span><br><span class="line">type: xxx</span><br><span class="line">layout: false</span><br></pre></td></tr></table></figure>
+<p>设置<code>layout: false</code>会使hexo在渲染页面时，不自动为页面渲染基本的导航栏、侧边栏等，所以该页面需要完全自定义css和js。我们可以既可以完全在md中写js和css（并不推荐），也可以单独创建相应的JS和CSS文件再引入到md文件中，下面只对后者进行介绍。</p>
+<ol start="3" type="1">
+<li>在<code>hexo/_data</code>文件夹中新建js和css文件</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">|</span><br><span class="line">|-- xxx.js</span><br><span class="line">|-- xxx.css</span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>在<code>xxx.md</code>中引入</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;_data/xxx.css&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- content --&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;xxx.js&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="含博客框架的子页面">含博客框架的子页面</h3>
+<p>这种类型的页面指依赖于hexo生成的博客页面主框架，比如我们的Tags标签页、Categories分类页等。这种页面并非完全定制的，这也会带来一个优点：我们可以利用Hexo和NexT主题附带的样式和JS来制作的页面。</p>
+<ol type="1">
+<li>在hexo主目录文件夹下，输入命令：</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo new page xxx</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>同自定义css方法，可在<code>hexo/_data</code>编辑相应文件并引入渲染</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">|</span><br><span class="line">|-- xxx.js</span><br><span class="line">|-- xxx.css</span><br></pre></td></tr></table></figure>
+<h2 id="总结">总结</h2>
+]]></content>
+      <categories>
+        <category>ST - 软件工具</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Python】with语句原理</title>
+    <url>/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>在我们使用Python的时候，常使用到如下的代码块:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件读取</span></span><br><span class="line"><span class="keyword">with</span> open(file, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度计算</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> g:</span><br><span class="line">    <span class="comment"># CODE BLOCK #</span></span><br></pre></td></tr></table></figure>
+<p>在很多场景中，使用with语句来可以让我们可以更好地来管理资源和简化代码，它可以看做是对try/finally模式的简化。它原理上是利用了上下文管理器，下文简要介绍将对其执行原理和自定义的方法。<a id="more"></a></p>
+<h2 id="上下文管理器概念">上下文管理器概念</h2>
+<h3 id="上下文管理协议context-management-protocol">上下文管理协议（Context Management Protocol）</h3>
+<p>包含方法 <code>__enter__()</code> 和 <code>__exit__()</code> ，支持该协议的对象要实现这两个方法。</p>
+<h3 id="上下文管理器context-manager">上下文管理器（Context Manager）</h3>
+<p>支持上下文管理协议的对象，这种对象必须实现 <code>__enter__()</code> 和 <code>__exit__()</code> 方法。 上下文管理器定义执行with语句时要建立的运行时上下文，负责执行with语句块上下文中的进入与退出操作。 通常使用with语句调用上下文管理器，也可以通过直接调用其方法来使用。</p>
+<ul>
+<li><strong><code>__enter__()</code></strong>
+<ul>
+<li>with语句执行时，先获取上下文管理器对象，随后调用其 <code>__enter__()</code></li>
+<li>若有 <code>as var</code> 语句，则将返回值赋给变量var</li>
+<li>可以返回上下文管理器对象本身，也可以是其他相关对象</li>
+</ul></li>
+<li><strong><code>__exit__()</code></strong>
+<ul>
+<li>带有三个参数 <code>exc_type, exc_val, exc_tb</code></li>
+<li>若上下文管理器对象执行无异常，则三个参数均为 <code>None</code></li>
+<li>若发生异常，则三个参数分别为 异常类型，异常值和tracback信息</li>
+</ul></li>
+</ul>
+<h2 id="with语句执行过程">with语句执行过程</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#   EXP: 表达式</span></span><br><span class="line"><span class="comment">#   VAR: 变量名，[as VAR][可选]</span></span><br><span class="line"><span class="comment"># BlOCK: 代码块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> EXP <span class="keyword">as</span> VAR:</span><br><span class="line">    BLOCK</span><br></pre></td></tr></table></figure>
+<p><img data-src="/resource/images/pl-python-with.png" width="100%" /></p>
+<ol type="1">
+<li>执行代码时，先执行 <code>EXPR</code> 语句，生成上下文管理器对象 context_manager；</li>
+<li>获取上下文管理器的 <code>__exit()__</code> 方法，并保存起来用于之后的调用；</li>
+<li>调用上下文管理器的 <code>__enter__()</code> 方法，且可将返回值赋给as语句变量；</li>
+<li>执行BLOCK中的表达式；</li>
+<li>不管是否执行过程中是否发生了异常，执行上下文管理器的 <code>__exit__()</code> 方法， 执行“清理”工作，如释放资源等。
+<ol type="1">
+<li>如果执行过程中没有出现异常，或者语句体中执行了语句 <code>break</code> / <code>continue</code> / <code>return</code> ，则以 <code>None</code> 作为参数调用 <code>__exit__(None, None, None)</code> ；</li>
+<li>如果执行过程中出现异常，则使用sys.exc_info得到的异常信息为参数调用 <code>__exit__(exc_type, exc_value, exc_traceback)</code> ；</li>
+</ol></li>
+<li>出现异常时，如果 <code>__exit__(type, value, traceback)</code> 返回 <code>False</code> ，则会重新抛出异常，让with之外的语句逻辑来处理异常，这也是通用做法；如果返回True，则忽略异常，不再对异常进行处理。</li>
+</ol>
+<h2 id="自定义上下文管理器">自定义上下文管理器</h2>
+<ul>
+<li>它使代码更简练，可以简化try/finally模式</li>
+<li>当代码异常产生时，<code>__exit__()</code> 会执行清理工作</li>
+<li>可以对软件系统中的资源进行管理，比如数据库连接、共享资源的访问控制等<br /></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding = utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上下文管理器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestWith</span>(<span class="params">object</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;进入with语句的时候被调用</span></span><br><span class="line"><span class="string">           并将返回值赋给as语句的变量名</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__enter__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;var&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span>(<span class="params">self, exc_type, exc_val, exc_tb</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;离开with的时候被with调用&quot;&quot;&quot;</span></span><br><span class="line">        print(<span class="string">&#x27;__exit__&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># with后面必须跟一个上下文管理器</span></span><br><span class="line"><span class="comment"># 如果使用了as，则是把上下文管理器的 __enter__() 方法的返回值赋值给 target</span></span><br><span class="line"><span class="comment"># target 可以是单个变量，或者由“()”括起来的元组（不能是仅仅由“,”分隔的变量列表，必须加“()”）</span></span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;main&#x27;</span>:</span><br><span class="line">    <span class="keyword">with</span> TestWith() <span class="keyword">as</span> var:</span><br><span class="line">        print(var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行结果</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">__enter__</span></span><br><span class="line"><span class="string">var</span></span><br><span class="line"><span class="string">__exit__</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>本例仅对应代码正常执行的流程，其他特殊情况不再一一列举，有兴趣可单独实验。</p>
+<h2 id="参考">参考</h2>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuaWJtLmNvbS96aC9hcnRpY2xlcy9vcy1jbi1weXRob253aXRoLw==">浅谈 Python 的 with 语句<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vcHl0aG9uYmFvL3AvMTEyMTEzNDcuaHRtbA==">Python中with用法详解<i class="fa fa-external-link-alt"></i></span> <br /> <span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC83NDU1Mjg3Nw==">Python中with使用<i class="fa fa-external-link-alt"></i></span> <br /></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>PL - 编程语言</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>语法进阶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
+    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vne-rl-gcn/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
+<a id="more"></a>
+<h2 id="论文简介">论文简介</h2>
+<p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
+<strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
+<strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br />
+<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
+<strong>关键技术</strong>：虚拟网络嵌入, 强化学习, 图卷积神经网络<br />
+<strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
+<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="问题定义">问题定义</h2>
+<h3 id="专业词汇">专业词汇</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">缩写</th>
+<th>描述</th>
+<th>全名</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">VNE</td>
+<td>虚拟网络嵌入</td>
+<td>Virtual Network Embedding</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">VNR</td>
+<td>虚拟网络请求</td>
+<td>Virtual Network Request</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RL</td>
+<td>强化学习</td>
+<td>Reinforcement Learning</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">GCN</td>
+<td>图卷积神经网络</td>
+<td>Graph Convolutional Network</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">A3C</td>
+<td></td>
+<td>Asynchronous Advantage Actor-Critic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vne">VNE</h3>
+<h2 id="算法模型">算法模型</h2>
+<h3 id="dl-a3c">DL-A3C</h3>
+<h3 id="gcn">GCN</h3>
+<h3 id="a3c-gcn">A3C + GCN</h3>
+<h4 id="环境-environment">环境 Environment</h4>
+<h4 id="代理-agent">代理 Agent</h4>
+<h4 id="状态-state">状态 State</h4>
+<h4 id="动作-action">动作 Action</h4>
+<h4 id="奖励-rewords">奖励 Rewords</h4>
+<ul>
+<li>动作反馈 action feedback</li>
+</ul>
+<p><span class="math display">\[r_{a}=\left\{\begin{array}{cl}
+  100 \gamma_{a} &amp; a_{t} \text {is successful} \\
+  -100 \gamma_{a} &amp;  \text {otherwise}
+\end{array}\right.\]</span></p>
+<ul>
+<li>成本效益 cost-efficient</li>
+</ul>
+<p><span class="math display">\[r_{c} =  \frac{\delta(revenue)}{\delta(cost)}\]</span></p>
+<ul>
+<li>负载均衡 Load balancing</li>
+</ul>
+<p><span class="math display">\[r_{s} = \frac{S_CPU_Remaining[a]}{S_CPU_Max[a]}\]</span></p>
+<ul>
+<li>资格痕迹 eligibility trace</li>
+</ul>
+<p><span class="math display">\[e g b_{-}{trace}_{t}[i]=\left\{\begin{array}{cl}
+  \gamma_{e}\left(e g b_{-}{trace}_{t-1}[i]+1\right) &amp; i==a_{t} \\
+  \gamma_{e} {egb}_{-} {trace}_{t-1}[i] &amp; \text { otherwise }
+\end{array}\right.\]</span></p>
+<p>故最终对于动作<span class="math inline">\(a{t}\)</span>奖励函数（Reward Function）为</p>
+<p><span class="math display">\[Reward[a_{t}]=\frac{r_{a} r_{c} r_{s}}{e g b{-}trace[a_{t}]+\epsilon}\]</span></p>
+<h2 id="性能评估">性能评估</h2>
+<h3 id="设计实验">设计实验</h3>
+<ul>
+<li>底层网络拓扑
+<ul>
+<li>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑</li>
+<li>该网络具有100个结点和500条边（模拟一个中型的ISP）。</li>
+<li>随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</li>
+</ul></li>
+<li>虚拟网络请求
+<ul>
+<li>随机生成VNR时满足Possion process（泊松分布），每组评估持续50000个时间单位</li>
+<li>即当VNR预期到达率为4个/100个时间单位时，则约有2000个VNR</li>
+<li>每个VRN的生成周期满足平均值为500的指数分布</li>
+<li>每个VNR的数量均匀分布在2~10之间</li>
+<li>初始化VNR中的节点CPU需求和链路带宽需求为0~30的均匀分布</li>
+<li>每对节点有50%的可能性形成边</li>
+</ul></li>
+<li>动态设置参数
+<ul>
+<li>VNR的到达率、节点及链路资源的分配、每个VNR的节点数量</li>
+<li>我们可以通过调节这三个参数来评估各种VNE场景</li>
+</ul></li>
+<li>测试阶段
+<ul>
+<li>学习代理仅使用actor网络生成嵌入策略，来从底层网络拓扑中选择合适的节点托管当前的虚拟节点</li>
+<li>该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR</li>
+</ul></li>
+</ul>
+<h3 id="对比算法">对比算法</h3>
+<ul>
+<li>R-ViNE<br />
+使用基于确定的取整（rounding-based）的方法来获得与VNE问题对应的MIP的线性规划松弛（linear programming relaxation），以最小化VNR的成本</li>
+<li>D-ViNE<br />
+和RR-ViNE，但特殊在其取整方法是随机的</li>
+<li>GRC<br />
+一种基于全局资源容量管理的节点排序算法</li>
+<li>MCVNE<br />
+一种基于强化学习的 Monte-Carlo MCTS 动作空间搜索算法</li>
+<li>NodeRank<br />
+一种节点排序算法，灵感来自与Google的PageRank算法</li>
+</ul>
+<p>它们基本覆盖了当前大部分算法的观点</p>
+<h3 id="评估指标">评估指标</h3>
+<h4 id="vnr-到达率测试">VNR 到达率测试</h4>
+<p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br />
+实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
+<p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
+<h4 id="资源请求测试">资源请求测试</h4>
+<p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
+<ul>
+<li>计算密集型任务需要更多的节点资源（CPU）</li>
+<li>而通信密集型任务需要更多的链路资源（带宽）</li>
+</ul>
+<p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
+<p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
+<h4 id="节点数量扩展性测试">节点数量扩展性测试</h4>
+<p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br />
+实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
+<p>结果分析：该算法优势明显，但可以发现当节点逐渐增加时，接受率下降明显</p>
+<p>原因分析：</p>
+<ul>
+<li>因为每个VNR都必须作为一个整体成功地嵌入；一个更大的VNR意味着在嵌入的中间步骤中失败的机会更多；</li>
+<li>因为同一VNR中的两个虚拟节点不能共享一个特定的基板节点，单个VNR中的更多节点限制了候选动作空间</li>
+</ul>
+<h4 id="平均运行时间统计">平均运行时间统计</h4>
+<p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
+<h3 id="验证测试">验证测试</h3>
+<p>在相同条件下，与其他基于强化学习的VNE算法进行比较</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-8.png" /></p>
+<h4 id="训练效率及收敛性">训练效率及收敛性</h4>
+<p>不同算法在相同实验条件下的训练效果对比，见下图(a)<br />
+实验结果：可以发现，在这组实验中，平均收益的优势要比接受率的明显<br />
+原因分析：当VNR的节点数量较少时，所有算法都可以有很好的表现；但当节点增多后，该算法可以带来更多的潜在收益（多指标的Reward）。</p>
+<h4 id="资源请求测试验证">资源请求测试验证</h4>
+<p>在不同的资源请求情况下，对这些算法进行测试，见下图(b)</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
+<p>实验结果：在不同数量的资源请求情况下，该算法的接受率均是最优的；此外，可以发现CNN的性能表现始终是最差的<br />
+原因分析：用GCN代替传统的CNN进行特征提取可以带来更好地性能。</p>
+<h3 id="其他参数下模型的可行性研究">其他参数下模型的可行性研究</h3>
+<h4 id="附加网络拓扑和参数">附加网络拓扑和参数</h4>
+<p>CSTNET：中国网络运营商，见下图(a)</p>
+<ul>
+<li>红色边为100Gb带宽的链路</li>
+<li>绿色边为10Gb带宽的链路</li>
+<li>橙色边为2.5Gb带宽的链路</li>
+<li>黑色边为1Gb带宽的链路</li>
+<li>边的权重：平均传输延迟 average transmission latency（毫秒），</li>
+</ul>
+<p>对比算法：Noderank<br />
+实验设计：</p>
+<ul>
+<li>模拟了一些随机的点对点的数据传输任务</li>
+<li>数据传输速率为 [500Mbps,3Gbps] 的均匀分布</li>
+</ul>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-6.png" /></p>
+<p>实验结果：A3C+GCN 模型的延迟更少</p>
+<h4 id="其他指标">其他指标</h4>
+<ul>
+<li>节点资源利用率：VNRs使用的节点基板资源量/资源总量</li>
+<li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
+</ul>
+<p>实验设计：同平均到达率测试</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
+<p>实验结果：A3C+GCN算法的这两项指标均为最佳</p>
+<h2 id="主要创新">主要创新</h2>
+<ul>
+<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
+<li>并行的策略梯度训练方法</li>
+<li>多指标的奖励函数</li>
+</ul>
+<h2 id="总结思考">总结思考</h2>
+<ul>
+<li>GCN较CNN可以更好地提取非欧数据的特征</li>
+<li>A3C算法较其他RL算法性能表现更佳</li>
+<li>并行的梯度训练策略更适应于实际场景</li>
+<li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
+<li>在模型评估部分，实验的设计比较完善</li>
+</ul>
+]]></content>
+      <categories>
+        <category>RP - 科研论文</category>
+      </categories>
+      <tags>
+        <tag>VNE</tag>
+        <tag>论文精读</tag>
+        <tag>强化学习</tag>
+        <tag>GNN</tag>
+        <tag>GCN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【讲座收获】ZJU 陈为教授：大数据与可视化技术</title>
+    <url>/2020/03/21/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-zju-professor-chenwei-date-visonlization/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>浙江大学陈为教授关于大数据与可视化技术及其应用的讲座。</p>
+<a id="more"></a>
+<h2 id="大数据思维">大数据思维</h2>
+<h3 id="一数据核心原理">一、数据核心原理</h3>
+<p>从“流程”核心转变为“数据”核心</p>
+<h3 id="二数据价值原理">二、数据价值原理</h3>
+<p>由功能即价值转变为数据即价值</p>
+<h3 id="三全样本原理">三、全样本原理</h3>
+<p>从抽样转变为需要全部数据样本</p>
+<h3 id="四关注效率原理">四、关注效率原理</h3>
+<p>由关注精确度转变为关注效率</p>
+<h3 id="五利用相关性取代因果关系">五、利用相关性取代因果关系</h3>
+<p>不需要知道为什么</p>
+<h3 id="六从采样到全样本">六、从采样到全样本</h3>
+<p>抽样 != 全样</p>
+<h3 id="七从精确到模糊">七、从精确到模糊</h3>
+<p>大数据简单算法比小数据复杂性算法更有效</p>
+<h3 id="八安迪比尔定律">八、安迪·比尔定律</h3>
+<p>软件硬件相互要求<br />
+大数据时代生产越来越过剩<br />
+大数据分析应用的三个层次<br />
+描述性分析-&gt; 预测性分析 -&gt; 指导性分析</p>
+<ol type="1">
+<li>关注发生了什么，呈现事物</li>
+<li>关注“可能发生什么”，呈现趋势</li>
+<li>关注“选择做什么”，呈现不同决策的后果</li>
+</ol>
+<h2 id="数据可视化">数据可视化</h2>
+<h3 id="概念原理">概念原理</h3>
+<p>创建并研究数据的<strong>视觉表达 (Visual Representation)</strong></p>
+<ul>
+<li>输入：数据（data）</li>
+<li>输出：视觉形式（visual form）</li>
+<li>目标：深入理解（insight）</li>
+</ul>
+<p><img data-src="/resource/images/lecture-zju-chenwei-data-visualization-1.png" /></p>
+<h3 id="主要任务">主要任务</h3>
+<ul>
+<li>表示数据 - Represent</li>
+<li>分析数据 - Analyze</li>
+<li>交流数据 - Communicate</li>
+</ul>
+<p><img data-src="/resource/images/lecture-zju-chenwei-data-visualization-2.png" /></p>
+<p>思维系统</p>
+<p><img data-src="/resource/images/lecture-zju-chenwei-data-visualization-3.png" /></p>
+<h3 id="重要应用">重要应用</h3>
+<p><img data-src="/resource/images/lecture-zju-chenwei-data-visualization-4.png" /></p>
+<h4 id="科学研究">科学研究</h4>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553101983-592e3de3-6399-4d7e-94fd-5520cb5d7436.jpeg" alt="Screenshot_2020-03-21-19-29-04-321_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-29-04-321_com.tencent.mm.jpg</figcaption>
+</figure>
+<h4 id="物联网与智慧城市">物联网与智慧城市</h4>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553093853-82ae1835-1ee9-446e-a9d7-1062ec4bd990.jpeg" alt="Screenshot_2020-03-21-19-31-43-189_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-31-43-189_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553096563-2e705eda-f52a-4d9d-8501-56e8d9f4a20b.jpeg" alt="Screenshot_2020-03-21-19-31-00-805_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-31-00-805_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553100901-44982283-79e6-4f40-bbde-844fd79a9312.jpeg" alt="Screenshot_2020-03-21-19-32-44-746_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-32-44-746_com.tencent.mm.jpg</figcaption>
+</figure>
+<h4 id="互联网与社交媒体">互联网与社交媒体</h4>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553116198-c5ab1e00-48c1-40e4-91cf-f4946189fef8.jpeg" alt="Screenshot_2020-03-21-19-33-59-913_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-33-59-913_com.tencent.mm.jpg</figcaption>
+</figure>
+<h4 id="可视化战役">可视化战役</h4>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553117639-2c9b41bf-e710-47fe-a845-1127481da915.jpeg" alt="Screenshot_2020-03-21-19-22-01-271_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-22-01-271_com.tencent.mm.jpg</figcaption>
+</figure>
+<h4 id="可视化技术原理">可视化技术原理</h4>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553108397-496f8771-8244-4a14-b3e0-1de3c4f563a7.jpeg" alt="Screenshot_2020-03-21-19-36-29-829_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-36-29-829_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553107177-df65738b-5da3-4e12-97b4-41634e49bb05.jpeg#" alt="Screenshot_2020-03-21-19-38-51-711_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-38-51-711_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553103214-3be220b5-f82b-449a-8236-99179c056d5f.jpeg" alt="Screenshot_2020-03-21-19-39-35-005_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-39-35-005_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553113310-36dfe174-5469-4332-9562-dd2342328f4c.jpeg" alt="Screenshot_2020-03-21-19-41-55-010_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-41-55-010_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553106046-4592657f-b6db-40c6-b015-1c8295265d90.jpeg" alt="Screenshot_2020-03-21-19-43-19-126_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-43-19-126_com.tencent.mm.jpg</figcaption>
+</figure>
+<h4 id="疫情可视化成果">疫情可视化成果</h4>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553104562-2fdc936c-d4fc-4389-b45c-3bcf70f540e0.jpeg" alt="Screenshot_2020-03-21-19-43-50-613_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-43-50-613_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553122434-af75c7be-d6a2-4b55-aadb-78466962b343.jpeg" alt="Screenshot_2020-03-21-19-46-02-513_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-46-02-513_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553118922-106f8ca6-72a4-45b4-b1c1-1f273a7f4ab4.jpeg" alt="Screenshot_2020-03-21-19-46-10-852_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-46-10-852_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553110693-67c79c0d-856c-4a8d-b443-0737a958a752.jpeg" alt="Screenshot_2020-03-21-19-47-49-742_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-47-49-742_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553095086-c642ff91-c59c-4f2c-be98-f46d2c27eb4b.jpeg" alt="Screenshot_2020-03-21-19-48-35-127_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-48-35-127_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553121370-dc268ad9-7e44-489e-88aa-6a7eecfaa959.jpeg" alt="Screenshot_2020-03-21-19-50-08-299_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-50-08-299_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553099079-0f2287d6-5f6f-4672-929b-dbc8ced4c212.jpeg" alt="Screenshot_2020-03-21-19-52-23-743_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-52-23-743_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553123618-26a9e0b7-8519-488b-9ae0-507597ec0127.jpeg" alt="Screenshot_2020-03-21-19-55-31-803_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-55-31-803_com.tencent.mm.jpg</figcaption>
+</figure>
+<h5 id="疫情可视化公益活动">疫情可视化公益活动</h5>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553097863-0e4f4174-04d5-4d15-98a1-e662a8316425.jpeg" alt="Screenshot_2020-03-21-19-55-47-774_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-55-47-774_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553109583-ae8af672-4d48-4d36-a56e-bb5906c69f87.jpeg" alt="Screenshot_2020-03-21-20-04-33-705_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-20-04-33-705_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553114681-a682bc1d-6485-4060-b11c-9caf09c55fcb.jpeg" alt="Screenshot_2020-03-21-20-08-01-604_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-20-08-01-604_com.tencent.mm.jpg</figcaption>
+</figure>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553111955-ea479654-ba5b-4a85-828c-a786583d293b.jpeg" alt="Screenshot_2020-03-21-20-11-09-734_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-20-11-09-734_com.tencent.mm.jpg</figcaption>
+</figure>
+<h2 id="拓展阅读">拓展阅读</h2>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlxaXpoaXhpbi5jb20vYXJ0aWNsZXMvMjAxOS0wNC0xMS0z">浙江大学陈为“大数据可视化”<i class="fa fa-external-link-alt"></i></span><br />
+<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yMDkyOTcwNw==">彻底颠覆你认知的10条大数据思维<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<h2 id="我的心得">我的心得</h2>
+]]></content>
+      <categories>
+        <category>MY - 感悟随笔</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+        <tag>大数据</tag>
+        <tag>数据可视化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【科研思维】高效的机器学习研究者</title>
+    <url>/2020/02/25/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-effictive-ml-researcher/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>△ 高效的机器学习研究者 | 彻底的自我管理能力 + 坚持到底的决心<br />
+☆ John Schulman &amp; 吴恩达  </p>
+<a id="more"></a>
+<hr />
+<h2 id="笔记">笔记</h2>
+<h3 id="挑选研究问题">1. 挑选研究问题</h3>
+<h4 id="提升研究品位">（1）提升研究品位</h4>
+<ul>
+<li><strong>阅读论文</strong> - 认真评论与探讨</li>
+<li><strong>研究小组</strong> - 吸收他人研究经验</li>
+<li><strong>同行建议</strong> - 吸收他人的看法</li>
+<li><strong>成果产出</strong> - 思考最有可能产出成果的研究方向/问题</li>
+</ul>
+<h4 id="研究的原动力">（2）研究的原动力</h4>
+<ul>
+<li><strong>想法驱动 - 测试某些想法</strong></li>
+</ul>
+<p>深刻理解研究主题以获得更多突破，避免与其他研究者想法相似</p>
+<ul>
+<li><strong>目标驱动 - 实现某些功能</strong></li>
+</ul>
+<p>注重通用性，将自己定义在通用解决方案中<br />
+△ 任何领域的机器学习的新想法都与某些目标有关</p>
+<h4 id="研究目标高远">（3）研究目标高远</h4>
+<p>10% 的改善 OR  10 倍的提升？</p>
+<ul>
+<li>较大的目标下：增量研究（10% 的提升）是最有效的</li>
+<li>增加的复杂性：取决于增量研究的性能提升</li>
+</ul>
+<h3 id="研究是条旅途">2. 研究是条旅途</h3>
+<p>在不清楚终点的旅途中，不断朝着更好地结果前进：</p>
+<h4 id="记录笔记">（1）记录笔记</h4>
+<p>每日总结 &amp; 每周总结 = 事情 + 想法 + 成果</p>
+<ul>
+<li>记录想法</li>
+<li>整理收获</li>
+<li>时间管理</li>
+</ul>
+<h4 id="是否换坑">（2）是否换坑？</h4>
+<p>过于频繁地切换想法比呆在原地不动的故障概率更高<br />
+可以设置固定的时间去尝试那些新想法以拓宽知识面</p>
+<h3 id="发展目光长远">3. 发展目光长远</h3>
+<h4 id="走出舒适区充实机器学习领域知识">走出舒适区，充实机器学习领域知识</h4>
+<ul>
+<li><strong>教材书</strong>： 集中的方式来吸取知识，巩固基础</li>
+<li><strong>学位论文</strong>：了解研究方向的背景、现状和展望</li>
+<li><strong>前沿论文：</strong>关注领域前沿，并自己复现对比</li>
+</ul>
+<h3 id="读论文的建议">4. 读论文的建议</h3>
+<h4 id="阅读进度法">（1）阅读进度法</h4>
+<p>  每一篇列一行，表示从 0 到 100 的阅读进度</p>
+<ul>
+<li>很重要：仔细读到进度100%</li>
+<li>不想要：10%确定是否放弃阅读</li>
+</ul>
+<h4 id="多次浏览法">（2）多次浏览法</h4>
+<ul>
+<li><strong>第一遍 标题、摘要和图表</strong>  - 论文讲什么</li>
+<li><strong>第二遍 前言、结语和图表</strong>  - 论文主要思想</li>
+<li><strong>第三遍 纵览论文主体</strong>      - 把握整体脉络（数学推导可跳过）</li>
+<li><strong>第四遍 阅读所有内容</strong>      - 遇难可跳过以后攻坚</li>
+</ul>
+<h3 id="团队合作">5. 团队合作</h3>
+<h4 id="多与同学同事交流">多与同学/同事交流</h4>
+<p><strong>途径</strong>：向他们解释不理解的观点或算法，并说明自己尝试做的东西<br />
+<strong>目的</strong>：更容易地发现错误和潜在问题，吸收其他人提出的想法</p>
+<hr />
+<h2 id="我的收获">我的收获</h2>
+<ol type="1">
+<li>研究方向和问题的确定是研究的第一步，选择合适且“有品位”的问题</li>
+<li>确定了研究目标就要坚持不懈地阅读和实验，且实验的想法和目标很重要</li>
+<li>要培养有效的研究习惯，如记好笔记、坚持不懈等</li>
+<li>目标长远，走出舒适区，丰富领域各方面知识</li>
+<li>论文阅读要讲求阅读方法以提高研究效率</li>
+<li>研究不是单打独斗，要注重团队合作，从团队交流中收获新的想法</li>
+</ol>
+<blockquote>
+<p>来源： <span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUU1ETktDMC1zWnU1cDhMZE1JVUxmZw==">机器之心公众号<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>RP - 科研论文</category>
+      </categories>
+      <tags>
+        <tag>科研思维</tag>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【讲座收获】潘复生院士谈科学创新</title>
+    <url>/2019/09/22/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-academician-pan-fu-sheng/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>潘复生院士关于科学创新的讲座</p>
+<a id="more"></a>
+<h2 id="科学发展现状">科学发展现状</h2>
+<p>资源匮乏<br />
+信息科技依赖<br />
+生物科学<br />
+学科交叉对知识要求越来越高</p>
+<h3 id="我国发展现状">我国发展现状</h3>
+<p>16个重大专项</p>
+<p>科技实力低于美国<br />
+科技投入远低于发达国家<br />
+基础研究待加强<br />
+科学素养低（官员政策制定）科普</p>
+<h2 id="创新素质培养">创新素质培养</h2>
+<h3 id="学会合作">学会合作</h3>
+<p>团结他人（比自己优秀的和略差与自己的）</p>
+<h3 id="学会放弃">学会放弃</h3>
+<p>（选择自己最喜欢的方向）</p>
+<h3 id="学会学习">学会学习</h3>
+<p>（ 知识学习能力远比知识记忆或积累能力更重要<br />
+学习能力比死记硬背更重要<br />
+基本工具一定要好（英语，计算机）<br />
+学会忘记有时比学会记住更重要 ）</p>
+<h3 id="学会分析和怀疑提问问题">学会分析和怀疑+提问问题</h3>
+<p>（不鼓励小中学生瞎猜怀疑=》知识积累+理解世界）<br />
+大学生学会怀疑</p>
+<h3 id="学会表达">学会表达</h3>
+<p>（让他人理解，好的表达扬长避短，站在对方角度来表达）</p>
+<h2 id="科研技巧">科研技巧</h2>
+<ol type="1">
+<li>重视偶然性才有必然性</li>
+<li>交流和讨论（潘与汉诺丁-英欧支持+国家支持）</li>
+<li>仿生学（创新启示）</li>
+<li>做多数人喜欢的事情（做好不喜欢的事，做自己喜欢的事做的会更好）</li>
+<li>逆向思维是成功的捷径</li>
+</ol>
+<h2 id="我的感悟">我的感悟</h2>
+]]></content>
+      <categories>
+        <category>MY - 感悟随笔</category>
+      </categories>
+      <tags>
+        <tag>学术讲座</tag>
+        <tag>创新思维</tag>
+        <tag>科研思维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据分析知识体系</title>
+    <url>/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>数据分析</p>
+<a id="more"></a>
+<h2 id="数据分析">数据分析</h2>
+<h2 id="python模块">Python模块</h2>
+<h3 id="numpy">Numpy</h3>
+<h3 id="pandas">pandas</h3>
+<h3 id="scipy">Scipy</h3>
+<h3 id="matplotlib">matplotlib</h3>
+<figure>
+<img data-src="https://i.loli.net/2019/08/22/vJjE548cQqPXxaZ.jpg" alt="test" /><figcaption>test</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>DA - 数据分析</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习知识体系</title>
+    <url>/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-introduction/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>深度学习</p>
+<a id="more"></a>
+<h3 id="基础网络">基础网络</h3>
+<ul>
+<li>CNN</li>
+<li>RNN</li>
+<li>GNN</li>
+</ul>
+<h3 id="应用场景">应用场景</h3>
+<ul>
+<li>CV 计算机视觉</li>
+<li>NLP 自然语言处理</li>
+<li>KG 知识图谱</li>
+</ul>
+<h3 id="主流框架">主流框架</h3>
+<ul>
+<li>TensorFlow</li>
+<li>PyTorch</li>
+<li>PaddlePaddle</li>
+<li>MindSpore</li>
+</ul>
+]]></content>
+      <categories>
+        <category>ML - 机器学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【NumPy】入门</title>
+    <url>/2019/08/19/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-numpy/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>NumPy</p>
+<a id="more"></a>
+<h3 id="数据">数据</h3>
+<ul>
+<li>Python语言诞生后，开发人员就产生了数值计算的需求，科学社区开始考虑用它进行科学计算。</li>
+<li>2006年，Travis Oliphant发布了NumPy库的第一个版本，整合了Numeric与Numarray包。</li>
+<li>如今，Numpy广泛应用于计算多维数组和大型数组等方面。此外，它还提供多个函数，操作起数组来效率很高，还可用来实现高级数学运算。</li>
+<li>当前，NumPy是开源项目，使用BSD许可证。</li>
+</ul>
+<h3 id="numpy-pandas">Numpy &amp; pandas</h3>
+<ul>
+<li>NumPy是用Python进行科学计算，尤其是数据分析时，所用到的一个基础库。 它是大量Python数学和科学计算包的基础，比如pandas库就用到了NumPy。</li>
+<li>pandas库专门用于数据分析，充分借鉴了Python标准库NumPy的相关概念。</li>
+</ul>
+<h3 id="numpy的安装">Numpy的安装</h3>
+<ul>
+<li>Windows： <code>pip install numpy</code> 若下载慢导致失败，可指定国内pip源（加上-i参数，指定pip源） <code>pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple</code><br />
+</li>
+<li>导入Numpy模块 <code>&gt;&gt;&gt; import numpy as np</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>DA - 数据分析</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
+        <tag>NumPy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Start the Journey of My Blog</title>
+    <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+    <div id="aplayer-mlnrVrJz" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="0046Ze2d2A7jeA" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
+    ></div>
+<h2 id="welcome-to-my-blog">Welcome to My Blog</h2>
+<p>Gemini向光性<br />
+困在双子星座的流浪旅人<br />
+<a href="/about">了解更多</a></p>
+<a id="more"></a>
+<h2 id="involved-fields">Involved Fields</h2>
+<p>博客计划主要涉及以下内容：</p>
+<h3 id="技术">技术</h3>
+<ul>
+<li>机器学习：传统机器学习、深度学习、强化学习</li>
+<li>数据分析：Numpy、Pandas、Scipy、Matlibplot</li>
+<li>全栈开发：Vue、jQuery、MySQL、SpringBoot、Django</li>
+<li>编程语言：Python、C/C++、Java、JS/TS</li>
+</ul>
+<h3 id="金融">金融</h3>
+<ul>
+<li>宏观经济</li>
+<li>微观经济</li>
+<li>企业分析</li>
+<li>金融分析</li>
+</ul>
+<h3 id="设计">设计</h3>
+<ul>
+<li>PPT设计</li>
+<li>平面设计</li>
+<li>视频剪辑</li>
+</ul>
+<h3 id="生活">生活</h3>
+<ul>
+<li>随笔</li>
+<li>音乐</li>
+<li>摄影</li>
+<li>影视</li>
+<li>游戏</li>
+<li>烹饪</li>
+</ul>
+<p>但深知自己才疏博浅且臻爱原创，又不愿随波逐流，故更新进度随缘。</p>
+]]></content>
+      <categories>
+        <category>MY - 感悟随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Python】基础语法总结</title>
+    <url>/2019/01/11/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-fundamental-syntax/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+]]></content>
+      <categories>
+        <category>PL - 编程语言</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>语法进阶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【游戏人生】双子Gemini——我们都在寻找着某个人</title>
+    <url>/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+    <div id="aplayer-QJhiqRBN" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="0004CQiv4NUbmR" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
+    ></div>
+<blockquote class="blockquote-center">
+<p>“我们都在寻找着 某个人”——《你的名字。》</p>
+
+</blockquote>
+<p>暗夜中的荧树依旧沉睡着，它已经很久很久没有发过光了，久的人们都早已忘记了那个传说......</p>
+<a id="more"></a>
+<h2 id="一相遇前尘如是">一、相遇：前尘如是</h2>
+<p>少了星光的装点，夜空暗淡了许多。我心有所念地张望着四周，却又不知在找寻着谁。明明毫无目的地来这儿，却又诚惶诚恐地害怕着错过。空荡荡的心将无神的目光映向不远处沉眠的荧树，然后莫名其妙地叹息。准备离开时的回眸，让我们的目光在朦胧的暮色下交错，我似乎懂了，懂得了命运织缠的意义。</p>
+<p><img data-src="/resource/images/game-gemini-1.png" /></p>
+<p>时间放佛在那一刻停格，空气也随之凝滞，任由荧树的年轮刻录下心动和心悸： 你尚未出现时，我的生命平静，轩昂阔步行走，动辄料事如神；如今惶乱，怯弱，像冰融的春水，一流就流向你，又不知你在何处（木心）。可明明你就在我面前，我却又不知所措。</p>
+<p><img data-src="/resource/images/game-gemini-2.png" /></p>
+<p>空气不再沉默——似乎有种引力牵引着我慢步走向了你。脚步声在寂寥的夜空中徘徊，你退回荧树枝下，等候着我的到来。但当手被牵起时，你却皱了皱眉，有些许心痛，却又不知痛从何而来。彼此只手相依，只手迎风，曼舞空凉。执子之手，挥洒荧光。古树开始苏醒，重现荧光，夜空渐被点亮，直至整个银河宛若天堂。</p>
+<h2 id="二别离心恸幽思">二、别离：心恸幽思</h2>
+<p><img data-src="/resource/images/game-gemini-3.png" /></p>
+<p>面前是无数陨石阻隔，彼岸即是梦寐以求的星河。无数次的碰撞，无数次的跌倒，无数次的逃亡。看着身旁遍体鳞伤的你，我心如刀割。头脑开始眩晕，身体开始麻木，但始终未停止撞击。终于，你，停了下来，慢慢下坠。此时，我，早已泪眼婆娑，椎心泣血。抱紧昏倒的你，看着你迂回的伤痕，痛恨自己的无力。</p>
+<p><img data-src="/resource/images/game-gemini-4.png" /></p>
+<p>恸哭一声——微光亦可昼亮，化作流星花火，划破无边银河。天空被渲染成晨曦般的颜色，陨石被狠狠撞碎坠落，星际被灿烂夺去轮廓。我回首望向了你，微笑着轻抚了一下，拭去你眼角的泪花。凝视着你，沉默，却又更多话语。回顾此生，路途虽险，却不惧混沌黑夜，不畏疾风骤雨，只因有你相伴左右，不曾离弃。</p>
+<p><img data-src="/resource/images/game-gemini-6.png" /></p>
+<p>原谅我，不再陪你，望这最后一星余晖燃尽守护你；<br />
+失去我，日月如常，世上最美的星云就在前方；<br />
+答应我，生活下去，未来你会有更好的相遇。</p>
+<p>星辉殆尽，堙灭散落，银河再归混沌，我已一别永年。就这样，我离开了你，无声无息，了无痕迹。</p>
+<h2 id="三追忆念旧顾逝">三、追忆：念旧顾逝</h2>
+<p>最后一丝星火被黑夜淹没，前方不再有陨石阻隔，她向前扑去，想要如往常般依偎着他，却痛痛地跌倒在地。眼泪肆意挥霍着，润湿了瞳孔，模糊了每个角落；打在了心口，放任痛楚清晰地游走，倒带往昔彼此依偎的甜蜜：</p>
+<p><img data-src="/resource/images/game-gemini-14.png" /> <img data-src="/resource/images/game-gemini-15.png" /> <img data-src="/resource/images/game-gemini-16.png" /> <img data-src="/resource/images/game-gemini-17.png" /> <img data-src="/resource/images/game-gemini-19.png" /></p>
+<p>荧树下他许诺让她看到世间最美的星云，带她浪迹天涯。 黎明的曙光照亮孤寂的夜空，驱赶着不羁的黑暗，他们双手相牵，追赶着晨曦，一起见证日出的那一抹微光。正午的太阳愈渐熠亮，他们在风中嬉戏，在路旁依靠，感受着对方的呼吸，心透着无声的默契。黄昏悄悄降临，彩霞中奔跑的身影停下了脚步，最浪漫不过彼此并肩欣赏夕阳。</p>
+<p>时而细雨微作，他们轻歌慢步；时而骤风忽起，他们依偎拥抱。他们在文明废墟中相伴而游，见证希望；在极地冰川中相依而行，战克风霜；在富丽殿堂中相视而笑，共享荣光。音符弹奏着甜蜜，图腾印刻下笑容。</p>
+<p>日出日落，朝暮共同分享，无惧颠簸跌宕；<br />
+路途遥远，同游山高水长，风景彼此共赏。</p>
+<p>而这一切已成过往……</p>
+<h2 id="四辉煌星夜如斯">四、辉煌：星夜如斯</h2>
+<p>任何一种环境或一个人，初次见面就预感到离别的隐痛时，你必定是爱上他了。（黄永玉）她明白了初遇时的心悸，不是青涩，亦不是恐惧，而是她早已预见他们命中注定要分离。 霓虹渐显倪端，微光开始蔓延，泪花随风飘落，伊人难以忘怀。星光映在她的脸庞，尽是泪行。手紧紧的攥着，慢步向前，她的眼神中少了悲伤，多了空灵，即使面前魂牵梦绕的星云也扬不起她嘴角的一丝微笑。</p>
+<p>景虽美，光虽亮，可，泪已尽，心已灰。</p>
+<p>没有形单影只的倾诉，没有感天动地的恸哭，甚至没有了恋人别离的苦楚，她走向星云的中央，目光死死的盯着他星辉散尽的方向，双臂展开，静静释怀……</p>
+<p><img data-src="/resource/images/game-gemini-12.png" /></p>
+<p>混沌银河骤然生光，星云再次燃起辉亮——她竭尽星辉在祈愿，不求时间重返，只求来世重逢。那一刻，宇宙听到了她的心声，苍穹为之感染。夜空灰暗千年，不再寂寥，星辉绚丽，占据每一寸黑暗。她最后一次俯瞰世间，不再有任何羁绊，微微一笑，随风消散。</p>
+<p><img data-src="/resource/images/game-gemini-13.png" /></p>
+<p>周边的星辰说那是他们一生中见过的最美最亮的星辉：冰冷中透着暖意，凄美却又不失灿烂，那不是悲伤，而是诠释，是渴盼，是希望。 言语停了下来，荧树又重归于暗淡... ...</p>
+<h2 id="五来世情缘何去">五、来世：情缘何去</h2>
+<p>银河浩渺无垠，星辰繁若樱花，来生相距光年十万，抑或咫尺之遥，可否会重逢再会？如若他日于星海偶遇，你我会擦肩而过，彼此不识，还是会心动如昔，情缘再续？ 命运最神秘的不是变幻莫测无人知晓，而是冥冥之中自有定向。</p>
+<hr />
+<p>荧树沉寂了万年，传说不再被流传，但至今仍会有人说：</p>
+<blockquote class="blockquote-center">
+<p>一次告别 天上就会有颗星 又熄灭</p>
+
+</blockquote>
+]]></content>
+      <categories>
+        <category>MY - 感悟随笔</category>
+      </categories>
+      <tags>
+        <tag>游戏人生</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
 </search>
