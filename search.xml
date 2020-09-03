@@ -232,19 +232,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【SDN】VNE 虚拟网络嵌入技术</title>
-    <url>/2020/08/19/CN%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/cn-vne/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><a id="more"></a>
-]]></content>
-      <categories>
-        <category>CN - 计算机网络</category>
-      </categories>
-      <tags>
-        <tag>VNE</tag>
-        <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【SciPy】Sparse稀疏矩阵主要存储格式总结</title>
     <url>/2020/08/18/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-scipy-sparse/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>在数据科学和深度学习等领域常会采用矩阵格式来存储数据，但当矩阵较为庞大且非零元素较少时，运算效率和存储有效率并不高。所以，通常我们采用Sparse稀疏矩阵的方式来存储矩阵，提高存储和运算效率。下面将对SciPy中七种常见的存储方式（COO/ CSR/ CSC/ BSR/ DOK/ LIL/ DIA）的概念和用法进行介绍和对比总结。</p>
