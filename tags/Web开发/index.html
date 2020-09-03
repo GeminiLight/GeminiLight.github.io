@@ -24,25 +24,19 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="本篇论文对资源消耗成本最小化的强化学习Policy Gradient算法，结合Seq2Seq模型，提出了一种虚拟网络服务放置的优化算法。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【论文精读】VNF placement optimization with DLR">
-<meta property="og:url" content="https://www.geminilight.cn/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vnf-placement-optimization-drl/index.html">
+  <meta name="description" content="GeminiLight">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gemini向光性">
+<meta property="og:url" content="https://www.geminilight.cn/tags/Web%E5%BC%80%E5%8F%91/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="本篇论文对资源消耗成本最小化的强化学习Policy Gradient算法，结合Seq2Seq模型，提出了一种虚拟网络服务放置的优化算法。">
+<meta property="og:description" content="GeminiLight">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-20T15:42:32.000Z">
-<meta property="article:modified_time" content="2020-08-25T18:37:02.399Z">
 <meta property="article:author" content="GeminiLight">
-<meta property="article:tag" content="VNE">
-<meta property="article:tag" content="论文精读">
-<meta property="article:tag" content="强化学习">
-<meta property="article:tag" content="GNN">
-<meta property="article:tag" content="GCN">
+<meta property="article:tag" content="Gemini向光性, GeminiLight, geminilight, 技术, 生活">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.geminilight.cn/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vnf-placement-optimization-drl/">
+<link rel="canonical" href="https://www.geminilight.cn/tags/Web%E5%BC%80%E5%8F%91/">
 
 
 <script class="page-configurations">
@@ -50,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>【论文精读】VNF placement optimization with DLR | Gemini向光性</title>
+  <title>Etiqueta: Web开发 | Gemini向光性</title>
   
 
 
@@ -136,7 +130,7 @@
       <i class="logo-line"></i>
     </a>
     
-      <p class="site-subtitle" itemprop="description">The light never goes on</p>
+      <p class="site-subtitle" itemprop="description">The light always goes on</p>
   </div>
 
   <div class="site-nav-right">
@@ -219,7 +213,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -231,7 +225,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E7%AE%80%E4%BB%8B"><span class="nav-text">论文简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89"><span class="nav-text">问题定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%93%E4%B8%9A%E8%AF%8D%E6%B1%87"><span class="nav-text">专业词汇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vnf-fge"><span class="nav-text">VNF-FGE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B"><span class="nav-text">算法模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="nav-text">性能评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C"><span class="nav-text">设计实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E7%AE%97%E6%B3%95"><span class="nav-text">对比算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text">评估指标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%88%9B%E6%96%B0"><span class="nav-text">主要创新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%80%9D%E8%80%83"><span class="nav-text">总结思考</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -247,20 +240,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">27</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -583,243 +576,58 @@ if(canvas.getContext){
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner tag">
       
 
       
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vnf-placement-optimization-drl/">
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">Web开发
+          <small>Etiqueta</small>
+        </h2>
+      </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.webp">
-      <meta itemprop="name" content="GeminiLight">
-      <meta itemprop="description" content="GeminiLight">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gemini向光性">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          【论文精读】VNF placement optimization with DLR
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-20 23:42:32" itemprop="dateCreated datePublished" datetime="2020-08-20T23:42:32+08:00">2020-08-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/RP-%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">RP - 科研论文</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>本篇论文对资源消耗成本最小化的强化学习Policy Gradient算法，结合Seq2Seq模型，提出了一种虚拟网络服务放置的优化算法。</p>
-<a id="more"></a>
-<h2 id="论文简介">论文简介</h2>
-<p><strong>论文名称</strong>：Virtual Network Function placement optimization with Deep Reinforcement Learning<br />
-<strong>论文作者</strong>：Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal<br />
-<strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br />
-<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
-<strong>关键技术</strong>：NFV 网络功能虚拟化, RL 强化学习, Seq2Seq<br />
-<strong>主要创新</strong>：以最小化资源消耗为目标，并用策略梯度算法结合Seq2Seq来搭建模型<br />
-<span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5NDUyOTE=">论文地址<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="问题定义">问题定义</h2>
-<h3 id="专业词汇">专业词汇</h3>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">缩写</th>
-<th>描述</th>
-<th>全名</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">NFV</td>
-<td>网络功能虚拟化</td>
-<td>Network Function Virtualization</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">VNF</td>
-<td>虚拟网络请求</td>
-<td>Virtual Network Functions</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">NS</td>
-<td>网络服务</td>
-<td>Network Service</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">VNF-FGE</td>
-<td>VNF正向图嵌入问题</td>
-<td>VNF Forward Graph Embedding problem</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vnf-fge">VNF-FGE</h3>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-1.webp" /></p>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-2.webp" /></p>
-<p>对于一组网络服务，</p>
-<ul>
-<li>它必须被最优地被放置在一组主机服务器上，即 <span class="math inline">\(h \in H\)</span></li>
-<li>满足主机服务器在计算、存储链路容量等方面的现在，即 <span class="math inline">\(s \in S\)</span></li>
-</ul>
-<p>问题目的：最小化对底层资源的消耗</p>
-<p><span class="math inline">\(H = \{ h_1, h_2, \dots, h_n \}\)</span> 主机服务器<br />
-<span class="math inline">\(V\)</span> 可用的VNF<br />
-<span class="math inline">\(m \in \{1, \dots, M\}\)</span> 一系列VNF组成的网络服务 <span class="math inline">\(s \in \{f_1, f_2, \dots, f_m \}\)</span> ，且<span class="math inline">\(f \in M\)</span> 一条服务链<br />
-<span class="math inline">\(S\)</span> 所有的服务链组合</p>
-<p><span class="math inline">\(x \in \{0, 1\}^{m\times n}\)</span></p>
-<ul>
-<li><span class="math inline">\(x_{fh}\)</span> 表示功能 <span class="math inline">\(f \in V\)</span> 是否被放置在主机 <span class="math inline">\(h \in H\)</span> 中（1放置，0未放置）</li>
-</ul>
-<p>动作搜索路径：<span class="math inline">\(\Omega = \{0,1\}^{m \times n}\)</span> s.t. <span class="math inline">\(\left.\sum_{h} x_{f h}=1 \forall f \in s\right\}\)</span></p>
-<ul>
-<li>对于一条服务链，它只能放置在一个主机一次</li>
-</ul>
-<p>辅助变量</p>
-<ul>
-<li><span class="math inline">\(y_h \in \{0,1\}\)</span>：服务器激活变量。1代表服务器正在执行VNF，0反之</li>
-<li><span class="math inline">\(g_i \in \{0,1\}\)</span>：链路激活变量。1代表链路正在承载流量，0反之</li>
-</ul>
-<p>功耗相关</p>
-<ul>
-<li>服务器主机功耗 <span class="math inline">\(W_h^{cpu}\)</span>
-<ul>
-<li>激活运行时（<span class="math inline">\(y_h = 1\)</span>）的最低功耗为 <span class="math inline">\(W_h^{min}\)</span></li>
-<li>功耗随着VNF的CPU需求总和而增加（线性增长）</li>
-</ul></li>
-<li>链路消耗 <span class="math inline">\(W_{net}\)</span>
-<ul>
-<li>带宽利用量 x 单位成本</li>
-</ul></li>
-</ul>
-<p>可用资源 <span class="math inline">\(r \in R\)</span></p>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-3.webp" /></p>
-<h2 id="算法模型">算法模型</h2>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-4.webp" /></p>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-5.webp" /></p>
-<h2 id="性能评估">性能评估</h2>
-<h3 id="设计实验">设计实验</h3>
-<h3 id="对比算法">对比算法</h3>
-<h3 id="评估指标">评估指标</h3>
-<h2 id="主要创新">主要创新</h2>
-<ul>
-<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
-<li>并行的策略梯度训练方法</li>
-<li>多指标的奖励函数</li>
-</ul>
-<h2 id="总结思考">总结思考</h2>
-<ul>
-<li>GCN较CNN可以更好地提取非欧数据的特征</li>
-<li>A3C算法较其他RL算法性能表现更佳</li>
-<li>并行的梯度训练策略更适应于实际场景</li>
-<li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
-<li>在模型评估部分，实验的设计比较完善</li>
-</ul>
-
+      
+    <div class="collection-year">
+      <span class="collection-header">2019</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-09-03T16:56:00+08:00"
+              content="2019-09-03">
+          09-03
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/pl-python-fundamental-syntax/" itemprop="url">
+            <span itemprop="name">【项目总结】《重庆大学软件综合实践平台》全栈开发经验总结</span>
+          </a>
+      </div>
+
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\07\13\RP - 科研论文\rp-vne-rl-gcn\" rel="bookmark">【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\08\19\CN - 计算机网络\cn-vne\" rel="bookmark">【SDN】VNE 虚拟网络嵌入技术</a></div>
-    </li>
-  </ul>
-
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>Gemini向光性
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://www.geminilight.cn/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/rp-vnf-placement-optimization-drl/" title="【论文精读】VNF placement optimization with DLR">https://www.geminilight.cn/2020/08/20/RP - 科研论文/rp-vnf-placement-optimization-drl/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/VNE/" rel="tag"># VNE</a>
-              <a href="/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/" rel="tag"># 论文精读</a>
-              <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" rel="tag"># 强化学习</a>
-              <a href="/tags/GNN/" rel="tag"># GNN</a>
-              <a href="/tags/GCN/" rel="tag"># GCN</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2020/08/19/CN%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/cn-vne/" rel="prev" title="【SDN】VNE 虚拟网络嵌入技术">
-                  <i class="fa fa-chevron-left"></i> 【SDN】VNE 虚拟网络嵌入技术
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2020/08/25/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-record-our-moments/" rel="next" title="【随笔】时光刻痕——记博客重启">
-                  【随笔】时光刻痕——记博客重启 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-      </footer>
-    
+    </header>
   </article>
+
+    </div>
+  </div>
   
   
+  
+
   
 
 
 
       
-    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -909,79 +717,9 @@ if(canvas.getContext){
   
 
   
-      <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              const target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      const script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
-
-<script>
-NexT.utils.loadComments('#gitalk-container', () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : 'ec28f6e4cd300bb646a0',
-      clientSecret: 'c110fe37a840a4133f1470ed107de921584bf2fa',
-      repo        : 'gitment-of-blog',
-      owner       : 'GeminiLight',
-      admin       : ['GeminiLight'],
-      id          : 'f65ccc0a039c2ed5c1edfc029e551a26',
-        language: 'zh-CN',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
 
 </body>
 </html>
