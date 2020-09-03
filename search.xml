@@ -4,14 +4,14 @@
     <title>【全栈开发】《重庆大学软件综合实践平台》项目开发经验总结</title>
     <url>/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/pl-python-fundamental-syntax/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-gQGsHFmg" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-lIemhZLH" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="002C8n7x1RdgXe" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
-<p>在大二小学期软件实训课程中，自己做了一个“重庆大学软件综实践平台”的项目，于是在此总结一些自己第一次做自己的全栈开发项目的经验。（其实这篇总结应该很早就写的，至于为什么拖到了现在？“不愧是我——拖延症大师”）</p>
+<p>在大二小学期软件实训课程中，自己做了一个“重庆大学软件综实践平台”的项目，于是在此总结一些自己第一次做自己的全栈开发项目的经验。（其实这篇总结应该很早就写的，至于为什么拖到了现在？“不愧是我——那只Monkey又在作怪”）</p>
 <a id="more"></a>
 <h2 id="前言">前言</h2>
 <h3 id="为什么">为什么</h3>
-<p>为什么会选择做“重庆大学软件综合实践平台”这个项目呢？主要是因为自己在学完Vue后便很少去实践，关于后端的知识也少有动力去精进，恰巧课程名称《软件综合实践》却主要假以钉钉、QQ作为课程平台，于是特定的时机场景，便萌生了做一个全栈的重庆大学软件综合实践平台的想法。</p>
+<p>为什么会选择做“重庆大学软件综合实践平台”这个项目呢？主要是因为自己在学完Vue后便很少去实践，关于后端的知识也少有动力去精进，恰巧课程名称《软件综合实践》却主要假以钉钉、QQ作为课程平台。于是在此特定的时机场景，便萌生了做一个重庆大学软件综合实践平台的想法。</p>
 <h3 id="做什么">做什么</h3>
 <p>现有的网络课程平台或是专门针对实验课程的平台繁多且不乏高质量网站，个人深知能力有限，并不渴求可以做出功能十分完善、需求十分满足的工业级项目。更多的出于自我学习的目的，项目偏向于一些必要需求的实现和一些特定场景的优化，因此，在前期需求分析阶段所作出的分析也主要是针对所学课程当中的常见需求和场景。</p>
 <h3 id="怎么做">怎么做</h3>
@@ -23,6 +23,7 @@
 </ul>
 <h2 id="展示">展示</h2>
 <p><img data-src="/resource/images/web/web-cquse-overview.png" /></p>
+<p>以下为项目中部分界面的展示</p>
 <h3 id="统一登录入口">统一登录入口</h3>
 <p><embed src="/resource/images/web/web-cquse-login.webp" /></p>
 <h3 id="学生功能页面">学生功能页面</h3>
@@ -59,7 +60,7 @@
 <p>原本以为数据库应该是整个项目最简单的部分，但不得承认数据库改动次数还是挺多的，而且数据库的一变前后端都得变，就很繁琐。虽说数据库设计上也算还可以，但是由于数据量、实践和个人能力的问题，对数据库中关于并发、缓存、锁粒度等等并没有得到很好地应用。 此外，《高性能MySQL》这本书让我知道数据库理论并不是简单的，要想达到最优的性能，就必须了解如join、in等等这些选择方式背后的原理实现。当然，自以为然地掌握了原理并不是软件工程的最终目的，考卷上三四张表的设计已经满足了考察水平和时间要求，但现实生活中应用场景要远远复杂，真正要达到较高的掌握程度就要真正去实践。</p>
 <p><strong>感想：检验理论掌握程度的最佳标准是实践。</strong></p>
 <h2 id="后记">后记</h2>
-<p>三周的实践对于拖延症而言依旧不长，精确些来说只是三天，至于说Deadline前的三天是如何度过，我只能期望大脑中的Monkey尽早能更加有远见些...</p>
+<p>三周的小学期对于拖延症患者而言并不长，精确些来说只是三天。至于说Deadline前的三天是如何度过，我只能期望大脑中的Monkey尽早能更加有远见些。</p>
 ]]></content>
       <categories>
         <category>WD - 网站开发</category>
