@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【全栈开发】《CQU软件综合实践平台》项目总结</title>
-    <url>/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/pl-python-fundamental-syntax/</url>
+    <title>【Web】《CQU软件综合实践平台》项目总结</title>
+    <url>/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/wd-web-cquse-system/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-ZSZYITEH" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-cxpWaOvX" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="002C8n7x1RdgXe" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <p>在大二小学期软件实训课程中，自己做了一个“CQU软件综实践平台”的项目，于是在此总结一些自己第一次做自己的全栈开发项目的经验。（其实这篇总结应该很早就写的，至于为什么拖到了现在？“不愧是我——那只Monkey又在作怪”）</p>
