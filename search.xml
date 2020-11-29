@@ -7,7 +7,7 @@
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Multi-domain Non-cooperative VNF-FG embedding: A deep reinforcement learning approach<br />
 <strong>论文作者</strong>：Quang Tran Anh Pham, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul<br />
-<strong>发表期刊</strong>：INFOCOM-2020 (CCF-A)<br />
+<strong>发表期刊</strong>：INFOCOM-2019 (CCF-A)<br />
 <strong>研究方向</strong>：NFV 网络功能虚拟化<br />
 <strong>关键技术</strong>：多域非合作，虚拟网络功能嵌入, 深度强化学习<br />
 <strong>主要创新</strong>：多域非合作场景；多通到的VNF-FG请求矩阵表示；基于成本的首次拟合算法<br />
@@ -96,7 +96,7 @@
 <li>每个域不与其他域进行通信，</li>
 <li>每个域单独做出决策将发送至中心客户，由中心客户根据价格进行选择</li>
 </ol>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
+<p><img data-src="/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-1.png" /></p>
 <p>大致的决策流程如下：</p>
 <ol type="1">
 <li>中心代理将VNF-FG请求处理为一个三维向量，即<code>state</code>，然后发送给每个域</li>
