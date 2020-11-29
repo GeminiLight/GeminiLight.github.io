@@ -1,6 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【论文精读】Multi-domain non-cooperative VNF-FG embedding - A deep reinforcement learning approach</title>
+    <url>/2020/11/29/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）来实现最小化部署成本的目标。</p>
+<a id="more"></a>
+<h2 id="论文简介">论文简介</h2>
+<p><strong>论文名称</strong>：Multi-domain non-cooperative VNF-FG embedding: A deep reinforcement learning approach<br />
+<strong>论文作者</strong>：Quang Tran Anh Pham, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul<br />
+<strong>发表期刊</strong>：INFOCOM-2020 (CCF-A)<br />
+<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
+<strong>关键技术</strong>：多域非合作，虚拟网络功能嵌入, 深度强化学习 <strong>主要创新</strong>：多域非合作场景、基于成本的首次拟合算法、多目标的奖励函数<br />
+<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="问题定义">问题定义</h2>
+<h3 id="专业词汇">专业词汇</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">缩写</th>
+<th>描述</th>
+<th>全名</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">NFV</td>
+<td>网络功能虚拟化</td>
+<td>Network Function Virtualization</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">VNF-FG</td>
+<td>虚拟网络功能转发图</td>
+<td>Virtual Network Function - Forwarding Graph</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VNF</td>
+<td>虚拟网络功能</td>
+<td>Virtual Network Function</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">VL</td>
+<td>虚拟链路</td>
+<td>Virtual Link</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">QoS</td>
+<td>服务质量</td>
+<td>Quality of Service</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vnf-fg">VNF-FG</h3>
+<p>每个VNF-FG由若干由VL连接起来的VNF组成</p>
+<ul>
+<li><span class="math inline">\(\mathcal{N&#39;}\)</span>表示VNF的集合，<span class="math inline">\(|\mathcal{N&#39;}|\)</span>为VNF个数
+<ul>
+<li>对于VNF，考虑<span class="math inline">\(K_{VNF}\)</span>种资源，如CPU、RAM、Storage</li>
+<li><span class="math inline">\(h_{n&#39;,k}\)</span>表示VNF <span class="math inline">\(n&#39;\)</span>对资源<span class="math inline">\(k\)</span>的请求量</li>
+<li><span class="math inline">\(h_{n&#39;} = [h_{n&#39;,0}, ..., h_{n&#39;,K_{VNF-1}}]\)</span>表示VNF <span class="math inline">\(n&#39;\)</span>对各种资源的请求量</li>
+</ul></li>
+<li><span class="math inline">\(\mathcal{L&#39;}\)</span>表示VL的集合，<span class="math inline">\(|\mathcal{L&#39;}|\)</span>为VNF个数
+<ul>
+<li>对于VL，考虑<span class="math inline">\(K_{VL}\)</span>种资源，如bandwidth、latency、packet loss</li>
+<li><span class="math inline">\(h_{l&#39;,k}\)</span>表示VNF <span class="math inline">\(l&#39;\)</span>对资源<span class="math inline">\(k\)</span>的请求量</li>
+<li><span class="math inline">\(h_{l&#39;} = [h_{l&#39;,0}, ..., h_{l&#39;,K_{VNF-1}}]\)</span>表示VNF <span class="math inline">\(l&#39;\)</span>对各种资源的请求量</li>
+</ul></li>
+</ul>
+<h3 id="问题约束">问题约束</h3>
+<ul>
+<li><p>一个VNF可以被成功部署在一个有足够的资源的主机上，且只能部署在一个主机上 <span class="math display">\[\sum_{n^{\prime}} \phi_{n}^{n^{\prime}} h_{n^{\prime}, k} \leq r_{n, k}, \forall n, k\]</span> <span class="math display">\[\sum_{n} \phi_{n}^{n^{\prime}} \leq 1, \forall n^{\prime}\]</span></p></li>
+<li><p>一个VL可以被部署在拥有足够资源且满足QoS要求的底层链路上</p></li>
+</ul>
+<p><span class="math display">\[\sum_{l^{\prime}} \phi_{l}^{l^{\prime}} h_{l^{\prime}, b w} \leq r_{l, b w}, \forall l\]</span> <span class="math display">\[h_{l^{\prime}, \text {delay}} \leq D\left(\phi^{\prime^{\prime}}\right)\]</span> <span class="math display">\[h_{l^{\prime}, \text {loss}} \leq R\left(\phi^{l^{\prime}}\right)\]</span></p>
+<h2 id="算法模型">算法模型</h2>
+<h3 id="multi-domain-non-cooperative-framework">Multi-domain Non-cooperative framework</h3>
+<h3 id="ddpg">DDPG</h3>
+<h4 id="环境-environment">环境 Environment</h4>
+<h4 id="代理-agent">代理 Agent</h4>
+<h4 id="状态-state">状态 State</h4>
+<h4 id="动作-action">动作 Action</h4>
+<h4 id="奖励-rewords">奖励 Rewords</h4>
+<h3 id="neural-network">Neural Network</h3>
+<h2 id="性能评估">性能评估</h2>
+<h3 id="设计实验">设计实验</h3>
+<ul>
+<li>底层网络拓扑
+<ul>
+<li>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑</li>
+<li>该网络具有100个结点和500条边（模拟一个中型的ISP）。</li>
+<li>随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</li>
+</ul></li>
+<li>虚拟网络请求
+<ul>
+<li>随机生成VNR时满足Possion process（泊松分布），每组评估持续50000个时间单位</li>
+<li>即当VNR预期到达率为4个/100个时间单位时，则约有2000个VNR</li>
+<li>每个VRN的生成周期满足平均值为500的指数分布</li>
+<li>每个VNR的数量均匀分布在2~10之间</li>
+<li>初始化VNR中的节点CPU需求和链路带宽需求为0~30的均匀分布</li>
+<li>每对节点有50%的可能性形成边</li>
+</ul></li>
+<li>动态设置参数
+<ul>
+<li>VNR的到达率、节点及链路资源的分配、每个VNR的节点数量</li>
+<li>我们可以通过调节这三个参数来评估各种VNE场景</li>
+</ul></li>
+<li>测试阶段
+<ul>
+<li>学习代理仅使用actor网络生成嵌入策略，来从底层网络拓扑中选择合适的节点托管当前的虚拟节点</li>
+<li>该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR</li>
+</ul></li>
+</ul>
+<h3 id="对比算法">对比算法</h3>
+<ul>
+<li>R-ViNE<br />
+使用基于确定的取整（rounding-based）的方法来获得与VNE问题对应的MIP的线性规划松弛（linear programming relaxation），以最小化VNR的成本</li>
+<li>D-ViNE<br />
+和RR-ViNE，但特殊在其取整方法是随机的</li>
+<li>GRC<br />
+一种基于全局资源容量管理的节点排序算法</li>
+<li>MCVNE<br />
+一种基于强化学习的 Monte-Carlo MCTS 动作空间搜索算法</li>
+<li>NodeRank<br />
+一种节点排序算法，灵感来自与Google的PageRank算法</li>
+</ul>
+<p>它们基本覆盖了当前大部分算法的观点</p>
+<h3 id="评估指标">评估指标</h3>
+<h4 id="vnr-到达率测试">VNR 到达率测试</h4>
+<p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br />
+实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
+<p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
+<h4 id="资源请求测试">资源请求测试</h4>
+<p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
+<ul>
+<li>计算密集型任务需要更多的节点资源（CPU）</li>
+<li>而通信密集型任务需要更多的链路资源（带宽）</li>
+</ul>
+<p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
+<p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
+<h4 id="节点数量扩展性测试">节点数量扩展性测试</h4>
+<p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br />
+实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
+<p>结果分析：该算法优势明显，但可以发现当节点逐渐增加时，接受率下降明显</p>
+<p>原因分析：</p>
+<ul>
+<li>因为每个VNR都必须作为一个整体成功地嵌入；一个更大的VNR意味着在嵌入的中间步骤中失败的机会更多；</li>
+<li>因为同一VNR中的两个虚拟节点不能共享一个特定的基板节点，单个VNR中的更多节点限制了候选动作空间</li>
+</ul>
+<h4 id="平均运行时间统计">平均运行时间统计</h4>
+<h2 id="主要创新">主要创新</h2>
+<ul>
+<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
+<li>并行的策略梯度训练方法</li>
+<li>多指标的奖励函数</li>
+</ul>
+<h2 id="总结思考">总结思考</h2>
+<ul>
+<li>GCN较CNN可以更好地提取非欧数据的特征</li>
+<li>A3C算法较其他RL算法性能表现更佳</li>
+<li>并行的梯度训练策略更适应于实际场景</li>
+<li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
+<li>在模型评估部分，实验的设计比较完善</li>
+</ul>
+]]></content>
+      <categories>
+        <category>RP - 科研论文</category>
+      </categories>
+      <tags>
+        <tag>VNE</tag>
+        <tag>论文精读</tag>
+        <tag>强化学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【Web】《CQU软件综合实践平台》项目总结</title>
     <url>/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/wd-web-cquse-system/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
@@ -114,7 +288,7 @@
   </entry>
   <entry>
     <title>【论文精读】VNF placement optimization with DLR</title>
-    <url>/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/papervnf-placement-optimization-drl/</url>
+    <url>/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vnf-placement-optimization-drl/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文对资源消耗成本最小化的强化学习Policy Gradient算法，结合Seq2Seq模型，提出了一种虚拟网络服务放置的优化算法。</p>
 <a id="more"></a>
 <h2 id="论文简介">论文简介</h2>
@@ -1055,7 +1229,7 @@
   </entry>
   <entry>
     <title>【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
-    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-vne-rl-gcn/</url>
+    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-rl-gcn/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
 <a id="more"></a>
 <h2 id="论文简介">论文简介</h2>

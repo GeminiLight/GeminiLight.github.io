@@ -24,24 +24,34 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="在大二小学期软件实训课程中，自己做了一个“CQU软件综实践平台”的项目，于是在此总结一些自己第一次做自己的全栈开发项目的经验。（其实这篇总结应该很早就写的，至于为什么拖到了现在？“不愧是我——那只Monkey又在作怪”）">
+  <meta name="description" content="本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Web】《CQU软件综合实践平台》项目总结">
-<meta property="og:url" content="https://www.geminilight.cn/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/wd-web-cquse-system/index.html">
+<meta property="og:title" content="【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN">
+<meta property="og:url" content="https://www.geminilight.cn/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-rl-gcn/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="在大二小学期软件实训课程中，自己做了一个“CQU软件综实践平台”的项目，于是在此总结一些自己第一次做自己的全栈开发项目的经验。（其实这篇总结应该很早就写的，至于为什么拖到了现在？“不愧是我——那只Monkey又在作怪”）">
+<meta property="og:description" content="本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/web/web-cquse-overview.png">
-<meta property="article:published_time" content="2020-09-03T08:56:00.000Z">
-<meta property="article:modified_time" content="2020-09-05T04:03:26.097Z">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-1.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-2.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-3.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-4.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-8.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-5.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-6.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-7.png">
+<meta property="article:published_time" content="2020-07-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-29T01:51:20.646Z">
 <meta property="article:author" content="GeminiLight">
-<meta property="article:tag" content="前端开发">
-<meta property="article:tag" content="Web开发">
+<meta property="article:tag" content="VNE">
+<meta property="article:tag" content="论文精读">
+<meta property="article:tag" content="强化学习">
+<meta property="article:tag" content="GNN">
+<meta property="article:tag" content="GCN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/web/web-cquse-overview.png">
+<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-1.png">
 
 
-<link rel="canonical" href="https://www.geminilight.cn/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/wd-web-cquse-system/">
+<link rel="canonical" href="https://www.geminilight.cn/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-rl-gcn/">
 
 
 <script class="page-configurations">
@@ -54,7 +64,7 @@
   };
 </script>
 
-  <title>【Web】《CQU软件综合实践平台》项目总结 | Gemini向光性</title>
+  <title>【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN | Gemini向光性</title>
   
 
 
@@ -111,9 +121,6 @@
   </style>
 </noscript>
 
-<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
-<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
-<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -233,7 +240,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88"><span class="nav-text">为什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%9A%E4%BB%80%E4%B9%88"><span class="nav-text">做什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%81%9A"><span class="nav-text">怎么做</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%95%E7%A4%BA"><span class="nav-text">展示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9F%E4%B8%80%E7%99%BB%E5%BD%95%E5%85%A5%E5%8F%A3"><span class="nav-text">统一登录入口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%A6%E7%94%9F%E5%8A%9F%E8%83%BD%E9%A1%B5%E9%9D%A2"><span class="nav-text">学生功能页面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%A6%E7%94%9F%E4%B8%BB%E9%A1%B5"><span class="nav-text">学生主页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%A6%E7%94%9F%E7%AD%BE%E5%88%B0%E7%95%8C%E9%9D%A2"><span class="nav-text">学生签到界面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%A6%E7%94%9F%E4%B8%8A%E4%BC%A0%E6%8A%A5%E5%91%8A"><span class="nav-text">学生上传报告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%A6%E7%94%9F%E6%88%90%E7%BB%A9%E6%9F%A5%E8%AF%A2"><span class="nav-text">学生成绩查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%A6%E7%94%9F%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83"><span class="nav-text">学生个人中心</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%99%E5%B8%88%E5%8A%9F%E8%83%BD%E9%A1%B5%E9%9D%A2"><span class="nav-text">教师功能页面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%99%E5%B8%88%E4%B8%BB%E9%A1%B5"><span class="nav-text">教师主页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%99%E5%B8%88%E7%99%BB%E8%AE%B0%E6%88%90%E7%BB%A9"><span class="nav-text">教师登记成绩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%99%E5%B8%88%E6%9F%A5%E7%9C%8B%E9%80%89%E9%A2%98"><span class="nav-text">教师查看选题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E5%8A%9F%E8%83%BD%E9%A1%B5%E9%9D%A2"><span class="nav-text">后台功能页面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86"><span class="nav-text">学生信息管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF"><span class="nav-text">修改学生信息</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF%E6%96%B9%E9%9D%A2"><span class="nav-text">前端方面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E7%AB%AF%E6%96%B9%E9%9D%A2"><span class="nav-text">后端方面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%B9%E9%9D%A2"><span class="nav-text">数据库方面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-text">后记</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E7%AE%80%E4%BB%8B"><span class="nav-text">论文简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89"><span class="nav-text">问题定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%93%E4%B8%9A%E8%AF%8D%E6%B1%87"><span class="nav-text">专业词汇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vne"><span class="nav-text">VNE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B"><span class="nav-text">算法模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dl-a3c"><span class="nav-text">DL-A3C</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gcn"><span class="nav-text">GCN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#a3c-gcn"><span class="nav-text">A3C + GCN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83-environment"><span class="nav-text">环境 Environment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%90%86-agent"><span class="nav-text">代理 Agent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8A%B6%E6%80%81-state"><span class="nav-text">状态 State</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E4%BD%9C-action"><span class="nav-text">动作 Action</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A5%96%E5%8A%B1-rewords"><span class="nav-text">奖励 Rewords</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="nav-text">性能评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C"><span class="nav-text">设计实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E7%AE%97%E6%B3%95"><span class="nav-text">对比算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text">评估指标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vnr-%E5%88%B0%E8%BE%BE%E7%8E%87%E6%B5%8B%E8%AF%95"><span class="nav-text">VNR 到达率测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E8%AF%B7%E6%B1%82%E6%B5%8B%E8%AF%95"><span class="nav-text">资源请求测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E6%95%B0%E9%87%8F%E6%89%A9%E5%B1%95%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="nav-text">节点数量扩展性测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E7%BB%9F%E8%AE%A1"><span class="nav-text">平均运行时间统计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E6%B5%8B%E8%AF%95"><span class="nav-text">验证测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E6%95%88%E7%8E%87%E5%8F%8A%E6%94%B6%E6%95%9B%E6%80%A7"><span class="nav-text">训练效率及收敛性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E8%AF%B7%E6%B1%82%E6%B5%8B%E8%AF%95%E9%AA%8C%E8%AF%81"><span class="nav-text">资源请求测试验证</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0%E4%B8%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6"><span class="nav-text">其他参数下模型的可行性研究</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%92%8C%E5%8F%82%E6%95%B0"><span class="nav-text">附加网络拓扑和参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%8C%87%E6%A0%87"><span class="nav-text">其他指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%88%9B%E6%96%B0"><span class="nav-text">主要创新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%80%9D%E8%80%83"><span class="nav-text">总结思考</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -594,7 +601,7 @@ if(canvas.getContext){
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/wd-web-cquse-system/">
+    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-rl-gcn/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.webp">
@@ -610,7 +617,7 @@ if(canvas.getContext){
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【Web】《CQU软件综合实践平台》项目总结
+          【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN
         </h1>
 
         <div class="post-meta">
@@ -621,7 +628,7 @@ if(canvas.getContext){
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-09-03 16:56:00" itemprop="dateCreated datePublished" datetime="2020-09-03T16:56:00+08:00">2020-09-03</time>
+              <time title="创建时间：2020-07-13 00:00:00" itemprop="dateCreated datePublished" datetime="2020-07-13T00:00:00+08:00">2020-07-13</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -629,7 +636,7 @@ if(canvas.getContext){
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/WD-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">WD - 网站开发</span></a>
+                  <a href="/categories/RP-%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">RP - 科研论文</span></a>
                 </span>
             </span>
 
@@ -639,7 +646,7 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
+              <span>3.2k</span>
             </span>
 
         </div>
@@ -649,64 +656,211 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-        
-    <div id="aplayer-cxpWaOvX" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="002C8n7x1RdgXe" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
-    ></div>
-<p>在大二小学期软件实训课程中，自己做了一个“CQU软件综实践平台”的项目，于是在此总结一些自己第一次做自己的全栈开发项目的经验。（其实这篇总结应该很早就写的，至于为什么拖到了现在？“不愧是我——那只Monkey又在作怪”）</p>
+        <p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
 <a id="more"></a>
-<h2 id="前言">前言</h2>
-<h3 id="为什么">为什么</h3>
-<p>为什么会选择做“CQU软件综合实践平台”这个项目呢？主要是因为自己在入门Vue后便很少去实践，关于后端的知识也少有动力去精进，恰巧课程名称《软件综合实践》且主要假以钉钉、QQ作为课程平台。于是在此特定的时机场景，便萌生了做一个重庆大学软件综合实践平台的想法。</p>
-<h3 id="做什么">做什么</h3>
-<p>现有的网络课程平台或是专门针对实验课程的平台繁多且不乏高质量网站，个人深知能力有限，并不渴求可以做出功能十分完善、需求十分满足的工业级项目。更多的出于自我学习的目的，项目偏向于一些必要需求的实现和一些特定场景的优化，因此，在前期需求分析阶段所作出的分析也主要是针对所学课程当中的常见需求和场景。</p>
-<h3 id="怎么做">怎么做</h3>
-<p>该平台是基于B/S的实验课程管理系统，故离不开前端与后端的技术支撑。在具体实现过程中，主要用到了以下技术栈：</p>
+<h2 id="论文简介">论文简介</h2>
+<p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
+<strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
+<strong>发表期刊</strong>：JSAC-2020 (CCF-A)<br />
+<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
+<strong>关键技术</strong>：虚拟网络嵌入, 强化学习, 图卷积神经网络<br />
+<strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
+<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="问题定义">问题定义</h2>
+<h3 id="专业词汇">专业词汇</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">缩写</th>
+<th>描述</th>
+<th>全名</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">VNE</td>
+<td>虚拟网络嵌入</td>
+<td>Virtual Network Embedding</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">VNR</td>
+<td>虚拟网络请求</td>
+<td>Virtual Network Request</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RL</td>
+<td>强化学习</td>
+<td>Reinforcement Learning</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">GCN</td>
+<td>图卷积神经网络</td>
+<td>Graph Convolutional Network</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">A3C</td>
+<td></td>
+<td>Asynchronous Advantage Actor-Critic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vne">VNE</h3>
+<h2 id="算法模型">算法模型</h2>
+<h3 id="dl-a3c">DL-A3C</h3>
+<h3 id="gcn">GCN</h3>
+<h3 id="a3c-gcn">A3C + GCN</h3>
+<h4 id="环境-environment">环境 Environment</h4>
+<h4 id="代理-agent">代理 Agent</h4>
+<h4 id="状态-state">状态 State</h4>
+<h4 id="动作-action">动作 Action</h4>
+<h4 id="奖励-rewords">奖励 Rewords</h4>
 <ul>
-<li>前端：HTML、CSS、JS、Vue、Element UI</li>
-<li>后端：SpringBoot、Redis、Mybatis plus、AliYun oss</li>
-<li>数据库：MySQL、CURD、乐观锁、触发器、范式设计</li>
+<li>动作反馈 action feedback</li>
 </ul>
-<h2 id="展示">展示</h2>
-<p><img data-src="/resource/images/web/web-cquse-overview.png" /></p>
-<p>以下为项目中部分界面的展示</p>
-<h3 id="统一登录入口">统一登录入口</h3>
-<p><embed src="/resource/images/web/web-cquse-login.webp" /></p>
-<h3 id="学生功能页面">学生功能页面</h3>
-<h4 id="学生主页">学生主页</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-home.webp" /></p>
-<h4 id="学生签到界面">学生签到界面</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-sign.webp" /></p>
-<h4 id="学生上传报告">学生上传报告</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-report.webp" /></p>
-<h4 id="学生成绩查询">学生成绩查询</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-grade.webp" /></p>
-<h4 id="学生个人中心">学生个人中心</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-user.webp" /></p>
-<h3 id="教师功能页面">教师功能页面</h3>
-<h4 id="教师主页">教师主页</h4>
-<p><embed src="/resource/images/web/web-cquse-tch-home.webp" /></p>
-<h4 id="教师登记成绩">教师登记成绩</h4>
-<p><embed src="/resource/images/web/web-cquse-tch-grade.webp" /></p>
-<h4 id="教师查看选题">教师查看选题</h4>
-<p><embed src="/resource/images/web/web-cquse-tch-project.webp" /></p>
-<h3 id="后台功能页面">后台功能页面</h3>
-<h4 id="学生信息管理">学生信息管理</h4>
-<p><embed src="/resource/images/web/web-cquse-admin-stu.webp" /></p>
-<h4 id="修改学生信息">修改学生信息</h4>
-<p><embed src="/resource/images/web/web-cquse-admin-modify.webp" /></p>
-<h2 id="总结">总结</h2>
-<h3 id="前端方面">前端方面</h3>
-<p>Vue、React、Angular等等这些流行的前端框架一定程度上改变了前端开发的模式，工程化地提高了前端开发的效率，但也对前端开发提出了更高的要求。 项目中，通过进一步对Vue的学习，发现Vue很多新的特性和难的特性都可以在JavaScript、TypeScript中找到源痕迹。Vue在新beta版本中加入的新特性，也越来越偏重于TS的语言特性，更加注重模板与类的使用。但奈何个人对TypeScript了解甚少，因此对于一些语法糖的使用规范理解得并不是很好。所以编码时，秉承着真不会就不用的原则..还有要感谢Element UI让我写出了还能看的UI。</p>
-<p><strong>感想：基础为底石，方能站得稳，看得深，做得好。</strong></p>
-<h3 id="后端方面">后端方面</h3>
-<p>从Django到Springboot的过渡可能如学语言时从python到java的过渡，虽然可说是由“简”入“繁”，但整个项目体验下来，不得不承认java语言的工程性会更强些。 整个项目的完成离不开对各种插件的使用，如Mybatis-plus、lombok、easy-excel等等，这些插件对一些常见的方法进行了封装实现，明显提高了开发效率。但其实过渡封装反而会对自定义方法的实现带来不便。 另外，Mybatis-plus官方文档在自定义SQL方面，特别xml实现方面，写的就很…不容易理解，也可能需要Mybatis的基础吧，然而课程时间限制来不及去补充了解下。现在感觉要想真正了解一些高效的插件，离不开对其实现代码的阅读。</p>
-<p><strong>感想：所谓的高效开发往往可能是对底层实现的不求甚解。</strong></p>
-<h3 id="数据库方面">数据库方面</h3>
-<p>原本以为数据库应该是整个项目最简单的部分，但不得承认数据库改动次数还是挺多的，而且数据库的一变前后端都得变，就很繁琐。虽说数据库设计上也算还可以，但是由于数据量、实践和个人能力的问题，对数据库中关于并发、缓存、锁粒度等等并没有得到很好地应用。 此外，《高性能MySQL》这本书让我知道数据库理论并不是简单的，要想达到最优的性能，就必须了解如join、in等等这些选择方式背后的原理实现。当然，自以为然地掌握了原理并不是软件工程的最终目的，考卷上三四张表的设计已经满足了考察水平和时间要求，但现实生活中应用场景要远远复杂，真正要达到较高的掌握程度就要真正去实践。</p>
-<p><strong>感想：检验理论掌握程度的最佳标准是实践。</strong></p>
-<h2 id="后记">后记</h2>
-<p>三周的小学期对于拖延症患者而言并不长，精确些来说只是三天。至于说Deadline前的三天是如何度过，我只能期望大脑中的Monkey尽早能更加有远见些。</p>
+<p><span class="math display">\[r_{a}=\left\{\begin{array}{cl}
+  100 \gamma_{a} &amp; a_{t} \text {is successful} \\
+  -100 \gamma_{a} &amp;  \text {otherwise}
+\end{array}\right.\]</span></p>
+<ul>
+<li>成本效益 cost-efficient</li>
+</ul>
+<p><span class="math display">\[r_{c} =  \frac{\delta(revenue)}{\delta(cost)}\]</span></p>
+<ul>
+<li>负载均衡 Load balancing</li>
+</ul>
+<p><span class="math display">\[r_{s} = \frac{S_CPU_Remaining[a]}{S_CPU_Max[a]}\]</span></p>
+<ul>
+<li>资格痕迹 eligibility trace</li>
+</ul>
+<p><span class="math display">\[e g b_{-}{trace}_{t}[i]=\left\{\begin{array}{cl}
+  \gamma_{e}\left(e g b_{-}{trace}_{t-1}[i]+1\right) &amp; i==a_{t} \\
+  \gamma_{e} {egb}_{-} {trace}_{t-1}[i] &amp; \text { otherwise }
+\end{array}\right.\]</span></p>
+<p>故最终对于动作<span class="math inline">\(a{t}\)</span>奖励函数（Reward Function）为</p>
+<p><span class="math display">\[Reward[a_{t}]=\frac{r_{a} r_{c} r_{s}}{e g b{-}trace[a_{t}]+\epsilon}\]</span></p>
+<h2 id="性能评估">性能评估</h2>
+<h3 id="设计实验">设计实验</h3>
+<ul>
+<li>底层网络拓扑
+<ul>
+<li>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑</li>
+<li>该网络具有100个结点和500条边（模拟一个中型的ISP）。</li>
+<li>随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</li>
+</ul></li>
+<li>虚拟网络请求
+<ul>
+<li>随机生成VNR时满足Possion process（泊松分布），每组评估持续50000个时间单位</li>
+<li>即当VNR预期到达率为4个/100个时间单位时，则约有2000个VNR</li>
+<li>每个VRN的生成周期满足平均值为500的指数分布</li>
+<li>每个VNR的数量均匀分布在2~10之间</li>
+<li>初始化VNR中的节点CPU需求和链路带宽需求为0~30的均匀分布</li>
+<li>每对节点有50%的可能性形成边</li>
+</ul></li>
+<li>动态设置参数
+<ul>
+<li>VNR的到达率、节点及链路资源的分配、每个VNR的节点数量</li>
+<li>我们可以通过调节这三个参数来评估各种VNE场景</li>
+</ul></li>
+<li>测试阶段
+<ul>
+<li>学习代理仅使用actor网络生成嵌入策略，来从底层网络拓扑中选择合适的节点托管当前的虚拟节点</li>
+<li>该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR</li>
+</ul></li>
+</ul>
+<h3 id="对比算法">对比算法</h3>
+<ul>
+<li>R-ViNE<br />
+使用基于确定的取整（rounding-based）的方法来获得与VNE问题对应的MIP的线性规划松弛（linear programming relaxation），以最小化VNR的成本</li>
+<li>D-ViNE<br />
+和RR-ViNE，但特殊在其取整方法是随机的</li>
+<li>GRC<br />
+一种基于全局资源容量管理的节点排序算法</li>
+<li>MCVNE<br />
+一种基于强化学习的 Monte-Carlo MCTS 动作空间搜索算法</li>
+<li>NodeRank<br />
+一种节点排序算法，灵感来自与Google的PageRank算法</li>
+</ul>
+<p>它们基本覆盖了当前大部分算法的观点</p>
+<h3 id="评估指标">评估指标</h3>
+<h4 id="vnr-到达率测试">VNR 到达率测试</h4>
+<p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br />
+实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
+<p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
+<h4 id="资源请求测试">资源请求测试</h4>
+<p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
+<ul>
+<li>计算密集型任务需要更多的节点资源（CPU）</li>
+<li>而通信密集型任务需要更多的链路资源（带宽）</li>
+</ul>
+<p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
+<p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
+<h4 id="节点数量扩展性测试">节点数量扩展性测试</h4>
+<p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br />
+实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
+<p>结果分析：该算法优势明显，但可以发现当节点逐渐增加时，接受率下降明显</p>
+<p>原因分析：</p>
+<ul>
+<li>因为每个VNR都必须作为一个整体成功地嵌入；一个更大的VNR意味着在嵌入的中间步骤中失败的机会更多；</li>
+<li>因为同一VNR中的两个虚拟节点不能共享一个特定的基板节点，单个VNR中的更多节点限制了候选动作空间</li>
+</ul>
+<h4 id="平均运行时间统计">平均运行时间统计</h4>
+<p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
+<h3 id="验证测试">验证测试</h3>
+<p>在相同条件下，与其他基于强化学习的VNE算法进行比较</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-8.png" /></p>
+<h4 id="训练效率及收敛性">训练效率及收敛性</h4>
+<p>不同算法在相同实验条件下的训练效果对比，见下图(a)<br />
+实验结果：可以发现，在这组实验中，平均收益的优势要比接受率的明显<br />
+原因分析：当VNR的节点数量较少时，所有算法都可以有很好的表现；但当节点增多后，该算法可以带来更多的潜在收益（多指标的Reward）。</p>
+<h4 id="资源请求测试验证">资源请求测试验证</h4>
+<p>在不同的资源请求情况下，对这些算法进行测试，见下图(b)</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
+<p>实验结果：在不同数量的资源请求情况下，该算法的接受率均是最优的；此外，可以发现CNN的性能表现始终是最差的<br />
+原因分析：用GCN代替传统的CNN进行特征提取可以带来更好地性能。</p>
+<h3 id="其他参数下模型的可行性研究">其他参数下模型的可行性研究</h3>
+<h4 id="附加网络拓扑和参数">附加网络拓扑和参数</h4>
+<p>CSTNET：中国网络运营商，见下图(a)</p>
+<ul>
+<li>红色边为100Gb带宽的链路</li>
+<li>绿色边为10Gb带宽的链路</li>
+<li>橙色边为2.5Gb带宽的链路</li>
+<li>黑色边为1Gb带宽的链路</li>
+<li>边的权重：平均传输延迟 average transmission latency（毫秒），</li>
+</ul>
+<p>对比算法：Noderank<br />
+实验设计：</p>
+<ul>
+<li>模拟了一些随机的点对点的数据传输任务</li>
+<li>数据传输速率为 [500Mbps,3Gbps] 的均匀分布</li>
+</ul>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-6.png" /></p>
+<p>实验结果：A3C+GCN 模型的延迟更少</p>
+<h4 id="其他指标">其他指标</h4>
+<ul>
+<li>节点资源利用率：VNRs使用的节点基板资源量/资源总量</li>
+<li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
+</ul>
+<p>实验设计：同平均到达率测试</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
+<p>实验结果：A3C+GCN算法的这两项指标均为最佳</p>
+<h2 id="主要创新">主要创新</h2>
+<ul>
+<li>基于RL+GCN的自动虚拟网络嵌入算法</li>
+<li>并行的策略梯度训练方法</li>
+<li>多指标的奖励函数</li>
+</ul>
+<h2 id="总结思考">总结思考</h2>
+<ul>
+<li>GCN较CNN可以更好地提取非欧数据的特征</li>
+<li>A3C算法较其他RL算法性能表现更佳</li>
+<li>并行的梯度训练策略更适应于实际场景</li>
+<li>多指标的Reward可以让Agent学习到更好地策略来提高收益</li>
+<li>在模型评估部分，实验的设计比较完善</li>
+</ul>
 
     </div>
 
@@ -714,6 +868,15 @@ if(canvas.getContext){
     
     
       
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\08\20\RP - 科研论文\paper-nfv-vnf-placement-optimization-drl\" rel="bookmark">【论文精读】VNF placement optimization with DLR</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\11\29\RP - 科研论文\paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding\" rel="bookmark">【论文精读】Multi-domain non-cooperative VNF-FG embedding - A deep reinforcement learning approach</a></div>
+    </li>
+  </ul>
 
         
 
@@ -724,7 +887,7 @@ if(canvas.getContext){
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.geminilight.cn/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/wd-web-cquse-system/" title="【Web】《CQU软件综合实践平台》项目总结">https://www.geminilight.cn/2020/09/03/WD - WEB开发/wd-web-cquse-system/</a>
+    <a href="https://www.geminilight.cn/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-rl-gcn/" title="【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN">https://www.geminilight.cn/2020/07/13/RP - 科研论文/paper-nfv-vne-rl-gcn/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -735,21 +898,24 @@ if(canvas.getContext){
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag"># 前端开发</a>
-              <a href="/tags/Web%E5%BC%80%E5%8F%91/" rel="tag"># Web开发</a>
+              <a href="/tags/VNE/" rel="tag"># VNE</a>
+              <a href="/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/" rel="tag"># 论文精读</a>
+              <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" rel="tag"># 强化学习</a>
+              <a href="/tags/GNN/" rel="tag"># GNN</a>
+              <a href="/tags/GCN/" rel="tag"># GCN</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/08/25/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-record-our-moments/" rel="prev" title="【随笔】时光刻痕——记博客重启">
-                  <i class="fa fa-chevron-left"></i> 【随笔】时光刻痕——记博客重启
+                <a href="/2020/03/21/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-zju-professor-chenwei-date-visonlization/" rel="prev" title="【讲座收获】ZJU 陈为教授：大数据与可视化技术">
+                  <i class="fa fa-chevron-left"></i> 【讲座收获】ZJU 陈为教授：大数据与可视化技术
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/11/29/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding/" rel="next" title="【论文精读】Multi-domain non-cooperative VNF-FG embedding - A deep reinforcement learning approach">
-                  【论文精读】Multi-domain non-cooperative VNF-FG embedding - A deep reinforcement learning approach <i class="fa fa-chevron-right"></i>
+                <a href="/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/" rel="next" title="【Python】with语句原理">
+                  【Python】with语句原理 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -853,6 +1019,57 @@ if(canvas.getContext){
   
 
   
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      const script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
@@ -867,7 +1084,7 @@ NexT.utils.loadComments('#gitalk-container', () => {
       repo        : 'gitment-of-blog',
       owner       : 'GeminiLight',
       admin       : ['GeminiLight'],
-      id          : '32cf7107c7574c176ab0176dbe265fc0',
+      id          : '59d4140488ddd7fb9cc248cb8495310e',
         language: 'zh-CN',
       distractionFreeMode: true
     });
