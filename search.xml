@@ -10,7 +10,7 @@
 <strong>发表期刊</strong>：INFOCOM-2020 (CCF-A)<br />
 <strong>研究方向</strong>：NFV 网络功能虚拟化<br />
 <strong>关键技术</strong>：多域非合作，虚拟网络功能嵌入, 深度强化学习<br />
-<strong>主要创新</strong>：多域非合作场景、基于成本的首次拟合算法、多目标的奖励函数<br />
+<strong>主要创新</strong>：多域非合作场景；多通到的VNF-FG请求矩阵表示；基于成本的首次拟合算法<br />
 <span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">下载论文<i class="fa fa-external-link-alt"></i></span></p>
 <a id="more"></a>
 <h2 id="问题定义">问题定义</h2>
