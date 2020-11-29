@@ -24,19 +24,19 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）相结合的方法来实现最大化VNF部署个数和最小化部署成本的目标。">
+  <meta name="description" content="本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）相结合的方法来实现最大化VNF部署个数和最小化部署成本的目标。 论文简介 论文名称：Multi-domain Non-cooperative VNF-FG embedding: A deep reinforcement learning approach 论文作者：Quang Tr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【论文精读】Multi-domain non-cooperative VNF-FG embedding - A deep reinforcement learning approach">
 <meta property="og:url" content="https://www.geminilight.cn/2020/11/29/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）相结合的方法来实现最大化VNF部署个数和最小化部署成本的目标。">
+<meta property="og:description" content="本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）相结合的方法来实现最大化VNF部署个数和最小化部署成本的目标。 论文简介 论文名称：Multi-domain Non-cooperative VNF-FG embedding: A deep reinforcement learning approach 论文作者：Quang Tr">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-1.png">
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-2.png">
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-3.png">
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-4.png">
 <meta property="article:published_time" content="2020-11-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-29T16:54:59.691Z">
+<meta property="article:modified_time" content="2020-11-29T16:58:50.028Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="VNE">
 <meta property="article:tag" content="论文精读">
@@ -651,14 +651,15 @@ if(canvas.getContext){
     
     <div class="post-body" itemprop="articleBody">
         <p>本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）相结合的方法来实现最大化VNF部署个数和最小化部署成本的目标。</p>
-<a id="more"></a>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Multi-domain Non-cooperative VNF-FG embedding: A deep reinforcement learning approach<br />
 <strong>论文作者</strong>：Quang Tran Anh Pham, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul<br />
 <strong>发表期刊</strong>：INFOCOM-2020 (CCF-A)<br />
 <strong>研究方向</strong>：NFV 网络功能虚拟化<br />
-<strong>关键技术</strong>：多域非合作，虚拟网络功能嵌入, 深度强化学习 <strong>主要创新</strong>：多域非合作场景、基于成本的首次拟合算法、多目标的奖励函数<br />
-<span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<strong>关键技术</strong>：多域非合作，虚拟网络功能嵌入, 深度强化学习<br />
+<strong>主要创新</strong>：多域非合作场景、基于成本的首次拟合算法、多目标的奖励函数<br />
+<span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
 <h2 id="问题定义">问题定义</h2>
 <h3 id="缩写释义">缩写释义</h3>
 <table>
