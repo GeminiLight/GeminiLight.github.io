@@ -32,10 +32,8 @@
 <meta property="og:description" content="本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）来实现最小化部署成本的目标。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-1.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-2.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-3.png">
 <meta property="article:published_time" content="2020-11-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-29T08:09:41.704Z">
+<meta property="article:modified_time" content="2020-11-29T09:33:22.816Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="VNE">
 <meta property="article:tag" content="论文精读">
@@ -233,7 +231,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E7%AE%80%E4%BB%8B"><span class="nav-text">论文简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89"><span class="nav-text">问题定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%93%E4%B8%9A%E8%AF%8D%E6%B1%87"><span class="nav-text">专业词汇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vnf-fg"><span class="nav-text">VNF-FG</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%BA%A6%E6%9D%9F"><span class="nav-text">问题约束</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B"><span class="nav-text">算法模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#multi-domain-non-cooperative-framework"><span class="nav-text">Multi-domain Non-cooperative framework</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ddpg"><span class="nav-text">DDPG</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83-environment"><span class="nav-text">环境 Environment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%90%86-agent"><span class="nav-text">代理 Agent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8A%B6%E6%80%81-state"><span class="nav-text">状态 State</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E4%BD%9C-action"><span class="nav-text">动作 Action</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A5%96%E5%8A%B1-rewords"><span class="nav-text">奖励 Rewords</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#neural-network"><span class="nav-text">Neural Network</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="nav-text">性能评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C"><span class="nav-text">设计实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E7%AE%97%E6%B3%95"><span class="nav-text">对比算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text">评估指标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vnr-%E5%88%B0%E8%BE%BE%E7%8E%87%E6%B5%8B%E8%AF%95"><span class="nav-text">VNR 到达率测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E8%AF%B7%E6%B1%82%E6%B5%8B%E8%AF%95"><span class="nav-text">资源请求测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E6%95%B0%E9%87%8F%E6%89%A9%E5%B1%95%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="nav-text">节点数量扩展性测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E7%BB%9F%E8%AE%A1"><span class="nav-text">平均运行时间统计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%88%9B%E6%96%B0"><span class="nav-text">主要创新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%80%9D%E8%80%83"><span class="nav-text">总结思考</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E7%AE%80%E4%BB%8B"><span class="nav-text">论文简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89"><span class="nav-text">问题定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%A9%E5%86%99%E9%87%8A%E4%B9%89"><span class="nav-text">缩写释义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vnf-fg"><span class="nav-text">VNF-FG</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%BA%A6%E6%9D%9F"><span class="nav-text">问题约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vnf-fg-%E8%AF%B7%E6%B1%82"><span class="nav-text">VNF-FG 请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E4%BB%B7%E6%A0%BC"><span class="nav-text">资源价格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B"><span class="nav-text">算法模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#multi-domain-non-cooperative-framework"><span class="nav-text">Multi-domain Non-cooperative framework</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ddpg"><span class="nav-text">DDPG</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%90%86-agent"><span class="nav-text">代理 Agent</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#neural-network"><span class="nav-text">Neural Network</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="nav-text">性能评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C"><span class="nav-text">设计实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E7%AE%97%E6%B3%95"><span class="nav-text">对比算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text">评估指标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vnr-%E5%88%B0%E8%BE%BE%E7%8E%87%E6%B5%8B%E8%AF%95"><span class="nav-text">VNR 到达率测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E7%BB%9F%E8%AE%A1"><span class="nav-text">平均运行时间统计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%88%9B%E6%96%B0"><span class="nav-text">主要创新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%80%9D%E8%80%83"><span class="nav-text">总结思考</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -639,7 +637,7 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.9k</span>
+              <span>4.1k</span>
             </span>
 
         </div>
@@ -652,14 +650,14 @@ if(canvas.getContext){
         <p>本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）来实现最小化部署成本的目标。</p>
 <a id="more"></a>
 <h2 id="论文简介">论文简介</h2>
-<p><strong>论文名称</strong>：Multi-domain non-cooperative VNF-FG embedding: A deep reinforcement learning approach<br />
+<p><strong>论文名称</strong>：Multi-domain Non-cooperative VNF-FG embedding: A deep reinforcement learning approach<br />
 <strong>论文作者</strong>：Quang Tran Anh Pham, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul<br />
 <strong>发表期刊</strong>：INFOCOM-2020 (CCF-A)<br />
 <strong>研究方向</strong>：NFV 网络功能虚拟化<br />
 <strong>关键技术</strong>：多域非合作，虚拟网络功能嵌入, 深度强化学习 <strong>主要创新</strong>：多域非合作场景、基于成本的首次拟合算法、多目标的奖励函数<br />
 <span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="问题定义">问题定义</h2>
-<h3 id="专业词汇">专业词汇</h3>
+<h3 id="缩写释义">缩写释义</h3>
 <table>
 <thead>
 <tr class="header">
@@ -694,6 +692,11 @@ if(canvas.getContext){
 <td>服务质量</td>
 <td>Quality of Service</td>
 </tr>
+<tr class="even">
+<td style="text-align: center;">DDPG</td>
+<td></td>
+<td>deep deterministic policy gradient</td>
+</tr>
 </tbody>
 </table>
 <h3 id="vnf-fg">VNF-FG</h3>
@@ -715,47 +718,44 @@ if(canvas.getContext){
 <h3 id="问题约束">问题约束</h3>
 <ul>
 <li><p>一个VNF可以被成功部署在一个有足够的资源的主机上，且只能部署在一个主机上 <span class="math display">\[\sum_{n^{\prime}} \phi_{n}^{n^{\prime}} h_{n^{\prime}, k} \leq r_{n, k}, \forall n, k\]</span> <span class="math display">\[\sum_{n} \phi_{n}^{n^{\prime}} \leq 1, \forall n^{\prime}\]</span></p></li>
-<li><p>一个VL可以被部署在拥有足够资源且满足QoS要求的底层链路上</p></li>
+<li><p>一个虚拟链路可以被部署在拥有足够资源且满足QoS要求的底层链路上</p></li>
 </ul>
 <p><span class="math display">\[\sum_{l^{\prime}} \phi_{l}^{l^{\prime}} h_{l^{\prime}, b w} \leq r_{l, b w}, \forall l\]</span> <span class="math display">\[h_{l^{\prime}, \text {delay}} \leq D\left(\phi^{\prime^{\prime}}\right)\]</span> <span class="math display">\[h_{l^{\prime}, \text {loss}} \leq R\left(\phi^{l^{\prime}}\right)\]</span></p>
+<h3 id="vnf-fg-请求">VNF-FG 请求</h3>
+<p>一个三维矩阵 <span class="math inline">\(\left|\mathcal{N}^{\prime}\right| \times\left|\mathcal{N}^{\prime}\right| \times\left(2 \times K_{\mathrm{VNF}}+K_{\mathrm{VL}}\right)\)</span>，可以看做<span class="math inline">\(\left(2 \times K_{\mathrm{VNF}}+K_{\mathrm{VL}}\right) \text { -channel of }\left|\mathcal{N}^{\prime}\right| \times\left|\mathcal{N}^{\prime}\right|\)</span>，即<span class="math inline">\(\left(2 \times K_{\mathrm{VNF}}+K_{\mathrm{VL}}\right)\)</span>个通道的<span class="math inline">\(\left|\mathcal{N}^{\prime}\right| \times\left|\mathcal{N}^{\prime}\right|\)</span>的矩阵表示。</p>
+<ul>
+<li><span class="math inline">\(K_{VL}\)</span> 描述了虚拟链路的资源请求</li>
+<li><span class="math inline">\(2 \times K_{VNF}\)</span> 分别描述了源VNF和目的VNF的资源请求</li>
+</ul>
+<h3 id="资源价格">资源价格</h3>
+<p>VNF <span class="math inline">\(n&#39;\)</span>放置在底层节点<span class="math inline">\(n\)</span>上时，其资源<span class="math inline">\(m\)</span>的价格表示为<span class="math inline">\(c^m_{n,n^{\prime}}\)</span>，则VNF <span class="math inline">\(n&#39;\)</span>的价格向量可表示为：<span class="math inline">\(\mathbf{c}_{n^{\prime}}=\left[\mathbf{c}_{0, n^{\prime}}, \mathbf{c}_{1, n^{\prime}}, \ldots, \mathbf{c}_{|\mathcal{N}|-1, n^{\prime}}\right]\)</span>，其中<span class="math inline">\(c_{i,n^{\prime}}=[\mathbf{c}_{0, n^{\prime}}^{0},\cdots,\mathbf{c}_{0, n^{\prime}}^{k_{VNF}-1}]\)</span>。因此，需要用<span class="math inline">\(\left|\mathcal{N}^{\prime}\right| \times\left|\mathcal{N}^{\prime}\right| \times K_{VNF}\)</span>矩阵来表示。</p>
+<p>VL <span class="math inline">\(l&#39;\)</span>带宽资源的代价表示为<span class="math inline">\(c_{i,l&#39;}\)</span>，则VL <span class="math inline">\(l&#39;\)</span>的价格向量可表示为：<span class="math inline">\(\mathbf{c}_{l^{\prime}}=\left[\mathbf{c}_{0, l^{\prime}}, \mathbf{c}_{1, l^{\prime}}, \ldots, \mathbf{c}_{|\mathcal{L}|-1, l^{\prime}}\right]\)</span>，需要用<span class="math inline">\(\left|\mathcal{L}^{\prime}\right| \times\left|\mathcal{L}^{\prime}\right|\)</span>来表示。</p>
+<p>这些价格由每个与决定，它们会被发送到中心客户。</p>
 <h2 id="算法模型">算法模型</h2>
 <h3 id="multi-domain-non-cooperative-framework">Multi-domain Non-cooperative framework</h3>
+<p>在该文中，环境是由多个非合作的域和一个中心客户（client）组成的。这些域有这些特征：</p>
+<ol type="1">
+<li>每个域都没有其他域的拓扑结构和资源信息</li>
+<li>每个域不与其他域进行通信，</li>
+<li>每个域单独做出决策将发送至中心客户，由中心客户根据价格进行选择</li>
+</ol>
+<p>大致的决策流程如下：</p>
+<ol type="1">
+<li>中心代理将VNF-FG请求处理为一个三维向量，即<code>state</code>，然后发送给每个域</li>
+<li>每个域使用actor网络根据<code>state</code>计算出<code>action</code>。每个域的动作<span class="math inline">\(A_i\)</span>是向中心客户提出的价格，如<span class="math inline">\(c_{n, n^{\prime}}^{k}, \forall n \in \mathcal{N}_{i}\)</span>和<span class="math inline">\(c_{l, l^{\prime}}, \forall l \in \mathcal{L}_{i}\)</span>分别代表节点和链路成本。</li>
+<li>中心代理根据这些信息作出最终决策，每个域根据决策来部署VNF和VL，最后得到相应奖励</li>
+</ol>
 <h3 id="ddpg">DDPG</h3>
-<h4 id="环境-environment">环境 Environment</h4>
+<ul>
+<li>环境 Environment：多个域和一个中心客户</li>
+<li>状态 State：经过处理的VNF-FG请求，是一个三维矩阵。</li>
+<li>动作 Action：行为就像是对出售其资源的域名的竞价，它包括对节点资源和链路资源的报价。</li>
+<li>奖励 Reward：根据部署质量和资源报价，中心代理返回给每个域相应奖励 <span class="math display">\[r_{i}=\sum_{n^{\prime} \in \mathcal{N}^{\prime}} \sum_{n \in \mathcal{N}_{i}} \sum_{k \in K_{c}} \omega_{n}^{n^{\prime}} c_{n, n^{\prime}}^{k} h_{n^{\prime}, k}+\sum_{l \in \mathcal{L}_{i}} \sum_{l^{\prime} \in \mathcal{L}^{\prime}} \omega_{l}^{l^{\prime}} c_{l, l^{\prime}} h_{l^{\prime}, b w}\]</span> 式中，<span class="math inline">\(w_n^{n&#39;}\)</span>和<span class="math inline">\(w_n^{n&#39;}\)</span>表示放置成功二进制位，当且仅当节点和链路被成功放置且满足服务质量时才为1。</li>
+</ul>
 <h4 id="代理-agent">代理 Agent</h4>
-<h4 id="状态-state">状态 State</h4>
-<h4 id="动作-action">动作 Action</h4>
-<h4 id="奖励-rewords">奖励 Rewords</h4>
 <h3 id="neural-network">Neural Network</h3>
 <h2 id="性能评估">性能评估</h2>
 <h3 id="设计实验">设计实验</h3>
-<ul>
-<li>底层网络拓扑
-<ul>
-<li>使用参数 <span class="math inline">\(\alpha = 0.5\)</span> 和 <span class="math inline">\(\beta = 0.2\)</span> 的 Waxman 随机图来生成一个底层网络拓扑</li>
-<li>该网络具有100个结点和500条边（模拟一个中型的ISP）。</li>
-<li>随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。</li>
-</ul></li>
-<li>虚拟网络请求
-<ul>
-<li>随机生成VNR时满足Possion process（泊松分布），每组评估持续50000个时间单位</li>
-<li>即当VNR预期到达率为4个/100个时间单位时，则约有2000个VNR</li>
-<li>每个VRN的生成周期满足平均值为500的指数分布</li>
-<li>每个VNR的数量均匀分布在2~10之间</li>
-<li>初始化VNR中的节点CPU需求和链路带宽需求为0~30的均匀分布</li>
-<li>每对节点有50%的可能性形成边</li>
-</ul></li>
-<li>动态设置参数
-<ul>
-<li>VNR的到达率、节点及链路资源的分配、每个VNR的节点数量</li>
-<li>我们可以通过调节这三个参数来评估各种VNE场景</li>
-</ul></li>
-<li>测试阶段
-<ul>
-<li>学习代理仅使用actor网络生成嵌入策略，来从底层网络拓扑中选择合适的节点托管当前的虚拟节点</li>
-<li>该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR</li>
-</ul></li>
-</ul>
 <h3 id="对比算法">对比算法</h3>
 <ul>
 <li>R-ViNE<br />
@@ -776,25 +776,6 @@ if(canvas.getContext){
 实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
 <p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
 <p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
-<h4 id="资源请求测试">资源请求测试</h4>
-<p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
-<ul>
-<li>计算密集型任务需要更多的节点资源（CPU）</li>
-<li>而通信密集型任务需要更多的链路资源（带宽）</li>
-</ul>
-<p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
-<p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
-<h4 id="节点数量扩展性测试">节点数量扩展性测试</h4>
-<p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br />
-实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
-<p>结果分析：该算法优势明显，但可以发现当节点逐渐增加时，接受率下降明显</p>
-<p>原因分析：</p>
-<ul>
-<li>因为每个VNR都必须作为一个整体成功地嵌入；一个更大的VNR意味着在嵌入的中间步骤中失败的机会更多；</li>
-<li>因为同一VNR中的两个虚拟节点不能共享一个特定的基板节点，单个VNR中的更多节点限制了候选动作空间</li>
-</ul>
 <h4 id="平均运行时间统计">平均运行时间统计</h4>
 <h2 id="主要创新">主要创新</h2>
 <ul>
