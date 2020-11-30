@@ -442,7 +442,6 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>【论文笔记】VNF placement optimization with DLR</title>
     <url>/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vnf-placement-optimization-drl/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文对资源消耗成本最小化的强化学习Policy Gradient算法，结合Seq2Seq模型，提出了一种虚拟网络服务放置的优化算法。</p>
-<a id="more"></a>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Virtual Network Function placement optimization with Deep Reinforcement Learning<br />
 <strong>论文作者</strong>：Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal<br />
@@ -451,6 +450,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <strong>关键技术</strong>：NFV 网络功能虚拟化, RL 强化学习, Seq2Seq<br />
 <strong>主要创新</strong>：以最小化资源消耗为目标，并用策略梯度算法结合Seq2Seq来搭建模型<br />
 <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5NDUyOTE=">论文地址<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
 <h2 id="问题定义">问题定义</h2>
 <h3 id="专业词汇">专业词汇</h3>
 <table>
@@ -1379,7 +1379,6 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>【论文笔记】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
     <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-rl-gcn/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
-<a id="more"></a>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
 <strong>论文作者</strong>：Zhongxia Yan, Jingguo Ge, Y ulei Wu, Senior Member , IEEE, Liangxiong Li, Tong Li<br />
@@ -1388,6 +1387,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <strong>关键技术</strong>：虚拟网络嵌入, 强化学习, 图卷积神经网络<br />
 <strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
 <span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
 <h2 id="问题定义">问题定义</h2>
 <h3 id="专业词汇">专业词汇</h3>
 <table>
