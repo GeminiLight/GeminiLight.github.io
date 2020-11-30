@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【论文精读】Multi-domain non-cooperative VNF-FG embedding - A deep reinforcement learning approach</title>
+    <title>【论文笔记】Multi-domain non-cooperative VNF-FG embedding - A deep reinforcement learning approach</title>
     <url>/2020/11/29/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）相结合的方法来实现最大化VNF部署个数和最小化部署成本的目标。</p>
 <h2 id="论文简介">论文简介</h2>
@@ -20,7 +20,7 @@
 <tr class="header">
 <th style="text-align: center;">缩写</th>
 <th>描述</th>
-<th>全名</th>
+<th>全称</th>
 </tr>
 </thead>
 <tbody>
@@ -89,7 +89,7 @@
 <p>VL <span class="math inline">\(l&#39;\)</span>带宽资源的代价表示为<span class="math inline">\(c_{i,l&#39;}\)</span>，则VL <span class="math inline">\(l&#39;\)</span>的价格向量可表示为：<span class="math inline">\(\mathbf{c}_{l^{\prime}}=\left[\mathbf{c}_{0, l^{\prime}}, \mathbf{c}_{1, l^{\prime}}, \ldots, \mathbf{c}_{|\mathcal{L}|-1, l^{\prime}}\right]\)</span>，需要用<span class="math inline">\(\left|\mathcal{L}^{\prime}\right| \times\left|\mathcal{L}^{\prime}\right|\)</span>来表示。</p>
 <p>这些价格由每个与决定，它们会被发送到中心客户。</p>
 <h2 id="算法模型">算法模型</h2>
-<h3 id="multi-domain-non-cooperative-framework">Multi-domain Non-cooperative framework</h3>
+<h3 id="多域非合作架构">多域非合作架构</h3>
 <p>在该文中，环境是由多个非合作的域和一个中心客户（client）组成的。这些域有这些特征：</p>
 <ol type="1">
 <li>每个域都没有其他域的拓扑结构和资源信息</li>
@@ -103,7 +103,7 @@
 <li>每个域使用actor网络根据<code>state</code>计算出<code>action</code>。每个域的动作<span class="math inline">\(A_i\)</span>是向中心客户提出的价格，如<span class="math inline">\(c_{n, n^{\prime}}^{k}, \forall n \in \mathcal{N}_{i}\)</span>和<span class="math inline">\(c_{l, l^{\prime}}, \forall l \in \mathcal{L}_{i}\)</span>分别代表节点和链路成本。</li>
 <li>中心代理根据这些信息作出最终决策，每个域根据决策来部署VNF和VL，最后得到相应奖励</li>
 </ol>
-<h3 id="ddpg">DDPG</h3>
+<h3 id="深度强化学习-ddpg">深度强化学习 DDPG</h3>
 <h4 id="马尔科夫决策-mdp">马尔科夫决策 MDP</h4>
 <ul>
 <li>环境 Environment：多个域和一个中心客户</li>
@@ -139,6 +139,7 @@
 <p>对于域<span class="math inline">\(i\)</span>，其目标是找到一个从VNF-FG请求到本地动作的映射策略：<span class="math inline">\(\mu_i:S \rightarrow A_i\)</span>来最大化获得奖励。</p>
 <h3 id="决策算法-cff">决策算法 CFF</h3>
 <p>在收集了来自不同域<span class="math inline">\(A_i\)</span>的价格后，中心客户必须做出决定来部署其VNF-FG。虽然很难保证一条路径能够满足虚拟链路所需的QoS，但是可以保证VNFs的资源需求。因此，在部署VNF时，决策必须考虑底层节点的容量以及部署的成本。</p>
+<p><img data-src="/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-4.png" /></p>
 <p>该文使用了将一种资源分配算法First-Fit算法改进为基于成本的First-Fit（CFF）算法来进行从VNF到底层节点的决策生成：</p>
 <ul>
 <li>输入：每个域的动作<span class="math inline">\(A_i\)</span></li>
@@ -160,7 +161,6 @@
 </ul></li>
 </ul>
 <p>映射VNF策略的目标是最大化部署个数和最小化部署成本。映射虚拟链路<span class="math inline">\(l&#39;\)</span>时，根据<span class="math inline">\(A_{*,vl}[l&#39;]\)</span>作为链路权重，使用Dijkstra算法来寻找最小成本的链路。</p>
-<p><img data-src="/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-4.png" /></p>
 <h2 id="性能评估">性能评估</h2>
 <h3 id="设计实验">设计实验</h3>
 <h4 id="网络拓扑设置">网络拓扑设置</h4>
@@ -238,7 +238,6 @@ three domain with CFF，三域使用CCF算法</li>
 <li>SA-CFF<br />
 simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 </ul>
-<p>它们基本覆盖了当前大部分算法的观点</p>
 <h3 id="评估指标">评估指标</h3>
 <h2 id="总结思考">总结思考</h2>
 <ul>
