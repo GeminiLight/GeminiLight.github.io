@@ -252,9 +252,9 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>RP - 科研论文</category>
       </categories>
       <tags>
-        <tag>VNE</tag>
-        <tag>论文精读</tag>
-        <tag>强化学习</tag>
+        <tag>Paper</tag>
+        <tag>NFV</tag>
+        <tag>DRL</tag>
       </tags>
   </entry>
   <entry>
@@ -316,15 +316,14 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>RP - 科研论文</category>
       </categories>
       <tags>
-        <tag>科研思维</tag>
-        <tag>机器学习</tag>
+        <tag>Research</tag>
       </tags>
   </entry>
   <entry>
     <title>【Web】《CQU软件综合实践平台》项目总结</title>
     <url>/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/wd-web-cquse-system/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-cxpWaOvX" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-virpRxKX" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="002C8n7x1RdgXe" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <p>在大二小学期软件实训课程中，自己做了一个“CQU软件综实践平台”的项目，于是在此总结一些自己第一次做自己的全栈开发项目的经验。（其实这篇总结应该很早就写的，至于为什么拖到了现在？“不愧是我——那只Monkey又在作怪”）</p>
@@ -386,15 +385,15 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>WD - 网站开发</category>
       </categories>
       <tags>
-        <tag>前端开发</tag>
-        <tag>Web开发</tag>
+        <tag>front-end</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
     <title>【随笔】时光刻痕——记博客重启</title>
     <url>/2020/08/25/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-record-our-moments/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-cdzYjhQb" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-aGKQbFMI" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="000ycaRl2V0Ojm" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <p>日历翻至八月，空气日渐升温。在这个特殊的年份，暑假的宿舍只余下我一人——这也是我第一次独自在远离家乡的“专属”空间中“自由”生活。</p>
@@ -428,12 +427,12 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>MY - 感悟随笔</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
         <tag>Blog</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
-    <title>【论文精读】VNF placement optimization with DLR</title>
+    <title>【论文笔记】VNF placement optimization with DLR</title>
     <url>/2020/08/20/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vnf-placement-optimization-drl/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文对资源消耗成本最小化的强化学习Policy Gradient算法，结合Seq2Seq模型，提出了一种虚拟网络服务放置的优化算法。</p>
 <a id="more"></a>
@@ -544,11 +543,10 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>RP - 科研论文</category>
       </categories>
       <tags>
-        <tag>VNE</tag>
-        <tag>论文精读</tag>
-        <tag>强化学习</tag>
-        <tag>GNN</tag>
-        <tag>GCN</tag>
+        <tag>Paper</tag>
+        <tag>NFV</tag>
+        <tag>DRL</tag>
+        <tag>DL</tag>
       </tags>
   </entry>
   <entry>
@@ -1035,8 +1033,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>DA - 数据分析</category>
       </categories>
       <tags>
+        <tag>Data Science</tag>
         <tag>Python</tag>
-        <tag>数据分析</tag>
         <tag>SciPy</tag>
       </tags>
   </entry>
@@ -1208,8 +1206,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>GD - 平面设计</category>
       </categories>
       <tags>
-        <tag>PPT设计</tag>
-        <tag>大学生活</tag>
+        <tag>Slide</tag>
       </tags>
   </entry>
   <entry>
@@ -1309,7 +1306,6 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
       <tags>
         <tag>Blog</tag>
         <tag>Hexo</tag>
-        <tag>NexT</tag>
       </tags>
   </entry>
   <entry>
@@ -1370,11 +1366,10 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>语法进阶</tag>
       </tags>
   </entry>
   <entry>
-    <title>【论文精读】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
+    <title>【论文笔记】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
     <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-rl-gcn/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
 <a id="more"></a>
@@ -1586,16 +1581,15 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>RP - 科研论文</category>
       </categories>
       <tags>
-        <tag>VNE</tag>
-        <tag>论文精读</tag>
-        <tag>强化学习</tag>
+        <tag>Paper</tag>
+        <tag>NFV</tag>
+        <tag>DRL</tag>
         <tag>GNN</tag>
-        <tag>GCN</tag>
       </tags>
   </entry>
   <entry>
     <title>【讲座收获】ZJU 陈为教授：大数据与可视化技术</title>
-    <url>/2020/03/21/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-zju-professor-chenwei-date-visonlization/</url>
+    <url>/2020/03/21/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/lecture-zju-professor-chenwei-date-visonlization/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>浙江大学陈为教授关于大数据与可视化技术及其应用的讲座。</p>
 <a id="more"></a>
 <h2 id="大数据思维">大数据思维</h2>
@@ -1730,9 +1724,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>MY - 感悟随笔</category>
       </categories>
       <tags>
-        <tag>学术讲座</tag>
-        <tag>大数据</tag>
-        <tag>数据可视化</tag>
+        <tag>Research</tag>
+        <tag>Data Visualization</tag>
       </tags>
   </entry>
   <entry>
@@ -1822,14 +1815,14 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>RP - 科研论文</category>
       </categories>
       <tags>
-        <tag>科研思维</tag>
-        <tag>机器学习</tag>
+        <tag>Research</tag>
+        <tag>ML</tag>
       </tags>
   </entry>
   <entry>
-    <title>【讲座收获】潘复生院士谈科学创新</title>
-    <url>/2019/09/22/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/lecture-academician-pan-fu-sheng/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>潘复生院士关于科学创新的讲座</p>
+    <title>【学术讲座】潘复生院士谈科学创新</title>
+    <url>/2019/09/22/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/lecture-academician-pan-fu-sheng/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>重庆大学材料学院潘复生院士关于科学创新的讲座</p>
 <a id="more"></a>
 <h2 id="科学发展现状">科学发展现状</h2>
 <p>资源匮乏<br />
@@ -1868,12 +1861,12 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <h2 id="我的感悟">我的感悟</h2>
 ]]></content>
       <categories>
-        <category>MY - 感悟随笔</category>
+        <category>RP - 科研论文</category>
       </categories>
       <tags>
-        <tag>学术讲座</tag>
-        <tag>创新思维</tag>
-        <tag>科研思维</tag>
+        <tag>Lecture</tag>
+        <tag>Innovatation</tag>
+        <tag>Research</tag>
       </tags>
   </entry>
   <entry>
@@ -1895,8 +1888,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>DA - 数据分析</category>
       </categories>
       <tags>
+        <tag>Data Science</tag>
         <tag>Python</tag>
-        <tag>数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -1959,8 +1952,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>DA - 数据分析</category>
       </categories>
       <tags>
+        <tag>Data Science</tag>
         <tag>Python</tag>
-        <tag>数据分析</tag>
         <tag>NumPy</tag>
       </tags>
   </entry>
@@ -1968,7 +1961,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>Start the Journey of My Blog</title>
     <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-ibfTmDCs" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-RJqhnOfF" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="0046Ze2d2A7jeA" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <h2 id="welcome-to-my-blog">Welcome to My Blog</h2>
@@ -2013,8 +2006,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>MY - 感悟随笔</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
         <tag>Blog</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -2027,14 +2020,13 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>语法进阶</tag>
       </tags>
   </entry>
   <entry>
     <title>【游戏人生】双子Gemini——我们都在寻找着某个人</title>
     <url>/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-TGFlwdmt" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-rlydTWqb" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="0004CQiv4NUbmR" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <blockquote class="blockquote-center">
@@ -2088,8 +2080,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>MY - 感悟随笔</category>
       </categories>
       <tags>
-        <tag>游戏人生</tag>
-        <tag>随笔</tag>
+        <tag>Game</tag>
+        <tag>Sentiment</tag>
       </tags>
   </entry>
 </search>
