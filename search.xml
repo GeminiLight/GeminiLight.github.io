@@ -207,14 +207,14 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><p><strong>Recent Advances of Resource Allocation in Network Function Virtualization</strong></p>
 <ul>
 <li>Publication: TPDS 2021 (CCF-A)</li>
-<li>Author: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu</li>
+<li>Authors: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu</li>
 <li>Keyworks: /</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkxNjk4NTc=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
 </ul></li>
 <li><p><strong>A Survey on the Placement of Virtual Resources and Virtual Network Functions</strong></p>
 <ul>
 <li>Publication: IEEE Communications Surveys &amp; Tutorials 2019 (Q1)</li>
-<li>Author: Abdelquoddouss Laghrissi and Tarik Taleb</li>
+<li>Authors: Abdelquoddouss Laghrissi and Tarik Taleb</li>
 <li>Keyworks: /</li>
 <li>Link: <span class="exturl" data-url="aHR0cDovL21vc2FpYy1sYWIub3JnL3VwbG9hZHMvcGFwZXJzLzA3OGI2MDFlLTNlMDEtNGE0Mi04YTM1LWI5OGUyZDExMzk0My5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
@@ -225,7 +225,7 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><p><strong>Toward Profit-Seeking Virtual Network Embedding</strong></p>
 <ul>
 <li>Publication: INFOCOM 2014 (CCF-A)</li>
-<li>Author: Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee</li>
+<li>Authors: Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee</li>
 <li>Keyworks: VNE, GRC (Global Resource Control)</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzY4NDc5MTg=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
@@ -237,7 +237,7 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><p><strong>MUVINE: Multi-Stage Virtual Network Embedding in Cloud Data Centers Using Reinforcement Learning-Based Predictions</strong></p>
 <ul>
 <li>Publication: JSAC 2020 (CCF-A)</li>
-<li>Author: Hiren Kumar Thakkar, Chinmaya Dehury, Prasan Kumar Sahoo</li>
+<li>Authors: Hiren Kumar Thakkar, Chinmaya Dehury, Prasan Kumar Sahoo</li>
 <li>Keyworks: VNE, Q-learning, ML(Machine Learning), Multi-Stage</li>
 <li>Objective: Maximizing the server resources utilization and minimizing the number of physical links used</li>
 <li>Link: <span class="exturl" data-url="aHR0cDovLzEyMC4xMjYuMTYuMjUwL1B1YmxpY2F0aW9uX1BERi9qb3VybmFsL2o0NC5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
@@ -245,7 +245,7 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><p><strong>Virtual Network Embedding via Monte Carlo Tree Search</strong></p>
 <ul>
 <li>Publication: IEEE Trans on Cybernetics 2018 (CCF-B)</li>
-<li>Author: Soroush Haeri and Ljiljana Trajkovi´c</li>
+<li>Authors: Soroush Haeri and Ljiljana Trajkovi´c</li>
 <li>Keyworks: VNE, MCTS (Monte Carlo Tree Search)</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
@@ -256,14 +256,14 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><p><strong>Optimal VNF Placement via Deep Reinforcement Learning in SDN/NFV-Enabled Networks</strong></p>
 <ul>
 <li>Publication: JSAC 2019 (CCF-A)</li>
-<li>Author: Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou</li>
+<li>Authors: Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou</li>
 <li>Keyworks: VNFP, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>DeepViNE: Virtual Network Embedding with Deep Reinforcement Learning</strong></p>
 <ul>
 <li>Publication: INFOCOM 2019 (CCF-A)</li>
-<li>Author: Mahdi Dolati, Seyedeh Bahereh Hassanpour, Majid Ghaderi, Ahmad Khonsari</li>
+<li>Authors: Mahdi Dolati, Seyedeh Bahereh Hassanpour, Majid Ghaderi, Ahmad Khonsari</li>
 <li>Keyworks: VNE, DQN (Deep Q Network), Multi-channels Representations</li>
 <li>Objective: Minimize the VN blocking probability</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly9wZW9wbGUudWNhbGdhcnkuY2Evfm1naGFkZXJpL2RvY3MvaW5mb2NvbTE5LWRlZXB2aW5lLnBkZg==">paper<i class="fa fa-external-link-alt"></i></span></li>
@@ -274,7 +274,7 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><p><strong>Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach With Graph Convolutional Networks</strong></p>
 <ul>
 <li>Publication: JSAC 2020 (CCF-A)</li>
-<li>Author: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li</li>
+<li>Authors: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li</li>
 <li>Keyworks: VNE, A3C (Asynchronous Advantage Actor-Critic), GCN (Graph Convolutional Network)</li>
 <li>Objective: Minimizing the acceptance ratio and long-term average revenue</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkwNjA5MTA=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
@@ -282,7 +282,7 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><p><strong>Virtual Network Function Placement Optimization With Deep Reinforcement Learning</strong></p>
 <ul>
 <li>Publication: JSAC 2019 (CCF-A)</li>
-<li>Author: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal</li>
+<li>Authors: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal</li>
 <li>Keyworks: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)</li>
 <li>Objective: Minimizing the overall power consumption</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5NDUyOTE=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
@@ -290,7 +290,7 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><p><strong>Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach</strong></p>
 <ul>
 <li>Publication: INFOCOM 2019 (CCF-A)</li>
-<li>Author: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul</li>
+<li>Authors: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul</li>
 <li>Keyworks: VNF-FG, DDPG (Deep Deterministic Policy Gradient), Multi-domain Non-cooperative</li>
 <li>Objective: Maximize the number of allocated VNFs and VLs with the lowest cost</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">paper<i class="fa fa-external-link-alt"></i></span></li>
