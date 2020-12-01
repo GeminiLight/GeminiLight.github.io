@@ -29,13 +29,13 @@
         <category>ML - 机器学习</category>
       </categories>
       <tags>
-        <tag>GNN</tag>
         <tag>DL</tag>
+        <tag>GNN</tag>
       </tags>
   </entry>
   <entry>
     <title>【论文汇总】Papers on VNE, SFCP and VNFP</title>
-    <url>/2020/12/01/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding%20copy/</url>
+    <url>/2020/12/01/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="papers-on-vne-sfcp-and-vnfp">Papers on VNE, SFCP and VNFP</h1>
 <table>
 <thead>
@@ -107,48 +107,72 @@
 <a id="more"></a>
 <h2 id="survey-papers"><a href="#content">Survey papers</a></h2>
 <ol type="1">
-<li><p><strong>A Survey on the Placement of Virtual Resources and Virtual Network Functions.</strong> <span class="exturl" data-url="aHR0cDovL21vc2FpYy1sYWIub3JnL3VwbG9hZHMvcGFwZXJzLzA3OGI2MDFlLTNlMDEtNGE0Mi04YTM1LWI5OGUyZDExMzk0My5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></p>
+<li><p><strong>A Survey on the Placement of Virtual Resources and Virtual Network Functions</strong></p>
 <ul>
-<li>Publication: IEEE Communications Surveys &amp; Tutorials 2019. (Q1)</li>
-<li>Author: <em>Abdelquoddouss Laghrissi and Tarik Taleb.</em></li>
+<li>Publication: IEEE Communications Surveys &amp; Tutorials 2019 (Q1)</li>
+<li>Author: Abdelquoddouss Laghrissi and Tarik Taleb</li>
 <li>Keyworks: /</li>
+<li>Link: <span class="exturl" data-url="aHR0cDovL21vc2FpYy1sYWIub3JnL3VwbG9hZHMvcGFwZXJzLzA3OGI2MDFlLTNlMDEtNGE0Mi04YTM1LWI5OGUyZDExMzk0My5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
 <h2 id="mathematical-optimization-based"><a href="#content">Mathematical optimization-based</a></h2>
 <h2 id="heuristic-based"><a href="#content">Heuristic-based</a></h2>
 <ol type="1">
-<li><p><strong>Toward Profit-Seeking Virtual Network Embedding.</strong> INFOCOM 2014. <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzY4NDc5MTg=">paper<i class="fa fa-external-link-alt"></i></span></p>
+<li><p><strong>Toward Profit-Seeking Virtual Network Embedding</strong></p>
 <ul>
-<li>Publication: INFOCOM 2014. (CCF-A)</li>
-<li>Author: <em>Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee.</em></li>
+<li>Publication: INFOCOM 2014 (CCF-A)</li>
+<li>Author: Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee</li>
 <li>Keyworks: VNE, GRC (Global Resource Control)</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzY4NDc5MTg=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
 <h2 id="nature-heuristic-based"><a href="#content">Nature Heuristic-based</a></h2>
 <h2 id="reinforcement-learning-based"><a href="#content">Reinforcement learning-based</a></h2>
 <h3 id="basic-rl"><a href="#content">Basic RL</a></h3>
 <ol type="1">
-<li><p><strong>Virtual Network Embedding via Monte Carlo Tree Search.</strong> <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></p>
+<li><p><strong>Virtual Network Embedding via Monte Carlo Tree Search</strong></p>
 <ul>
-<li>Publication: IEEE Trans on Cybernetics 2018. (CCF-B)</li>
-<li>Author: <em>Soroush Haeri and Ljiljana Trajkovi´c.</em></li>
+<li>Publication: IEEE Trans on Cybernetics 2018 (CCF-B)</li>
+<li>Author: Soroush Haeri and Ljiljana Trajkovi´c</li>
 <li>Keyworks: VNE, MCTS (Monte Carlo Tree Search)</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
 <!-- <details><summary> more </summary>  -->
 <h3 id="value-based-drl"><a href="#content">Value-based DRL</a></h3>
 <ol type="1">
-<li><p><strong>Optimal VNF Placement via Deep Reinforcement Learning in SDN/NFV-Enabled Networks.</strong> <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></p>
+<li><p><strong>Optimal VNF Placement via Deep Reinforcement Learning in SDN/NFV-Enabled Networks</strong></p>
 <ul>
-<li>Publication: JSAC 2019. (CCF-B)</li>
-<li>Author: <em>Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou.</em></li>
-<li>Keyworks: VNFP, DDQN (Double Deep Q Network)</li>
+<li>Publication: JSAC 2019 (CCF-A)</li>
+<li>Author: Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou</li>
+<li>Keyworks: VNFP, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>DeepViNE: Virtual Network Embedding with Deep Reinforcement Learning</strong></p>
+<ul>
+<li>Publication: INFOCOM 2019 (CCF-A)</li>
+<li>Author: Mahdi Dolati, Seyedeh Bahereh Hassanpour, Majid Ghaderi, Ahmad Khonsari</li>
+<li>Keyworks: VNE, DQN (Deep Q Network), Multi-channels Representations</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9wZW9wbGUudWNhbGdhcnkuY2Evfm1naGFkZXJpL2RvY3MvaW5mb2NvbTE5LWRlZXB2aW5lLnBkZg==">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
 <h3 id="policy-based-drl"><a href="#content">Policy-based DRL</a></h3>
 <ol type="1">
-<li><p><strong>Virtual Network Embedding via Monte Carlo Tree Search.</strong> IEEE Trans on Cybernetics 2018. <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></p>
-<p><em>Soroush Haeri and Ljiljana Trajkovi´c.</em></p></li>
+<li><p><strong>Virtual Network Function Placement Optimization With Deep Reinforcement Learning</strong></p>
+<ul>
+<li>Publication: JSAC 2019 (CCF-A)</li>
+<li>Author: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal</li>
+<li>Keyworks: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)</li>
+<li>Objective: Minimizing the overall power consumption</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5NDUyOTE=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
+</ul></li>
+<li><p><strong>Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach</strong></p>
+<ul>
+<li>Publication: INFOCOM 2019 (CCF-A)</li>
+<li>Author: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul</li>
+<li>Keyworks: VNF-FG, DDPG (Deep Deterministic Policy Gradient), Multi-domain Non-cooperative</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">paper<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
 </ol>
 ]]></content>
       <categories>
@@ -490,7 +514,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>【Web】《CQU软件综合实践平台》项目总结</title>
     <url>/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/wd-web-cquse-system/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-virpRxKX" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-kHdlGuFH" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="002C8n7x1RdgXe" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <p>在大二小学期软件实训课程中，自己做了一个“CQU软件综实践平台”的项目，于是在此总结一些自己第一次做自己的全栈开发项目的经验。（其实这篇总结应该很早就写的，至于为什么拖到了现在？“不愧是我——那只Monkey又在作怪”）</p>
@@ -560,7 +584,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>【随笔】时光刻痕——记博客重启</title>
     <url>/2020/08/25/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-record-our-moments/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-aGKQbFMI" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-NNozELbf" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="000ycaRl2V0Ojm" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <p>日历翻至八月，空气日渐升温。在这个特殊的年份，暑假的宿舍只余下我一人——这也是我第一次独自在远离家乡的“专属”空间中“自由”生活。</p>
@@ -710,10 +734,10 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>RP - 科研论文</category>
       </categories>
       <tags>
+        <tag>DL</tag>
         <tag>Paper</tag>
         <tag>NFV</tag>
         <tag>DRL</tag>
-        <tag>DL</tag>
       </tags>
   </entry>
   <entry>
@@ -1200,8 +1224,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>DA - 数据分析</category>
       </categories>
       <tags>
-        <tag>Data Science</tag>
         <tag>Python</tag>
+        <tag>Data Science</tag>
         <tag>SciPy</tag>
       </tags>
   </entry>
@@ -1748,10 +1772,10 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>RP - 科研论文</category>
       </categories>
       <tags>
+        <tag>GNN</tag>
         <tag>Paper</tag>
         <tag>NFV</tag>
         <tag>DRL</tag>
-        <tag>GNN</tag>
       </tags>
   </entry>
   <entry>
@@ -2055,8 +2079,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>DA - 数据分析</category>
       </categories>
       <tags>
-        <tag>Data Science</tag>
         <tag>Python</tag>
+        <tag>Data Science</tag>
       </tags>
   </entry>
   <entry>
@@ -2119,8 +2143,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>DA - 数据分析</category>
       </categories>
       <tags>
-        <tag>Data Science</tag>
         <tag>Python</tag>
+        <tag>Data Science</tag>
         <tag>NumPy</tag>
       </tags>
   </entry>
@@ -2128,7 +2152,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>Start the Journey of My Blog</title>
     <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-RJqhnOfF" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-dLcjXxqx" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="0046Ze2d2A7jeA" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <h2 id="welcome-to-my-blog">Welcome to My Blog</h2>
@@ -2193,7 +2217,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>【游戏人生】双子Gemini——我们都在寻找着某个人</title>
     <url>/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-rlydTWqb" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-nwMgojFa" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="0004CQiv4NUbmR" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <blockquote class="blockquote-center">
