@@ -4,7 +4,8 @@
     <title>【论文笔记】GNN之GAT：Graph Attention Networks</title>
     <url>/2020/12/01/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-gnn-gat/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>图神经网络（GNN）是当前深度学习领域研究的焦点，本文提出了一种GAT（graph attention networks）网络。它使用masked self-attention层来优化图卷积神经网络的平均加权的问题。在GAT中，图中的每个节点可以根据邻节点的特征，为其分配不同的权值。</p>
-<p><strong>论文名称</strong>：Graph Attention Networks <strong>论文作者</strong>：Petar Veličković, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Liò, Yoshua Bengio<br />
+<p><strong>论文名称</strong>：Graph Attention Networks<br />
+<strong>论文作者</strong>：Petar Veličković, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Liò, Yoshua Bengio<br />
 <strong>发表期刊</strong>：ICLR-2018 (THU-A)<br />
 <strong>研究方向</strong>：GNN 图神经网络<br />
 <strong>关键技术</strong>：Masked Attentionn<br />
@@ -1900,7 +1901,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
       </tags>
   </entry>
   <entry>
-    <title>【讲座收获】ZJU 陈为教授：大数据与可视化技术</title>
+    <title>【学术讲座】ZJU 陈为教授：大数据与可视化技术</title>
     <url>/2020/03/21/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/lecture-zju-professor-chenwei-date-visonlization/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>浙江大学陈为教授关于大数据与可视化技术及其应用的讲座。</p>
 <a id="more"></a>
