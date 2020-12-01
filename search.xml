@@ -36,8 +36,7 @@
   <entry>
     <title>【论文汇总】Papers on VNE, SFCP and VNFP</title>
     <url>/2020/12/01/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="papers-on-vne-sfcp-and-vnfp">Papers on VNE, SFCP and VNFP</h1>
-<table>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><table>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Acronym</th>
@@ -107,6 +106,13 @@
 <a id="more"></a>
 <h2 id="survey-papers"><a href="#content">Survey papers</a></h2>
 <ol type="1">
+<li><p><strong>Recent Advances of Resource Allocation in Network Function Virtualization</strong></p>
+<ul>
+<li>Publication: TPDS 2021 (CCF-A)</li>
+<li>Author: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu</li>
+<li>Keyworks: /</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkxNjk4NTc=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
+</ul></li>
 <li><p><strong>A Survey on the Placement of Virtual Resources and Virtual Network Functions</strong></p>
 <ul>
 <li>Publication: IEEE Communications Surveys &amp; Tutorials 2019 (Q1)</li>
@@ -130,6 +136,14 @@
 <h2 id="reinforcement-learning-based"><a href="#content">Reinforcement learning-based</a></h2>
 <h3 id="basic-rl"><a href="#content">Basic RL</a></h3>
 <ol type="1">
+<li><p><strong>MUVINE: Multi-Stage Virtual Network Embedding in Cloud Data Centers Using Reinforcement Learning-Based Predictions</strong></p>
+<ul>
+<li>Publication: JSAC 2020 (CCF-A)</li>
+<li>Author: Hiren Kumar Thakkar, Chinmaya Dehury, Prasan Kumar Sahoo</li>
+<li>Keyworks: VNE, Q-learning, ML(Machine Learning), Multi-Stage</li>
+<li>Objective: Maximizing the server resources utilization and minimizing the number of physical links used</li>
+<li>Link: <span class="exturl" data-url="aHR0cDovLzEyMC4xMjYuMTYuMjUwL1B1YmxpY2F0aW9uX1BERi9qb3VybmFsL2o0NC5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
 <li><p><strong>Virtual Network Embedding via Monte Carlo Tree Search</strong></p>
 <ul>
 <li>Publication: IEEE Trans on Cybernetics 2018 (CCF-B)</li>
@@ -153,11 +167,20 @@
 <li>Publication: INFOCOM 2019 (CCF-A)</li>
 <li>Author: Mahdi Dolati, Seyedeh Bahereh Hassanpour, Majid Ghaderi, Ahmad Khonsari</li>
 <li>Keyworks: VNE, DQN (Deep Q Network), Multi-channels Representations</li>
+<li>Objective: Minimize the VN blocking probability</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly9wZW9wbGUudWNhbGdhcnkuY2Evfm1naGFkZXJpL2RvY3MvaW5mb2NvbTE5LWRlZXB2aW5lLnBkZg==">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
 <h3 id="policy-based-drl"><a href="#content">Policy-based DRL</a></h3>
 <ol type="1">
+<li><p><strong>Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach With Graph Convolutional Networks</strong></p>
+<ul>
+<li>Publication: JSAC 2020 (CCF-A)</li>
+<li>Author: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li</li>
+<li>Keyworks: VNE, A3C (Asynchronous Advantage Actor-Critic), GCN (Graph Convolutional Network)</li>
+<li>Objective: Minimizing the acceptance ratio and long-term average revenue</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkwNjA5MTA=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
+</ul></li>
 <li><p><strong>Virtual Network Function Placement Optimization With Deep Reinforcement Learning</strong></p>
 <ul>
 <li>Publication: JSAC 2019 (CCF-A)</li>
@@ -171,6 +194,7 @@
 <li>Publication: INFOCOM 2019 (CCF-A)</li>
 <li>Author: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul</li>
 <li>Keyworks: VNF-FG, DDPG (Deep Deterministic Policy Gradient), Multi-domain Non-cooperative</li>
+<li>Objective: Maximize the number of allocated VNFs and VLs with the lowest cost</li>
 <li>Link: <span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
