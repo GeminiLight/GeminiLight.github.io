@@ -3,14 +3,14 @@
   <entry>
     <title>【论文笔记】GNN之GAT：Graph Attention Networks</title>
     <url>/2020/12/01/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-gnn-gat/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>图神经网络（GNN）是当前深度学习领域研究的焦点，本文提出了一种GAT（graph attention networks）网络。它使用多头的masked self-attention层来为每个邻居节点分配不同的权重，优化了图卷积神经网络的平均加权的问题。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>图神经网络（GNN）是当前深度学习领域研究的焦点之一，本文提出了一种GAT（graph attention networks）网络，它使用多头的masked self-attention层来为每个邻居节点分配不同的权重，优化了图卷积神经网络的平均加权的问题。</p>
 <p><strong>论文名称</strong>：Graph Attention Networks<br />
 <strong>论文作者</strong>：Petar Veličković, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Liò, Yoshua Bengio<br />
 <strong>发表期刊</strong>：ICLR-2018 (THU-A)<br />
 <strong>研究方向</strong>：GNN 图神经网络<br />
 <strong>关键技术</strong>：Masked self Attention, Multi Attention<br />
 <strong>主要创新</strong>：将多头注意力机制应用于图神经网络，来提升特征提取效果。<br />
-<span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">下载论文<i class="fa fa-external-link-alt"></i></span> | <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BldGFyVi0vR0FUP3V0bV9zb3VyY2U9Y2F0YWx5emV4LmNvbQ==">源码链接<i class="fa fa-external-link-alt"></i></span></p>
+<span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">下载论文<i class="fa fa-external-link-alt"></i></span> | <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BldGFyVi0vR0FUP3V0bV9zb3VyY2U9Y2F0YWx5emV4LmNvbQ==">查看源码<i class="fa fa-external-link-alt"></i></span></p>
 <a id="more"></a>
 <h2 id="论文简介">论文简介</h2>
 <h3 id="缩写释义">缩写释义</h3>
