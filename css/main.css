@@ -3318,23 +3318,31 @@ figcaption {
 .post-body {
   counter-reset: h2;
 }
+.post-body h1 a,
+.post-body h2 a,
+.post-body h3 a,
+.post-body h4 a,
+.post-body h5 a,
+.post-body h6 a {
+  color: #69f;
+  text-decoration: none;
+}
+.post-body h1 a::hover,
+.post-body h2 a::hover,
+.post-body h3 a::hover,
+.post-body h4 a::hover,
+.post-body h5 a::hover,
+.post-body h6 a::hover {
+  color: #87daff;
+}
 .post-body h1 {
   counter-reset: h2;
-}
-.post-body h1 a {
-  color: #69f;
 }
 .post-body h2 {
   counter-reset: h3;
 }
-.post-body h2 a {
-  color: #69f;
-}
 .post-body h3 {
   counter-reset: h4;
-}
-.post-body h3 a {
-  color: #69f;
 }
 .post-body h4 {
   counter-reset: h5;
