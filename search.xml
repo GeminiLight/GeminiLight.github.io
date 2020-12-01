@@ -3,7 +3,7 @@
   <entry>
     <title>【论文笔记】GNN之GAT：Graph Attention Networks</title>
     <url>/2020/12/01/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-gnn-gat/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>图神经网络（GNN）是当前深度学习领域研究的焦点，本文提出了一种GAT（graph attention networks）网络。它使用masked self-attention层来优化图卷积神经网络的平均加权的问题。在GAT中，图中的每个节点可以根据邻节点的特征，为其分配不同的权值。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>图神经网络（GNN）是当前深度学习领域研究的焦点，本文提出了一种GAT（graph attention networks）网络。它使用多头的masked self-attention层来为每个邻居节点分配不同的权重，优化了图卷积神经网络的平均加权的问题。</p>
 <p><strong>论文名称</strong>：Graph Attention Networks<br />
 <strong>论文作者</strong>：Petar Veličković, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Liò, Yoshua Bengio<br />
 <strong>发表期刊</strong>：ICLR-2018 (THU-A)<br />
