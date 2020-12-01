@@ -46,25 +46,20 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 </tr>
 <tr>
 <td colspan="2">
-<a href="#nature-heuristic-based">4. Nature Heuristic-based</a>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<a href="#reinforcement-learning-based">5. Reinforcement learning-based</a>
+<a href="#reinforcement-learning-based">4. Reinforcement learning-based</a>
 </td>
 </tr>
 <tr>
 <td>
- <a href="#basic-rl">5.1 Basic RL</a>
+ <a href="#basic-rl">4.1 Basic RL</a>
 </td>
 <td>
- <a href="#value-based-drl">5.2 Value-based DRL</a>
+ <a href="#value-based-drl">4.2 Value-based DRL</a>
 </td>
 </tr>
 <tr>
 <td>
- <a href="#policy-based-drl">5.3 Policy-based DRL</a>
+ <a href="#policy-based-drl">4.3 Policy-based DRL</a>
 </td>
 <td>
  <a href="#"></a>
@@ -92,15 +87,30 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <h2 id="mathematical-optimization-based"><a href="#content">Mathematical optimization-based</a></h2>
 <h2 id="heuristic-based"><a href="#content">Heuristic-based</a></h2>
 <ol type="1">
+<li><p><strong>An Online Algorithm for VNF Service Chain Scaling in Datacenters</strong></p>
+<ul>
+<li>Publication: TON 2020 (CCF-A)</li>
+<li>Authors: Ziyue Luo, Chuan Wu</li>
+<li>Keyworks: VNFS, VNFP, ILP (Integer Linear Program), Regularization, Rounding</li>
+<li>Objective: Minimize the operating cost and deployment cost</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pLmNzLmhrdS5oay9+Y3d1L3BhcGVycy96eWx1by10b24xOS5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints</strong></p>
+<ul>
+<li>Publication: INFOCOM 2018 (CCF-A)</li>
+<li>Authors: Ziyue Luo, Chuan Wu</li>
+<li>Keyworks: SFCP, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)</li>
+<li>Objective: Minimize the total deployment cost</li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9oYWwuaW5yaWEuZnIvaGFsLTAxNzQzMjczL2RvY3VtZW50">paper<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
 <li><p><strong>Toward Profit-Seeking Virtual Network Embedding</strong></p>
 <ul>
 <li>Publication: INFOCOM 2014 (CCF-A)</li>
 <li>Authors: Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee</li>
 <li>Keyworks: VNE, GRC (Global Resource Control)</li>
-<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzY4NDc5MTg=">paper<i class="fa fa-external-link-alt"></i></span></li>
+<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzY4NDc5MTg=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE Explore)</li>
 </ul></li>
 </ol>
-<h2 id="nature-heuristic-based"><a href="#content">Nature Heuristic-based</a></h2>
 <h2 id="reinforcement-learning-based"><a href="#content">Reinforcement learning-based</a></h2>
 <h3 id="basic-rl"><a href="#content">Basic RL</a></h3>
 <ol type="1">
