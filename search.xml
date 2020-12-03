@@ -313,7 +313,7 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <h3 id="测试任务">测试任务</h3>
 <h4 id="转导学习transductive-learning">转导学习（Transductive Learning）</h4>
 <p>先观察特定的训练样本，然后对特定的测试样本做出预测（从特殊到特殊），这类模型如k近邻、SVM等。</p>
-<p>使用了三个标准的引证网络数据集——Cora、Citeseer与Pubmed。在这些数据集中，节点对应于文档，边（无向的）对应于引用关系。节点特征对应于文档的BoW表示。每个节点拥有一个类别标签（在分类时使用softmax激活函数）。每个数据集的详细信息如下表所示：</p>
+<p>使用了三个标准的引证网络数据集——Cora、Citeseer与Pubmed。在这些数据集中，节点对应于文档，边（无向的）对应于引用关系。节点特征对应于文档的BoW表示。每个节点拥有一个类别标签（在分类时使用softmax激活函数）。</p>
 <p><img data-src="/resource/images/paper/paper-dl-gnn-gat-3.png" /></p>
 <h4 id="归纳学习inductive-learning">归纳学习（Inductive Learning）</h4>
 <p>先从训练样本中学习到一定的模式，然后利用其对测试样本进行预测（即首先从特殊到一般，然后再从一般到特殊），这类模型如常见的贝叶斯模型。</p>
