@@ -1133,7 +1133,15 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <li>块大小 <code>(R, C)</code> 必须均匀划分矩阵 <code>(M, N)</code> 的形状。</li>
 <li>R和C必须满足关系：<code>M % R = 0</code> 和 <code>N % C = 0</code></li>
 </ul></li>
-<li>适用场景及优点参考csr</li>
+</ul>
+<h4 id="应用场景-1">应用场景</h4>
+<p>参考CSR</p>
+<h4 id="优缺点-3">优缺点</h4>
+<h5 id="优点-2">①优点</h5>
+<ul>
+<li>与csr很类似</li>
+<li>更适合于适用于具有密集子矩阵的稀疏矩阵</li>
+<li>在某些情况下比csr和csc计算更高效。</li>
 </ul>
 <h4 id="实例化-2">实例化</h4>
 <ul>
@@ -1160,13 +1168,6 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 </ul>
 <h4 id="代码示例-1">代码示例</h4>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成数据</span></span><br><span class="line">indptr = np.array([<span class="number">0</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">6</span>])</span><br><span class="line">indices = np.array([<span class="number">0</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">data = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]).repeat(<span class="number">4</span>).reshape(<span class="number">6</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建矩阵</span></span><br><span class="line">bsr = bsr_matrix((data, indices, indptr), shape=(<span class="number">6</span>,<span class="number">6</span>)).todense()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为array</span></span><br><span class="line">bsr.todense()</span><br><span class="line">matrix([[<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>],</span><br><span class="line">        [<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>],</span><br><span class="line">        [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">3</span>],</span><br><span class="line">        [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">3</span>],</span><br><span class="line">        [<span class="number">4</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">6</span>],</span><br><span class="line">        [<span class="number">4</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
-<h4 id="优缺点-3">优缺点</h4>
-<h5 id="优点-2">①优点</h5>
-<ul>
-<li>与csr很类似</li>
-<li>更适合于适用于具有密集子矩阵的稀疏矩阵</li>
-<li>在某些情况下比csr和csc计算更高效。</li>
-</ul>
 <h3 id="dok--dok_matrix">DOK- <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNjaXB5Lm9yZy9kb2Mvc2NpcHkvcmVmZXJlbmNlL2dlbmVyYXRlZC9zY2lweS5zcGFyc2UuZG9rX21hdHJpeC5odG1s">dok_matrix<i class="fa fa-external-link-alt"></i></span></h3>
 <h4 id="dictionary-of-keys-matrix-按键字典矩阵">Dictionary of Keys Matrix 按键字典矩阵</h4>
 <ul>
@@ -1177,12 +1178,6 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <ul>
 <li>逐渐添加矩阵的元素</li>
 </ul>
-<h4 id="实例化方法-1">实例化方法</h4>
-<ul>
-<li><code>dok_matrix(D)</code>：D代表密集矩阵；</li>
-<li><code>dok_matrix(S)</code>：S代表其他类型稀疏矩阵</li>
-<li><code>dok_matrix((M, N), [dtype])</code>：构建一个shape为M*N的空矩阵，默认数据类型是<code>d</code>，</li>
-</ul>
 <h4 id="优缺点-4">优缺点</h4>
 <h5 id="优点-3">①优点</h5>
 <ul>
@@ -1192,6 +1187,12 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <h5 id="缺点-2">②缺点</h5>
 <ul>
 <li>不允许重复索引（coo中适用），但可以很高效的转换成coo后进行重复索引</li>
+</ul>
+<h4 id="实例化方法-1">实例化方法</h4>
+<ul>
+<li><code>dok_matrix(D)</code>：D代表密集矩阵；</li>
+<li><code>dok_matrix(S)</code>：S代表其他类型稀疏矩阵</li>
+<li><code>dok_matrix((M, N), [dtype])</code>：构建一个shape为M*N的空矩阵，默认数据类型是<code>d</code>，</li>
 </ul>
 <h4 id="代码示例-2">代码示例</h4>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dok = sparse.dok_matrix((<span class="number">5</span>, <span class="number">5</span>), dtype=np.float32)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">        dok[i,j] = i+j    <span class="comment"># 更新元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># zero elements are accessible</span></span><br><span class="line">dok[(<span class="number">0</span>, <span class="number">0</span>)]  <span class="comment"># = 0</span></span><br><span class="line"></span><br><span class="line">dok.keys()</span><br><span class="line"><span class="comment"># &#123;(0, 0), ..., (4, 4)&#125;</span></span><br><span class="line"></span><br><span class="line">dok.toarray()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[0. 1. 2. 3. 4.]</span></span><br><span class="line"><span class="string"> [1. 2. 3. 4. 5.]</span></span><br><span class="line"><span class="string"> [2. 3. 4. 5. 6.]</span></span><br><span class="line"><span class="string"> [3. 4. 5. 6. 7.]</span></span><br><span class="line"><span class="string"> [4. 5. 6. 7. 8.]]</span></span><br><span class="line"><span class="string"> &#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
@@ -1276,7 +1277,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <li><code>offsets</code>：存储DIA对角偏移量的数组</li>
 </ul>
 <h4 id="代码示例-4">代码示例</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成数据</span></span><br><span class="line">data = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]])</span><br><span class="line">offsets = np.array([<span class="number">0</span>, <span class="number">-2</span>, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建矩阵</span></span><br><span class="line">dia = sparse.dia_matrix((data, offsets), shape=(<span class="number">4</span>, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看数据</span></span><br><span class="line"><span class="comment"># replace cutoff data</span></span><br><span class="line">dia.data.ravel()[<span class="number">9</span>:<span class="number">12</span>] = <span class="number">0</span></span><br><span class="line">dia.data</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[ 1,  2,  3,  4,  5],</span></span><br><span class="line"><span class="string">       [ 6,  7,  8,  9,  0],</span></span><br><span class="line"><span class="string">       [ 0,  0, 13, 14, 15]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为array</span></span><br><span class="line">dia.toarray()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[1, 7, 0, 0],</span></span><br><span class="line"><span class="string">       [0, 2, 8, 0],</span></span><br><span class="line"><span class="string">       [5, 0, 3, 9],</span></span><br><span class="line"><span class="string">       [0, 6, 0, 4]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成数据</span></span><br><span class="line">data = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]])</span><br><span class="line">offsets = np.array([<span class="number">0</span>, <span class="number">-2</span>, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建矩阵</span></span><br><span class="line">dia = sparse.dia_matrix((data, offsets), shape=(<span class="number">4</span>, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看数据</span></span><br><span class="line">dia.data</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[[1 2 3 4]</span></span><br><span class="line"><span class="string">        [5 6 0 0]</span></span><br><span class="line"><span class="string">        [0 7 8 9]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为array</span></span><br><span class="line">dia.toarray()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">array([[1 7 0 0]</span></span><br><span class="line"><span class="string">       [0 2 8 0]</span></span><br><span class="line"><span class="string">       [5 0 3 9]</span></span><br><span class="line"><span class="string">       [0 6 0 4]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 <hr />
 <h2 id="矩阵格式对比">矩阵格式对比</h2>
 <table>
@@ -1306,7 +1307,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <td style="text-align: left;">yes</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>“write-only”</strong></td>
+<td style="text-align: left;"><strong>write-only</strong></td>
 <td style="text-align: left;">yes</td>
 <td style="text-align: left;">yes</td>
 <td style="text-align: left;">yes</td>
@@ -1317,7 +1318,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <td style="text-align: left;">yes</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>“read-only”</strong></td>
+<td style="text-align: left;"><strong>read-only</strong></td>
 <td style="text-align: left;">no</td>
 <td style="text-align: left;">no</td>
 <td style="text-align: left;">no</td>
@@ -1328,7 +1329,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <td style="text-align: left;">yes</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>low memory‡</strong></td>
+<td style="text-align: left;"><strong>low memory</strong></td>
 <td style="text-align: left;">yes</td>
 <td style="text-align: left;">no</td>
 <td style="text-align: left;">no</td>
