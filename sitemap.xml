@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.geminilight.cn/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-introduction/</loc>
+    
+    <lastmod>2020-12-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.geminilight.cn/2020/08/18/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-scipy-sparse/</loc>
     
     <lastmod>2020-12-04</lastmod>
@@ -38,13 +45,6 @@
   
   <url>
     <loc>https://www.geminilight.cn/2020/11/29/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding/</loc>
-    
-    <lastmod>2020-12-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-introduction/</loc>
     
     <lastmod>2020-12-01</lastmod>
     
@@ -94,20 +94,6 @@
   
   <url>
     <loc>https://www.geminilight.cn/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/</loc>
-    
-    <lastmod>2020-11-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/2019/08/22/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-introduction/</loc>
-    
-    <lastmod>2020-11-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/2019/08/19/DA%20-%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/da-numpy/</loc>
     
     <lastmod>2020-11-30</lastmod>
     
@@ -257,13 +243,6 @@
   
   <url>
     <loc>https://www.geminilight.cn/tags/Data-Science/</loc>
-    <lastmod>2020-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/tags/NumPy/</loc>
     <lastmod>2020-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
