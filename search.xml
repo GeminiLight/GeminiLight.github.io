@@ -71,17 +71,17 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <ol type="1">
 <li><p><strong>Recent Advances of Resource Allocation in Network Function Virtualization</strong></p>
 <ul>
-<li>Publication: TPDS 2021 (CCF-A)</li>
-<li>Authors: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu</li>
-<li>Keyworks: /</li>
-<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkxNjk4NTc=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
+<li><code>Publication</code>: TPDS 2021 (CCF-A)</li>
+<li><code>Authors</code>: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu</li>
+<li><code>Keyworks</code>: /</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkxNjk4NTc=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
 </ul></li>
 <li><p><strong>A Survey on the Placement of Virtual Resources and Virtual Network Functions</strong></p>
 <ul>
-<li>Publication: IEEE Communications Surveys &amp; Tutorials 2019 (Q1)</li>
-<li>Authors: Abdelquoddouss Laghrissi and Tarik Taleb</li>
-<li>Keyworks: /</li>
-<li>Link: <span class="exturl" data-url="aHR0cDovL21vc2FpYy1sYWIub3JnL3VwbG9hZHMvcGFwZXJzLzA3OGI2MDFlLTNlMDEtNGE0Mi04YTM1LWI5OGUyZDExMzk0My5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
+<li><code>Publication</code>: IEEE Communications Surveys &amp; Tutorials 2019 (Q1)</li>
+<li><code>Authors</code>: Abdelquoddouss Laghrissi and Tarik Taleb</li>
+<li><code>Keyworks</code>: /</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cDovL21vc2FpYy1sYWIub3JnL3VwbG9hZHMvcGFwZXJzLzA3OGI2MDFlLTNlMDEtNGE0Mi04YTM1LWI5OGUyZDExMzk0My5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
 <h2 id="mathematical-optimization-based"><a href="#content">Mathematical optimization-based</a></h2>
@@ -89,19 +89,19 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <ol type="1">
 <li><p><strong>An Online Algorithm for VNF Service Chain Scaling in Datacenters</strong></p>
 <ul>
-<li>Publication: TON 2020 (CCF-A)</li>
-<li>Authors: Ziyue Luo, Chuan Wu</li>
-<li>Keyworks: VNFS, VNFP, ILP (Integer Linear Program), Regularization, Rounding</li>
-<li>Objective: Minimize the operating cost and deployment cost</li>
-<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9pLmNzLmhrdS5oay9+Y3d1L3BhcGVycy96eWx1by10b24xOS5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
+<li><code>Publication</code>: TON 2020 (CCF-A)</li>
+<li><code>Authors</code>: Ziyue Luo, Chuan Wu</li>
+<li><code>Keyworks</code>: VNFS, VNFP, ILP (Integer Linear Program), Regularization, Rounding</li>
+<li><code>Objective</code>: Minimize the operating cost and deployment cost</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pLmNzLmhrdS5oay9+Y3d1L3BhcGVycy96eWx1by10b24xOS5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints</strong></p>
 <ul>
-<li>Publication: INFOCOM 2018 (CCF-A)</li>
-<li>Authors: Ziyue Luo, Chuan Wu</li>
-<li>Keyworks: SFCP, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)</li>
-<li>Objective: Minimize the total deployment cost</li>
-<li>Link: <span class="exturl" data-url="aHR0cHM6Ly9oYWwuaW5yaWEuZnIvaGFsLTAxNzQzMjczL2RvY3VtZW50">paper<i class="fa fa-external-link-alt"></i></span></li>
+<li><code>Publication</code>: INFOCOM 2018 (CCF-A)</li>
+<li><code>Authors</code>: Ziyue Luo, Chuan Wu</li>
+<li><code>Keyworks</code>: SFCP, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)</li>
+<li><code>Objective</code>: Minimize the total deployment cost</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9oYWwuaW5yaWEuZnIvaGFsLTAxNzQzMjczL2RvY3VtZW50">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>Toward Profit-Seeking Virtual Network Embedding</strong></p>
 <ul>
