@@ -2,7 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.geminilight.cn/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-01-10</lastmod>
+  </url>
+  <url>
+    <loc>https://www.geminilight.cn/resource/draft/paper-dl-gnn-gcn.html</loc>
+    <lastmod>2020-12-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.geminilight.cn/resource/draft/paper-dl-gnn-grn.html</loc>
+    <lastmod>2020-12-29</lastmod>
   </url>
   <url>
     <loc>https://www.geminilight.cn/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/</loc>
@@ -19,10 +27,6 @@
   <url>
     <loc>https://www.geminilight.cn/2020/12/01/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-dl-gnn-gat/</loc>
     <lastmod>2020-12-03</lastmod>
-  </url>
-  <url>
-    <loc>https://www.geminilight.cn/resource/draft/paper-dl-gnn-gcn.html</loc>
-    <lastmod>2020-12-02</lastmod>
   </url>
   <url>
     <loc>https://www.geminilight.cn/2020/03/21/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/lecture-zju-professor-chenwei-date-visonlization/</loc>

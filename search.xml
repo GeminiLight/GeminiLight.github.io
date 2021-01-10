@@ -880,71 +880,49 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
       </tags>
   </entry>
   <entry>
-    <title>【论文汇总】Papers on VNE, SFCD and VNFP</title>
+    <title>【论文汇总】Papers on NFV-RA</title>
     <url>/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Lastest update: Dec. 02, 2020.<br />
-Contributed by Gemini Light(Tianfu Wang).</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Acronym</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">VNE</td>
-<td>Virtual Network Embedding</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">SFCD</td>
-<td>Service Function Chain Deployment</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">VNFP</td>
-<td>Virtual Network Function Placement</td>
-</tr>
-</tbody>
-</table>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Lastest update: JAN. 10, 2021.<br />
+Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L25mdi1wYXBlcnM=">GitHub<i class="fa fa-external-link-alt"></i></span>, so as to get updates in time.</p>
+<p>This is a paper list about <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmV0d29ya19mdW5jdGlvbl92aXJ0dWFsaXphdGlvbg==">Network Functions Virtualization<i class="fa fa-external-link-alt"></i></span> (NFV) including:</p>
+<ul>
+<li>Comprehensive <strong>Surveys</strong></li>
+<li><strong>VNE</strong>: Virtual Network Embedding Algorithms</li>
+<li><strong>VNFC</strong>: Virtual Network Function Chain Algorithms<br />
+</li>
+<li><strong>VNFP</strong>: Virtual Network Function Placement Algorithms<br />
+</li>
+<li><strong>VNFS</strong>: Virtual Network Function Scheduling Algorithms</li>
+</ul>
+<p>Particularly, papers related with resource allocation are classified according to method categories.</p>
+<p><strong>Favorably receive that submit relevant papers to <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L25mdi1wYXBlcnM=">this repository<i class="fa fa-external-link-alt"></i></span> in the appropriate format.</strong></p>
 <h2 id="content"><a href="#content">Content</a></h2>
-<table>
-<tr>
-<td colspan="2">
-<a href="#survey-papers">1. Survey</a>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<a href="#mathematical-optimization-based">2. Mathematical optimization-based</a>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<a href="#heuristic-based">3. Heuristic-based</a>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<a href="#reinforcement-learning-based">4. Reinforcement learning-based</a>
-</td>
-</tr>
-<tr>
-<td>
- <a href="#basic-rl">4.1 Basic RL</a>
-</td>
-<td>
- <a href="#value-based-drl">4.2 Value-based DRL</a>
-</td>
-</tr>
-<tr>
-<td>
- <a href="#policy-based-drl">4.3 Policy-based DRL</a>
-</td>
-<td>
- <a href="#"></a>
-</td>
-</tr>
-</table>
+<ul>
+<li><a href="#survey-papers">Survey</a></li>
+<li><a href="#mathematical-based">Mathematical-based</a></li>
+<li><a href="#heuristic-based">Heuristic-based</a>
+<ul>
+<li><a href="#basic-heruistics">Basic heruistics</a></li>
+<li><a href="#meta-heruistics">Meta-heruistics</a></li>
+</ul></li>
+<li><a href="#reinforcement-learning-based">Reinforcement Learning-based</a>
+<ul>
+<li><a href="#basic-rl">Basic RL</a></li>
+<li><a href="#value-based-drl">Value-based DRL</a></li>
+<li><a href="#policy-based-drl">Policy-based DRL</a></li>
+</ul></li>
+</ul>
+<!-- Template :star:
+
+1. **An Online Algorithm for VNF Service Chain Scaling in Datacenters**
+
+   - `Publication`: TON 2020 (**CCF-A**)
+   - `Authors`: Ziyue Luo, Chuan Wu
+   - `Keyworks`: VNFS, VNFP, ILP (Integer Linear Program), Regularization, Rounding
+   - `Objective`: Minimize the operating cost and deployment cost
+   - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
+
+-->
 <a id="more"></a>
 <h2 id="survey-papers"><a href="#content">Survey papers</a></h2>
 <ol type="1">
@@ -952,20 +930,45 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <ul>
 <li><code>Publication</code>: TPDS 2021 (<strong>CCF-A</strong>)</li>
 <li><code>Authors</code>: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu</li>
-<li><code>Keyworks</code>: NFV</li>
-<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkxNjk4NTc=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkxNjk4NTc=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>NFV Platform Design: A Survey</strong></p>
+<ul>
+<li><code>Publication</code>: TNSM 2020 (<strong>CCF-C</strong>)</li>
+<li><code>Authors</code>: Tianzhu Zhang</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzIwMDIuMTEwNTk=">arXiv<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
 </ul></li>
 <li><p><strong>A Survey on the Placement of Virtual Resources and Virtual Network Functions</strong></p>
 <ul>
-<li><code>Publication</code>: IEEE Communications Surveys &amp; Tutorials 2019 (<strong>JCR-1</strong>)</li>
+<li><code>Publication</code>: IEEE Communications Surveys &amp; Tutorials 2019 (<strong>JCR-Q1</strong>)</li>
 <li><code>Authors</code>: Abdelquoddouss Laghrissi and Tarik Taleb</li>
-<li><code>Keyworks</code>: /</li>
 <li><code>Link</code>: <span class="exturl" data-url="aHR0cDovL21vc2FpYy1sYWIub3JnL3VwbG9hZHMvcGFwZXJzLzA3OGI2MDFlLTNlMDEtNGE0Mi04YTM1LWI5OGUyZDExMzk0My5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
+<li><p><strong>Resource Allocation in NFV: A Comprehensive Survey</strong></p>
+<ul>
+<li><code>Publication</code>: TNSM 2019 (<strong>CCF-C</strong>)</li>
+<li><code>Authors</code>: Juliver Gil Herrera, Juan Felipe Botero</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzc1MzQ3NDE=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>A comprehensive survey of network function virtualization</strong></p>
+<ul>
+<li><code>Publication</code>: CN 2018 (<strong>CCF-B</strong>)</li>
+<li><code>Authors</code>: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL2Ficy9waWkvUzEzODkxMjg2MTgzMDAzMDY=">ScienceDirect<i class="fa fa-external-link-alt"></i></span>(To ScienceDirect)</li>
+</ul></li>
 </ol>
-<h2 id="mathematical-optimization-based"><a href="#content">Mathematical optimization-based</a></h2>
+<h2 id="mathematical-based"><a href="#content">Mathematical-based</a></h2>
 <h2 id="heuristic-based"><a href="#content">Heuristic-based</a></h2>
+<h3 id="based-heuristic"><a href="#content">Based Heuristic</a></h3>
 <ol type="1">
+<li><p><strong>Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network Edge</strong></p>
+<ul>
+<li><code>Publication</code>: INFOCOM 2020 (<strong>CCF-A</strong>)</li>
+<li><code>Authors</code>: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li</li>
+<li><code>Keyworks</code>: VNFP, MILP (Mixed Integer Iinear Programming), Latency-aware, CDFSA (constrained depth-first search algorithm)</li>
+<li><code>Objective</code>: Minimize the resource consumption of both servers and links with latency guarantees</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9mYW5nbWluZ2xpdS5naXRodWIuaW8vZmlsZXMvSU5GT0NPTTIwLUVkZ2UtTkZWLnBkZg==">paper<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
 <li><p><strong>An Online Algorithm for VNF Service Chain Scaling in Datacenters</strong></p>
 <ul>
 <li><code>Publication</code>: TON 2020 (<strong>CCF-A</strong>)</li>
@@ -974,11 +977,27 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><code>Objective</code>: Minimize the operating cost and deployment cost</li>
 <li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pLmNzLmhrdS5oay9+Y3d1L3BhcGVycy96eWx1by10b24xOS5wZGY=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
+<li><p><strong>Congestion-Aware and Energy-Aware Virtual Network Embedding</strong></p>
+<ul>
+<li><code>Publication</code>: TON 2020 (<strong>CCF-A</strong>)</li>
+<li><code>Authors</code>: Minh Pham, Doan B. Hoang, Zenon Chaczko</li>
+<li><code>Keyworks</code>: VNE, relaxed LP (linear Program), Congestion-aware, Energy-aware, SDN (Software-Defined Networks), SR (Segment Routing)</li>
+<li><code>Objective</code>: Multiple-objective is to save cost, save energy and avoid network congestion simultaneously</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5NDUxNjI=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>Reliability Aware Service Placement Using a Viterbi-Based Algorithm</strong></p>
+<ul>
+<li><code>Publication</code>: TNSM 2020 (<strong>CCF-C</strong>)</li>
+<li><code>Authors</code>: Mohammad Karimzadeh-Farshbafan, Vahid Shah-Mansouri, Dusit Niyato</li>
+<li><code>Keyworks</code>: VNFP, MICP (mixed integer convex programming), Viterbi-based</li>
+<li><code>Objective</code>: Minimize the cost of resources of the InPs and maximizing the reliability of the service</li>
+<li><code>Link</code>: [IEEE Xplore]</li>
+</ul></li>
 <li><p><strong>Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints</strong></p>
 <ul>
 <li><code>Publication</code>: INFOCOM 2018 (<strong>CCF-A</strong>)</li>
 <li><code>Authors</code>: Ziyue Luo, Chuan Wu</li>
-<li><code>Keyworks</code>: SFCP, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)</li>
+<li><code>Keyworks</code>: VNFP, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)</li>
 <li><code>Objective</code>: Minimize the total deployment cost</li>
 <li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9oYWwuaW5yaWEuZnIvaGFsLTAxNzQzMjczL2RvY3VtZW50">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
@@ -988,12 +1007,21 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><code>Authors</code>: Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee</li>
 <li><code>Keyworks</code>: VNE, GRC (Global Resource Control)</li>
 <li><code>Objective</code>: Maximize the revenue-to-cost ratio and acceptance ratio</li>
-<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzY4NDc5MTg=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE Explore)</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzY4NDc5MTg=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
+<h3 id="meta-heuristic"><a href="#content">Meta-Heuristic</a></h3>
 <h2 id="reinforcement-learning-based"><a href="#content">Reinforcement learning-based</a></h2>
 <h3 id="basic-rl"><a href="#content">Basic RL</a></h3>
 <ol type="1">
+<li><p><strong>A Dynamic Reliability-Aware Service Placement for Network Function Virtualization (NFV)</strong></p>
+<ul>
+<li><code>Publication</code>: JSAC 2020 (<strong>CCF-A</strong>)</li>
+<li><code>Authors</code>: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li</li>
+<li><code>Keyworks</code>: VNFP, Dynamic Reliability-aware, MDP (Markov Deci- sion Process), Viterbi algorithm</li>
+<li><code>Objective</code>: Minimize the placement cost and maximize the number of admitted services</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzE5MTEuMDY1MzI=">arXiv<i class="fa fa-external-link-alt"></i></span>(To arXiv)</li>
+</ul></li>
 <li><p><strong>MUVINE: Multi-Stage Virtual Network Embedding in Cloud Data Centers Using Reinforcement Learning-Based Predictions</strong></p>
 <ul>
 <li><code>Publication</code>: JSAC 2020 (<strong>CCF-A</strong>)</li>
@@ -1046,7 +1074,7 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><code>Authors</code>: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li</li>
 <li><code>Keyworks</code>: VNE, A3C (Asynchronous Advantage Actor-Critic), GCN (Graph Convolutional Network)</li>
 <li><code>Objective</code>: Minimizing the acceptance ratio and long-term average revenue</li>
-<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkwNjA5MTA=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkwNjA5MTA=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>Virtual Network Function Placement Optimization With Deep Reinforcement Learning</strong></p>
 <ul>
@@ -1054,15 +1082,23 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <li><code>Authors</code>: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal</li>
 <li><code>Keyworks</code>: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)</li>
 <li><code>Objective</code>: Minimize the overall power consumption</li>
-<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5NDUyOTE=">paper<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5NDUyOTE=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach</strong></p>
 <ul>
 <li><code>Publication</code>: INFOCOM 2019 (<strong>CCF-A</strong>)</li>
 <li><code>Authors</code>: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul</li>
-<li><code>Keyworks</code>: VNF-FG, DDPG (Deep Deterministic Policy Gradient), Multi-domain Non-cooperative</li>
+<li><code>Keyworks</code>: VNFP, DDPG (Deep Deterministic Policy Gradient), Multi-domain Non-cooperative</li>
 <li><code>Objective</code>: Maximize the number of allocated VNFs and VLs with the lowest cost</li>
 <li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">paper<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>VNE-TD: A virtual network emb e dding algorithm based on temporal-difference learning</strong></p>
+<ul>
+<li><code>Publication</code>: CN 2019 (<strong>CCF-B</strong>)</li>
+<li><code>Authors</code>: Sen Wang, Jun Bi, Jianping Wu, Athanasios V. Vasilakos, Qilin Fan</li>
+<li><code>Keyworks</code>: VNFP, TD (Temporal Difference), GRC (Global Resource Control)</li>
+<li><code>Objective</code>: Maximize the long-term time-average revenue of the InP</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL2Ficy9waWkvUzEzODkxMjg2MTgzMDU4NFg=">ScienceDirect<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>NFVdeep: adaptive online service function chain deployment with deep reinforcement learning</strong></p>
 <ul>

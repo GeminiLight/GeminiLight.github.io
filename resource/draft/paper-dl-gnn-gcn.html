@@ -32,7 +32,7 @@
 <meta property="og:description" content="本文提出了一种基于卷积操作的图神经网络GCN，它将卷积操作适应于图结构，同时提取图结构和节点的特征信息，并在在半监督学习中获得了较好的效果提升。 论文名称：Semi-Supervised Classification with Graph Convolutional Networks 论文作者：Thomas N. Kipf, Max Welling 发表期刊：ICLR-2017 (THU-A">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-26T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-02T03:28:10.066Z">
+<meta property="article:modified_time" content="2020-12-30T02:03:26.565Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="DL">
 <meta property="article:tag" content="GNN">
@@ -672,9 +672,11 @@ if(canvas.getContext){
 <p>图的谱卷积操作被定义为信号<span class="math inline">\(x \in \mathbb{R}^N\)</span>与傅里叶域滤波器<span class="math inline">\(g_{\theta}=\operatorname{diag}(\theta)\)</span>的乘积：</p>
 <p>式中，<span class="math inline">\(U\)</span>是归一化图拉普拉斯特征向量的矩阵，满足</p>
 <p><span class="math display">\[L=I_{N}-D^{-\frac{1}{2}} A D^{-\frac{1}{2}}=U \Lambda U^{\top}\]</span></p>
-<p>其特征值<span class="math inline">\(\Lambda\)</span>的对角矩阵和<span class="math inline">\(U^{\top} x\)</span>是<span class="math inline">\(x\)</span>的图傅里叶变换。我们可以理解<span class="math inline">\(g_{\theta}\)</span>为<span class="math inline">\(L\)</span>特征值的函数，如<span class="math inline">\(g_{\theta}(\Lambda)\)</span>。但大型图的特征分解是高计算需求的</p>
+<p>其特征值<span class="math inline">\(\Lambda\)</span>的对角矩阵和<span class="math inline">\(U^{\top} x\)</span>是<span class="math inline">\(x\)</span>的图傅里叶变换。我们可以理解<span class="math inline">\(g_{\theta}\)</span>为<span class="math inline">\(L\)</span>特征值的函数，如<span class="math inline">\(g_{\theta}(\Lambda)\)</span>。</p>
+<p>但大型图的特征分解是高计算需求的。为了避免这个问题，<span class="math inline">\(g_{\theta}(\Lambda)\)</span>可以通过切比雪夫多项式<span class="math inline">\(T_k(x)\)</span>的截断展开很好地逼近到第<span class="math inline">\(K^{th}\)</span>阶：</p>
 <p><span class="math display">\[g_{\theta} \star x=U g_{\theta} U^{\top} x\]</span></p>
-<p><span class="math display">\[g_{\theta^{\prime}}(\Lambda) \approx \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{\Lambda})\]</span></p>
+<p>式中，<span class="math inline">\(\tilde{\Lambda}=\frac{2}{\lambda_{\max }} \Lambda-I_{N}\)</span>，<span class="math inline">\(\lambda_{\max }\)</span>表示L的最大特征值。<span class="math inline">\(\theta&#39; \in \mathbb{R}^K\)</span>是切比雪夫系数的向量表示。切比雪夫多项式递归定义为<span class="math inline">\(T_{k}(x) = 2 x T_{k-1}(x)-T_{k-2}(x)\)</span>, <span class="math inline">\(T_{0}(x)=1, T_1(x)=x\)</span>。</p>
+<p>因此，信号<span class="math inline">\(x\)</span>和滤波<span class="math inline">\(g_{\theta^{\prime}}\)</span>的卷积操作可以定义为 <span class="math display">\[g_{\theta^{\prime}}(\Lambda) \approx \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{\Lambda})\]</span> 式中，<span class="math inline">\(\tilde{L}=\frac{2}{\lambda_{\max }} L-I_{N}\)</span>，因为<span class="math inline">\(\left(U \Lambda U^{\top}\right)^{k}=U \Lambda^{k} U^{\top}\)</span>。注意，这个表达式现在是K-local，因为它是Laplacian中的第K阶多项式，即它只依赖于距离中心节点（第K阶邻域）最大K步的节点。</p>
 <p><span class="math display">\[g_{\theta^{\prime}} \star x \approx \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{L}) x\]</span></p>
 <h2 id="模型改进">模型改进</h2>
 <h2 id="性能评估">性能评估</h2>
@@ -741,7 +743,7 @@ if(canvas.getContext){
 <div class="copyright">
   
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -604,7 +604,7 @@ if(canvas.getContext){
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/" class="post-title-link" itemprop="url">【论文汇总】Papers on VNE, SFCD and VNFP</a>
+            <a href="/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/" class="post-title-link" itemprop="url">【论文汇总】Papers on NFV-RA</a>
         </h2>
 
         <div class="post-meta">
@@ -633,7 +633,7 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.3k</span>
+              <span>6.6k</span>
             </span>
 
         </div>
@@ -643,69 +643,47 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Lastest update: Dec. 02, 2020.<br />
-Contributed by Gemini Light(Tianfu Wang).</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Acronym</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">VNE</td>
-<td>Virtual Network Embedding</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">SFCD</td>
-<td>Service Function Chain Deployment</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">VNFP</td>
-<td>Virtual Network Function Placement</td>
-</tr>
-</tbody>
-</table>
+          <p>Lastest update: JAN. 10, 2021.<br />
+Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L25mdi1wYXBlcnM=">GitHub<i class="fa fa-external-link-alt"></i></span>, so as to get updates in time.</p>
+<p>This is a paper list about <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmV0d29ya19mdW5jdGlvbl92aXJ0dWFsaXphdGlvbg==">Network Functions Virtualization<i class="fa fa-external-link-alt"></i></span> (NFV) including:</p>
+<ul>
+<li>Comprehensive <strong>Surveys</strong></li>
+<li><strong>VNE</strong>: Virtual Network Embedding Algorithms</li>
+<li><strong>VNFC</strong>: Virtual Network Function Chain Algorithms<br />
+</li>
+<li><strong>VNFP</strong>: Virtual Network Function Placement Algorithms<br />
+</li>
+<li><strong>VNFS</strong>: Virtual Network Function Scheduling Algorithms</li>
+</ul>
+<p>Particularly, papers related with resource allocation are classified according to method categories.</p>
+<p><strong>Favorably receive that submit relevant papers to <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L25mdi1wYXBlcnM=">this repository<i class="fa fa-external-link-alt"></i></span> in the appropriate format.</strong></p>
 <h2 id="content"><a href="#content">Content</a></h2>
-<table>
-<tr>
-<td colspan="2">
-<a href="#survey-papers">1. Survey</a>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<a href="#mathematical-optimization-based">2. Mathematical optimization-based</a>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<a href="#heuristic-based">3. Heuristic-based</a>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<a href="#reinforcement-learning-based">4. Reinforcement learning-based</a>
-</td>
-</tr>
-<tr>
-<td>
- <a href="#basic-rl">4.1 Basic RL</a>
-</td>
-<td>
- <a href="#value-based-drl">4.2 Value-based DRL</a>
-</td>
-</tr>
-<tr>
-<td>
- <a href="#policy-based-drl">4.3 Policy-based DRL</a>
-</td>
-<td>
- <a href="#"></a>
-</td>
-</tr>
-</table>
+<ul>
+<li><a href="#survey-papers">Survey</a></li>
+<li><a href="#mathematical-based">Mathematical-based</a></li>
+<li><a href="#heuristic-based">Heuristic-based</a>
+<ul>
+<li><a href="#basic-heruistics">Basic heruistics</a></li>
+<li><a href="#meta-heruistics">Meta-heruistics</a></li>
+</ul></li>
+<li><a href="#reinforcement-learning-based">Reinforcement Learning-based</a>
+<ul>
+<li><a href="#basic-rl">Basic RL</a></li>
+<li><a href="#value-based-drl">Value-based DRL</a></li>
+<li><a href="#policy-based-drl">Policy-based DRL</a></li>
+</ul></li>
+</ul>
+<!-- Template :star:
+
+1. **An Online Algorithm for VNF Service Chain Scaling in Datacenters**
+
+   - `Publication`: TON 2020 (**CCF-A**)
+   - `Authors`: Ziyue Luo, Chuan Wu
+   - `Keyworks`: VNFS, VNFP, ILP (Integer Linear Program), Regularization, Rounding
+   - `Objective`: Minimize the operating cost and deployment cost
+   - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
+
+-->
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/#more" rel="contents">
@@ -1559,7 +1537,7 @@ Contributed by Gemini Light(Tianfu Wang).</p>
 <div class="copyright">
   
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
