@@ -24,15 +24,15 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="Lastest update: JAN. 10, 2021. Welcome to star this work on GitHub, so as to get updates in time. This is a paper list about Network Functions Virtualization (NFV) including:  Comprehensive Survey">
+  <meta name="description" content="Lastest update: JAN. 10, 2021. Welcome to star this work on GitHub, so as to get updates in time. This is a paper list about Resource Allocation in Network Functions Virtualization (NFV) including">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【论文汇总】Papers on NFV-RA">
 <meta property="og:url" content="https://www.geminilight.cn/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="Lastest update: JAN. 10, 2021. Welcome to star this work on GitHub, so as to get updates in time. This is a paper list about Network Functions Virtualization (NFV) including:  Comprehensive Survey">
+<meta property="og:description" content="Lastest update: JAN. 10, 2021. Welcome to star this work on GitHub, so as to get updates in time. This is a paper list about Resource Allocation in Network Functions Virtualization (NFV) including">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-10T01:16:59.117Z">
+<meta property="article:modified_time" content="2021-01-11T16:15:01.329Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="Paper">
 <meta property="article:tag" content="NFV">
@@ -635,7 +635,7 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>6.6k</span>
+              <span>8.1k</span>
             </span>
 
         </div>
@@ -647,26 +647,26 @@ if(canvas.getContext){
     <div class="post-body" itemprop="articleBody">
         <p>Lastest update: JAN. 10, 2021.<br />
 Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L25mdi1wYXBlcnM=">GitHub<i class="fa fa-external-link-alt"></i></span>, so as to get updates in time.</p>
-<p>This is a paper list about <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmV0d29ya19mdW5jdGlvbl92aXJ0dWFsaXphdGlvbg==">Network Functions Virtualization<i class="fa fa-external-link-alt"></i></span> (NFV) including:</p>
+<p>This is a paper list about Resource Allocation in <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmV0d29ya19mdW5jdGlvbl92aXJ0dWFsaXphdGlvbg==">Network Functions Virtualization<i class="fa fa-external-link-alt"></i></span> (NFV) including</p>
 <ul>
 <li>Comprehensive <strong>Surveys</strong></li>
 <li><strong>VNE</strong>: Virtual Network Embedding Algorithms</li>
-<li><strong>VNFC</strong>: Virtual Network Function Chain Algorithms<br />
+<li><strong>VNFC</strong>: Virtual Network Function Chaining Algorithms<br />
 </li>
 <li><strong>VNFP</strong>: Virtual Network Function Placement Algorithms<br />
 </li>
 <li><strong>VNFS</strong>: Virtual Network Function Scheduling Algorithms</li>
 </ul>
-<p>Particularly, papers related with resource allocation are classified according to method categories.</p>
-<p><strong>Favorably receive that submit relevant papers to <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L25mdi1wYXBlcnM=">this repository<i class="fa fa-external-link-alt"></i></span> in the appropriate format.</strong></p>
+<p>Particularly, we mainly collect papers from high-quality journals and conferences, and classify them according to method categories.</p>
+<p><strong>Favorably receive that submit relevant papers to this repository in the appropriate format.</strong></p>
 <h2 id="content"><a href="#content">Content</a></h2>
 <ul>
 <li><a href="#survey-papers">Survey</a></li>
 <li><a href="#mathematical-based">Mathematical-based</a></li>
 <li><a href="#heuristic-based">Heuristic-based</a>
 <ul>
-<li><a href="#basic-heruistics">Basic heruistics</a></li>
-<li><a href="#meta-heruistics">Meta-heruistics</a></li>
+<li><a href="#basic-heuristics">Basic heuristics</a></li>
+<li><a href="#meta-heuristics">Meta-heuristics</a></li>
 </ul></li>
 <li><a href="#reinforcement-learning-based">Reinforcement Learning-based</a>
 <ul>
@@ -695,11 +695,23 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <li><code>Authors</code>: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu</li>
 <li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkxNjk4NTc=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
-<li><p><strong>NFV Platform Design: A Survey</strong></p>
+<li><p><strong>SDN/NFV-Empowered Future IoV With Enhanced Communication, Computing, and Caching</strong></p>
 <ul>
-<li><code>Publication</code>: TNSM 2020 (<strong>CCF-C</strong>)</li>
-<li><code>Authors</code>: Tianzhu Zhang</li>
-<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzIwMDIuMTEwNTk=">arXiv<i class="fa fa-external-link-alt"></i></span>(To IEEE explore)</li>
+<li><code>Publication</code>: Proc. IEEE 2020 (<strong>CCF-A</strong>)</li>
+<li><code>Authors</code>: Weihua Zhuang; Qiang Ye; Feng Lyu; Nan Cheng; Ju Ren</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5MDc4NTE=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>Survey of Performance Acceleration Techniques for Network Function Virtualization</strong></p>
+<ul>
+<li><code>Publication</code>: Proc. IEEE 2019 (<strong>CCF-A</strong>)</li>
+<li><code>Authors</code>: Leonardo Linguaglossa; Stanislav Lange; Salvatore Pontarelli; Gábor Rétvári; Dario Rossi; Thomas Zinner; Roberto Bifulco; Michael; Jarschel; Giuseppe Bianchi</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg2NjY3NTE=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>Will Serverless Computing Revolutionize NFV?</strong></p>
+<ul>
+<li><code>Publication</code>: Proc. IEEE 2019 (<strong>CCF-A</strong>)</li>
+<li><code>Authors</code>: Paarijaat Aditya; Istemi Ekin Akkus; Andre Beck; Ruichuan Chen; Volker Hilt; Ivica Rimac; Klaus Satzke; Manuel Stein</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg2NTMzNzk=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>A Survey on the Placement of Virtual Resources and Virtual Network Functions</strong></p>
 <ul>
@@ -717,7 +729,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <ul>
 <li><code>Publication</code>: CN 2018 (<strong>CCF-B</strong>)</li>
 <li><code>Authors</code>: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang</li>
-<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL2Ficy9waWkvUzEzODkxMjg2MTgzMDAzMDY=">ScienceDirect<i class="fa fa-external-link-alt"></i></span>(To ScienceDirect)</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL2Ficy9waWkvUzEzODkxMjg2MTgzMDAzMDY=">ScienceDirect<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
 <h2 id="mathematical-based"><a href="#content">Mathematical-based</a></h2>
@@ -754,7 +766,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <li><code>Authors</code>: Mohammad Karimzadeh-Farshbafan, Vahid Shah-Mansouri, Dusit Niyato</li>
 <li><code>Keyworks</code>: VNFP, MICP (mixed integer convex programming), Viterbi-based</li>
 <li><code>Objective</code>: Minimize the cost of resources of the InPs and maximizing the reliability of the service</li>
-<li><code>Link</code>: [IEEE Xplore]</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5MzMxMTE=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints</strong></p>
 <ul>
@@ -774,6 +786,32 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 </ul></li>
 </ol>
 <h3 id="meta-heuristic"><a href="#content">Meta-Heuristic</a></h3>
+<ol type="1">
+<li><p><strong>A Constructive Particle Swarm Optimizer for Virtual Network Embedding</strong></p>
+<ul>
+<li><code>Publication</code>: TNSE 2020 (<strong>JCR-Q1</strong>)</li>
+<li><code>Authors</code>: Yongqiang Gao; Haibing Guan; Zhengwei Qi; Yang Hou; Liang Liu</li>
+<li><code>Keyworks</code>: VNE, CPSO (Constructive Particle Swarm Optimizer)</li>
+<li><code>Objective</code>: MinimiziE the cost of bandwidth for embedding the VN</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg3ODYxNjY=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>A Multi-objective Ant Colony System algorithm for Virtual Machine Placement in Cloud Computing</strong></p>
+<ul>
+<li><code>Publication</code>: JCSS 2013 (<strong>CCF-B</strong>)</li>
+<li><code>Authors</code>: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li</li>
+<li><code>Keyworks</code>: VNFP, ACS (Ant Colony System), Multi-objective</li>
+<li><code>Objective</code>: Minimize total resource wastage and power consumption</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL3BpaS9TMDAyMjAwMDAxMzAwMDYyNw==">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+<li><p><strong>Virtual Network Embedding through Topology Awareness and Optimization</strong></p>
+<ul>
+<li><code>Publication</code>: CN 2012 (<strong>CCF-B</strong>)</li>
+<li><code>Authors</code>: Xiang Cheng, Sen Su, Zhongbao Zhang, Kai Shuang, Fangchun Yang, Yan Luo, Jie Wang</li>
+<li><code>Keyworks</code>: VNFP, PSO (Particle Swarm Optimization), Topology decomposition</li>
+<li><code>Objective</code>: Minimize total resource wastage and power Consumption</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8yNTc1ODIyNTNfVmlydHVhbF9uZXR3b3JrX2VtYmVkZGluZ190aHJvdWdoX3RvcG9sb2d5X2F3YXJlbmVzc19hbmRfb3B0aW1pemF0aW9u">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
+</ul></li>
+</ol>
 <h2 id="reinforcement-learning-based"><a href="#content">Reinforcement learning-based</a></h2>
 <h3 id="basic-rl"><a href="#content">Basic RL</a></h3>
 <ol type="1">
@@ -783,7 +821,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <li><code>Authors</code>: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li</li>
 <li><code>Keyworks</code>: VNFP, Dynamic Reliability-aware, MDP (Markov Deci- sion Process), Viterbi algorithm</li>
 <li><code>Objective</code>: Minimize the placement cost and maximize the number of admitted services</li>
-<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzE5MTEuMDY1MzI=">arXiv<i class="fa fa-external-link-alt"></i></span>(To arXiv)</li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzE5MTEuMDY1MzI=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>MUVINE: Multi-Stage Virtual Network Embedding in Cloud Data Centers Using Reinforcement Learning-Based Predictions</strong></p>
 <ul>
@@ -801,13 +839,13 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <li><code>Objective</code>: Maximize the profit of InPs (revenue-to-cost and acceptance ratio)</li>
 <li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
-<li><p><strong>An efficient algorithm for virtual network function placement and chaining</strong></p>
+<li><p><strong>An Efficient Algorithm for Virtual Network Function Placement and Chaining</strong></p>
 <ul>
 <li><code>Publication</code>: CCNC 2017</li>
 <li><code>Authors</code>: Oussama Soualah, Marouen Mechtri, Chaima Ghribi, Djamal Zeghlache</li>
 <li><code>Keyworks</code>: VNFP, MCTS (Monte Carlo Tree Search)</li>
 <li><code>Objective</code>: Maximize the acceptance rate of provisioning requests</li>
-<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTg1NzkzNzNfQW5fZWZmaWNpZW50X2FsZ29yaXRobV9mb3JfdmlydHVhbF9uZXR3b3JrX2Z1bmN0aW9uX3BsYWNlbWVudF9hbmRfY2hhaW5pbmc=">paper<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 </ol>
 <!-- <details><summary> more </summary>  -->
@@ -818,7 +856,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <li><code>Publication</code>: JSAC 2019 (<strong>CCF-A</strong>)</li>
 <li><code>Authors</code>: Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou</li>
 <li><code>Keyworks</code>: VNFP, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)</li>
-<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMTM4NzM5MjZfVmlydHVhbF9OZXR3b3JrX0VtYmVkZGluZ192aWFfTW9udGVfQ2FybG9fVHJlZV9TZWFyY2g=">paper<i class="fa fa-external-link-alt"></i></span></li>
+<li><code>Link</code>: <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50Lzg5MzI0NDU=">IEEE Xplore<i class="fa fa-external-link-alt"></i></span></li>
 </ul></li>
 <li><p><strong>DeepViNE: Virtual Network Embedding with Deep Reinforcement Learning</strong></p>
 <ul>
