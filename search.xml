@@ -700,7 +700,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>【Web】《CQU软件综合实践平台》项目总结</title>
     <url>/2020/09/03/WD%20-%20WEB%E5%BC%80%E5%8F%91/wd-web-cquse-system/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-vYGLxdoZ" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-rPQugUky" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="002C8n7x1RdgXe" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <p>在大二小学期软件实训课程中，自己做了一个“CQU软件综实践平台”的项目，于是在此总结一些自己第一次做自己的全栈开发项目的经验。（其实这篇总结应该很早就写的，至于为什么拖到了现在？“不愧是我——那只Monkey又在作怪”）</p>
@@ -721,30 +721,30 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <p><img data-src="/resource/images/web/web-cquse-overview.png" /></p>
 <p>以下为项目中部分界面的展示</p>
 <h3 id="统一登录入口">统一登录入口</h3>
-<p><embed src="/resource/images/web/web-cquse-login.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-login.webp" /></p>
 <h3 id="学生功能页面">学生功能页面</h3>
 <h4 id="学生主页">学生主页</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-home.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-stu-home.webp" /></p>
 <h4 id="学生签到界面">学生签到界面</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-sign.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-stu-sign.webp" /></p>
 <h4 id="学生上传报告">学生上传报告</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-report.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-stu-report.webp" /></p>
 <h4 id="学生成绩查询">学生成绩查询</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-grade.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-stu-grade.webp" /></p>
 <h4 id="学生个人中心">学生个人中心</h4>
-<p><embed src="/resource/images/web/web-cquse-stu-user.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-stu-user.webp" /></p>
 <h3 id="教师功能页面">教师功能页面</h3>
 <h4 id="教师主页">教师主页</h4>
-<p><embed src="/resource/images/web/web-cquse-tch-home.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-tch-home.webp" /></p>
 <h4 id="教师登记成绩">教师登记成绩</h4>
-<p><embed src="/resource/images/web/web-cquse-tch-grade.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-tch-grade.webp" /></p>
 <h4 id="教师查看选题">教师查看选题</h4>
-<p><embed src="/resource/images/web/web-cquse-tch-project.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-tch-project.webp" /></p>
 <h3 id="后台功能页面">后台功能页面</h3>
 <h4 id="学生信息管理">学生信息管理</h4>
-<p><embed src="/resource/images/web/web-cquse-admin-stu.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-admin-stu.webp" /></p>
 <h4 id="修改学生信息">修改学生信息</h4>
-<p><embed src="/resource/images/web/web-cquse-admin-modify.webp" /></p>
+<p><img data-src="/resource/images/web/web-cquse-admin-modify.webp" /></p>
 <h2 id="总结">总结</h2>
 <h3 id="前端方面">前端方面</h3>
 <p>Vue、React、Angular等等这些流行的前端框架一定程度上改变了前端开发的模式，工程化地提高了前端开发的效率，但也对前端开发提出了更高的要求。 项目中，通过进一步对Vue的学习，发现Vue很多新的特性和难的特性都可以在JavaScript、TypeScript中找到源痕迹。Vue在新beta版本中加入的新特性，也越来越偏重于TS的语言特性，更加注重模板与类的使用。但奈何个人对TypeScript了解甚少，因此对于一些语法糖的使用规范理解得并不是很好。所以编码时，秉承着真不会就不用的原则..还有要感谢Element UI让我写出了还能看的UI。</p>
@@ -770,7 +770,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>【随笔】时光刻痕——记博客重启</title>
     <url>/2020/08/25/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-record-our-moments/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-DKzFJcRK" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-pVDVjKhi" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="000ycaRl2V0Ojm" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <p>日历翻至八月，空气日渐升温。在这个特殊的年份，暑假的宿舍只余下我一人——这也是我第一次独自在远离家乡的“专属”空间中“自由”生活。</p>
@@ -855,8 +855,8 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 </tbody>
 </table>
 <h3 id="vnf-fge">VNF-FGE</h3>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-1.webp" /></p>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-2.webp" /></p>
+<p><img data-src="/resource/images/rp-vnf-placement-optimization-with-dlr-1.webp" /></p>
+<p><img data-src="/resource/images/rp-vnf-placement-optimization-with-dlr-2.webp" /></p>
 <p>对于一组网络服务，</p>
 <ul>
 <li>它必须被最优地被放置在一组主机服务器上，即 <span class="math inline">\(h \in H\)</span></li>
@@ -893,10 +893,10 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 </ul></li>
 </ul>
 <p>可用资源 <span class="math inline">\(r \in R\)</span></p>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-3.webp" /></p>
+<p><img data-src="/resource/images/rp-vnf-placement-optimization-with-dlr-3.webp" /></p>
 <h2 id="算法模型">算法模型</h2>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-4.webp" /></p>
-<p><embed src="/resource/images/rp-vnf-placement-optimization-with-dlr-5.webp" /></p>
+<p><img data-src="/resource/images/rp-vnf-placement-optimization-with-dlr-4.webp" /></p>
+<p><img data-src="/resource/images/rp-vnf-placement-optimization-with-dlr-5.webp" /></p>
 <h2 id="性能评估">性能评估</h2>
 <h3 id="设计实验">设计实验</h3>
 <h3 id="对比算法">对比算法</h3>
@@ -966,7 +966,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 </ul></li>
 </ul>
 <figure>
-<img data-src="/resource/images/da-scipy-sparse-dense.gif" alt="By Matt" /><figcaption><span class="exturl" data-url="aHR0cHM6Ly9tYXR0ZWRpbmcuZ2l0aHViLmlvLzIwMTkvMDQvMjUvc3BhcnNlLW1hdHJpY2VzLw==">By Matt<i class="fa fa-external-link-alt"></i></span></figcaption>
+<img data-src="/resource/images/da-scipy-sparse-dense.gif" alt="By Matt" /><figcaption aria-hidden="true"><span class="exturl" data-url="aHR0cHM6Ly9tYXR0ZWRpbmcuZ2l0aHViLmlvLzIwMTkvMDQvMjUvc3BhcnNlLW1hdHJpY2VzLw==">By Matt<i class="fa fa-external-link-alt"></i></span></figcaption>
 </figure>
 <h3 id="压缩存储">压缩存储</h3>
 <p>存储矩阵的一般方法是采用二维数组，其优点是可以随机地访问每一个元素，因而能够容易实现矩阵的各种运算。<br />
@@ -1426,152 +1426,152 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <h2 id="结构设计">结构设计</h2>
 <h3 id="首页">首页</h3>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-18-wps-office-1.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-18-wps-office-1.webp" alt="2018/11/20-大计基展演" /><figcaption aria-hidden="true">2018/11/20-大计基展演</figcaption>
 </figure>
 <ul>
 <li>描述：这个PPT做的时间还是比较早的，当时为了契合WPS和OFFICE对比的主题，于是做的颜色和动画比较花哨</li>
 <li>想法：颜色多而且都是重色彩的，过浓而影响视觉重心，可以减少些装饰元素未出现或不搭的颜色如粉、紫等等，再减少些颜色的饱和度，或许会改善些。</li>
 </ul>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-srtp-1.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-srtp-1.webp" alt="2019/06/03-SRTP立项" /><figcaption aria-hidden="true">2019/06/03-SRTP立项</figcaption>
 </figure>
 <ul>
 <li>描述：大概是第一次复现这副封面，比较适合首页信息密度较高的构图</li>
 <li>想法：背景颜色稍微亮了些，右部分的构图不太稳</li>
 </ul>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2019-train-4399-1.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2019-train-4399-1.webp" alt="2019/08/30-实训结题" /><figcaption aria-hidden="true">2019/08/30-实训结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-1.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-1.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-english-pre-ai-1.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-english-pre-ai-1.webp" alt="2020/06/05-陈述与沟通Presentation" /><figcaption aria-hidden="true">2020/06/05-陈述与沟通Presentation</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-innovte-1.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-innovte-1.webp" alt="2020/06/24-市创立项" /><figcaption aria-hidden="true">2020/06/24-市创立项</figcaption>
 </figure>
 <h3 id="目录页">目录页</h3>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-srtp-2.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-srtp-2.webp" alt="2019/06/03-SRTP立项" /><figcaption aria-hidden="true">2019/06/03-SRTP立项</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2019-train-4399-2.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2019-train-4399-2.webp" alt="2019/08/30-实训结题" /><figcaption aria-hidden="true">2019/08/30-实训结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-innovte-2.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-innovte-2.webp" alt="2020/06/24-市创立项" /><figcaption aria-hidden="true">2020/06/24-市创立项</figcaption>
 </figure>
 <h3 id="图示页">图示页</h3>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-srtp-3.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-srtp-3.webp" alt="2019/06/03-SRTP立项" /><figcaption aria-hidden="true">2019/06/03-SRTP立项</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2019-train-4399-4.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2019-train-4399-4.webp" alt="2019/08/30-实训结题" /><figcaption aria-hidden="true">2019/08/30-实训结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-4.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-4.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-6.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-6.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-12.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-12.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-english-pre-ai-2.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-english-pre-ai-2.webp" alt="2020/06/05-陈述与沟通Presentation" /><figcaption aria-hidden="true">2020/06/05-陈述与沟通Presentation</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-english-pre-ai-5.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-english-pre-ai-5.webp" alt="2020/06/05-陈述与沟通Presentation" /><figcaption aria-hidden="true">2020/06/05-陈述与沟通Presentation</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-innovte-3.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-innovte-3.webp" alt="2020/06/24-市创立项" /><figcaption aria-hidden="true">2020/06/24-市创立项</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-innovte-4.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-innovte-4.webp" alt="2020/06/24-市创立项" /><figcaption aria-hidden="true">2020/06/24-市创立项</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-train-cquse-1.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-train-cquse-1.webp" alt="2020/07/09-软件综合实践结题" /><figcaption aria-hidden="true">2020/07/09-软件综合实践结题</figcaption>
 </figure>
 <h3 id="分点页">分点页</h3>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-srtp-4.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-srtp-4.webp" alt="2019/06/03-SRTP立项" /><figcaption aria-hidden="true">2019/06/03-SRTP立项</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2019-train-4399-5.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2019-train-4399-5.webp" alt="2019/08/30-实训结题" /><figcaption aria-hidden="true">2019/08/30-实训结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2019-train-4399-8.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2019-train-4399-8.webp" alt="2019/08/30-实训结题" /><figcaption aria-hidden="true">2019/08/30-实训结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-3.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-3.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-5.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-5.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-7.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-7.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-9.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-9.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-innovte-6.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-innovte-6.webp" alt="2020/06/24-市创立项" /><figcaption aria-hidden="true">2020/06/24-市创立项</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-train-cquse-2.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-train-cquse-2.webp" alt="2020/07/09-软件综合实践结题" /><figcaption aria-hidden="true">2020/07/09-软件综合实践结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-train-cquse-3.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-train-cquse-3.webp" alt="2020/07/09-软件综合实践结题" /><figcaption aria-hidden="true">2020/07/09-软件综合实践结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-train-cquse-4.webp" /><figcaption>2020/07/09-软件综合实践结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-train-cquse-4.webp" alt="2020/07/09-软件综合实践结题" /><figcaption aria-hidden="true">2020/07/09-软件综合实践结题</figcaption>
 </figure>
 <h3 id="数据页">数据页</h3>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2019-train-4399-6.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2019-train-4399-6.webp" alt="2019/08/30-实训结题" /><figcaption aria-hidden="true">2019/08/30-实训结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2019-train-4399-7.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2019-train-4399-7.webp" alt="2019/08/30-实训结题" /><figcaption aria-hidden="true">2019/08/30-实训结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-2.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-2.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-10.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-10.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-13.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-13.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <h3 id="对比页">对比页</h3>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-18-wps-office-2.webp" /><figcaption>2018/11/20-大计基展演</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-18-wps-office-2.webp" alt="2018/11/20-大计基展演" /><figcaption aria-hidden="true">2018/11/20-大计基展演</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-8.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-8.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-english-pre-ai-3.webp" /><figcaption>2020/06/05-陈述与沟通Presentation</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-english-pre-ai-3.webp" alt="2020/06/05-陈述与沟通Presentation" /><figcaption aria-hidden="true">2020/06/05-陈述与沟通Presentation</figcaption>
 </figure>
 <h3 id="人物页">人物页</h3>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-11.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-11.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <h3 id="时间轴">时间轴</h3>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-14.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-14.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2020-innovte-5.webp" /><figcaption>2020/06/24-市创立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2020-innovte-5.webp" alt="2020/06/24-市创立项" /><figcaption aria-hidden="true">2020/06/24-市创立项</figcaption>
 </figure>
 <h3 id="结尾页">结尾页</h3>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-srtp-5.webp" /><figcaption>2019/06/03-SRTP立项</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-srtp-5.webp" alt="2019/06/03-SRTP立项" /><figcaption aria-hidden="true">2019/06/03-SRTP立项</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-2019-train-4399-9.webp" /><figcaption>2019/08/30-实训结题</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-2019-train-4399-9.webp" alt="2019/08/30-实训结题" /><figcaption aria-hidden="true">2019/08/30-实训结题</figcaption>
 </figure>
 <figure>
-<embed src="/resource/images/ppt/ad-ppt-19-hl-b-s-15.webp" /><figcaption>2020/04/09-虹霖品牌咨询</figcaption>
+<img data-src="/resource/images/ppt/ad-ppt-19-hl-b-s-15.webp" alt="2020/04/09-虹霖品牌咨询" /><figcaption aria-hidden="true">2020/04/09-虹霖品牌咨询</figcaption>
 </figure>
 <h2 id="元素设计">元素设计</h2>
 <h3 id="配色">配色</h3>
@@ -2017,79 +2017,79 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <p><img data-src="/resource/images/lecture-zju-chenwei-data-visualization-4.png" /></p>
 <h4 id="科学研究">科学研究</h4>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553101983-592e3de3-6399-4d7e-94fd-5520cb5d7436.jpeg" alt="Screenshot_2020-03-21-19-29-04-321_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-29-04-321_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553101983-592e3de3-6399-4d7e-94fd-5520cb5d7436.jpeg" alt="Screenshot_2020-03-21-19-29-04-321_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-29-04-321_com.tencent.mm.jpg</figcaption>
 </figure>
 <h4 id="物联网与智慧城市">物联网与智慧城市</h4>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553093853-82ae1835-1ee9-446e-a9d7-1062ec4bd990.jpeg" alt="Screenshot_2020-03-21-19-31-43-189_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-31-43-189_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553093853-82ae1835-1ee9-446e-a9d7-1062ec4bd990.jpeg" alt="Screenshot_2020-03-21-19-31-43-189_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-31-43-189_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553096563-2e705eda-f52a-4d9d-8501-56e8d9f4a20b.jpeg" alt="Screenshot_2020-03-21-19-31-00-805_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-31-00-805_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553096563-2e705eda-f52a-4d9d-8501-56e8d9f4a20b.jpeg" alt="Screenshot_2020-03-21-19-31-00-805_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-31-00-805_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553100901-44982283-79e6-4f40-bbde-844fd79a9312.jpeg" alt="Screenshot_2020-03-21-19-32-44-746_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-32-44-746_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553100901-44982283-79e6-4f40-bbde-844fd79a9312.jpeg" alt="Screenshot_2020-03-21-19-32-44-746_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-32-44-746_com.tencent.mm.jpg</figcaption>
 </figure>
 <h4 id="互联网与社交媒体">互联网与社交媒体</h4>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553116198-c5ab1e00-48c1-40e4-91cf-f4946189fef8.jpeg" alt="Screenshot_2020-03-21-19-33-59-913_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-33-59-913_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553116198-c5ab1e00-48c1-40e4-91cf-f4946189fef8.jpeg" alt="Screenshot_2020-03-21-19-33-59-913_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-33-59-913_com.tencent.mm.jpg</figcaption>
 </figure>
 <h4 id="可视化战役">可视化战役</h4>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553117639-2c9b41bf-e710-47fe-a845-1127481da915.jpeg" alt="Screenshot_2020-03-21-19-22-01-271_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-22-01-271_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553117639-2c9b41bf-e710-47fe-a845-1127481da915.jpeg" alt="Screenshot_2020-03-21-19-22-01-271_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-22-01-271_com.tencent.mm.jpg</figcaption>
 </figure>
 <h4 id="可视化技术原理">可视化技术原理</h4>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553108397-496f8771-8244-4a14-b3e0-1de3c4f563a7.jpeg" alt="Screenshot_2020-03-21-19-36-29-829_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-36-29-829_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553108397-496f8771-8244-4a14-b3e0-1de3c4f563a7.jpeg" alt="Screenshot_2020-03-21-19-36-29-829_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-36-29-829_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553107177-df65738b-5da3-4e12-97b4-41634e49bb05.jpeg#" alt="Screenshot_2020-03-21-19-38-51-711_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-38-51-711_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553107177-df65738b-5da3-4e12-97b4-41634e49bb05.jpeg#" alt="Screenshot_2020-03-21-19-38-51-711_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-38-51-711_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553103214-3be220b5-f82b-449a-8236-99179c056d5f.jpeg" alt="Screenshot_2020-03-21-19-39-35-005_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-39-35-005_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553103214-3be220b5-f82b-449a-8236-99179c056d5f.jpeg" alt="Screenshot_2020-03-21-19-39-35-005_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-39-35-005_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553113310-36dfe174-5469-4332-9562-dd2342328f4c.jpeg" alt="Screenshot_2020-03-21-19-41-55-010_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-41-55-010_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553113310-36dfe174-5469-4332-9562-dd2342328f4c.jpeg" alt="Screenshot_2020-03-21-19-41-55-010_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-41-55-010_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553106046-4592657f-b6db-40c6-b015-1c8295265d90.jpeg" alt="Screenshot_2020-03-21-19-43-19-126_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-43-19-126_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553106046-4592657f-b6db-40c6-b015-1c8295265d90.jpeg" alt="Screenshot_2020-03-21-19-43-19-126_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-43-19-126_com.tencent.mm.jpg</figcaption>
 </figure>
 <h4 id="疫情可视化成果">疫情可视化成果</h4>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553104562-2fdc936c-d4fc-4389-b45c-3bcf70f540e0.jpeg" alt="Screenshot_2020-03-21-19-43-50-613_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-43-50-613_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553104562-2fdc936c-d4fc-4389-b45c-3bcf70f540e0.jpeg" alt="Screenshot_2020-03-21-19-43-50-613_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-43-50-613_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553122434-af75c7be-d6a2-4b55-aadb-78466962b343.jpeg" alt="Screenshot_2020-03-21-19-46-02-513_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-46-02-513_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553122434-af75c7be-d6a2-4b55-aadb-78466962b343.jpeg" alt="Screenshot_2020-03-21-19-46-02-513_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-46-02-513_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553118922-106f8ca6-72a4-45b4-b1c1-1f273a7f4ab4.jpeg" alt="Screenshot_2020-03-21-19-46-10-852_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-46-10-852_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553118922-106f8ca6-72a4-45b4-b1c1-1f273a7f4ab4.jpeg" alt="Screenshot_2020-03-21-19-46-10-852_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-46-10-852_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553110693-67c79c0d-856c-4a8d-b443-0737a958a752.jpeg" alt="Screenshot_2020-03-21-19-47-49-742_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-47-49-742_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553110693-67c79c0d-856c-4a8d-b443-0737a958a752.jpeg" alt="Screenshot_2020-03-21-19-47-49-742_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-47-49-742_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553095086-c642ff91-c59c-4f2c-be98-f46d2c27eb4b.jpeg" alt="Screenshot_2020-03-21-19-48-35-127_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-48-35-127_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553095086-c642ff91-c59c-4f2c-be98-f46d2c27eb4b.jpeg" alt="Screenshot_2020-03-21-19-48-35-127_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-48-35-127_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553121370-dc268ad9-7e44-489e-88aa-6a7eecfaa959.jpeg" alt="Screenshot_2020-03-21-19-50-08-299_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-50-08-299_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553121370-dc268ad9-7e44-489e-88aa-6a7eecfaa959.jpeg" alt="Screenshot_2020-03-21-19-50-08-299_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-50-08-299_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553099079-0f2287d6-5f6f-4672-929b-dbc8ced4c212.jpeg" alt="Screenshot_2020-03-21-19-52-23-743_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-52-23-743_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553099079-0f2287d6-5f6f-4672-929b-dbc8ced4c212.jpeg" alt="Screenshot_2020-03-21-19-52-23-743_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-52-23-743_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553123618-26a9e0b7-8519-488b-9ae0-507597ec0127.jpeg" alt="Screenshot_2020-03-21-19-55-31-803_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-55-31-803_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553123618-26a9e0b7-8519-488b-9ae0-507597ec0127.jpeg" alt="Screenshot_2020-03-21-19-55-31-803_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-55-31-803_com.tencent.mm.jpg</figcaption>
 </figure>
 <h5 id="疫情可视化公益活动">疫情可视化公益活动</h5>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553097863-0e4f4174-04d5-4d15-98a1-e662a8316425.jpeg" alt="Screenshot_2020-03-21-19-55-47-774_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-19-55-47-774_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553097863-0e4f4174-04d5-4d15-98a1-e662a8316425.jpeg" alt="Screenshot_2020-03-21-19-55-47-774_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-19-55-47-774_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553109583-ae8af672-4d48-4d36-a56e-bb5906c69f87.jpeg" alt="Screenshot_2020-03-21-20-04-33-705_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-20-04-33-705_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553109583-ae8af672-4d48-4d36-a56e-bb5906c69f87.jpeg" alt="Screenshot_2020-03-21-20-04-33-705_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-20-04-33-705_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553114681-a682bc1d-6485-4060-b11c-9caf09c55fcb.jpeg" alt="Screenshot_2020-03-21-20-08-01-604_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-20-08-01-604_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553114681-a682bc1d-6485-4060-b11c-9caf09c55fcb.jpeg" alt="Screenshot_2020-03-21-20-08-01-604_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-20-08-01-604_com.tencent.mm.jpg</figcaption>
 </figure>
 <figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553111955-ea479654-ba5b-4a85-828c-a786583d293b.jpeg" alt="Screenshot_2020-03-21-20-11-09-734_com.tencent.mm.jpg" /><figcaption>Screenshot_2020-03-21-20-11-09-734_com.tencent.mm.jpg</figcaption>
+<img data-src="https://cdn.nlark.com/yuque/0/2020/jpeg/991157/1586553111955-ea479654-ba5b-4a85-828c-a786583d293b.jpeg" alt="Screenshot_2020-03-21-20-11-09-734_com.tencent.mm.jpg" /><figcaption aria-hidden="true">Screenshot_2020-03-21-20-11-09-734_com.tencent.mm.jpg</figcaption>
 </figure>
 <h2 id="拓展阅读">拓展阅读</h2>
 <blockquote>
@@ -2242,9 +2242,9 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
         <category>RP - 科研论文</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>Lecture</tag>
         <tag>Innovatation</tag>
+        <tag>Research</tag>
       </tags>
   </entry>
   <entry>
@@ -2282,7 +2282,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>Start the Journey of My Blog</title>
     <url>/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-EddARnta" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-LZmEUiSh" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="0046Ze2d2A7jeA" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <h2 id="welcome-to-my-blog">Welcome to My Blog</h2>
@@ -2347,7 +2347,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
     <title>【游戏人生】双子Gemini——我们都在寻找着某个人</title>
     <url>/2017/08/07/GL%20-%20%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/game-gemini/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-DfSBrVkp" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-XXXPQlgg" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="0004CQiv4NUbmR" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <blockquote class="blockquote-center">
