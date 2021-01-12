@@ -3230,14 +3230,28 @@ mjx-container[display="true"] + br {
 .float-right {
   float: right;
 }
+.main-inner h2 a {
+  color: #69f;
+  border-bottom: 0;
+}
+.main-inner h2 a:hover {
+  color: #7af;
+}
+.main-inner a {
+  color: #a8f;
+  border-bottom: 0;
+}
+.main-inner a:hover {
+  color: #aaf;
+}
 body {
-  background: #e1f5ff url("../images/bg-3.webp") no-repeat;
+  background: #fff url("../images/bg-3.webp") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
 }
-.main-inner {
-  opacity: 0.95;
+.main-inner .post-block {
+  background: rgba(255,255,255,0.95);
 }
 .site-brand-container {
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -3288,10 +3302,10 @@ body {
   background: #87daff;
   box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
-.category-all-page .category-list-count::before {
+.category-all-page .category-list-count:before {
   content: '';
 }
-.category-all-page .category-list-count::after {
+.category-all-page .category-list-count:after {
   content: '';
 }
 .category-all-page .category-list-child {
@@ -3319,10 +3333,19 @@ body {
 }
 .post-copyright {
   border-left: 3px solid #fb9;
-  background-color: #cdf;
+  background-color: rgba(212,226,253,0.3);
 }
 figcaption {
   text-align: center;
+}
+.highlight {
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.3);
+}
+code,
+kbd,
+.highlight,
+pre {
+  background: #f8f8f8;
 }
 .post-body {
   counter-reset: h2;
@@ -3336,13 +3359,13 @@ figcaption {
   color: #69f;
   border-bottom: 0;
 }
-.post-body h1 a::hover,
-.post-body h2 a::hover,
-.post-body h3 a::hover,
-.post-body h4 a::hover,
-.post-body h5 a::hover,
-.post-body h6 a::hover {
-  color: #87daff;
+.post-body h1 a:hover,
+.post-body h2 a:hover,
+.post-body h3 a:hover,
+.post-body h4 a:hover,
+.post-body h5 a:hover,
+.post-body h6 a:hover {
+  color: #7af;
 }
 .post-body h1 {
   counter-reset: h2;
@@ -3428,9 +3451,6 @@ h1,
 .posts-expand .post-title-link {
   color: #69f;
 }
-.posts-expand .post-title-link::before {
+.posts-expand .post-title-link:before {
   background: #69f;
-}
-.href {
-  color: #87daff;
 }
