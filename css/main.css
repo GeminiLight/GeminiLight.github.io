@@ -3230,19 +3230,19 @@ mjx-container[display="true"] + br {
 .float-right {
   float: right;
 }
+.main-inner article a {
+  color: #a8f;
+  border-bottom: 0;
+}
+.main-inner article a:hover {
+  color: #aaf;
+}
 .main-inner h2 a {
   color: #69f;
   border-bottom: 0;
 }
 .main-inner h2 a:hover {
   color: #7af;
-}
-.main-inner a {
-  color: #a8f;
-  border-bottom: 0;
-}
-.main-inner a:hover {
-  color: #aaf;
 }
 body {
   background: #fff url("../images/bg-3.webp") no-repeat;
