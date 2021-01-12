@@ -256,6 +256,13 @@
   </url>
   
   <url>
+    <loc>https://www.geminilight.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.geminilight.cn/tags/Game/</loc>
     <lastmod>2021-01-12</lastmod>
     <changefreq>daily</changefreq>
@@ -284,28 +291,7 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2021-01-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.geminilight.cn/tags/Python/</loc>
-    <lastmod>2021-01-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/tags/Lecture/</loc>
-    <lastmod>2021-01-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/tags/Innovatation/</loc>
     <lastmod>2021-01-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -355,6 +341,20 @@
   
   <url>
     <loc>https://www.geminilight.cn/tags/DRL/</loc>
+    <lastmod>2021-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/tags/Lecture/</loc>
+    <lastmod>2021-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/tags/Innovatation/</loc>
     <lastmod>2021-01-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -412,14 +412,14 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/categories/MY-%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://www.geminilight.cn/categories/ML-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2021-01-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/categories/ML-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://www.geminilight.cn/categories/MY-%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2021-01-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
