@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>【论文汇总】Papers on NFV-RA</title>
-    <url>/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/</url>
+    <url>/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-list-nfv-ra/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Lastest update: JAN. 10, 2021.<br />
 Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L25mdi1wYXBlcnM=">GitHub<i class="fa fa-external-link-alt"></i></span>, so as to get updates in time.</p>
 <p>This is a paper list about Resource Allocation in <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmV0d29ya19mdW5jdGlvbl92aXJ0dWFsaXphdGlvbg==">Network Functions Virtualization<i class="fa fa-external-link-alt"></i></span> (NFV) including</p>
@@ -92,7 +92,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 </ol>
 <h2 id="mathematical-based"><a href="#content">Mathematical-based</a></h2>
 <h2 id="heuristic-based"><a href="#content">Heuristic-based</a></h2>
-<h3 id="based-heuristic"><a href="#content">Based Heuristic</a></h3>
+<h3 id="basic-heuristic"><a href="#content">Basic Heuristic</a></h3>
 <ol type="1">
 <li><p><strong>Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network Edge</strong></p>
 <ul>

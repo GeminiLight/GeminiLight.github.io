@@ -1,4 +1,4 @@
-https://www.geminilight.cn/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-papers-summary/
+https://www.geminilight.cn/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-list-nfv-ra/
 https://www.geminilight.cn/2020/12/01/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-dl-gnn-gat/
 https://www.geminilight.cn/2020/11/29/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding/
 https://www.geminilight.cn/2020/11/06/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/research-great-researcher/
