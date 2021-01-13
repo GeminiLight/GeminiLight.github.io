@@ -3,14 +3,14 @@
   <entry>
     <title>【论文笔记】Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network</title>
     <url>/2021/01/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vnf-placement-latency-aware-network-edge/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文研究了网络边缘场景下的VNF放置问题，旨在最小化整体（服务器和链路）资源消耗，提出了一种两阶段的延迟感知的约束深度优先搜索算法（CDFSA） 。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文研究了网络边缘场景下的VNF放置问题，旨在最小化整体（服务器和链路）资源消耗，提出了一种两阶段的延迟感知的约束深度优先搜索算法（CDFSA） 和基于路径的贪婪算法（PGA）的方案。</p>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network Edge<br />
 <strong>论文作者</strong>：Panpan Jin, Xincai Fei, Qixia Zhang, Qixia Zhang, Fangming Liu, Bo Li<br />
 <strong>发表期刊</strong>：INFOCOM-2020 (CCF-A)<br />
 <strong>研究方向</strong>：NFV 网络功能虚拟化<br />
-<strong>关键技术</strong>：虚拟网络服务放置, 强化学习, 图卷积神经网络<br />
-<strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
+<strong>关键技术</strong>：邻接矩阵重构, 深度优先搜索, 贪婪算法<br />
+<strong>主要创新</strong>：网络边缘场景、延迟保障、两阶段（先边后点）<br />
 <span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkxNTUzNDU=">下载论文<i class="fa fa-external-link-alt"></i></span></p>
 <a id="more"></a>
 <p><strong>缩写词汇表</strong></p>
@@ -348,6 +348,11 @@ s_{3} &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0
 <h4 id="平均延迟">平均延迟</h4>
 <p><img data-src="/resource/images/paper/paper-nfv-vnfp-latency-ne-experiment-average-latency.png" /></p>
 <h2 id="总结思考">总结思考</h2>
+<ul>
+<li>场景新颖</li>
+<li>矩阵重构</li>
+<li>先边后点</li>
+</ul>
 ]]></content>
       <categories>
         <category>RP - 科研论文</category>
