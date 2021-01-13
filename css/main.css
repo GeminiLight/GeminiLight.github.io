@@ -3236,6 +3236,10 @@ mjx-container[display="true"] + br {
 .main-inner h2 a:hover {
   color: #7af;
 }
+.main-inner .post-button a:hover {
+  color: #fff;
+  background: #69f;
+}
 body {
   background: #fff url("../images/bg-3.webp") no-repeat;
   background-size: cover;
@@ -3318,10 +3322,6 @@ body {
   font-size: 15px;
   border-radius: 16px;
   line-height: 2;
-}
-.post-button a:hover {
-  color: #fff;
-  background: #69f;
 }
 .post-copyright {
   border-left: 3px solid #fb9;
