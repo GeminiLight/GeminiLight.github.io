@@ -1,6 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【论文笔记】Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network</title>
+    <url>/2021/01/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vnf-placement-latency-aware-network-edge/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文研究了网络边缘场景下的VNF放置问题，旨在最小化整体（服务器和链路）资源消耗，提出了一种两阶段的延迟感知的约束深度优先搜索算法（CDFSA） 。</p>
+<h2 id="论文简介">论文简介</h2>
+<p><strong>论文名称</strong>：Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network Edge<br />
+<strong>论文作者</strong>：Panpan Jin, Xincai Fei, Qixia Zhang, Qixia Zhang, Fangming Liu, Bo Li<br />
+<strong>发表期刊</strong>：INFOCOM-2020 (CCF-A)<br />
+<strong>研究方向</strong>：NFV 网络功能虚拟化<br />
+<strong>关键技术</strong>：虚拟网络服务放置, 强化学习, 图卷积神经网络<br />
+<strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
+<span class="exturl" data-url="aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzkxNTUzNDU=">下载论文<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
+<p><strong>缩写词汇表</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">缩写</th>
+<th>描述</th>
+<th>全名</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">VNF</td>
+<td>虚拟网络功能</td>
+<td>Virtual Network Function</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SFC</td>
+<td>服务功能链</td>
+<td>Service Function Chain</td>
+</tr>
+</tbody>
+</table>
+<h2 id="研究背景">研究背景</h2>
+<ul>
+<li>研究问题：VNF部署问题</li>
+<li>研究场景：网络边缘</li>
+<li>优化目标：在满足延迟要求的前提下，最小化服务器和链路的资源消耗</li>
+<li>研究难点：需同时考虑服务器和链路资源消耗
+<ul>
+<li>Path 1：虽选择了最短路径，但由于<span class="math inline">\(d_2\)</span>没有VNF2需要即时运行，这会产生额外的计算资源消耗</li>
+<li>Path 2：虽避免了新开服务器，但链路要长于Path 1</li>
+</ul></li>
+</ul>
+<h2 id="问题建模">问题建模</h2>
+<h3 id="network">Network</h3>
+<p>无向图 <span class="math inline">\(\mathbb{G} = (\mathbb{U}, \mathbb{D}, \mathbb{E})\)</span></p>
+<ul>
+<li><span class="math inline">\(\mathbb{U}\)</span>：Users，表示用户的集合</li>
+<li><span class="math inline">\(\mathbb{D}\)</span>：Devices，表示网络边缘中所有服务器硬件设备的集合，如接入点(ccess points)、交换器(switches)和路由器(routers)等
+<ul>
+<li>对于一个设备<span class="math inline">\(d_i \in \mathbb{D}\)</span>，其计算资源为<span class="math inline">\(C_i\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\mathbb{E}\)</span>：Edges，表示服务器间物理链路的集合
+<ul>
+<li>对于边<span class="math inline">\(e(u,v) \in \mathbb{E}\)</span>，表示设备<span class="math inline">\(d_u\)</span>和<span class="math inline">\(d_v\)</span>间链路，其带宽资源为<span class="math inline">\(B(u,v)\)</span></li>
+</ul></li>
+</ul>
+<h3 id="sfc-request">SFC Request</h3>
+<p>不同的用户有不同的服务需求，每个SFC由一组由顺序的VNF序列组成</p>
+<ul>
+<li><span class="math inline">\(\mathbb{N}\)</span>：表示各种类型VNF的集合</li>
+<li><span class="math inline">\(\mathbb{S}\)</span>：表示各种SFC的集合</li>
+<li><span class="math inline">\(\mathbb{P}\)</span>：表示每个SFC实际部署链路的集合</li>
+</ul>
+<p>对于用户<span class="math inline">\(u_i \in \mathbb{U}\)</span>其请求的SFC为<span class="math inline">\(S_i\)</span>，</p>
+<ul>
+<li>其中VNF个数为<span class="math inline">\(|S_i|\)</span>，第<span class="math inline">\(l\)</span>个VNF为<span class="math inline">\(s_i^l \in \mathbb{S_i}\)</span></li>
+<li><span class="math inline">\(\Phi_i^{ll&#39;}\)</span>表示<span class="math inline">\(s_i^l\)</span>与<span class="math inline">\(s_i^{l&#39;}\)</span>间的子链</li>
+<li><span class="math inline">\(T_{i,n}^{l}\)</span>表示第<span class="math inline">\(l\)</span>个VNF的类型是不是<span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\((\phi_i, t_i, r_i)\)</span>分别表示<span class="math inline">\(S_i\)</span>的source，destiination和flow rate
+<ul>
+<li><span class="math inline">\(\phi_i\)</span>是<span class="math inline">\(S_i\)</span>对应的AP，它们分布在不同的边缘云上，距离用户<span class="math inline">\(u_i\)</span>非常近</li>
+<li>每个SFC只有一个AP来进行网络访问，<span class="math inline">\(S_i\)</span>可以从第<span class="math inline">\(k\)</span>个AP <span class="math inline">\(d_{i,k} \in \phi_i\)</span>访问网络</li>
+<li>每一个AP <span class="math inline">\(d_{i,k}\)</span>实质仍对应一台服务器<span class="math inline">\(d_j \in \mathbb{D}\)</span>，其处理能力表示为<span class="math inline">\(\alpha_j\)</span></li>
+<li>对于<span class="math inline">\(r_i\)</span>，假设流速始终不变，且为单流</li>
+</ul></li>
+<li><span class="math inline">\(p_i \in \mathbb{P}\)</span>是该SFC被放置的物理链路的集合
+<ul>
+<li>如<span class="math inline">\(\{e(d_1, d_2), e(d_2, d_3), e(d_3, d_4)\}\)</span></li>
+</ul></li>
+</ul>
+<h3 id="问题约束">问题约束</h3>
+<h4 id="resource-capacity-计算资源约束">Resource Capacity 计算资源约束</h4>
+<p>假设</p>
+<ul>
+<li>一台服务器上的VNF可以同时被不同的SFC使用，使得它的剩余处理能力得到利用</li>
+<li>对于服务器<span class="math inline">\(d_j \in \mathbb{D}\)</span>，其运行的VNF种类的数量为<span class="math inline">\(Y_{i,n}\)</span></li>
+<li>其中，对于类型为<span class="math inline">\(n\)</span>的VNF，其所消耗的计算资源为<span class="math inline">\(R_n\)</span></li>
+<li>当服务链所需VNF类型已经运行在<span class="math inline">\(d_j\)</span>上时，不需新开VNF，即<span class="math inline">\(Y_{i,n}\)</span>不变；否则，新开一个VNF实例且<span class="math inline">\(Y_{i,n} = Y_{i,n} + 1\)</span></li>
+</ul>
+<p>每台服务器<span class="math inline">\(d_j\)</span>运行实例所需计算资源不超过其最大计算资源<span class="math inline">\(C_j\)</span>：</p>
+<p><span class="math display">\[\sum_{n \in \mathbb{N}} Y_{j, n} R_{n} \leq C_{j}, \quad \forall d_{j} \in \mathbb{D}\]</span></p>
+<h4 id="bandwidth-capacity-链路资源约束">Bandwidth Capacity 链路资源约束</h4>
+<p>同样，每条链路<span class="math inline">\(e(u,v)\)</span>所负载的带宽资源不超过其最大容量<span class="math inline">\(B(u,v)\)</span>：</p>
+<p><span class="math display">\[
+\sum_{S_{i} \in \mathbb{S}} \sum_{\Phi_{i}^{l l^{\prime} \subseteq S_{i}}} Z_{i(u, v)}^{l l^{\prime}} \cdot r_{i} \leq B(u, v),
+\forall e(u, v) \in \mathbb{E}, 1 \leq l&lt;l^{\prime} \leq\left|S_{i}\right|\]</span></p>
+<ul>
+<li><span class="math inline">\(Z_{i(e,u)}^{ll&#39;}\)</span>：表示服务链<span class="math inline">\(S_i\)</span>的子链<span class="math inline">\(\Phi_i^{ll&#39;}\)</span>是否经过链路<span class="math inline">\(e(u,v) \in \mathbb{E}\)</span></li>
+</ul>
+<h4 id="processing-capacity-处理能力约束">Processing Capacity 处理能力约束</h4>
+<p>每台服务器<span class="math inline">\(d_j\)</span>对所有VNF的实际处理能力不超过其最大能力：</p>
+<p><span class="math display">\[\sum_{S_{i} \in \mathbb{S}} \sum_{s_{i}^{l} \in S_{i}} T_{i, n}^{l} \cdot X_{i, j}^{l} \cdot r_{i} \leq Y_{j, n} \cdot W_{n}, \forall n \in \mathbb{N}, \forall d_{j} \in \mathbb{D}\]</span></p>
+<ul>
+<li><span class="math inline">\(W_n\)</span>：对type-n VNF的处理能力</li>
+<li><span class="math inline">\(X_{i,j}^l\)</span>：表明SFC <span class="math inline">\(S_i 的第\)</span>l<span class="math inline">\(个\)</span>VNF<span class="math inline">\(是否运行在服务器\)</span>d_j$上
+<ul>
+<li>特别地，此处假设SFC为单流，即SFC中的一个VNF只能运行在一个服务器上</li>
+<li><span class="math inline">\(\sum_{d_{j} \in \mathbb{D}} X_{i, j}^{l}=1, \quad \forall S_{i} \in \mathbb{S}, \forall l \in\left[1,\left|S_{i}\right|\right]\)</span></li>
+</ul></li>
+</ul>
+<h4 id="latency-limitation-延迟约束">latency limitation 延迟约束</h4>
+<p>本文考虑了两种延迟：</p>
+<ul>
+<li><strong>排队延迟</strong>（queueing delay）
+<ul>
+<li><span class="math inline">\(q_j\)</span>：SFC在AP <span class="math inline">\(d_j\)</span> 处排队产生的延迟</li>
+<li>对于每个AP，将其建模为一个<span class="math inline">\(M/M/1\)</span>队列，则其满足Little law</li>
+<li><span class="math inline">\(q_{j}=\frac{1}{\alpha_{j}-\sum_{S_{i} \in \mathbb{S}} A_{i, j} \cdot r_{i}}\)</span>
+<ul>
+<li>式中，<span class="math inline">\(A_{i,j}\)</span>表示<span class="math inline">\(S_i\)</span>是否从<span class="math inline">\(d_j\)</span>接入网络</li>
+<li>每个SFC仅有一个AP，故有<span class="math inline">\(\sum_{d_{j} \in \mathbb{D}} A_{i, j}=1, \quad \forall S_{i} \in \mathbb{S}\)</span></li>
+</ul></li>
+</ul></li>
+<li><strong>传播延迟</strong>（propagation delay &amp; transmission delay）
+<ul>
+<li><span class="math inline">\(l_i(u,v)\)</span>：SFC <span class="math inline">\(S_i\)</span>在链路<span class="math inline">\(e(u,v)\)</span>上进行传输产生的延迟</li>
+</ul></li>
+</ul>
+<p>故总延迟为：</p>
+<p><span class="math display">\[\begin{aligned}
+\sum_{d_{j} \in \mathbb{D}} A_{i, j} \cdot q_{j}+\sum_{\Phi_{i}^{l \prime} \subseteq S_{i}} Z_{i(u, v)}^{l l^{\prime}} \cdot l_{i(u, v)} \leq \beta_{i} \\
+\forall e(u, v) \in \mathbb{E}, \forall S_{i} \in \mathbb{S}, 1 \leq l&lt;l^{\prime} \leq\left|S_{i}\right|, j=u \text { if } l=1
+\end{aligned}\]</span></p>
+<h4 id="运行约束">运行约束</h4>
+<p>对于<span class="math inline">\(S_i\)</span>，其所有VNF都应当被运行</p>
+<p><span class="math display">\[\sum_{s_{i}^{l} \in S_{i}} \sum_{d_{j} \in \mathbb{D}} X_{i, j}^{l}=\left|S_{i}\right| \quad \forall S_{i} \in \mathbb{S}\]</span></p>
+<h3 id="优化目标">优化目标</h3>
+<p>同时最小化服务器和链路的资源消耗</p>
+<p><span class="math display">\[\begin{array}{cc}
+\min \sum_{d_{j} \in \mathbb{D}} \sum_{n \in \mathbb{N}} Y_{j, n} \cdot R_{n}+\sum_{e(u, v) \in \mathbb{E}} \sum_{S_{i} \in \mathbb{S}} \sum_{\Phi_{i}^{l l^{\prime}} \subseteq S_{i}} Z_{i(u, v)}^{l l^{\prime}} \cdot r_{i} \\
+\text { s.t. } (1),(2),(3),(4),(5),(6),(7),(8)
+\end{array}\]</span></p>
+<h2 id="算法模型">算法模型</h2>
+<h3 id="方案概述">方案概述</h3>
+<h3 id="cdfsa">CDFSA</h3>
+<h3 id="pga">PGA</h3>
+<h2 id="实验评估">实验评估</h2>
+<h3 id="设计实验">设计实验</h3>
+<!-- - 底层网络拓扑  
+  - 使用参数 $\alpha = 0.5$ 和 $\beta = 0.2$ 的 Waxman 随机图来生成一个底层网络拓扑
+  - 该网络具有100个结点和500条边（模拟一个中型的ISP）。
+  - 随机分配每个节点的CPU数量和边的带宽大小为50~100个单位。
+- 虚拟网络请求  
+  - 随机生成VNR时满足Possion process（泊松分布），每组评估持续50000个时间单位
+  - 即当VNR预期到达率为4个/100个时间单位时，则约有2000个VNR
+  - 每个VRN的生成周期满足平均值为500的指数分布
+  - 每个VNR的数量均匀分布在2~10之间
+  - 初始化VNR中的节点CPU需求和链路带宽需求为0~30的均匀分布
+  - 每对节点有50%的可能性形成边
+
+- 动态设置参数
+  - VNR的到达率、节点及链路资源的分配、每个VNR的节点数量
+  - 我们可以通过调节这三个参数来评估各种VNE场景
+- 测试阶段
+  - 学习代理仅使用actor网络生成嵌入策略，来从底层网络拓扑中选择合适的节点托管当前的虚拟节点
+  - 该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR -->
+<h3 id="对比算法">对比算法</h3>
+<ul>
+<li>Shortest Path Heuristic + First Fit Assignment (SHP+FF)<br />
+</li>
+<li>Constrained Depth-First Search Algorithm + First Fit Assignment (CDFSA + FF)<br />
+</li>
+<li>Shortest Path Heuristic + Path-based Greedy Algorithm (SHP+PGA)</li>
+</ul>
+<h3 id="评估指标">评估指标</h3>
+<h4 id="运行时间">运行时间</h4>
+<p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br />
+实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
+<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
+<p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
+<h4 id="资源消耗">资源消耗</h4>
+<h4 id="平均延迟">平均延迟</h4>
+<h2 id="主要创新">主要创新</h2>
+<h2 id="总结思考">总结思考</h2>
+]]></content>
+      <categories>
+        <category>RP - 科研论文</category>
+      </categories>
+      <tags>
+        <tag>Paper</tag>
+        <tag>NFV</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【论文汇总】Papers on NFV-RA</title>
     <url>/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-list-nfv-ra/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Lastest update: JAN. 10, 2021.<br />
