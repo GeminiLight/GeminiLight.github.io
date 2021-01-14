@@ -771,7 +771,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
       </tags>
   </entry>
   <entry>
-    <title>【论文笔记】Multi-domain non-cooperative VNF-FG embedding - A DRL approach</title>
+    <title>【论文笔记】Multi-domain Non-cooperative VNF-FG Embedding - A DRL Approach</title>
     <url>/2020/11/29/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文研究了多域非合作场景下的VNF放置问题，提出了一种深度强化学习DDPG算法与基于成本的首次拟合算法（CCF）相结合的方法来实现最大化VNF部署个数和最小化部署成本的目标。</p>
 <h2 id="论文简介">论文简介</h2>
@@ -866,7 +866,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <li>每个域不与其他域进行通信，</li>
 <li>每个域单独做出决策将发送至中心客户，由中心客户根据价格进行选择</li>
 </ol>
-<p><img data-src="/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-1.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding-1.png" /></p>
 <p>大致的决策流程如下：</p>
 <ol type="1">
 <li>中心代理将VNF-FG请求处理为一个三维向量，即<code>state</code>，然后发送给每个域</li>
@@ -882,7 +882,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <li>奖励 Reward：根据部署质量和资源报价，中心代理返回给每个域相应奖励 <span class="math display">\[r_{i}=\sum_{n^{\prime} \in \mathcal{N}^{\prime}} \sum_{n \in \mathcal{N}_{i}} \sum_{k \in K_{c}} \omega_{n}^{n^{\prime}} c_{n, n^{\prime}}^{k} h_{n^{\prime}, k}+\sum_{l \in \mathcal{L}_{i}} \sum_{l^{\prime} \in \mathcal{L}^{\prime}} \omega_{l}^{l^{\prime}} c_{l, l^{\prime}} h_{l^{\prime}, b w}\]</span> 式中，<span class="math inline">\(w_n^{n&#39;}\)</span>和<span class="math inline">\(w_n^{n&#39;}\)</span>表示放置成功二进制位，当且仅当节点和链路被成功放置且满足服务质量时才为1。</li>
 </ul>
 <h4 id="代理架构-agent">代理架构 Agent</h4>
-<p><img data-src="/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-2.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding-2.png" /></p>
 <p>DDPG由两个神经网络组成</p>
 <ul>
 <li>Actor network: 学习策略。根据当前策略和输入的<span class="math inline">\(s_t\)</span>来生成动作，要注意的是，动作被添加了噪声<span class="math inline">\(N\)</span>来使agent更好地探索环境。</li>
@@ -904,12 +904,12 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <li>将这些反映state信息相互影响的中间输出映射为动作</li>
 </ul></li>
 </ul>
-<p><img data-src="/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-3.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding-3.png" /></p>
 <p>收到每个域返回的动作（资源竞价），中心客户会做出最终的决定并执行，然后每个域会依据提供的资源收到相应的奖励，最后DRL代理会计算loss来更新参数。</p>
 <p>对于域<span class="math inline">\(i\)</span>，其目标是找到一个从VNF-FG请求到本地动作的映射策略：<span class="math inline">\(\mu_i:S \rightarrow A_i\)</span>来最大化获得奖励。</p>
 <h3 id="决策算法-cff">决策算法 CFF</h3>
 <p>在收集了来自不同域<span class="math inline">\(A_i\)</span>的价格后，中心客户必须做出决定来部署其VNF-FG。虽然很难保证一条路径能够满足虚拟链路所需的QoS，但是可以保证VNFs的资源需求。因此，在部署VNF时，决策必须考虑底层节点的容量以及部署的成本。</p>
-<p><img data-src="/resource/images/paper/rp-nfv-multi-domain-non-cooperative-vnf-fg-embedding-4.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding-4.png" /></p>
 <p>该文使用了将一种资源分配算法First-Fit算法改进为基于成本的First-Fit（CFF）算法来进行从VNF到底层节点的决策生成：</p>
 <ul>
 <li>输入：每个域的动作<span class="math inline">\(A_i\)</span></li>
@@ -1009,6 +1009,25 @@ three domain with CFF，三域使用CCF算法</li>
 simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 </ul>
 <h3 id="评估指标">评估指标</h3>
+<h4 id="平均奖励和单位价格">平均奖励和单位价格</h4>
+<p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-exp-reward.png" /></p>
+<h4 id="vnf和vl部署成功率">VNF和VL部署成功率</h4>
+<p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-exp-deploy.png" /></p>
+<h4 id="部署成功率对比">部署成功率对比</h4>
+<p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-exp-comparison.png" /></p>
+<h4 id="多域部署情况">多域部署情况</h4>
+<p>每个域平均资源情况</p>
+<ul>
+<li>域1有最少的CPU和RAM资源</li>
+<li>域3有最少的存储资源</li>
+</ul>
+<p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-exp-resource.png" /></p>
+<p>每一个域实际部署情况</p>
+<ul>
+<li>域2部署的VNF和VL都是最多的</li>
+<li>DRL会考虑负载均衡来进行放置决策</li>
+</ul>
+<p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-exp-mean-domain-deploy.png" /></p>
 <h2 id="总结思考">总结思考</h2>
 <ul>
 <li>该文研究了非合作多域场景下的VNF放置问题</li>

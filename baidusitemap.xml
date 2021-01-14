@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.geminilight.cn/2020/11/29/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding/</loc>
+    <lastmod>2021-01-14</lastmod>
+  </url>
+  <url>
     <loc>https://www.geminilight.cn/2021/01/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vnf-placement-latency-aware-network-edge/</loc>
     <lastmod>2021-01-14</lastmod>
   </url>
@@ -38,10 +42,6 @@
   </url>
   <url>
     <loc>https://www.geminilight.cn/2020/03/21/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/lecture-zju-professor-chenwei-date-visonlization/</loc>
-    <lastmod>2020-12-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.geminilight.cn/2020/11/29/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding/</loc>
     <lastmod>2020-12-01</lastmod>
   </url>
   <url>
