@@ -3,7 +3,7 @@
   <entry>
     <title>【论文笔记】Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network</title>
     <url>/2021/01/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vnf-placement-latency-aware-network-edge/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文研究了网络边缘场景下的VNF放置问题，旨在最小化整体（服务器和链路）资源消耗，提出了一种两阶段的延迟感知的约束深度优先搜索算法（CDFSA） 和基于路径的贪婪算法（PGA）的方案。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文研究了网络边缘场景下的VNF放置问题，旨在最小化整体（服务器和链路）资源消耗，提出了一种延迟感知的两阶段方案，即搜索路径的约束深度优先搜索算法（CDFSA） 和部署VNF的基于路径的贪心算法（PGA）。</p>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network Edge<br />
 <strong>论文作者</strong>：Panpan Jin, Xincai Fei, Qixia Zhang, Qixia Zhang, Fangming Liu, Bo Li<br />
@@ -113,7 +113,7 @@
 <p><span class="math display">\[\sum_{S_{i} \in \mathbb{S}} \sum_{s_{i}^{l} \in S_{i}} T_{i, n}^{l} \cdot X_{i, j}^{l} \cdot r_{i} \leq Y_{j, n} \cdot W_{n}, \forall n \in \mathbb{N}, \forall d_{j} \in \mathbb{D}\]</span></p>
 <ul>
 <li><span class="math inline">\(W_n\)</span>：对type-n VNF的处理能力</li>
-<li><span class="math inline">\(X_{i,j}^l\)</span>：表明SFC <span class="math inline">\(S_i 的第\)</span>l<span class="math inline">\(个\)</span>VNF<span class="math inline">\(是否运行在服务器\)</span>d_j$上
+<li><span class="math inline">\(X_{i,j}^l\)</span>：表明SFC <span class="math inline">\(S_i\)</span> 的第<span class="math inline">\(l\)</span>个<span class="math inline">\(VNF\)</span>是否运行在服务器<span class="math inline">\(d_j\)</span>上
 <ul>
 <li>特别地，此处假设SFC为单流，即SFC中的一个VNF只能运行在一个服务器上</li>
 <li><span class="math inline">\(\sum_{d_{j} \in \mathbb{D}} X_{i, j}^{l}=1, \quad \forall S_{i} \in \mathbb{S}, \forall l \in\left[1,\left|S_{i}\right|\right]\)</span></li>
