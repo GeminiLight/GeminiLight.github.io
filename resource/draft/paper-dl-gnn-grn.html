@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-dl-gnn-gat-3.png">
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-dl-gnn-gat-4.png">
 <meta property="article:published_time" content="2020-11-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-14T03:20:43.429Z">
+<meta property="article:modified_time" content="2021-01-14T03:24:10.804Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="DL">
 <meta property="article:tag" content="GNN">
@@ -663,12 +663,20 @@ if(canvas.getContext){
 </tbody>
 </table>
 <h3 id="研究背景">研究背景</h3>
+<p><strong>图结构数据</strong></p>
 <ul>
-<li>图结构数据是广泛存在的且较难处理</li>
-<li>早期，为了将图数据结构适应神经网络模型，用网格化的图数据来进一步使用CNN进行特征提取。</li>
-<li>之后，尝试扩展神经网络来直接对图数据进行处理</li>
-<li>受到CNN卷积思想的启发，图卷积神经网络也被提出和不断完善，通常分为谱方法和非谱方法。</li>
-<li>此外，注意力机制被广泛应用在端到端的任务模型中，它可以提取当前处理的输入与整个输入序列相关性更高的信息，从而提升了特征提取的效果。</li>
+<li>广泛存在的且较难处理</li>
+</ul>
+<p><strong>图神经网络</strong></p>
+<ul>
+<li>早期，将图数据网格化以适应神经网络模型（如利用CNN进行特征提取）</li>
+<li>之后，直接扩展神经网络来直接对图数据进行处理</li>
+<li>图卷积神经网络受到CNN卷积思想的启发被提出和不断完善，通常分为谱方法和非谱方法。</li>
+</ul>
+<p><strong>注意力机制</strong></p>
+<ul>
+<li>它可以提取当前处理的输入与整个输入序列相关性更高的信息，从而提升了特征提取的效果。</li>
+<li>被广泛应用在端到端的任务模型中</li>
 </ul>
 <p>本文提出一种基于注意力机制的图神经网络来GAT来使神经网络可以更高效的提取节点特征。其思想是通过关注邻域，遵循self-attention策略，计算图中每个节点的隐藏表示。</p>
 <h2 id="算法模型-graph-attentional-layer">算法模型 Graph Attentional Layer</h2>
