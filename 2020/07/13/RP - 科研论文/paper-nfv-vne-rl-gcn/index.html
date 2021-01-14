@@ -31,23 +31,32 @@
 <meta property="og:site_name" content="Gemini向光性">
 <meta property="og:description" content="本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。 论文简介 论文名称：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks 论文作者：Zhongxia">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-1.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-2.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-3.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-4.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-8.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-5.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-6.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-7.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-ex-problem.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-algo-rl-framework.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-algo-1-vne-procedure.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-algo-state.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-ex-hybrid-search.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-algo-rl-agent.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-algo-2-training-master.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-algo-3-training-worker.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-exp-parameter-settings.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-1.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-2.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-3.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-4.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-8.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-5.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-6.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-7.png">
 <meta property="article:published_time" content="2020-07-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-30T14:06:32.653Z">
+<meta property="article:modified_time" content="2021-01-14T04:54:57.745Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="GNN">
 <meta property="article:tag" content="Paper">
 <meta property="article:tag" content="NFV">
 <meta property="article:tag" content="DRL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/rp-vne-rl-gcn-1.png">
+<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/paper/paper-nfv-vne-drl-gcn-ex-problem.png">
 
 
 <link rel="canonical" href="https://www.geminilight.cn/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-rl-gcn/">
@@ -239,7 +248,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E7%AE%80%E4%BB%8B"><span class="nav-text">论文简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89"><span class="nav-text">问题定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%93%E4%B8%9A%E8%AF%8D%E6%B1%87"><span class="nav-text">专业词汇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vne"><span class="nav-text">VNE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B"><span class="nav-text">算法模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dl-a3c"><span class="nav-text">DL-A3C</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gcn"><span class="nav-text">GCN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#a3c-gcn"><span class="nav-text">A3C + GCN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83-environment"><span class="nav-text">环境 Environment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%90%86-agent"><span class="nav-text">代理 Agent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8A%B6%E6%80%81-state"><span class="nav-text">状态 State</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E4%BD%9C-action"><span class="nav-text">动作 Action</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A5%96%E5%8A%B1-rewords"><span class="nav-text">奖励 Rewords</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="nav-text">性能评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C"><span class="nav-text">设计实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E7%AE%97%E6%B3%95"><span class="nav-text">对比算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text">评估指标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vnr-%E5%88%B0%E8%BE%BE%E7%8E%87%E6%B5%8B%E8%AF%95"><span class="nav-text">VNR 到达率测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E8%AF%B7%E6%B1%82%E6%B5%8B%E8%AF%95"><span class="nav-text">资源请求测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E6%95%B0%E9%87%8F%E6%89%A9%E5%B1%95%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="nav-text">节点数量扩展性测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E7%BB%9F%E8%AE%A1"><span class="nav-text">平均运行时间统计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E6%B5%8B%E8%AF%95"><span class="nav-text">验证测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E6%95%88%E7%8E%87%E5%8F%8A%E6%94%B6%E6%95%9B%E6%80%A7"><span class="nav-text">训练效率及收敛性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E8%AF%B7%E6%B1%82%E6%B5%8B%E8%AF%95%E9%AA%8C%E8%AF%81"><span class="nav-text">资源请求测试验证</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0%E4%B8%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6"><span class="nav-text">其他参数下模型的可行性研究</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%92%8C%E5%8F%82%E6%95%B0"><span class="nav-text">附加网络拓扑和参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%8C%87%E6%A0%87"><span class="nav-text">其他指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%88%9B%E6%96%B0"><span class="nav-text">主要创新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%80%9D%E8%80%83"><span class="nav-text">总结思考</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E7%AE%80%E4%BB%8B"><span class="nav-text">论文简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%BB%BA%E6%A8%A1"><span class="nav-text">问题建模</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E7%BD%91%E7%BB%9C"><span class="nav-text">底层网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82"><span class="nav-text">虚拟网络请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%BA%A6%E6%9D%9F"><span class="nav-text">问题约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E7%9B%AE%E6%A0%87"><span class="nav-text">优化目标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A5%E5%8F%97%E7%8E%87"><span class="nav-text">接受率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%95%BF%E6%9C%9F%E5%B9%B3%E5%9D%87%E6%94%B6%E7%9B%8A"><span class="nav-text">长期平均收益</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4"><span class="nav-text">运行时间</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vne"><span class="nav-text">VNE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B"><span class="nav-text">算法模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83-environment"><span class="nav-text">环境 Environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81-state"><span class="nav-text">状态 State</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E4%BD%9C-action"><span class="nav-text">动作 Action</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%90%86-agent"><span class="nav-text">代理 Agent</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#gcn"><span class="nav-text">GCN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%96%E7%95%A5%E7%94%9F%E6%88%90"><span class="nav-text">策略生成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#a3c-%E5%B9%B6%E8%A1%8C%E8%AE%AD%E7%BB%83"><span class="nav-text">A3C 并行训练</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#master"><span class="nav-text">Master</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#worker"><span class="nav-text">Worker</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%96%E5%8A%B1-rewords"><span class="nav-text">奖励 Rewords</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="nav-text">性能评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C"><span class="nav-text">设计实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E7%AE%97%E6%B3%95"><span class="nav-text">对比算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text">评估指标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vnr-%E5%88%B0%E8%BE%BE%E7%8E%87%E6%B5%8B%E8%AF%95"><span class="nav-text">VNR 到达率测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E8%AF%B7%E6%B1%82%E6%B5%8B%E8%AF%95"><span class="nav-text">资源请求测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E6%95%B0%E9%87%8F%E6%89%A9%E5%B1%95%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="nav-text">节点数量扩展性测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E7%BB%9F%E8%AE%A1"><span class="nav-text">平均运行时间统计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E6%B5%8B%E8%AF%95"><span class="nav-text">验证测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E6%95%88%E7%8E%87%E5%8F%8A%E6%94%B6%E6%95%9B%E6%80%A7"><span class="nav-text">训练效率及收敛性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E8%AF%B7%E6%B1%82%E6%B5%8B%E8%AF%95%E9%AA%8C%E8%AF%81"><span class="nav-text">资源请求测试验证</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0%E4%B8%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6"><span class="nav-text">其他参数下模型的可行性研究</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%92%8C%E5%8F%82%E6%95%B0"><span class="nav-text">附加网络拓扑和参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%8C%87%E6%A0%87"><span class="nav-text">其他指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%88%9B%E6%96%B0"><span class="nav-text">主要创新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%80%9D%E8%80%83"><span class="nav-text">总结思考</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -645,7 +654,7 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.2k</span>
+              <span>4.3k</span>
             </span>
 
         </div>
@@ -665,8 +674,7 @@ if(canvas.getContext){
 <strong>主要创新</strong>：强化学习结合图卷积神经网络、并行的强化学习框架、多目标的奖励函数<br />
 <span class="exturl" data-url="aHR0cHM6Ly9vcmUuZXhldGVyLmFjLnVrL3JlcG9zaXRvcnkvYml0c3RyZWFtL2hhbmRsZS8xMDg3MS80MDc5OS9ZYW4tSlNBQy0yMDIwLnBkZj9zZXF1ZW5jZT0xJmFtcDtpc0FsbG93ZWQ9eQ==">下载论文<i class="fa fa-external-link-alt"></i></span></p>
 <a id="more"></a>
-<h2 id="问题定义">问题定义</h2>
-<h3 id="专业词汇">专业词汇</h3>
+<p><strong>词汇缩写</strong></p>
 <table>
 <thead>
 <tr class="header">
@@ -703,16 +711,83 @@ if(canvas.getContext){
 </tr>
 </tbody>
 </table>
+<h2 id="问题建模">问题建模</h2>
+<h3 id="底层网络">底层网络</h3>
+<p>加权无向图 <span class="math inline">\(G_s = (N_s, L_s, A^n, A^l)\)</span></p>
+<ul>
+<li><span class="math inline">\(N_s\)</span>：物理节点的集合</li>
+<li><span class="math inline">\(L_s\)</span>：物理链路的集合</li>
+<li><span class="math inline">\(A^n\)</span>：节点属性，如CPU processing capability, memory space and node reliability</li>
+<li><span class="math inline">\(A^l\)</span>：链路属性，如bandwidth, latency and packet loss rate</li>
+</ul>
+<p>本文仅考虑CPU资源和带宽资源分别作为节点和链路的属性</p>
+<h3 id="虚拟网络请求">虚拟网络请求</h3>
+<p>虚拟网络：加权无向图 <span class="math inline">\(G_v = (N_v, L_v, R^n, R^l)\)</span></p>
+<ul>
+<li><span class="math inline">\(N_v\)</span>：虚拟节点的集合</li>
+<li><span class="math inline">\(L_v\)</span>：虚拟链路的集合</li>
+<li><span class="math inline">\(R_n\)</span>：虚拟节点请求的集合</li>
+<li><span class="math inline">\(R_l\)</span>：虚拟链路请求的集合</li>
+</ul>
+<p>虚拟网络请求：<span class="math inline">\(VNR = (G_v, t_a, t_d)\)</span></p>
+<ul>
+<li><span class="math inline">\(t_a\)</span>：VNR到达时间</li>
+<li><span class="math inline">\(t_d\)</span>：VNR离开时间</li>
+</ul>
+<h3 id="问题约束">问题约束</h3>
+<p>映射问题 <span class="math inline">\(M: G_{v}\left(N_{v}, L_{v}\right) \rightarrow G_{s}^{\prime}\left(N_{s}^{\prime}, L_{s}^{\prime}\right)\)</span></p>
+<ul>
+<li>节点映射：CPU资源约束</li>
+<li>链路映射：带宽资源约束</li>
+</ul>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-ex-problem.png" /></p>
+<h3 id="优化目标">优化目标</h3>
+<h4 id="接受率">接受率</h4>
+<p>底层网络在时间<span class="math inline">\(T\)</span>接受率为</p>
+<p><span class="math display">\[AC_Ratio(T) = \frac{\sum_{t=0}^{T}{NUM\_VNR\_S}}{\sum_{t=0}^{T}{NUM\_VNR}}\]</span></p>
+<ul>
+<li><span class="math inline">\(NUM\_VNR\_S\)</span>：成功嵌入的VNR数量</li>
+<li><span class="math inline">\(NUM\_VNR\)</span>：VNR的总数量</li>
+</ul>
+<h4 id="长期平均收益">长期平均收益</h4>
+<p>单个VNR <span class="math inline">\(G_v\)</span> 被嵌入成功的收益为</p>
+<p><span class="math display">\[\operatorname{Rev}\left(G_{v}\right)=\sum_{n_{v} \in N_{v}} \operatorname{CPU}\left(n_{v}\right)+\sum_{l_{v} \in L_{v}} B W\left(l_{v}\right)\]</span></p>
+<p>底层网络长期平均收益为</p>
+<p><span class="math display">\[Rev(T) = \frac{\sum_{t=0}^{T}Rev(G^t_v)}{T}\]</span></p>
+<ul>
+<li><span class="math inline">\(G^t_v\)</span>：表示时间<span class="math inline">\(t\)</span>是被成功嵌入的VNR</li>
+</ul>
+<h4 id="运行时间">运行时间</h4>
+<p>权衡性能与时效，适应实时场景。</p>
 <h3 id="vne">VNE</h3>
 <h2 id="算法模型">算法模型</h2>
-<h3 id="dl-a3c">DL-A3C</h3>
-<h3 id="gcn">GCN</h3>
-<h3 id="a3c-gcn">A3C + GCN</h3>
-<h4 id="环境-environment">环境 Environment</h4>
-<h4 id="代理-agent">代理 Agent</h4>
-<h4 id="状态-state">状态 State</h4>
-<h4 id="动作-action">动作 Action</h4>
-<h4 id="奖励-rewords">奖励 Rewords</h4>
+<p>为了适应RL框架，本文Agent使用单步决策，即每一次决策生成的是一个虚拟节点的放置策略</p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-algo-rl-framework.png" /></p>
+<p>当获取一个虚拟节点的放置策略后，尝试将其进行放置</p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-algo-1-vne-procedure.png" /></p>
+<h3 id="环境-environment">环境 Environment</h3>
+<p>由底层网络及其相关设定构成</p>
+<h3 id="状态-state">状态 State</h3>
+<p>所需状态表示如下：</p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-algo-state.png" /></p>
+<h3 id="动作-action">动作 Action</h3>
+<p>在Agent生成单个虚拟节点的放置决策后，需尝试对其进行放置，此时要满足以下约束</p>
+<ul>
+<li>被选物理节点可用资源 &gt; 当前虚拟节点资源请求</li>
+<li>存在带宽资源充足的链路来放置虚拟链路</li>
+</ul>
+<p>对于链路的搜索，本文采用混合搜索策略：优先尝试最短路径，若失败则尝试其他次优路径。</p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-ex-hybrid-search.png" /></p>
+<h3 id="代理-agent">代理 Agent</h3>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-algo-rl-agent.png" /></p>
+<h4 id="gcn">GCN</h4>
+<h4 id="策略生成">策略生成</h4>
+<h4 id="a3c-并行训练">A3C 并行训练</h4>
+<h4 id="master">Master</h4>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-algo-2-training-master.png" /></p>
+<h4 id="worker">Worker</h4>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-algo-3-training-worker.png" /></p>
+<h3 id="奖励-rewords">奖励 Rewords</h3>
 <ul>
 <li>动作反馈 action feedback</li>
 </ul>
@@ -766,6 +841,7 @@ if(canvas.getContext){
 <li>该代理已被训练72小时，经历了70000次训练迭代，进行了近1680000次不同的VNR</li>
 </ul></li>
 </ul>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-exp-parameter-settings.png" /></p>
 <h3 id="对比算法">对比算法</h3>
 <ul>
 <li>R-ViNE<br />
@@ -784,7 +860,7 @@ if(canvas.getContext){
 <h4 id="vnr-到达率测试">VNR 到达率测试</h4>
 <p>实际场景：虚拟网络总在忙碌时频繁接受VNR请求，空闲时则反之。<br />
 实验模拟：将到达率由4个/100时间单位逐渐增至20个/100时间单位，步长为2。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-1.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-1.png" /></p>
 <p>结果分析：该算法在VNR请求较频繁时，接受率和平均收益明显优于其他算法。</p>
 <h4 id="资源请求测试">资源请求测试</h4>
 <p>实际场景：不同的网络服务具有不同的资源需求模式，比如：</p>
@@ -793,12 +869,12 @@ if(canvas.getContext){
 <li>而通信密集型任务需要更多的链路资源（带宽）</li>
 </ul>
 <p>实验模拟：将节点与链路资源需求的逐渐由[0,30]升至[0,100]的平均分布，步长为10。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-2.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-2.png" /></p>
 <p>结果分析：随着资源需求越来越多，嵌入的成功率也会都明显随之降低，但该算法的表现依然是最忧的。</p>
 <h4 id="节点数量扩展性测试">节点数量扩展性测试</h4>
 <p>实际场景：企业级用户对网络服务需求量较大，个人用户服务使用的节点数量较小。<br />
 实验模拟：将VNR中的虚拟节点数量从[2,10]的均匀分布增加到[2,32]，步长为2。</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-3.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-3.png" /></p>
 <p>结果分析：该算法优势明显，但可以发现当节点逐渐增加时，接受率下降明显</p>
 <p>原因分析：</p>
 <ul>
@@ -807,17 +883,17 @@ if(canvas.getContext){
 </ul>
 <h4 id="平均运行时间统计">平均运行时间统计</h4>
 <p>平均运行时间指VNE算法处理一个完整VNF的平均时间开销</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-4.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-4.png" /></p>
 <h3 id="验证测试">验证测试</h3>
 <p>在相同条件下，与其他基于强化学习的VNE算法进行比较</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-8.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-8.png" /></p>
 <h4 id="训练效率及收敛性">训练效率及收敛性</h4>
 <p>不同算法在相同实验条件下的训练效果对比，见下图(a)<br />
 实验结果：可以发现，在这组实验中，平均收益的优势要比接受率的明显<br />
 原因分析：当VNR的节点数量较少时，所有算法都可以有很好的表现；但当节点增多后，该算法可以带来更多的潜在收益（多指标的Reward）。</p>
 <h4 id="资源请求测试验证">资源请求测试验证</h4>
 <p>在不同的资源请求情况下，对这些算法进行测试，见下图(b)</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-5.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-5.png" /></p>
 <p>实验结果：在不同数量的资源请求情况下，该算法的接受率均是最优的；此外，可以发现CNN的性能表现始终是最差的<br />
 原因分析：用GCN代替传统的CNN进行特征提取可以带来更好地性能。</p>
 <h3 id="其他参数下模型的可行性研究">其他参数下模型的可行性研究</h3>
@@ -836,7 +912,7 @@ if(canvas.getContext){
 <li>模拟了一些随机的点对点的数据传输任务</li>
 <li>数据传输速率为 [500Mbps,3Gbps] 的均匀分布</li>
 </ul>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-6.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-6.png" /></p>
 <p>实验结果：A3C+GCN 模型的延迟更少</p>
 <h4 id="其他指标">其他指标</h4>
 <ul>
@@ -844,7 +920,7 @@ if(canvas.getContext){
 <li>链路资源利用率：VNRs使用的链路基板资源量/资源总量</li>
 </ul>
 <p>实验设计：同平均到达率测试</p>
-<p><img data-src="/resource/images/rp-vne-rl-gcn-7.png" /></p>
+<p><img data-src="/resource/images/paper/paper-nfv-vne-drl-gcn-7.png" /></p>
 <p>实验结果：A3C+GCN算法的这两项指标均为最佳</p>
 <h2 id="主要创新">主要创新</h2>
 <ul>
