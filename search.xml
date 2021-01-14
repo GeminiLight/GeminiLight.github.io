@@ -758,8 +758,8 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <h3 id="评估指标">评估指标</h3>
 <h2 id="总结思考">总结思考</h2>
 <ul>
-<li>利用多头注意力机制来为每个邻接节点赋予不同的注意力权重，提升特征提取效果</li>
-<li>GAT模型无需了解整个图结构，只需知道每个节点的邻节点即可</li>
+<li>多头注意力机制的应用：为每个邻接节点赋予不同的注意力权重，提升特征提取效果</li>
+<li>不依赖全局图结构：GAT模型无需了解整个图结构，只需知道每个节点的邻节点即可</li>
 </ul>
 ]]></content>
       <categories>
