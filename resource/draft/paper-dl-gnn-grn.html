@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-dl-gnn-gat-3.png">
 <meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-dl-gnn-gat-4.png">
 <meta property="article:published_time" content="2020-11-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-29T04:49:23.576Z">
+<meta property="article:modified_time" content="2021-01-14T03:20:43.429Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="DL">
 <meta property="article:tag" content="GNN">
@@ -714,11 +714,24 @@ if(canvas.getContext){
 <p>右图中，有三条不同颜色的线分别代表三个注意力机制在节点<span class="math inline">\(i\)</span>处得到的结果，即此处<span class="math inline">\(K=3\)</span>。之后，进行连接操作或平均操作得到最终输出<span class="math inline">\(\vec{h}&#39;\)</span>。</p>
 <h2 id="模型改进">模型改进</h2>
 <ul>
-<li><p>计算高效。无需使用特征值分解等复杂的矩阵运算，且操作基本都可以实现并行。</p></li>
-<li><p>可为同一个邻居的节点分配不同的重要性，提高模型表达能力。此外，注意权重可能有助于提高解释能力。</p></li>
-<li><p>注意机制以共享的方式应用于图中的所有边，因此它不依赖于对全局图结构或需预先访问其所有节点的。我们无需访问整个图，而只需要访问所关注节点的邻节点即可。这一特点的作用主要有：a) 图不需要是无向的（如果边j→i不存在，我们可以省略计算αij）。 b) 它使我们的技术直接适用于归纳学习，包括在训练过程中完全看不见的图形上评估模型的任务。</p></li>
-<li><p>它是建立在所有邻节点上的，而且无需假设任何节点顺序</p></li>
-<li><p>GAT可以被看作是MoNet的一个特例。特殊地是，不同于MoNet实例相比，本文模型使用节点特征进行相似性计算，而不是节点的结构属性（假设预先知道图形结构）。具体来说，可以通过将伪坐标函数（pseudo-coordinate function）设为<span class="math inline">\(u(x,y)=f(x) \| f(y)\)</span>，其中<span class="math inline">\(f(x)\)</span>表示节点<span class="math inline">\(x\)</span>的特征，<span class="math inline">\(\|\)</span>；相应的权重函数则变成了<span class="math inline">\(w_j(u)=softmax(MLP(u))\)</span>。</p></li>
+<li><p><strong>计算高效且可并行</strong>。无需使用特征值分解等复杂的矩阵运算，且操作基本都可以实现并行。</p></li>
+<li><p><strong>节点不同权重提升模型表达能力</strong>。可为同一个邻居的节点分配不同的重要性，且利用了多头注意力机制。</p></li>
+<li><p><strong>提高可解释性较强</strong>。注意力机制可提高解释能力。</p></li>
+<li><p><strong>不依赖全局图结构</strong>。注意机制以共享的方式应用于图中的所有边，因此它不依赖于对全局图结构或需预先访问其所有节点的。我们无需访问整个图，而只需要访问所关注节点的邻节点即可。</p></li>
+<li><p><strong>不受节点顺序影响</strong>。它是建立在所有邻节点上的，而且无需假设任何节点顺序</p></li>
+<li><p><strong>实质仍是节点相似性</strong>。GAT可以被看作是MoNet的一个特例。</p>
+<ul>
+<li>GAT
+<ul>
+<li>节点相似计算：节点特征</li>
+<li>伪坐标函数：<span class="math inline">\(u(x,y)=f(x) \| f(y)\)</span>，其中<span class="math inline">\(f(x)\)</span>表示节点<span class="math inline">\(x\)</span>的特征，<span class="math inline">\(\|\)</span>；相应的权重函数则变成了<span class="math inline">\(w_j(u)=softmax(MLP(u))\)</span>。</li>
+</ul></li>
+<li>MoNet
+<ul>
+<li>节点相似计算：节点的结构属性</li>
+<li>伪坐标函数：<span class="math inline">\(u(x,y)=f(x) \| f(y)\)</span></li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="性能评估">性能评估</h2>
 <h3 id="数据集">数据集</h3>
@@ -735,8 +748,9 @@ if(canvas.getContext){
 <h3 id="评估指标">评估指标</h3>
 <h2 id="总结思考">总结思考</h2>
 <ul>
-<li>利用多头注意力机制来为每个邻接节点赋予不同的注意力权重，提升特征提取效果</li>
-<li>GAT模型无需了解整个图结构，只需知道每个节点的邻节点即可</li>
+<li>融合注意力机制：为每个邻接节点赋予不同的注意力权重</li>
+<li>多头注意力机制：给出了两种聚合方案，提高特征了提取效果</li>
+<li>不依赖整个拓扑结构：无需了解整个图结构，只需知道每个节点的邻节点即可</li>
 </ul>
 
       </div>

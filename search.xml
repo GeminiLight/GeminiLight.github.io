@@ -780,7 +780,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
 <strong>发表期刊</strong>：INFOCOM-2019 (CCF-A)<br />
 <strong>研究方向</strong>：NFV 网络功能虚拟化<br />
 <strong>关键技术</strong>：多域非合作，虚拟网络功能嵌入, 深度强化学习<br />
-<strong>主要创新</strong>：多域非合作场景；多通道的VNF-FG请求矩阵表示；基于成本的首次拟合算法<br />
+<strong>主要创新</strong>：多域非合作场景；多通道的VNF-FG请求矩阵表示；基于Cost的First Fit算法<br />
 <span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">下载论文<i class="fa fa-external-link-alt"></i></span></p>
 <a id="more"></a>
 <h2 id="问题定义">问题定义</h2>
@@ -1030,11 +1030,11 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <p><img data-src="/resource/images/paper/paper-nfv-multi-domain-non-cooperative-vnf-exp-mean-domain-deploy.png" /></p>
 <h2 id="总结思考">总结思考</h2>
 <ul>
-<li>该文研究了非合作多域场景下的VNF放置问题</li>
-<li>对于VNF和VL均考虑多种资源约束</li>
-<li>将VNF-FG请求处理为一个包含VNF和VL请求信息的3维矩阵</li>
-<li>使用了DDPG的深度强化学习方法来训练神经网络</li>
-<li>改进了First Fit算法来达到最小化部署成本的目标</li>
+<li>场景特殊：多域非合作场景下的VNF放置问题</li>
+<li>资源种类多：对于VNF和VL均考虑多种资源约束</li>
+<li>矩阵构造：将VNF-FG请求处理为一个包含VNF和VL请求信息的3维矩阵</li>
+<li>深度强化学习：使用了DDPG的DRL方法来训练神经网络</li>
+<li>改进启发式算法：改进了First Fit算法来达到最小化部署成本的目标</li>
 </ul>
 ]]></content>
       <categories>
