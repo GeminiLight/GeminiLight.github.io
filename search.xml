@@ -7,7 +7,7 @@
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network Edge<br />
 <strong>论文作者</strong>：Panpan Jin, Xincai Fei, Qixia Zhang, Qixia Zhang, Fangming Liu, Bo Li<br />
-<strong>发表期刊</strong>：INFOCOM 2020 (CCF-A)<br />
+<strong>发表会议</strong>：INFOCOM 2020 (CCF-A)<br />
 <strong>研究方向</strong>：NFV 网络功能虚拟化<br />
 <strong>关键技术</strong>：邻接矩阵重构, 深度优先搜索, 贪婪算法<br />
 <strong>主要创新</strong>：网络边缘场景、延迟保障、两阶段（先边后点）<br />
@@ -646,7 +646,7 @@ Welcome to star this work on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIu
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>图神经网络（GNN）是当前深度学习领域研究的焦点之一，本文提出了一种GAT（graph attention networks）网络，它使用多头的masked自注意力机制来为每个邻居节点分配不同的权重，优化了图卷积神经网络的平均加权的问题。</p>
 <p><strong>论文名称</strong>：Graph Attention Networks<br />
 <strong>论文作者</strong>：Petar Veličković, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Liò, Yoshua Bengio<br />
-<strong>发表期刊</strong>：ICLR-2018 (THU-A)<br />
+<strong>发表期刊</strong>：ICLR 2018 (THU-A)<br />
 <strong>研究方向</strong>：GNN 图神经网络<br />
 <strong>关键技术</strong>：Masked self Attention, Multi Attention<br />
 <strong>主要创新</strong>：将多头注意力机制应用于图神经网络，来提升特征提取效果。<br />
@@ -1766,9 +1766,9 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
       </tags>
   </entry>
   <entry>
-    <title>【PPT设计】大一大二时期个人PPT设计风格总结</title>
+    <title>【PPT设计】2018至2020年个人PPT设计汇总</title>
     <url>/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>[更新中] 时光总若即若离，不觉将至大三。回望已逝的两年大学生活，发现自己已经做了不少的PPT，有关社团、有关学术、有关技术等等。于是，今天将两年来所作PPT汇总整理，来分析个人的风格，以寻求进步。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>[更新中] 对过去几年所做过的PPT进行总结反思。</p>
 <a id="more"></a>
 <h2 id="前言">前言</h2>
 <p>PPT设计所涉及到的结构和元素繁多，于是文章将按时间顺序分别从结构设计、元素和动画设计三方面来介绍。</p>
@@ -1785,7 +1785,7 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <img data-src="/resource/images/ppt/ad-ppt-19-srtp-1.webp" alt="2019/06/03-SRTP立项" /><figcaption aria-hidden="true">2019/06/03-SRTP立项</figcaption>
 </figure>
 <ul>
-<li>描述：大概是第一次复现这副封面，比较适合首页信息密度较高的构图</li>
+<li>描述：大概是第一次复现这副封面，比较适合首页信息密度较低的构图</li>
 <li>想法：背景颜色稍微亮了些，右部分的构图不太稳</li>
 </ul>
 <figure>
@@ -1797,6 +1797,9 @@ simulated annealing algorithm with CFF，模拟退火和CCF算法结合</li>
 <figure>
 <img data-src="/resource/images/ppt/ad-ppt-2020-english-pre-ai-1.webp" alt="2020/06/05-陈述与沟通Presentation" /><figcaption aria-hidden="true">2020/06/05-陈述与沟通Presentation</figcaption>
 </figure>
+<ul>
+<li>这幅图还是挺喜欢的，虽然下面的文字排版不是很美观。主要新颖点在于自己复现的AI和外框是与图片高度相似的，这样为动画设计留足了空间。</li>
+</ul>
 <figure>
 <img data-src="/resource/images/ppt/ad-ppt-2020-innovte-1.webp" alt="2020/06/24-市创立项" /><figcaption aria-hidden="true">2020/06/24-市创立项</figcaption>
 </figure>
