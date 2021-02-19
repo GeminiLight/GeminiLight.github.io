@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-32x32.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.ico">
+  <link rel="mask-icon" href="/images/favicon-32x32.ico" color="#222">
+  <meta name="google-site-verification" content="RrL9pY7_YVrRxyUv7G4ksTPRGYJmECxw-uI8iVOz7vI">
+  <meta name="baidu-site-verification" content="AozFAayi1Z">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="随着深度学习模型的不断增大、数据的不断增多，并行计算成为了解决机器学习训练难题的一种主流技术。本文主要是对Shusen Wang的《分布式机器学习》课程的笔记记录和扩展，仅是对机器学习中并行计算方式的概述。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【分布式ML】机器学习中的并行计算">
+<meta property="og:url" content="https://www.geminilight.cn/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/parallel-computing-and-machine-learning/index.html">
+<meta property="og:site_name" content="Gemini向光性">
+<meta property="og:description" content="随着深度学习模型的不断增大、数据的不断增多，并行计算成为了解决机器学习训练难题的一种主流技术。本文主要是对Shusen Wang的《分布式机器学习》课程的笔记记录和扩展，仅是对机器学习中并行计算方式的概述。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613727787801-7f7af0c2-0e60-4c3f-8ca5-f592b04dfff7.png#align=left&amp;display=inline&amp;height=1027&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.png&amp;originHeight=1027&amp;originWidth=945&amp;size=76269&amp;status=done&amp;style=none&amp;width=945">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613636779824-1fb6d3a0-779c-43c8-8fcf-f8fd40b839ae.png#align=left&amp;display=inline&amp;height=175&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=350&amp;originWidth=1215&amp;size=34939&amp;status=done&amp;style=none&amp;width=607.5">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637240579-73076efc-0866-43b3-8386-c7b4779c7083.png#align=left&amp;display=inline&amp;height=148&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=295&amp;originWidth=628&amp;size=17787&amp;status=done&amp;style=none&amp;width=314">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637305183-76080e4e-5f5a-4380-abdf-501262fce309.png#align=left&amp;display=inline&amp;height=280&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=560&amp;originWidth=713&amp;size=39545&amp;status=done&amp;style=none&amp;width=356.5">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637117427-b29682fa-7556-40a0-922f-7c02009f4798.png#align=left&amp;display=inline&amp;height=311&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=621&amp;originWidth=1192&amp;size=50765&amp;status=done&amp;style=none&amp;width=596">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637153292-bc53acef-1b7c-4ff7-a183-32b6f2ff452c.png#align=left&amp;display=inline&amp;height=311&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=622&amp;originWidth=1352&amp;size=72359&amp;status=done&amp;style=none&amp;width=676">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613667742259-0b1f140b-4f1e-4ff0-b6bf-03b28204983d.png#align=left&amp;display=inline&amp;height=364&amp;margin=%5Bobject%20Object%5D&amp;originHeight=504&amp;originWidth=866&amp;size=0&amp;status=done&amp;style=none&amp;width=625">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613667136598-1f03702c-e8d0-4564-82d0-be15507aec69.png#align=left&amp;display=inline&amp;height=321&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=642&amp;originWidth=1026&amp;size=120870&amp;status=done&amp;style=none&amp;width=513">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613666601776-1e28fc21-b3ab-445c-92a0-bc7f8ce1461c.png#align=left&amp;display=inline&amp;height=235&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=469&amp;originWidth=862&amp;size=95815&amp;status=done&amp;style=none&amp;width=431">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613660519864-10f7e212-2d01-4e3d-acce-1430ca064449.png#align=left&amp;display=inline&amp;height=283&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=565&amp;originWidth=1136&amp;size=39323&amp;status=done&amp;style=none&amp;width=568">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661037085-e41811e4-6db3-43ac-a078-e681bc81f6d6.png#align=left&amp;display=inline&amp;height=308&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=615&amp;originWidth=834&amp;size=44680&amp;status=done&amp;style=none&amp;width=417">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/gif/991157/1613638281119-eee5da4c-1974-4288-8757-697bddaaa6ab.gif#align=left&amp;display=inline&amp;height=433&amp;margin=%5Bobject%20Object%5D&amp;name=mapreduce.gif&amp;originHeight=688&amp;originWidth=765&amp;size=33140&amp;status=done&amp;style=none&amp;width=481">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613659817801-c43733ba-c99f-40ac-9bf7-5157c8a3c85b.png#align=left&amp;display=inline&amp;height=266&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=531&amp;originWidth=1376&amp;size=63548&amp;status=done&amp;style=none&amp;width=688">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661194797-7f281fbf-6ff5-45a9-ac95-ae8f41b32370.png#align=left&amp;display=inline&amp;height=384&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=706&amp;originWidth=976&amp;size=67244&amp;status=done&amp;style=none&amp;width=531">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661793298-395d0fbd-cc93-4d10-a996-39865b172f9e.png#align=left&amp;display=inline&amp;height=318&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=696&amp;originWidth=1538&amp;size=94430&amp;status=done&amp;style=none&amp;width=702">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661498865-a9f29cbe-3433-48b5-aba5-fb52fb9aeb96.png#align=left&amp;display=inline&amp;height=323&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=646&amp;originWidth=1247&amp;size=53096&amp;status=done&amp;style=none&amp;width=623.5">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661838562-e74e593c-7eb1-42c5-a7e4-eaf5bce08464.png#align=left&amp;display=inline&amp;height=296&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=696&amp;originWidth=1510&amp;size=69894&amp;status=done&amp;style=none&amp;width=643">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613662931987-777caf31-5db8-431a-bf5a-67db7c0a4c21.png#align=left&amp;display=inline&amp;height=172&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=343&amp;originWidth=1331&amp;size=30336&amp;status=done&amp;style=none&amp;width=665.5">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613663190866-c507fee3-cfc0-43fe-9757-0bf1d866f5d4.png#align=left&amp;display=inline&amp;height=286&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=571&amp;originWidth=1181&amp;size=72393&amp;status=done&amp;style=none&amp;width=590.5">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613664248048-412b7d32-c18a-4439-96ef-28e39eaa4f56.png#align=left&amp;display=inline&amp;height=93&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=233&amp;originWidth=1616&amp;size=24040&amp;status=done&amp;style=none&amp;width=643">
+<meta property="article:published_time" content="2019-08-22T02:08:11.000Z">
+<meta property="article:modified_time" content="2021-02-19T12:26:43.158Z">
+<meta property="article:author" content="GeminiLight">
+<meta property="article:tag" content="深度学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613727787801-7f7af0c2-0e60-4c3f-8ca5-f592b04dfff7.png#align=left&amp;display=inline&amp;height=1027&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.png&amp;originHeight=1027&amp;originWidth=945&amp;size=76269&amp;status=done&amp;style=none&amp;width=945">
+
+
+<link rel="canonical" href="https://www.geminilight.cn/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/parallel-computing-and-machine-learning/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【分布式ML】机器学习中的并行计算 | Gemini向光性</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?81607a4529b9e096ccf0ac76663fbc7c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  <script>
+    !function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/2.1/gio.js","gio");
+    gio('init', 'UA-175467019-1', {});
+    gio('send');
+  </script>
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Gemini向光性</h1>
+      <i class="logo-line"></i>
+    </a>
+    
+      <p class="site-subtitle" itemprop="description">The light always goes on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97"><span class="nav-text">什么是并行计算？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%9C%80%E8%A6%81%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97"><span class="nav-text">为什么机器学习中需要并行计算？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97"><span class="nav-text">并行计算与分布式计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B%E5%AE%9E%E4%BE%8B"><span class="nav-text">房价预测实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E9%A2%84%E6%B5%8B%E5%99%A8"><span class="nav-text">线性预测器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B"><span class="nav-text">训练模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mapreduce"><span class="nav-text">MapReduce</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6%E7%89%B9%E7%82%B9"><span class="nav-text">框架特点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GeminiLight"
+      src="/images/avatar.webp">
+  <p class="site-author-name" itemprop="name">GeminiLight</p>
+  <div class="site-description" itemprop="description">stay hungry, stay foolish</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlbWluaWxpZ2h0" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;geminilight"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnd0Zmx5MjAxOEAxNjMuY29t" title="E-Mail → mailto:wtfly2018@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9nZW1pbmlfbGlnaHQ=" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;gemini_light"><i class="fa fa-book fa-fw"></i>ZhiHu</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTc1Mzg2MDMz" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;175386033"><i class="fa fa-tv fa-fw"></i>BiliBili</span>
+      </span>
+  </div>
+
+
+
+
+
+
+  <div class="links-of-blogroll animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2Jvb2tzL3NoYXJlLzhlZTc2OTRiLTFiMjgtNDE3Yy05MjFmLTQ1YWY0Zjg0ZDcwYz8jIOOAik1MIC0g5py65Zmo5a2m5Lmg44CL" title="https:&#x2F;&#x2F;www.yuque.com&#x2F;books&#x2F;share&#x2F;8ee7694b-1b28-417c-921f-45af4f84d70c?# 《ML - 机器学习》">我的机器学习笔记</span>
+        </li>
+    </ul>
+  </div>
+
+      </section>
+
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%; margin: 20px 0 0 0;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/parallel-computing-and-machine-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.webp">
+      <meta itemprop="name" content="GeminiLight">
+      <meta itemprop="description" content="stay hungry, stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gemini向光性">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【分布式ML】机器学习中的并行计算
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-22 10:08:11" itemprop="dateCreated datePublished" datetime="2019-08-22T10:08:11+08:00">2019-08-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ML-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">ML - 机器学习</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.5k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>随着深度学习模型的不断增大、数据的不断增多，并行计算成为了解决机器学习训练难题的一种主流技术。本文主要是对Shusen Wang的《分布式机器学习》课程的笔记记录和扩展，仅是对机器学习中并行计算方式的概述。</p>
+<a id="more"></a>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613727787801-7f7af0c2-0e60-4c3f-8ca5-f592b04dfff7.png#align=left&amp;display=inline&amp;height=1027&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.png&amp;originHeight=1027&amp;originWidth=945&amp;size=76269&amp;status=done&amp;style=none&amp;width=945" alt="并行计算与机器学习.png" /><figcaption aria-hidden="true">并行计算与机器学习.png</figcaption>
+</figure>
+<h2 id="概述">概述</h2>
+<h3 id="什么是并行计算">什么是并行计算？</h3>
+<p>使用多个处理器来加速计算过程，使时钟运行时间更短 多个处理器的情况包括</p>
+<ul>
+<li>一台计算机上有多个CPU</li>
+<li>多个计算机的CPU</li>
+</ul>
+<h3 id="为什么机器学习中需要并行计算">为什么机器学习中需要并行计算？</h3>
+<ul>
+<li>深度学习模型大。模型参数越来越多</li>
+<li>训练数据多。比如ImageNet有14M张图片</li>
+<li>计算资源成本高。在大模型上训练大数据集的必然结构</li>
+</ul>
+<h3 id="并行计算与分布式计算">并行计算与分布式计算</h3>
+<p>分布式计算可以看做是一种并行计算。两者的界限是模糊的，但从机器学习研究人员角度出发</p>
+<ul>
+<li>并行计算 Parallel computing
+<ul>
+<li>数据或模型被分划分成多份，但这些CPU都属于一台电脑，并行计算任务仍在一台电脑节点执行</li>
+</ul></li>
+<li>分布式计算 Distributed computing
+<ul>
+<li>数据或模型被分划分成多份，且在不同的节点上进行计算</li>
+</ul></li>
+</ul>
+<h3 id="房价预测实例">房价预测实例</h3>
+<h4 id="线性预测器">线性预测器</h4>
+<ul>
+<li>输入：<span class="math display">\[X \in \mathbb{R}^d\]</span>（有关房价的特征）</li>
+<li>预测：<span class="math display">\[f(X) = X^T W\]</span>（房价）
+<ul>
+<li>假设有<span class="math display">\[d\]</span>个房价相关的特征，如面积、年限等</li>
+<li><span class="math display">\[f(X) = w_1x_1 + w_2x_2 + w_3x_3 + \cdots + w_dx_d\]</span></li>
+<li>其中<span class="math display">\[x_i\]</span>表示特征，<span class="math display">\[w_i\]</span>是其权重</li>
+</ul></li>
+</ul>
+<h4 id="训练模型">训练模型</h4>
+<ul>
+<li>训练集
+<ul>
+<li>输入：<span class="math display">\[X_1, \cdots, X_n \in \mathbb{R}^d\]</span></li>
+<li>标签：<span class="math display">\[y_1, \cdots, y_n \in \mathbb{R}\]</span></li>
+</ul></li>
+<li>损失函数：<span class="math display">\[L(\mathbf{W})=\sum_{i=1}^{n} \frac{1}{2}\left(\mathbf{X}_{i}^{T} \mathbf{W}-y_{i}\right)^{2}\]</span></li>
+<li>最小二乘回归：<span class="math display">\[\mathbf{W}^{*}=\underset{\mathbf{W}}{\operatorname{argmin}} L(\mathbf{W})\]</span></li>
+<li>梯度下降：
+<ul>
+<li>梯度：<span class="math display">\[g(W)=\frac{\partial L(\mathrm{W})}{\partial \mathrm{W}}=\sum_{i=1}^{n} \frac{\partial \frac{1}{2}\left(\mathbf{X}_{i}^{T} \mathrm{W}-y_{i}\right)^{2}}{\partial \mathrm{W}}=\sum_{i=1}^{n}\left(\mathbf{X}_{i}^{T} \mathbf{W}-y_{i}\right) \mathbf{X}_{i}\]</span></li>
+<li><span class="math display">\[g(\mathbf{W})=\sum_{i=1}^{n} g_{i}(\mathbf{W}), \text { where } g_{i}(\mathbf{W})=\left(\mathbf{X}_{i}^{T} \mathbf{W}-y_{i}\right) \mathbf{X}_{i}\]</span></li>
+<li><span class="math display">\[W_{t+1} = W_t - \alpha \cdot g(W_t)\]</span></li>
+</ul></li>
+</ul>
+<p>我们可以发现，当仅一个处理器处理大的模型`和海量数据的时候，计算量是巨大的。 #### 并行梯度下降训练 并行梯度下降的基本思想便是利用多个处理器来分别利用自己的数据计算梯度，最后通过聚合或其他方式来实现并行计算梯度下降以加速模型训练过程。 下面的图示便展示了两个处理器各自利用一半数据计算梯度<span class="math display">\[\tilde{g}_1\]</span>、<span class="math display">\[\tilde{g}_2\]</span>，然后将两个结果进行聚合，实现了并行梯度下降： <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613636779824-1fb6d3a0-779c-43c8-8fcf-f8fd40b839ae.png#align=left&amp;display=inline&amp;height=175&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=350&amp;originWidth=1215&amp;size=34939&amp;status=done&amp;style=none&amp;width=607.5" alt="image.png" /> ## 概念 ### 通信 Communication #### 内存共享 Share memory 当处理器共用一个内存，它们可以访问相同的数据，直接进行通信 <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637240579-73076efc-0866-43b3-8386-c7b4779c7083.png#align=left&amp;display=inline&amp;height=148&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=295&amp;originWidth=628&amp;size=17787&amp;status=done&amp;style=none&amp;width=314" alt="image.png" /> #### 消息传递 Message passing 当存在多个节点的时候，不同节点上的处理器所访问的内存是不同的。这种情况下，需要通过消息传递来进行通信 <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637305183-76080e4e-5f5a-4380-abdf-501262fce309.png#align=left&amp;display=inline&amp;height=280&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=560&amp;originWidth=713&amp;size=39545&amp;status=done&amp;style=none&amp;width=356.5" alt="image.png" /> ### 架构 Architecture #### Client-Server 一个节点作为Server来协调其他节点，其他节点作为Worker来执行计算任务 <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637117427-b29682fa-7556-40a0-922f-7c02009f4798.png#align=left&amp;display=inline&amp;height=311&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=621&amp;originWidth=1192&amp;size=50765&amp;status=done&amp;style=none&amp;width=596" alt="image.png" /> #### Peer-to-Peer 每个节点都是平等的，它们都有邻居，邻居之间可以通信 <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637153292-bc53acef-1b7c-4ff7-a183-32b6f2ff452c.png#align=left&amp;display=inline&amp;height=311&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=622&amp;originWidth=1352&amp;size=72359&amp;status=done&amp;style=none&amp;width=676" alt="image.png" /> ### 同步性 #### 批同步 Bulk Synchronous 当全部Worker节点发送梯度信息到Server后，Server才进行一次参数更新 #### 异步 Asynchronous 当一个Worker将计算出的梯度传回Server时，Server随即进行一次参数更新 ### 并行性 Parallelism <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613667742259-0b1f140b-4f1e-4ff0-b6bf-03b28204983d.png#align=left&amp;display=inline&amp;height=364&amp;margin=%5Bobject%20Object%5D&amp;originHeight=504&amp;originWidth=866&amp;size=0&amp;status=done&amp;style=none&amp;width=625" /> #### 数据并行 这是主流的并行方式。将数据划分成若干份，分别在拥有整个模型的Worker上进行梯度计算，不同Worker间梯度计算是并行的 <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613667136598-1f03702c-e8d0-4564-82d0-be15507aec69.png#align=left&amp;display=inline&amp;height=321&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=642&amp;originWidth=1026&amp;size=120870&amp;status=done&amp;style=none&amp;width=513" alt="image.png" /> #### 模型并行 当模型太大了以致于不能把整个模型载入一个GPU中，可以考虑把整个模型按层或其他方式分解成若干份。</p>
+<ul>
+<li>比如每个不同的节点计算着整个模型的不同的层，计算着不同的层的梯度。</li>
+<li>模型较后部分的计算必须等前面计算完成，因此不同节点间的计算实际是串行的。但每个部分计算互不妨碍，更像是流水线结构</li>
+</ul>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613666601776-1e28fc21-b3ab-445c-92a0-bc7f8ce1461c.png#align=left&amp;display=inline&amp;height=235&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=469&amp;originWidth=862&amp;size=95815&amp;status=done&amp;style=none&amp;width=431" alt="image.png" /> ### 成本与加速比 Cost &amp; Speedup Ratio <span class="math display">\[加速比 = \frac{使用一个节点消耗的时钟时间}{使用m个节点消耗的时钟时间}\]</span> 实际加速比是低于<span class="math display">\[m\]</span>倍的：存在其他成本，如通信和同步 <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613660519864-10f7e212-2d01-4e3d-acce-1430ca064449.png#align=left&amp;display=inline&amp;height=283&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=565&amp;originWidth=1136&amp;size=39323&amp;status=done&amp;style=none&amp;width=568" alt="image.png" /> #### 计算成本 节点执行计算任务所消耗的时间，与模型大小、数据量和节点计算性能有关。 #### 通信成本 数据传输所消耗的时间，通常由通信复杂度和延迟所决定 <span class="math display">\[T = \frac{\text{complexity}}{\text{bandwith}} + \text{latency}\]</span></p>
+<ul>
+<li>通信复杂度
+<ul>
+<li>即Server与Worker传输的数据大小</li>
+<li>随模型参数量和Worker节点数量增加而增长</li>
+</ul></li>
+<li>延迟
+<ul>
+<li>数据传输时可能会产生延迟</li>
+<li>取决于计算机网络状况 #### 同步成本 当采用同步的计算方法时（如MapReduce），就可能会产生同步成本，因为不同节点完成相同任务的时间可能是不同的。 Stragger节点</li>
+</ul></li>
+<li>一个严重慢于其他节点的Worker，比如因为特殊情况而重启</li>
+<li>同步并行计算方法实际时钟时间消耗取决于最慢的节点</li>
+</ul>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661037085-e41811e4-6db3-43ac-a078-e681bc81f6d6.png#align=left&amp;display=inline&amp;height=308&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=615&amp;originWidth=834&amp;size=44680&amp;status=done&amp;style=none&amp;width=417" alt="image.png" /> ## 主流框架 | | <strong>通信</strong> | <strong>架构</strong> | <strong>并行性</strong> | | --- | --- | --- | --- | | MapReduce | Message passing | client-server | synchronous | | Parameter Server | Message passing | client-server | asynchronous | | Decentralized | Message passing | peer-to-peer | synchronous or asynchronous |</p>
+<h3 id="mapreduce">MapReduce</h3>
+<p>由Google提出</p>
+<ul>
+<li><p>本质思想：Server广播参数，Worker执行Map运算并将结果返回Server，Server执行Reduce，从而完成一次参数更新</p></li>
+<li><p>开源实现：Hadoop、Spark等 #### 框架特点</p></li>
+<li><p>架构：client-server</p></li>
+<li><p>通信：消息传递</p></li>
+<li><p>并行方式：批量同步 #### 计算流程</p></li>
+</ul>
+<ol type="1">
+<li><code>Broadcast</code> ：Server将参数发送给每个Worker</li>
+<li><code>Map</code> ：每个worker利用自己的数据进行Map操作</li>
+<li><code>Reduce</code> ：Worker将Map后的结果发送到Server，Server进行Reduce操作</li>
+</ol>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/gif/991157/1613638281119-eee5da4c-1974-4288-8757-697bddaaa6ab.gif#align=left&amp;display=inline&amp;height=433&amp;margin=%5Bobject%20Object%5D&amp;name=mapreduce.gif&amp;originHeight=688&amp;originWidth=765&amp;size=33140&amp;status=done&amp;style=none&amp;width=481" alt="mapreduce.gif" /> #### 梯度下降 <strong>数据并行 Data Parallelism</strong>：在Worker节点之间划分数据（节点具有数据子集） 在本例中，我们假设有<span class="math display">\[m\]</span>个节点，因此将数据分成<span class="math display">\[m\]</span>份，每个节点拥有<span class="math display">\[\frac{1}{m}\]</span>数据</p>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613659817801-c43733ba-c99f-40ac-9bf7-5157c8a3c85b.png#align=left&amp;display=inline&amp;height=266&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=531&amp;originWidth=1376&amp;size=63548&amp;status=done&amp;style=none&amp;width=688" alt="image.png" /><figcaption aria-hidden="true">image.png</figcaption>
+</figure>
+<ol type="1">
+<li><code>Broadcast</code> ：Server广播最新的模型参数<span class="math display">\[W_\]</span>到各个Worker节点</li>
+<li><code>Map</code> ：Worker在本地执行计算任务
+<ol type="1">
+<li>将<span class="math display">\[(X_i, y_i, W_t)\]</span>映射到<span class="math display">\[g_i = (X^T_i W_t - y_i)X_\]</span></li>
+<li>获得<span class="math display">\[n\]</span>个梯度向量：<span class="math display">\[g_i, \cdots, g_\]</span>（<span class="math display">\[n\]</span>是指样本个数）</li>
+</ol></li>
+<li><code>Reduce</code> ：计算梯度和<span class="math display">\[g = \sum^n_{i=1} g_i\]</span>
+<ol type="1">
+<li>Worker在本地将自己计算出的梯度进行求和得到一个向量</li>
+<li>Server根据每个Worker计算出的向量再进行一次求和</li>
+</ol></li>
+<li><code>Update</code> ：Server更新参数 <span class="math display">\[W_{t+1} \leftarrow W_t - \alpha \cdot g\]</span></li>
+</ol>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661194797-7f281fbf-6ff5-45a9-ac95-ae8f41b32370.png#align=left&amp;display=inline&amp;height=384&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=706&amp;originWidth=976&amp;size=67244&amp;status=done&amp;style=none&amp;width=531" alt="image.png" /> #### 时间消耗 <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661793298-395d0fbd-cc93-4d10-a996-39865b172f9e.png#align=left&amp;display=inline&amp;height=318&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=696&amp;originWidth=1538&amp;size=94430&amp;status=done&amp;style=none&amp;width=702" alt="image.png" /> ### Parameter Server 在<span class="exturl" data-url="aHR0cDovL3dlYi5lZWNzLnVtaWNoLmVkdS9+bW9zaGFyYWYvUmVhZGluZ3MvUGFyYW1ldGVyLVNlcnZlci5wZGY=">Scaling distributed machine learning with the parameter server<i class="fa fa-external-link-alt"></i></span>中被提出，</p>
+<ul>
+<li><p>本质思想：根据每个Worker传回的数据立即进行参数更新，即异步</p></li>
+<li><p>开源实现：Ray #### 框架特点</p></li>
+<li><p>架构：client-server</p></li>
+<li><p>通信：消息传递</p></li>
+<li><p>并行方式：异步</p></li>
+</ul>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661498865-a9f29cbe-3433-48b5-aba5-fb52fb9aeb96.png#align=left&amp;display=inline&amp;height=323&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=646&amp;originWidth=1247&amp;size=53096&amp;status=done&amp;style=none&amp;width=623.5" alt="image.png" /> #### 梯度下降 同样的，数据被划成<span class="math display">\[m\]</span>个子集分到每个Worker节点</p>
+<ul>
+<li><strong>第<span class="math display">\[i\]</span>个Worker节点重复：</strong>
+<ul>
+<li>从Server拉取最新参数<span class="math display">\[W\]</span></li>
+<li>利用本地数据和参数<span class="math display">\[W\]</span>计算梯度<span class="math display">\[\tilde{g}_\]</span></li>
+<li>将梯度推送到Server</li>
+</ul></li>
+<li><strong>Server执行：</strong>
+<ul>
+<li>从一个Worker收到梯度<span class="math display">\[\tilde{g}_i\]</span></li>
+<li>参数更新<span class="math display">\[W \leftarrow W - \alpha \cdot \tilde{g}_i\]</span> #### 时间消耗 <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613661838562-e74e593c-7eb1-42c5-a7e4-eaf5bce08464.png#align=left&amp;display=inline&amp;height=296&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=696&amp;originWidth=1510&amp;size=69894&amp;status=done&amp;style=none&amp;width=643" alt="image.png" /> #### 性能分析</li>
+</ul></li>
+<li>优点
+<ul>
+<li>比同步的MapReduce更快</li>
+</ul></li>
+<li>缺点
+<ul>
+<li>理论上，收敛速度更慢</li>
+<li>如果某些节点比其他节点慢很多，梯度可能受损</li>
+</ul></li>
+</ul>
+<p>图示：Wroker 3 在<span class="math display">\[t_1\]</span>时刻才完成了一次梯度计算，并返回Server进行更新。而此时Server的参数已经被Worker 1 和 2 的梯度更新了数次，该梯度可能是不利于模型性能的 <img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613662931987-777caf31-5db8-431a-bf5a-67db7c0a4c21.png#align=left&amp;display=inline&amp;height=172&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=343&amp;originWidth=1331&amp;size=30336&amp;status=done&amp;style=none&amp;width=665.5" alt="image.png" /> ### Decentralized Network</p>
+<h4 id="框架特点">框架特点</h4>
+<ul>
+<li>架构：P2P</li>
+<li>通信：消息传递，且节点只与其邻居进行通信</li>
+<li>并行方式：异步或同步</li>
+</ul>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613663190866-c507fee3-cfc0-43fe-9757-0bf1d866f5d4.png#align=left&amp;display=inline&amp;height=286&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=571&amp;originWidth=1181&amp;size=72393&amp;status=done&amp;style=none&amp;width=590.5" alt="image.png" /> #### 梯度下降 第<span class="math display">\[i\]</span>个节点重复执行</p>
+<ul>
+<li><p>使用本地参数<span class="math display">\[\tilde{W_}\]</span>来计算梯度<span class="math display">\[\tilde{g_t}\]</span></p></li>
+<li><p>拉取邻居节点的梯度，表示为<span class="math display">\[\{\tilde{W_k}\}\]</span></p></li>
+<li><p>计算梯度平均值 <span class="math display">\[\tilde{W} \leftarrow \text{weighted average of }  \tilde{W_i} \text{ and } \{\tilde{W_k}\}\]</span></p></li>
+<li><p>更新参数 <span class="math display">\[\tilde{W} \leftarrow \tilde{W} - \alpha \cdot \tilde{g}_i\]</span> #### 性能分析 被证明是可收敛的，但收敛情况取决于网络的连接情况</p></li>
+<li><p>当网络的连接率是较好的时候，模型可以很快收敛</p></li>
+<li><p>当节点间连接较少时，它可能不收敛</p></li>
+</ul>
+<figure>
+<img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613664248048-412b7d32-c18a-4439-96ef-28e39eaa4f56.png#align=left&amp;display=inline&amp;height=93&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=233&amp;originWidth=1616&amp;size=24040&amp;status=done&amp;style=none&amp;width=643" alt="image.png" /><figcaption aria-hidden="true">image.png</figcaption>
+</figure>
+<h2 id="参考">参考</h2>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1nVmNuT2U2X2M2USZhbXA7bGlzdD1QTHZPTzBidGxvUm5zNmVnWHVlaVJqdTREWFFqTlJKUWQ1">Shusen Wang《分布式机器学习》<i class="fa fa-external-link-alt"></i></span><br />
+<span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzUzODUxMDE0L2Fuc3dlci8xNTg3OTQ3NTI=">李哲龙. 分布式机器学习里的 数据并行 和 模型并行 各是什么意思？ 知乎<i class="fa fa-external-link-alt"></i></span><br />
+<span class="exturl" data-url="aHR0cHM6Ly9tZWRpdW0uY29tL0BqZXJ1OTIvZ2VvLWRpc3RyaWJ1dGVkLW1hY2hpbmUtbGVhcm5pbmctYW4tb3ZlcnZpZXctZWUzZmM0MmEwMzE5">Jeru Luke. Geo-Distributed Machine Learning: An Overview. Medium<i class="fa fa-external-link-alt"></i></span><br />
+Li and others: Scaling distributed machine learning with the parameter server. In OSDI, 2014.</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2019\08\22\ML - 机器学习\dl-introduction\" rel="bookmark">深度学习知识体系</a></div>
+    </li>
+  </ul>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Gemini向光性
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.geminilight.cn/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/parallel-computing-and-machine-learning/" title="【分布式ML】机器学习中的并行计算">https://www.geminilight.cn/2019/08/22/ML - 机器学习/parallel-computing-and-machine-learning/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"># 深度学习</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/" rel="prev" title="Start the Journey of My Blog">
+                  <i class="fa fa-chevron-left"></i> Start the Journey of My Blog
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-introduction/" rel="next" title="深度学习知识体系">
+                  深度学习知识体系 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GeminiLight</span>
+</div>
+
+      
+
+
+
+
+
+
+
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+
+
+
+
+  <script async type="text/javascript" src="/js/custom/cursor-firework.js"></script>
+
