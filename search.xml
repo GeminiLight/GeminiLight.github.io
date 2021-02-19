@@ -39,8 +39,8 @@
 <li><p>输入：<span class="math inline">\(X \in \mathbb{R}^d\)</span>（有关房价的特征）</p></li>
 <li><p>预测：<span class="math inline">\(f(X) = X^T W\)</span>（房价）</p>
 <ul>
-<li>假设有<span class="math display">\[d\]</span>个房价相关的特征，如面积、年限等</li>
-<li><span class="math display">\[f(X) = w_1x_1 + w_2x_2 + w_3x_3 + \cdots + w_dx_d\]</span></li>
+<li>假设有<span class="math inline">\(d\)</span>个房价相关的特征，如面积、年限等</li>
+<li><span class="math inline">\(f(X) = w_1x_1 + w_2x_2 + w_3x_3 + \cdots + w_dx_d\)</span></li>
 <li>其中<span class="math inline">\(x_i\)</span>表示特征，<span class="math inline">\(w_i\)</span>是其权重</li>
 </ul></li>
 </ul>
@@ -56,8 +56,8 @@
 <li><p>梯度下降：</p>
 <ul>
 <li>梯度：<span class="math inline">\(g(W)=\frac{\partial L(\mathrm{W})}{\partial \mathrm{W}}=\sum_{i=1}^{n} \frac{\partial \frac{1}{2}\left(\mathbf{X}_{i}^{T} \mathrm{W}-y_{i}\right)^{2}}{\partial \mathrm{W}}=\sum_{i=1}^{n}\left(\mathbf{X}_{i}^{T} \mathbf{W}-y_{i}\right) \mathbf{X}_{i}\)</span></li>
-<li><span class="math display">\[g(\mathbf{W})=\sum_{i=1}^{n} g_{i}(\mathbf{W}), \text { where } g_{i}(\mathbf{W})=\left(\mathbf{X}_{i}^{T} \mathbf{W}-y_{i}\right) \mathbf{X}_{i}\]</span></li>
-<li><span class="math display">\[W_{t+1} = W_t - \alpha \cdot g(W_t)\]</span></li>
+<li><span class="math inline">\(g(\mathbf{W})=\sum_{i=1}^{n} g_{i}(\mathbf{W}), \text { where } g_{i}(\mathbf{W})=\left(\mathbf{X}_{i}^{T} \mathbf{W}-y_{i}\right) \mathbf{X}_{i}\)</span></li>
+<li><span class="math inline">\(W_{t+1} = W_t - \alpha \cdot g(W_t)\)</span></li>
 </ul></li>
 </ul>
 <p>我们可以发现，当仅一个处理器处理大的模型`和海量数据的时候，计算量是巨大的。</p>
