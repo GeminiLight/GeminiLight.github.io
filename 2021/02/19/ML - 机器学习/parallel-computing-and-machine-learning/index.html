@@ -31,13 +31,13 @@
 <meta property="og:site_name" content="Gemini向光性">
 <meta property="og:description" content="随着深度学习模型的不断增大、数据的不断增多，并行计算成为了解决机器学习训练难题的一种主流技术。本文主要是对Shusen Wang的《分布式机器学习》课程的笔记记录和扩展，仅是对机器学习中并行计算方式的概述。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613727787801-7f7af0c2-0e60-4c3f-8ca5-f592b04dfff7.png#align=left&amp;display=inline&amp;height=1027&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.png&amp;originHeight=1027&amp;originWidth=945&amp;size=76269&amp;status=done&amp;style=none&amp;width=945">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613636779824-1fb6d3a0-779c-43c8-8fcf-f8fd40b839ae.png#align=left&amp;display=inline&amp;height=175&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=350&amp;originWidth=1215&amp;size=34939&amp;status=done&amp;style=none&amp;width=607.5">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637240579-73076efc-0866-43b3-8386-c7b4779c7083.png#align=left&amp;display=inline&amp;height=148&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=295&amp;originWidth=628&amp;size=17787&amp;status=done&amp;style=none&amp;width=314">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637305183-76080e4e-5f5a-4380-abdf-501262fce309.png#align=left&amp;display=inline&amp;height=280&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=560&amp;originWidth=713&amp;size=39545&amp;status=done&amp;style=none&amp;width=356.5">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637117427-b29682fa-7556-40a0-922f-7c02009f4798.png#align=left&amp;display=inline&amp;height=311&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=621&amp;originWidth=1192&amp;size=50765&amp;status=done&amp;style=none&amp;width=596">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637153292-bc53acef-1b7c-4ff7-a183-32b6f2ff452c.png#align=left&amp;display=inline&amp;height=311&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=622&amp;originWidth=1352&amp;size=72359&amp;status=done&amp;style=none&amp;width=676">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613667742259-0b1f140b-4f1e-4ff0-b6bf-03b28204983d.png#align=left&amp;display=inline&amp;height=364&amp;margin=%5Bobject%20Object%5D&amp;originHeight=504&amp;originWidth=866&amp;size=0&amp;status=done&amp;style=none&amp;width=625">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/dml-parallel-computing-and-machine-learning-1.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/dml-parallel-computing-and-machine-learning-2.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/dml-parallel-computing-and-machine-learning-3.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/dml-parallel-computing-and-machine-learning-4.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/dml-parallel-computing-and-machine-learning-5.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/dml-parallel-computing-and-machine-learning-6.png">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/dml-parallel-computing-and-machine-learning-7.png">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613667136598-1f03702c-e8d0-4564-82d0-be15507aec69.png#align=left&amp;display=inline&amp;height=321&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=642&amp;originWidth=1026&amp;size=120870&amp;status=done&amp;style=none&amp;width=513">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613666601776-1e28fc21-b3ab-445c-92a0-bc7f8ce1461c.png#align=left&amp;display=inline&amp;height=235&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=469&amp;originWidth=862&amp;size=95815&amp;status=done&amp;style=none&amp;width=431">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613660519864-10f7e212-2d01-4e3d-acce-1430ca064449.png#align=left&amp;display=inline&amp;height=283&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=565&amp;originWidth=1136&amp;size=39323&amp;status=done&amp;style=none&amp;width=568">
@@ -52,11 +52,11 @@
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613663190866-c507fee3-cfc0-43fe-9757-0bf1d866f5d4.png#align=left&amp;display=inline&amp;height=286&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=571&amp;originWidth=1181&amp;size=72393&amp;status=done&amp;style=none&amp;width=590.5">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613664248048-412b7d32-c18a-4439-96ef-28e39eaa4f56.png#align=left&amp;display=inline&amp;height=93&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=233&amp;originWidth=1616&amp;size=24040&amp;status=done&amp;style=none&amp;width=643">
 <meta property="article:published_time" content="2021-02-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-02-19T12:39:58.099Z">
+<meta property="article:modified_time" content="2021-02-19T12:47:07.542Z">
 <meta property="article:author" content="GeminiLight">
 <meta property="article:tag" content="+ 深度学习 + 分布式">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2021/png/991157/1613727787801-7f7af0c2-0e60-4c3f-8ca5-f592b04dfff7.png#align=left&amp;display=inline&amp;height=1027&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.png&amp;originHeight=1027&amp;originWidth=945&amp;size=76269&amp;status=done&amp;style=none&amp;width=945">
+<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/paper/dml-parallel-computing-and-machine-learning-1.png">
 
 
 <link rel="canonical" href="https://www.geminilight.cn/2021/02/19/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/parallel-computing-and-machine-learning/">
@@ -654,7 +654,7 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.5k</span>
+              <span>4.4k</span>
             </span>
 
         </div>
@@ -666,9 +666,7 @@ if(canvas.getContext){
     <div class="post-body" itemprop="articleBody">
         <p>随着深度学习模型的不断增大、数据的不断增多，并行计算成为了解决机器学习训练难题的一种主流技术。本文主要是对Shusen Wang的《分布式机器学习》课程的笔记记录和扩展，仅是对机器学习中并行计算方式的概述。</p>
 <a id="more"></a>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613727787801-7f7af0c2-0e60-4c3f-8ca5-f592b04dfff7.png#align=left&amp;display=inline&amp;height=1027&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.png&amp;originHeight=1027&amp;originWidth=945&amp;size=76269&amp;status=done&amp;style=none&amp;width=945" alt="并行计算与机器学习.png" /><figcaption aria-hidden="true">并行计算与机器学习.png</figcaption>
-</figure>
+<p><img data-src="/resource/images/paper/dml-parallel-computing-and-machine-learning-1.png" /></p>
 <h2 id="概述">概述</h2>
 <h3 id="什么是并行计算">什么是并行计算？</h3>
 <p>使用多个处理器来加速计算过程，使时钟运行时间更短 多个处理器的情况包括</p>
@@ -724,39 +722,29 @@ if(canvas.getContext){
 <p>我们可以发现，当仅一个处理器处理大的模型`和海量数据的时候，计算量是巨大的。</p>
 <h4 id="并行梯度下降训练">并行梯度下降训练</h4>
 <p>并行梯度下降的基本思想便是利用多个处理器来分别利用自己的数据计算梯度，最后通过聚合或其他方式来实现并行计算梯度下降以加速模型训练过程。 下面的图示便展示了两个处理器各自利用一半数据计算梯度<span class="math inline">\(\tilde{g}_1\)</span>、<span class="math inline">\(\tilde{g}_2\)</span>，然后将两个结果进行聚合，实现了并行梯度下降：</p>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613636779824-1fb6d3a0-779c-43c8-8fcf-f8fd40b839ae.png#align=left&amp;display=inline&amp;height=175&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=350&amp;originWidth=1215&amp;size=34939&amp;status=done&amp;style=none&amp;width=607.5" alt="image.png" /><figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+<p><img data-src="/resource/images/paper/dml-parallel-computing-and-machine-learning-2.png" /></p>
 <h2 id="概念">概念</h2>
 <h3 id="通信-communication">通信 Communication</h3>
 <h4 id="内存共享-share-memory">内存共享 Share memory</h4>
 <p>当处理器共用一个内存，它们可以访问相同的数据，直接进行通信</p>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637240579-73076efc-0866-43b3-8386-c7b4779c7083.png#align=left&amp;display=inline&amp;height=148&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=295&amp;originWidth=628&amp;size=17787&amp;status=done&amp;style=none&amp;width=314" alt="image.png" /><figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+<p><img data-src="/resource/images/paper/dml-parallel-computing-and-machine-learning-3.png" /></p>
 <h4 id="消息传递-message-passing">消息传递 Message passing</h4>
 <p>当存在多个节点的时候，不同节点上的处理器所访问的内存是不同的。这种情况下，需要通过消息传递来进行通信</p>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637305183-76080e4e-5f5a-4380-abdf-501262fce309.png#align=left&amp;display=inline&amp;height=280&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=560&amp;originWidth=713&amp;size=39545&amp;status=done&amp;style=none&amp;width=356.5" alt="image.png" /><figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+<p><img data-src="/resource/images/paper/dml-parallel-computing-and-machine-learning-4.png" /></p>
 <h3 id="架构-architecture">架构 Architecture</h3>
 <h4 id="client-server">Client-Server</h4>
 <p>一个节点作为Server来协调其他节点，其他节点作为Worker来执行计算任务</p>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637117427-b29682fa-7556-40a0-922f-7c02009f4798.png#align=left&amp;display=inline&amp;height=311&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=621&amp;originWidth=1192&amp;size=50765&amp;status=done&amp;style=none&amp;width=596" alt="image.png" /><figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+<p><img data-src="/resource/images/paper/dml-parallel-computing-and-machine-learning-5.png" /></p>
 <h4 id="peer-to-peer">Peer-to-Peer</h4>
 <p>每个节点都是平等的，它们都有邻居，邻居之间可以通信</p>
-<figure>
-<img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613637153292-bc53acef-1b7c-4ff7-a183-32b6f2ff452c.png#align=left&amp;display=inline&amp;height=311&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=622&amp;originWidth=1352&amp;size=72359&amp;status=done&amp;style=none&amp;width=676" alt="image.png" /><figcaption aria-hidden="true">image.png</figcaption>
-</figure>
+<p><img data-src="/resource/images/paper/dml-parallel-computing-and-machine-learning-6.png" /></p>
 <h3 id="同步性">同步性</h3>
 <h4 id="批同步-bulk-synchronous">批同步 Bulk Synchronous</h4>
 <p>当全部Worker节点发送梯度信息到Server后，Server才进行一次参数更新</p>
 <h4 id="异步-asynchronous">异步 Asynchronous</h4>
 <p>当一个Worker将计算出的梯度传回Server时，Server随即进行一次参数更新</p>
 <h3 id="并行性-parallelism">并行性 Parallelism</h3>
-<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/991157/1613667742259-0b1f140b-4f1e-4ff0-b6bf-03b28204983d.png#align=left&amp;display=inline&amp;height=364&amp;margin=%5Bobject%20Object%5D&amp;originHeight=504&amp;originWidth=866&amp;size=0&amp;status=done&amp;style=none&amp;width=625" /></p>
+<p><img data-src="/resource/images/paper/dml-parallel-computing-and-machine-learning-7.png" /></p>
 <h4 id="数据并行">数据并行</h4>
 <p>这是主流的并行方式。将数据划分成若干份，分别在拥有整个模型的Worker上进行梯度计算，不同Worker间梯度计算是并行的</p>
 <figure>
