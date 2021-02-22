@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>【分布式ML】机器学习中的并行计算</title>
-    <url>/2021/02/19/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/parallel-computing-and-machine-learning/</url>
+    <url>/2021/02/19/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dml-parallel-computing-and-machine-learning/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>随着深度学习模型的不断增大、数据的不断增多，并行计算成为了解决机器学习训练难题的一种主流技术。本文主要是对Shusen Wang的《分布式机器学习》课程的笔记记录和扩展，仅是对机器学习中并行计算方式的概述。</p>
 <a id="more"></a>
 <p><img data-src="/resource/images/dml/dml-parallel-computing-and-machine-learning-1.png" /></p>
@@ -267,10 +267,11 @@ Li and others: Scaling distributed machine learning with the parameter server. I
 </blockquote>
 ]]></content>
       <categories>
-        <category>+ ML - 机器学习</category>
+        <category>ML - 机器学习</category>
       </categories>
       <tags>
-        <tag>+ 深度学习 + 分布式</tag>
+        <tag>深度学习</tag>
+        <tag>分布式</tag>
       </tags>
   </entry>
   <entry>

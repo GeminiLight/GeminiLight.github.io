@@ -1,4 +1,4 @@
-https://www.geminilight.cn/2021/02/19/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/parallel-computing-and-machine-learning/
+https://www.geminilight.cn/2021/02/19/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dml-parallel-computing-and-machine-learning/
 https://www.geminilight.cn/2021/01/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vnf-placement-latency-aware-ne/
 https://www.geminilight.cn/2020/12/02/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-list-nfv-ra/
 https://www.geminilight.cn/2020/12/01/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-dl-gnn-gat/
