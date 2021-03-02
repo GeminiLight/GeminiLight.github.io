@@ -3,7 +3,11 @@
   <entry>
     <title>【AI】人工智能课程集</title>
     <url>/2021/03/02/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/course-collection-on-ai/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里收集了许多关于人工智能的高质量课程和教程，涵盖了</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvYjIyYTExN2ItMmU3ZC00NmRiLWFjODgtNjJiMjhiNTdjYzAz">Yuque优化排版<i class="fa fa-external-link-alt"></i></span>：支持筛选排序寻找自己所需要的课程</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L2NvdXJzZS1jb2xsZWN0aW9uLW9uLWFp">Github项目主页<i class="fa fa-external-link-alt"></i></span>：及时获取更新动态，欢迎推荐高质量的课程/教程到本项目中😄</li>
+</ul>
+<p>这里收集了许多关于人工智能的高质量课程和教程，涵盖了</p>
 <ul>
 <li>机器学习 Machine Learning (ML)</li>
 <li>数据挖掘 (Data Mining, DM)</li>
@@ -24,11 +28,7 @@
 <li>PyTorch</li>
 <li>...</li>
 </ul>
-<p>相关链接：</p>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvYjIyYTExN2ItMmU3ZC00NmRiLWFjODgtNjJiMjhiNTdjYzAz">Yuque优化排版<i class="fa fa-external-link-alt"></i></span>：支持筛选排序寻找自己所需要的课程</li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L2NvdXJzZS1jb2xsZWN0aW9uLW9uLWFp">Github项目主页<i class="fa fa-external-link-alt"></i></span>：欢迎推荐高质量的课程/教程到本项目中😄</li>
-</ul>
+<a id="more"></a>
 <blockquote>
 <p>提示:</p>
 <ol type="1">
