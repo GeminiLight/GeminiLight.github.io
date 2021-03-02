@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-32x32.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.ico">
+  <link rel="mask-icon" href="/images/favicon-32x32.ico" color="#222">
+  <meta name="google-site-verification" content="RrL9pY7_YVrRxyUv7G4ksTPRGYJmECxw-uI8iVOz7vI">
+  <meta name="baidu-site-verification" content="AozFAayi1Z">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="这里收集了许多关于人工智能的高质量课程和教程，涵盖了  机器学习 Machine Learning (ML) 数据挖掘 (Data Mining, DM) 数学基础 Mathematics (Math) 深度学习 Deep Learning (DL) 强化学习 Reinforcement Learning (RL) 深度强化学习 Deep Reinforcement Learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【AI】人工智能课程集">
+<meta property="og:url" content="https://www.geminilight.cn/2021/03/02/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/course-collection-on-ai/index.html">
+<meta property="og:site_name" content="Gemini向光性">
+<meta property="og:description" content="这里收集了许多关于人工智能的高质量课程和教程，涵盖了  机器学习 Machine Learning (ML) 数据挖掘 (Data Mining, DM) 数学基础 Mathematics (Math) 深度学习 Deep Learning (DL) 强化学习 Reinforcement Learning (RL) 深度强化学习 Deep Reinforcement Learning">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-03-02T14:57:40.876Z">
+<meta property="article:author" content="GeminiLight">
+<meta property="article:tag" content="分布式">
+<meta property="article:tag" content="人工智能">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.geminilight.cn/2021/03/02/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/course-collection-on-ai/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【AI】人工智能课程集 | Gemini向光性</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?81607a4529b9e096ccf0ac76663fbc7c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  <script>
+    !function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/2.1/gio.js","gio");
+    gio('init', 'UA-175467019-1', {});
+    gio('send');
+  </script>
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Gemini向光性</h1>
+      <i class="logo-line"></i>
+    </a>
+    
+      <p class="site-subtitle" itemprop="description">The light always goes on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GeminiLight"
+      src="/images/avatar.webp">
+  <p class="site-author-name" itemprop="name">GeminiLight</p>
+  <div class="site-description" itemprop="description">stay hungry, stay foolish</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlbWluaWxpZ2h0" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;geminilight"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnd0Zmx5MjAxOEAxNjMuY29t" title="E-Mail → mailto:wtfly2018@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9nZW1pbmlfbGlnaHQ=" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;gemini_light"><i class="fa fa-book fa-fw"></i>ZhiHu</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTc1Mzg2MDMz" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;175386033"><i class="fa fa-tv fa-fw"></i>BiliBili</span>
+      </span>
+  </div>
+
+
+
+
+
+
+  <div class="links-of-blogroll animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2Jvb2tzL3NoYXJlLzhlZTc2OTRiLTFiMjgtNDE3Yy05MjFmLTQ1YWY0Zjg0ZDcwYz8jIOOAik1MIC0g5py65Zmo5a2m5Lmg44CL" title="https:&#x2F;&#x2F;www.yuque.com&#x2F;books&#x2F;share&#x2F;8ee7694b-1b28-417c-921f-45af4f84d70c?# 《ML - 机器学习》">我的机器学习笔记</span>
+        </li>
+    </ul>
+  </div>
+
+      </section>
+
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%; margin: 20px 0 0 0;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2021/03/02/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/course-collection-on-ai/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.webp">
+      <meta itemprop="name" content="GeminiLight">
+      <meta itemprop="description" content="stay hungry, stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gemini向光性">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【AI】人工智能课程集
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-02 00:00:00" itemprop="dateCreated datePublished" datetime="2021-03-02T00:00:00+08:00">2021-03-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ML-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">ML - 机器学习</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.2k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>这里收集了许多关于人工智能的高质量课程和教程，涵盖了</p>
+<ul>
+<li>机器学习 Machine Learning (ML)</li>
+<li>数据挖掘 (Data Mining, DM)</li>
+<li>数学基础 Mathematics (Math)</li>
+<li>深度学习 Deep Learning (DL)</li>
+<li>强化学习 Reinforcement Learning (RL)</li>
+<li>深度强化学习 Deep Reinforcement Learning (DRL)</li>
+<li>分布式机器学习Distributed Machine Learning (DML)</li>
+<li>自然语言处理 Natural Language Processing (NLP)</li>
+<li>计算机视觉 Computer Vision (CV)</li>
+<li>生成式对抗网络 Generative Adversarial Network (GAN)</li>
+<li>图神经网络 Graph Neural Network (GNN)</li>
+<li>知识图谱 Knowledge Graph (KG)</li>
+<li>推荐系统 Recommander System (RS)</li>
+<li>因果推理 Causal Inference (CI)</li>
+<li>组合优化 Combinational Optimazation (CO)</li>
+<li>TensorFlow</li>
+<li>PyTorch</li>
+<li>...</li>
+</ul>
+<p>相关链接：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvYjIyYTExN2ItMmU3ZC00NmRiLWFjODgtNjJiMjhiNTdjYzAz">Yuque优化排版<i class="fa fa-external-link-alt"></i></span>：支持筛选排序寻找自己所需要的课程</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dlbWluaUxpZ2h0L2NvdXJzZS1jb2xsZWN0aW9uLW9uLWFp">Github项目主页<i class="fa fa-external-link-alt"></i></span>：欢迎推荐高质量的课程/教程到本项目中😄</li>
+</ul>
+<blockquote>
+<p>提示:</p>
+<ol type="1">
+<li>点击 <code>课程名称</code> 栏中的链接一般会跳转到课程主页，在那里你可以找到更多相关资料</li>
+<li>课程名称中含有中文的一般是中文授课</li>
+</ol>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">最近更新</th>
+<th style="text-align: center;">类别</th>
+<th style="text-align: center;">方向</th>
+<th style="text-align: center;">课程名称</th>
+<th style="text-align: center;">机构</th>
+<th style="text-align: center;">教师</th>
+<th style="text-align: center;">视频</th>
+<th style="text-align: center;">更多资源</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">NLP</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL3dlYi5zdGFuZm9yZC5lZHUvY2xhc3MvY3MyMjRuLw==">CS224n: Natural Language Processing with Deep Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;">Chris Manning, John Hewitt Head TA</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXI0NDExZjd0ZA==">BiliBili (2019)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">GNN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL3dlYi5zdGFuZm9yZC5lZHUvY2xhc3MvY3MyMjR3Lw==">CS224W: Machine Learning with Graphs<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWpFNDExNzdBND9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xNDI0NjU0NjIyMjAzMzI3MjEyNA==">Bilibili (2019)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">RL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93ZWIuc3RhbmZvcmQuZWR1L2NsYXNzL2NzMjM0Lw==">CS234: Reinforcement Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;">Emma Brunskill</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUNjNDExaDdRUT9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xMTA1MTM4NzIwOTY1Mzc0MjkzOA==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL2NzMjI5LnN0YW5mb3JkLmVkdS9zeWxsYWJ1cy1mYWxsMjAyMC5odG1s">CS229: Machine Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;">Tengyu Ma, Andrew Ng (吴恩达), Chris Ré</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUpFNDExdzdVYj9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xMDE4MDc5NjQxMDgyMzM5OTMw">BiliBili (2018)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2ZlbmdkdTc4L0NvdXJzZXJhLU1MLUFuZHJld05nLU5vdGVz">Note<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9jczIzMC5zdGFuZm9yZC5lZHUv">CS230: Deep Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcmV3bmcub3JnLw==">Andrew Ng (吴恩达), Kian Katanforoosh<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVliNDExNzd0bQ==">BiliBili (2018)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">CV</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL2NzMjMxbi5zdGFuZm9yZC5lZHUv">CS231n: Convolutional Neural Networks for Visual Recognition<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9wcm9maWxlcy5zdGFuZm9yZC5lZHUvZmVpLWZlaS1saQ==">Fei-Fei Li (李飞飞)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMW5KNDExejdmZT9mcm9tPXNlYXJjaCZhbXA7c2VpZD0yNDc1MzM3NTk0ODA2OTExNTM2">Bilibili (2019)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">GAN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9kZWVwZ2VuZXJhdGl2ZW1vZGVscy5naXRodWIuaW8v">CS236: Deep Generative Models<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;">Stefano Ermon, Aditya Grover</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVNKNDExYjdEOD9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xNzYxMTc3MzE1MzMxNDUyODc4MA==">Bilibili (2019)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DM</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93ZWIuc3RhbmZvcmQuZWR1L2NsYXNzL2NzMjQ2Lw==">CS246: Mining Massive Data Sets<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;">Jure Leskovec</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVNDNHkxODd4MT9mcm9tPXNlYXJjaCZhbXA7c2VpZD03MzExNjU2NTYwMjgxODkxOTk=">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">RL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9jczMzMi5zdGFuZm9yZC5lZHUvIyFzeWxsYWJ1cy5tZA==">CS332: Advanced Survey of Reinforcement Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;">Emma Brunskill</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">KG</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93ZWIuc3RhbmZvcmQuZWR1L2NsYXNzL2NzNTIwLw==">CS520: Knowledge Graphs<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;">Vinay K. Chaudhri, Naren Chittar, Michael Genesereth</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUQ1NDExVzdSaQ==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">Math</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93ZWIuc3RhbmZvcmQuZWR1L2NsYXNzL2VlMzY0YS9pbmRleC5odG1s">EE364a: Convex Optimization I<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Stanford</td>
+<td style="text-align: center;">John Duchi</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL2RlZXBsZWFybmluZy5jcy5jbXUuZWR1L1MyMS9pbmRleC5odG1s">CS 11-785: Introduction to Deep Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">CMU</td>
+<td style="text-align: center;">Graham Neubig</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWhvNHkxZDdFYT9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xODMyMTE3MjM4NzQ4ODYyNzY1NA==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">NLP</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL3d3dy5waG9udHJvbi5jb20vY2xhc3Mvbm40bmxwMjAxOS8=">CS 11-747: Neural Networks for NLP<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">CMU</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWt0NDExaDdLdA==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">AI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9pbnN0LmVlY3MuYmVya2VsZXkuZWR1L35jczE4OC8=">CS 188: Introduction to Artificial Intelligence<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">UC Berkeley</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWtBNDExRTdKZz9mcm9tPXNlYXJjaCZhbXA7c2VpZD03MjMyNzY2MDkzMDY1NDg1ODAw">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25ldXJvdGVjaC1iZXJrZWxleS9uZXVyb3RlY2gtY291cnNl">CS 198-96: Introduction to Neurotechnology<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">UC Berkeley</td>
+<td style="text-align: center;">Deven Navani</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUU1NHkxZDdSQj9mcm9tPXNlYXJjaCZhbXA7c2VpZD04ODcwNTE4NjYzNjE4MjA5MjE4">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DRL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL3JhaWwuZWVjcy5iZXJrZWxleS5lZHUvZGVlcHJsY291cnNlLw==">CS 285: Deep Reinforcement Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">UC Berkeley</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9wZW9wbGUuZWVjcy5iZXJrZWxleS5lZHUvfnN2bGV2aW5lLw==">Sergey Levine<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWtBNDExNzdOYQ==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL2ludHJvdG9kZWVwbGVhcm5pbmcuY29tL2luZGV4Lmh0bWw=">MIT 6. S191: Introduction to Deep Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">MIT</td>
+<td style="text-align: center;">Alexander Amini, Ava Soleimany</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWpvNHkxZDdSNj9mcm9tPXNlYXJjaCZhbXA7c2VpZD03ODcyNTg2MTA5MjY2NjYzOTIz">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">AI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9jczUwLmhhcnZhcmQuZWR1Lw==">CS50: Introduction to Artificial Intelligence with Python<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Harvard</td>
+<td style="text-align: center;">David J. Malan</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVVLNHkxcjd4bQ==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9uaWVzc25lci5naXRodWIuaW8vSTJETC8=">Introduction to Deep Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">TUM</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cubmllc3NuZXJsYWIub3JnL2luZGV4Lmh0bWw=">Matthias Nießner<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUJRNHkxQTd3cQ==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">GNN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9nbm4uc2Vhcy51cGVubi5lZHUv">ESE 680: Graph Neural Networks<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">UPenn</td>
+<td style="text-align: center;">Alejandro Ribeiro</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTd5NHkxQjdKTg==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">RL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2VuZ2dlbi9EZWVwTWluZC1BZHZhbmNlZC1EZWVwLUxlYXJuaW5nLWFuZC1SZWluZm9yY2VtZW50LUxlYXJuaW5n">Reinforcement Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">UCL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuZGF2aWRzaWx2ZXIudWsv">David Silver<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWt0NDExRDc2ZT9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xMTU5MTIzODg0Njc2MTcxMTgzMA==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj0ycFd2N0dPdnVmMA==">Youtube<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9hdGNvbGQuZ2l0aHViLmlvL3B5dG9yY2gtRGVlcC1MZWFybmluZy8=">Deep Learning (Pytorch)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">NYU</td>
+<td style="text-align: center;">Yann Lecun, Alfredo Canziani</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTk3NDExTTdnRw==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">AI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9ldGh6LmNoL2RlLmh0bWw=">Course Series Including AI, BD, IR et al.<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">ETH Zürich</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMU55NHkxNjc3UQ==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">GAN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVlcGxlYXJuaW5nLmFpL3Byb2dyYW0vZ2VuZXJhdGl2ZS1hZHZlcnNhcmlhbC1uZXR3b3Jrcy1nYW5zLXNwZWNpYWxpemF0aW9uLw==">Generative Adversarial Networks (GANs) Specialization<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">DeepLearning. AI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcmV3bmcub3JnLw==">Andrew Ng (吴恩达)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVR2NDExZTdmQw==">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RzdWlyYWsvZGVlcGxlYXJuaW5nLmFp">Code<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">AI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuY291cnNlcmEub3JnL2xlYXJuL2FpLWZvci1ldmVyeW9uZQ==">AI For Everyone<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">DeepLearning. AI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcmV3bmcub3JnLw==">Andrew Ng (吴恩达)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXJKNDExdDdVUQ==">bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">CO</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9kdXZlbmF1ZC5naXRodWIuaW8vbGVhcm5pbmctdG8tc2VhcmNoLw==">CSC2547: Learning to Search<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">UofT</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueHVldGFuZ3guY29tL2NvdXJzZS9USFUwODA5MTAwMTAyNi81ODgyNzk2P2NoYW5uZWw9c2VhcmNoX3Jlc3VsdA==">大数据机器学习<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">THU</td>
+<td style="text-align: center;">袁春</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueHVldGFuZ3guY29tL2NvdXJzZS9USFUwODA5MTAwMTAyNi81ODgyNzk2P2NoYW5uZWw9c2VhcmNoX3Jlc3VsdA==">学堂在线<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">TensorFlow</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvdXJzZTE2My5vcmcvbGVhcm4vUEtVLTEwMDI1MzYwMDI/dGlkPTE0NTI5Mzc0NzEjL2xlYXJuL2Fubm91bmNl">人工智能实践：Tensorflow笔记<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">PKU</td>
+<td style="text-align: center;">曹健</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvdXJzZTE2My5vcmcvY291cnNlL1BLVS0xMDAyNTM2MDAyP3RpZD0xNDUyOTM3NDcx">MOOC<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">AI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvdXJzZTE2My5vcmcvY291cnNlL1BLVS0xMDAzNDcxMDA5P3RpZD0xNDUwMjA5NDQ0">人工智能与信息社会<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">PKU</td>
+<td style="text-align: center;">陈斌</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvdXJzZTE2My5vcmcvY291cnNlL1BLVS0xMDAzNDcxMDA5P3RpZD0xNDUwMjA5NDQ0Iy9pbmZv">MOOC<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">AI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvdXJzZTE2My5vcmcvY291cnNlL1BLVS0xMDAyMTg4MDAzIy9pbmZv">人工智能原理<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">PKU</td>
+<td style="text-align: center;">王文敏</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvdXJzZTE2My5vcmcvY291cnNlL1BLVS0xMDAyMTg4MDAz">MOOC<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">AI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvdXJzZTE2My5vcmcvY291cnNlL1pKVS0xMDAzMzc3MDI3Iy9pbmZv">人工智能：模型与算法<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">ZJU</td>
+<td style="text-align: center;">吴飞</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvdXJzZTE2My5vcmcvY291cnNlL1pKVS0xMDAzMzc3MDI3Iy9pbmZv">MOOC<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL3d3dy56anV2aXBhaS5jb20v">机器学习<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">ZJU</td>
+<td style="text-align: center;">胡浩基</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWRKNDExQjdnaA==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">NLP</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueHVldGFuZ3guY29tL2NvdXJzZS9TSlRVMDg1NDAwMjIwNy81OTQ0NDczP2NoYW5uZWw9c2VhcmNoX3Jlc3VsdA==">自然语言处理<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">SJTU</td>
+<td style="text-align: center;">赵海</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueHVldGFuZ3guY29tL2NvdXJzZS9TSlRVMDg1NDAwMjIwNy81OTQ0NDczP2NoYW5uZWw9c2VhcmNoX3Jlc3VsdA==">学堂在线<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9pbnMuc2p0dS5lZHUuY24vcGVvcGxlL3h1emhpcWluL21sY291cnNlLmh0bWw=">统计计算与机器学习<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">SJTU</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9pbnMuc2p0dS5lZHUuY24vcGVvcGxlL3h1emhpcWluLw==">许志钦<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vOTU5NzU0NDEvY2hhbm5lbC9kZXRhaWw/Y2lkPTEwNzcyNQ==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2018</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL29jdy5zanR1LmVkdS5jbi9HMlMvT0NXL2NuL0NvdXJzZUhvbWUuaHRtbA==">机器学习导论<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">SJTU</td>
+<td style="text-align: center;">张志华</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWp0NDExYjc2bg==">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DM</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueHVldGFuZ3guY29tL2NvdXJzZS90am51MDgwOTEwMDIzNzIvNTg4MzczOD9jaGFubmVsPXNlYXJjaF9yZXN1bHQ=">数据挖掘<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">TJU</td>
+<td style="text-align: center;">喻梅, 王建荣, 于健</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueHVldGFuZ3guY29tL2NvdXJzZS90am51MDgwOTEwMDIzNzIvNTg4MzczOD9jaGFubmVsPXNlYXJjaF9yZXN1bHQ=">学堂在线<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">CV</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9jdi14dWViYS5jbHViLw==">计算机视觉与深度学习<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">BUPT</td>
+<td style="text-align: center;">鲁鹏</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVY1NHkxQjdLMw==">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">CV</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9jdi14dWViYS5jbHVi">计算机视觉基础<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">BUPT</td>
+<td style="text-align: center;">鲁鹏</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMW56NHkxOTdRdg==">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zcGVlY2guZWUubnR1LmVkdS50dy9+aHlsZWUvbWwvMjAyMS1zcHJpbmcuaHRtbA==">Machine Learning (机器学习)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">NTU</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zcGVlY2guZWUubnR1LmVkdS50dy9+dGxrYWdrLw==">李宏毅<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVd2NDExaDdrTj9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xNTE3MDk5MzQ2MDM5NTkwNTExNA==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RhdGF3aGFsZWNoaW5hL2xlZW1sLW5vdGVz">Note<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">NLP</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL3NwZWVjaC5lZS5udHUuZWR1LnR3L350bGthZ2svY291cnNlc19ETEhMUDIwLmh0bWw=">Deep Learning for Human Language Processing (深度学习人类语言处理)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">NTU</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zcGVlY2guZWUubnR1LmVkdS50dy9+dGxrYWdrLw==">李宏毅<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVFFNDExcDd6Mw==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">Math</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL3NwZWVjaC5lZS5udHUuZWR1LnR3L350bGthZ2svY291cnNlcy5odG1s">Linear Algebra (线性代数)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">NTU</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zcGVlY2guZWUubnR1LmVkdS50dy9+dGxrYWdrLw==">李宏毅<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTh2NDExQjdGUQ==">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">DL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuY3NpZS5udHUuZWR1LnR3L35taXVsYWIvczEwOC1hZGwvc3lsbGFidXM=">Applied Deep Learning (应用机器学习)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">NTU</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuY3NpZS5udHUuZWR1LnR3L355dmNoZW4v">陈蕴侬<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTlnNHkxYjd2eD9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xMDEyMDQ4MjU0ODc0NTA0MDc5Mw==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">RL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vYy9TaHVzZW5XYW5nL3BsYXlsaXN0cz92aWV3PTUwJmFtcDtzb3J0PWRkJmFtcDtzaGVsZl9pZD0y">Reinforcement Learning (强化学习)<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">SIT</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL3dhbmdzaHVzZW4uZ2l0aHViLmlvLw==">Shusen Wang<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUJFNDExVzdUQT9mcm9tPXNlYXJjaCZhbXA7c2VpZD00MzMwODczMDQ1ODk3MDI1ODQz">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Tutorial</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXU3NDExNjd2Sw==">机器学习: 从0到1学Tensorflow<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Google</td>
+<td style="text-align: center;">Laurence Moroney</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXU3NDExNjd2Sw==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Tutorial</td>
+<td style="text-align: center;">TensorFlow</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vcGxheWxpc3Q/bGlzdD1QTFFZMkg4clJveXZ3TGJ6Ym5LSjU5TmtadlFBVzl3TGJ4">Coding TensorFlow<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Google</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTRFNDExOTdORw==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Tutorial</td>
+<td style="text-align: center;">GNN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhZGRsZVBhZGRsZS9QR0wvdHJlZS9tYWluL2NvdXJzZQ==">PGL: 图神经网络7日打卡营<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Baidu</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXJmNHkxdjdjVQ==">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhZGRsZVBhZGRsZS9QR0wvdHJlZS9tYWluL2NvdXJzZQ==">Slide<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Tutorial</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9tb2ZhbnB5LmNvbS8=">有趣的机器学习<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Individual</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9tb2ZhbnB5LmNvbS8=">莫烦Python<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMjQzODIxNDg0P3NwbV9pZF9mcm9tPTMzMy43ODguYl83NjVmNzU3MDY5NmU2NjZmLjI=">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWFFNDExbzdxZA==">机器学习-白板推导系列<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Individual</td>
+<td style="text-align: center;">Shuhuai</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWFFNDExbzdxZA==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2Jvb2tzL3NoYXJlL2Y0MDMxZjY1LTcwYzEtNDkwOS1iYTAxLWM0N2MzMTM5ODQ2Nj8j">Note<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXZKNDExODdoaw==">菜菜的机器学习sklearn<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Individual</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMjkzMjIwNz9zcG1faWRfZnJvbT0zMzMuNzg4LmJfNzY1Zjc1NzA2OTZlNjY2Zi4y">菜菜TsaiTsai<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXZKNDExODdoaw==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lzMTMwNS9za2xlYXJuLW1s">Code<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Course</td>
+<td style="text-align: center;">CI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYnJhZHluZWFsLmNvbS9jYXVzYWwtaW5mZXJlbmNlLWNvdXJzZQ==">Introduction to Causal Inference<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Individual</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYnJhZHluZWFsLmNvbS9hYm91dG1l">Brady Neal<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMW5aNHkxSzc4aQ==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Tutorial</td>
+<td style="text-align: center;">TensorFlow</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj10UFlqM2ZGSkdqaw==">TensorFlow 2.0 Complete Course - Python Neural Networks for Beginners Tutorial<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">freeCodeCamp</td>
+<td style="text-align: center;">Tim Ruscica</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXRFNDExeDdxNQ==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Lecture</td>
+<td style="text-align: center;">GNN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTM1NDExdDc2WD9wPTI=">图形图像学科前沿研习班：图神经网络专题<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">中国图象图形学学会</td>
+<td style="text-align: center;">唐杰, 崔鹏, 石川, 严骏驰</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTM1NDExdDc2WD9wPTI=">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMUl2dmhOZmpQZFByeXpiVHh6MmhsblE=">Silde (密码: w6vg)<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Workshop</td>
+<td style="text-align: center;">GNN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9ldmVudC5iYWFpLmFjLmNuL2Nvbi9nbm4tb25saW5lLXdvcmtzaG9wLTIwMjAv">图表示学习和图神经网络的最新理论进展和应用<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">BAAI (智源研究院)</td>
+<td style="text-align: center;">宋国杰, 沈华伟, 唐杰, 石川</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXpwNHkxMTdiQg==">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">DML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zaXRlcy5nb29nbGUuY29tL3ZpZXcvYWFhaS0yMDIxLXR1dG9yaWFsLWFoOS9ob21l">AAAI 2021 Tutorial: Simplifying and Automating Parallel Machine Learning via a Programmable and Composable Parallel ML System<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">AAAI</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTNONDExOTdBRD9wPTU=">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">ML</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9leHBsYWlubWwtdHV0b3JpYWwuZ2l0aHViLmlvL2FhYWkyMQ==">AAAI 2021 Tutorial: Explaining Machine Learning Predictions: State-of-the-art, Challenges, and Opportunities<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">AAAI</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTNONDExOTdBRD9wPTI=">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">GNN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL2NzZS5tc3UuZWR1L35tYXlhbzQvdHV0b3JpYWxzL2FhYWkyMDIxLw==">AAAI 2021 Tutorial: Graph Neural Networks: Models and Applications<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">AAAI</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUdBNDExTTdQTD9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xMjI3MDk3OTM2OTgxMTQxMDk1MA==">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">CO</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zaXRlcy5nb29nbGUuY29tL3ZpZXcvbWwtY28tYWFhaS0yMS8=">AAAI 2021 Tutorial: ML &amp; CO<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">AAAI</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">Meta Learning</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zaXRlcy5nb29nbGUuY29tL21pdC5lZHUvYWFhaTIwMjFtZXRhbGVhcm5pbmd0dXRvcmlhbA==">AAAI 2021 Tutorial: Meta Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">AAAI</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWV5NHkxbjdZOA==">Bilibili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">RS</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vcGxheWxpc3Q/bGlzdD1QTF9sc2JBc0xfbzJDdzBWWFE0R2Q4Ql81V1VtWnFRdUlN">KDD 2020 Tutorial: Building Recommender Systems with PyTorch<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">Facebook</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTJ0NHkxaTdaeA==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">CI</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL2tkZDIwMjB0dXRvcmlhbC50aHVtZWRpYWxhYi5jb20vIw==">KDD 2020 Tutorial: Causal Inference Meets Machine Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">KDD</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">GNN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cDovL3d3dy5jYWx2aW56YW5nLmNvbS9rZGQyMDIwX3R1dG9yaWFsX21lZGljYWxfZ3JhcGhfYW5hbHl0aWNzLmh0bWw=">KDD 2020 Tutorial: Recent Advances on Graph Analytics and Its Applications in Healthcare<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">KDD</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">GNN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9haS50ZW5jZW50LmNvbS9haWxhYi9tbC9LREQtRGVlcC1HcmFwaC1MZWFybmluZy5odG1s">KDD 2020 Tutorial: Advanced Deep Graph Learning: Deeper, Faster, Robuster, and Unsupervised<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">KDD</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">GNN</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9jaHV4dXpoYW5nLmdpdGh1Yi5pby9LREQyMF9UdXRvcmlhbC5odG1s">KDD 2020 Tutorial: Multi-modal Network Representation Learning: Methods and Applications<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">KDD</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">AD</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zaXRlcy5nb29nbGUuY29tL3ZpZXcva2RkMjAyMGRlZXBleWUvaG9tZQ==">KDD 2020 Tutorial: Deep Learning for Anomaly Detection<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">KDD</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">NLP</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0VyaWMtV2FsbGFjZS9pbnRlcnByZXRhYmlsaXR5LXR1dG9yaWFsLWVtbmxwMjAyMC8=">EMNLP 2020 Tutorial: Interpreting Predictions of NLP Models<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">EMNLP</td>
+<td style="text-align: center;">Eric Wallace, Matt Gardner, Sameer Singh</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMW5LNHkxNzdCVw==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">Conference Tutorial</td>
+<td style="text-align: center;">RL</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly9zaXRlcy5nb29nbGUuY29tL3ZpZXcvbWJybC10dXRvcmlhbA==">ICML 2020 Tutorial: Model-Based Methods in Reinforcement Learning<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;">ICML</td>
+<td style="text-align: center;">Igor Mordatch and Jessica Hamrick</td>
+<td style="text-align: center;"><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWdhNHkxeDd3OA==">BiliBili<i class="fa fa-external-link-alt"></i></span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2021\02\19\ML - 机器学习\dml-parallel-computing-and-machine-learning\" rel="bookmark">【分布式ML】机器学习中的并行计算</a></div>
+    </li>
+  </ul>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Gemini向光性
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.geminilight.cn/2021/03/02/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/course-collection-on-ai/" title="【AI】人工智能课程集">https://www.geminilight.cn/2021/03/02/ML - 机器学习/course-collection-on-ai/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" rel="tag"># 分布式</a>
+              <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" rel="tag"># 人工智能</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/02/19/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dml-parallel-computing-and-machine-learning/" rel="prev" title="【分布式ML】机器学习中的并行计算">
+                  <i class="fa fa-chevron-left"></i> 【分布式ML】机器学习中的并行计算
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GeminiLight</span>
+</div>
+
+      
+
+
+
+
+
+
+
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      const script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
+
+
+
+
+
+  <script async type="text/javascript" src="/js/custom/cursor-firework.js"></script>
+
