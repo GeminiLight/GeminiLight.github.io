@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【Presentation】DRL-SFCP&amp;#58 Adaptive Service Function Chains Placement with Deep Reinforcement Learning</title>
+    <url>/2021/04/19/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-drl-gcn/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>This is a presentation on our paper named "DRL-SFCP" accepted by IEEE ICC 2021, where a novel algorithm integrating GNN, Seq2Seq model and DRL is proposed.</p>
+<h2 id="document">Document</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/1.jpg" /></p>
+<p><strong>Title</strong>：DRL-SFCP: Adaptive Service Function Chains Placement with Deep Reinforcement Learning<br />
+<strong>Authors</strong>：Tianfu Wang, Qilin Fan*, Xiuhua Li, Xu Zhang, Qingyu Xiong, Shu Fu and Min Gao<br />
+<strong>Publication</strong>：ICC-2021 (CCF-C)<br />
+<strong>Direction</strong>：Network Function Virtualization, Service Function Chain Placement<br />
+<strong>Keywords</strong>：Service Function Chain Placement, Deep Reinforcement Learning, Asynchronous Advantage Actor-Critic, Graph Neural Network, Sequence-to-sequence Model<br />
+<strong>Innovation</strong>：Propose a DRL algorithm integrating GNN and Seq2Seq model to capture sufficient information from input features and utilizing A3C methods to accelerate the training efficiency and model robustness. <a href="/resource/paper/icc-2021-drl-sfcp.pdf">paper</a> | <a href="/resource/paper/icc-2021-drl-sfcp-slide.pdf">slide</a></p>
+<a id="more"></a>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/2.jpg" /></p>
+<p>This presentation is divided into 5 parts.</p>
+<ul>
+<li>Firstly, I will introduce the development and significance of Network Function Virtualization.</li>
+<li>Secondly, the formulation of Service Function Chains Placement Problem will be provided.</li>
+<li>And then, I will give the description of our proposed model.</li>
+<li>Next, I will show some evaluation results.</li>
+<li>Finally, our work and some future research directions will be concluded.</li>
+</ul>
+<h2 id="introduction-on-nfv">Introduction on NFV</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/3.jpg" /></p>
+<p>In the traditional network framework, with the increase of user service requests| and their diversity, the network service providers are required to invest| in expensive dedicated hardware to configure network functions| such as firewalls, video decoders and load balancers. It’s also difficult to manage and deploy.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/4.jpg" /></p>
+<p>Conversely, NFV technology offers us the ability to virtualize the network service by using virtual machines. NFV reduces dependency on dedicated infrastructure, facilitating service provision and making networks relatively more flexible. It not only can improve resource utilization and security, but also allows for flexible management and maintenance.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/5.jpg" /></p>
+<p>The global NFV market is expected to grow from USD twelve point nine billion in twenty nineteen to USD thirty six point three billion by twenty twenty four, at a CAGR (Compound Annual Growth Rate) of twenty two. nine % during the forecast period.<br />
+The growing number of network complexities and ever-increasing demand for cloud-based services have resulted in the tremendous adoption of virtualization environments within the networking domain.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/6.jpg" /></p>
+<p>Benefiting from NFV technology, a complex network service can be composed of a series of ordered virtual network functions, known as service function chain.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/7.jpg" /></p>
+<p>In the online scenario, continuous SFC requests are attempted to be placed in the physical network under various resource constraints. It can be treated as a constrained combinational optimization problem which is also a NP-hard problem. However, it’s an challenging issue actively followed by infrastructure providers that place SFC requests as efficiently as possible to improve the resource utilization and quality of service.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/8.jpg" /></p>
+<p>The existing solutions can be classified into three categories which all have their own limitations:</p>
+<ul>
+<li>Firstly, mathematical optimization-based methods require the prior knowledge of SFCs;</li>
+<li>Secondly, heuristic and meta-heuristic based approaches usually fall into the local optimum;</li>
+<li>Thirdly, some proposed reinforcement learning-based algorithms often confront with large search space and manually selected features.</li>
+</ul>
+<p>Therefore, we propose a novel deep reinforcement learning-based approach for online SFC deployment to mitigate or overcome these disadvantages.</p>
+<h2 id="sfcp-formulation">SFCP Formulation</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/9.jpg" /></p>
+<p>Before introducing our model, we formulate the physical network as a weighted undirected graph. Similarly, each SFC Request is modelled as a weighted directed graph. Both of them have various nodes attributes such as CPU, storage, and memory. In this paper, we only take one link attributes, bandwidth, into consideration. There are four constraints when deploying SFC request in physical network.</p>
+<ul>
+<li>The first one is the node resources constraint: the required node resources shouldn’t exceed the remaining node resources.</li>
+<li>The second one is the link bandwidth constraint: the total bandwidth mapped on the node does not exceed its remaining bandwidth.</li>
+<li>The third one is the path constraint if the SFC is accepted, the path mapped in the physical network must pass through virtual network functions following the specified order in the request.</li>
+<li>The last one is the deployment constraint: When handling the same SFC request, each physical node only can accommodate one VNF.</li>
+</ul>
+<p>Here, our objective is to maximize the long-term average revenue.</p>
+<h2 id="proposed-drl-sfcp-model">Proposed DRL-SFCP Model</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/10.jpg" /></p>
+<p>Under the DRL framework, the interaction between agent and environment is defined as Markov decision process (MDP). We cast the placement of each SFC request as a finite-horizon MDP.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/11.jpg" /></p>
+<p>The physical network and SFC requests are considered as the environment. Intuitively, the state includes the current physical network features and the SFC request demands. The action is actually one of the physical nodes to accommodate one VNF. Primarily, we employ a customized neural network as the agent to make placement decisions. According to the deployment result, the calculated reward is returned to award or punish the agent.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/12.jpg" /></p>
+<p>The architecture of our model is illustrated in this figure, consisting of three main components: Embedding of physical network, Embedding of SFC request and Policy generation. Subsequently, I will explain them in detail.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/13.jpg" /></p>
+<p>Graph Neural Network has recently become a hot topic in machine learning that has been widely used in many fields. Owing to its adaption to graph structure, we use GCN to extract features of physical network. Namely, the input node features are transformed into new node Representations by GCN.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/14.jpg" /></p>
+<p>To capture orderly requirement of SFC requests, we utilize the encoder of the Seq2Seq model, which is implemented by gated recurrent unit (GRU) network. In the beginning, a sequence of VNF is input into the encoder to obtain the temporal relationship. Then, in each timestep, an action to place the current VNF will be output by the decoder.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/15.jpg" /></p>
+<p>Overall, we use GCN and the Encoder of Seq2Seq model to capture information of physical network and SFC requests. After integrating the information, the decoder will generate the action distribution to select an action. Then, this action, a physical node, will attempt to place the current VNF.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/16.jpg" /></p>
+<p>Next, the reward signal is designed to encourage the agent to place SFCs to maximize the long-term average revenue.</p>
+<ul>
+<li>When not finished and current VNF is placed successfully, the discounted SFC revenue will be award to the agent.</li>
+<li>When not in the end and the current VNF is placed unsuccessfully, the agent will be punished with the discounted SFC revenue.</li>
+<li>Particularly, when a complete SFC is placed successfully, the total SFC revenue will be returned to the agent.</li>
+</ul>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/17.jpg" /></p>
+<p>Advantage actor-critic is an efficient training method for discrete action space. Both actor and critic are composed of the aforementioned neural network but have disparate output. The state, including the features of the current physical network and VNF being placed, is input into the actor network. The agent selects the action based on the probability distribution, and the environment returns the reward. Meanwhile, we can obtain a value estimating the state after the same state is input into the critic network. Then, with the help of reward and this value, the Temporal error can be calculated to optimize the actor and critic.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/18.jpg" /></p>
+<p>Besides, we use the well-known Asynchronous Advantage Actor-critic methods to enhance the training efficiency and model robustness. Briefly, There are several agents simultaneously explore in independent environments. At set intervals, experiences collected by them will be submitted to a master-worker to update global shared parameters. This parallel training architecture accelerates the training rate and Strengthen the model robustness.</p>
+<h2 id="performance-simulation">Performance Simulation</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/19.jpg" /></p>
+<p>To demonstrate the performance of our approach, we conduct a series of experiments with these settings, compared with two other algorithms. Here, the orange asterisks mean corresponding parameters will be varied in the experiments.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/20.jpg" /></p>
+<p>These figures compare our approach with other algorithms in terms of the long-term average revenue and acceptance rate, respectively. Obviously, when the number reaches 2-thousand, our model outperforms them in the long-term average revenue and acceptance rate.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/21.jpg" /></p>
+<p>The figures provide the experiment results of three algorithms in various arrival rate conditions. Our model's impressive performance can always attain the best deployment results, which shows the excellent abilities of fitting and generalization of DNN.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/22.jpg" /></p>
+<p>In this experiment, we estimate the average processing time in different SFC lengths to test our model's scalability. As the length of SFC request increases, the average processing time of our model is slightly inferior to GRC but much faster than MCTS, which demonstrates that our model is well-suited for Application on online scenarios.</p>
+<h2 id="conclusion-and-future-work">Conclusion and Future work</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/23.jpg" /></p>
+<p>To conclude,</p>
+<ul>
+<li>we first model the SFC placement to MDP and employ an intelligent agent to guide SFC requests' online placement decisions.</li>
+<li>Effective neural network architecture is then leveraged to extract sufficient information from the physical network and SFC requests, integrating GNN and Seq2Seq model.</li>
+<li>What's more, we utilize the well-known A3C method to enhance the training efficiency and model robustness.</li>
+</ul>
+<p>Additionally, more powerful neural network architectures, more efficient DRL methods and More realistic modelling scenarios are expected to be studied in future.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/24.jpg" /></p>
+]]></content>
+      <categories>
+        <category>RP - 科研论文</category>
+      </categories>
+      <tags>
+        <tag>GNN</tag>
+        <tag>Paper</tag>
+        <tag>NFV</tag>
+        <tag>DRL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【AI】人工智能课程集</title>
     <url>/2021/03/02/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/course-collection-on-ai/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><ul>
@@ -3357,7 +3463,7 @@ The software package that can give a thinking machine the benefits of agency sho
   </entry>
   <entry>
     <title>【论文笔记】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
-    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-drl-gcn/</url>
+    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-drl-sfcp/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />

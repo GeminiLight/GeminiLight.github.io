@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-32x32.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.ico">
+  <link rel="mask-icon" href="/images/favicon-32x32.ico" color="#222">
+  <meta name="google-site-verification" content="RrL9pY7_YVrRxyUv7G4ksTPRGYJmECxw-uI8iVOz7vI">
+  <meta name="baidu-site-verification" content="AozFAayi1Z">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="This is a presentation on our paper named &quot;DRL-SFCP&quot; accepted by IEEE ICC 2021, where a novel algorithm integrating GNN, Seq2Seq model and DRL is proposed. Document  Title：DRL-SFCP: Adaptive Servic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Presentation】DRL-SFCP&amp;#58 Adaptive Service Function Chains Placement with Deep Reinforcement Learning">
+<meta property="og:url" content="https://www.geminilight.cn/2021/04/19/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-drl-gcn/index.html">
+<meta property="og:site_name" content="Gemini向光性">
+<meta property="og:description" content="This is a presentation on our paper named &quot;DRL-SFCP&quot; accepted by IEEE ICC 2021, where a novel algorithm integrating GNN, Seq2Seq model and DRL is proposed. Document  Title：DRL-SFCP: Adaptive Servic">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/1.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/2.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/3.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/4.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/5.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/6.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/7.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/8.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/9.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/10.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/11.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/12.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/13.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/14.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/15.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/16.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/17.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/18.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/19.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/20.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/21.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/22.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/23.jpg">
+<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/24.jpg">
+<meta property="article:published_time" content="2021-04-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-19T01:57:36.200Z">
+<meta property="article:author" content="GeminiLight">
+<meta property="article:tag" content="GNN">
+<meta property="article:tag" content="Paper">
+<meta property="article:tag" content="NFV">
+<meta property="article:tag" content="DRL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/paper/icc-2021-drl-sfcp-slide/1.jpg">
+
+
+<link rel="canonical" href="https://www.geminilight.cn/2021/04/19/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-drl-gcn/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【Presentation】DRL-SFCP&#58 Adaptive Service Function Chains Placement with Deep Reinforcement Learning | Gemini向光性</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?81607a4529b9e096ccf0ac76663fbc7c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  <script>
+    !function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/2.1/gio.js","gio");
+    gio('init', 'UA-175467019-1', {});
+    gio('send');
+  </script>
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Gemini向光性</h1>
+      <i class="logo-line"></i>
+    </a>
+    
+      <p class="site-subtitle" itemprop="description">The light always goes on</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#document"><span class="nav-text">Document</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-on-nfv"><span class="nav-text">Introduction on NFV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sfcp-formulation"><span class="nav-text">SFCP Formulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proposed-drl-sfcp-model"><span class="nav-text">Proposed DRL-SFCP Model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#performance-simulation"><span class="nav-text">Performance Simulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusion-and-future-work"><span class="nav-text">Conclusion and Future work</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GeminiLight"
+      src="/images/avatar.webp">
+  <p class="site-author-name" itemprop="name">GeminiLight</p>
+  <div class="site-description" itemprop="description">stay hungry, stay foolish</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlbWluaWxpZ2h0" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;geminilight"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnd0Zmx5MjAxOEAxNjMuY29t" title="E-Mail → mailto:wtfly2018@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9nZW1pbmlfbGlnaHQ=" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;gemini_light"><i class="fa fa-book fa-fw"></i>ZhiHu</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTc1Mzg2MDMz" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;175386033"><i class="fa fa-tv fa-fw"></i>BiliBili</span>
+      </span>
+  </div>
+
+
+
+
+
+
+  <div class="links-of-blogroll animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2Jvb2tzL3NoYXJlLzhlZTc2OTRiLTFiMjgtNDE3Yy05MjFmLTQ1YWY0Zjg0ZDcwYz8jIOOAik1MIC0g5py65Zmo5a2m5Lmg44CL" title="https:&#x2F;&#x2F;www.yuque.com&#x2F;books&#x2F;share&#x2F;8ee7694b-1b28-417c-921f-45af4f84d70c?# 《ML - 机器学习》">我的机器学习笔记</span>
+        </li>
+    </ul>
+  </div>
+
+      </section>
+
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%; margin: 20px 0 0 0;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2021/04/19/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-drl-gcn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.webp">
+      <meta itemprop="name" content="GeminiLight">
+      <meta itemprop="description" content="stay hungry, stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gemini向光性">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Presentation】DRL-SFCP&#58 Adaptive Service Function Chains Placement with Deep Reinforcement Learning
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-04-19T00:00:00+08:00">2021-04-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/RP-%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">RP - 科研论文</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>8.2k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>This is a presentation on our paper named "DRL-SFCP" accepted by IEEE ICC 2021, where a novel algorithm integrating GNN, Seq2Seq model and DRL is proposed.</p>
+<h2 id="document">Document</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/1.jpg" /></p>
+<p><strong>Title</strong>：DRL-SFCP: Adaptive Service Function Chains Placement with Deep Reinforcement Learning<br />
+<strong>Authors</strong>：Tianfu Wang, Qilin Fan*, Xiuhua Li, Xu Zhang, Qingyu Xiong, Shu Fu and Min Gao<br />
+<strong>Publication</strong>：ICC-2021 (CCF-C)<br />
+<strong>Direction</strong>：Network Function Virtualization, Service Function Chain Placement<br />
+<strong>Keywords</strong>：Service Function Chain Placement, Deep Reinforcement Learning, Asynchronous Advantage Actor-Critic, Graph Neural Network, Sequence-to-sequence Model<br />
+<strong>Innovation</strong>：Propose a DRL algorithm integrating GNN and Seq2Seq model to capture sufficient information from input features and utilizing A3C methods to accelerate the training efficiency and model robustness. <a href="/resource/paper/icc-2021-drl-sfcp.pdf">paper</a> | <a href="/resource/paper/icc-2021-drl-sfcp-slide.pdf">slide</a></p>
+<a id="more"></a>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/2.jpg" /></p>
+<p>This presentation is divided into 5 parts.</p>
+<ul>
+<li>Firstly, I will introduce the development and significance of Network Function Virtualization.</li>
+<li>Secondly, the formulation of Service Function Chains Placement Problem will be provided.</li>
+<li>And then, I will give the description of our proposed model.</li>
+<li>Next, I will show some evaluation results.</li>
+<li>Finally, our work and some future research directions will be concluded.</li>
+</ul>
+<h2 id="introduction-on-nfv">Introduction on NFV</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/3.jpg" /></p>
+<p>In the traditional network framework, with the increase of user service requests| and their diversity, the network service providers are required to invest| in expensive dedicated hardware to configure network functions| such as firewalls, video decoders and load balancers. It’s also difficult to manage and deploy.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/4.jpg" /></p>
+<p>Conversely, NFV technology offers us the ability to virtualize the network service by using virtual machines. NFV reduces dependency on dedicated infrastructure, facilitating service provision and making networks relatively more flexible. It not only can improve resource utilization and security, but also allows for flexible management and maintenance.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/5.jpg" /></p>
+<p>The global NFV market is expected to grow from USD twelve point nine billion in twenty nineteen to USD thirty six point three billion by twenty twenty four, at a CAGR (Compound Annual Growth Rate) of twenty two. nine % during the forecast period.<br />
+The growing number of network complexities and ever-increasing demand for cloud-based services have resulted in the tremendous adoption of virtualization environments within the networking domain.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/6.jpg" /></p>
+<p>Benefiting from NFV technology, a complex network service can be composed of a series of ordered virtual network functions, known as service function chain.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/7.jpg" /></p>
+<p>In the online scenario, continuous SFC requests are attempted to be placed in the physical network under various resource constraints. It can be treated as a constrained combinational optimization problem which is also a NP-hard problem. However, it’s an challenging issue actively followed by infrastructure providers that place SFC requests as efficiently as possible to improve the resource utilization and quality of service.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/8.jpg" /></p>
+<p>The existing solutions can be classified into three categories which all have their own limitations:</p>
+<ul>
+<li>Firstly, mathematical optimization-based methods require the prior knowledge of SFCs;</li>
+<li>Secondly, heuristic and meta-heuristic based approaches usually fall into the local optimum;</li>
+<li>Thirdly, some proposed reinforcement learning-based algorithms often confront with large search space and manually selected features.</li>
+</ul>
+<p>Therefore, we propose a novel deep reinforcement learning-based approach for online SFC deployment to mitigate or overcome these disadvantages.</p>
+<h2 id="sfcp-formulation">SFCP Formulation</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/9.jpg" /></p>
+<p>Before introducing our model, we formulate the physical network as a weighted undirected graph. Similarly, each SFC Request is modelled as a weighted directed graph. Both of them have various nodes attributes such as CPU, storage, and memory. In this paper, we only take one link attributes, bandwidth, into consideration. There are four constraints when deploying SFC request in physical network.</p>
+<ul>
+<li>The first one is the node resources constraint: the required node resources shouldn’t exceed the remaining node resources.</li>
+<li>The second one is the link bandwidth constraint: the total bandwidth mapped on the node does not exceed its remaining bandwidth.</li>
+<li>The third one is the path constraint if the SFC is accepted, the path mapped in the physical network must pass through virtual network functions following the specified order in the request.</li>
+<li>The last one is the deployment constraint: When handling the same SFC request, each physical node only can accommodate one VNF.</li>
+</ul>
+<p>Here, our objective is to maximize the long-term average revenue.</p>
+<h2 id="proposed-drl-sfcp-model">Proposed DRL-SFCP Model</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/10.jpg" /></p>
+<p>Under the DRL framework, the interaction between agent and environment is defined as Markov decision process (MDP). We cast the placement of each SFC request as a finite-horizon MDP.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/11.jpg" /></p>
+<p>The physical network and SFC requests are considered as the environment. Intuitively, the state includes the current physical network features and the SFC request demands. The action is actually one of the physical nodes to accommodate one VNF. Primarily, we employ a customized neural network as the agent to make placement decisions. According to the deployment result, the calculated reward is returned to award or punish the agent.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/12.jpg" /></p>
+<p>The architecture of our model is illustrated in this figure, consisting of three main components: Embedding of physical network, Embedding of SFC request and Policy generation. Subsequently, I will explain them in detail.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/13.jpg" /></p>
+<p>Graph Neural Network has recently become a hot topic in machine learning that has been widely used in many fields. Owing to its adaption to graph structure, we use GCN to extract features of physical network. Namely, the input node features are transformed into new node Representations by GCN.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/14.jpg" /></p>
+<p>To capture orderly requirement of SFC requests, we utilize the encoder of the Seq2Seq model, which is implemented by gated recurrent unit (GRU) network. In the beginning, a sequence of VNF is input into the encoder to obtain the temporal relationship. Then, in each timestep, an action to place the current VNF will be output by the decoder.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/15.jpg" /></p>
+<p>Overall, we use GCN and the Encoder of Seq2Seq model to capture information of physical network and SFC requests. After integrating the information, the decoder will generate the action distribution to select an action. Then, this action, a physical node, will attempt to place the current VNF.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/16.jpg" /></p>
+<p>Next, the reward signal is designed to encourage the agent to place SFCs to maximize the long-term average revenue.</p>
+<ul>
+<li>When not finished and current VNF is placed successfully, the discounted SFC revenue will be award to the agent.</li>
+<li>When not in the end and the current VNF is placed unsuccessfully, the agent will be punished with the discounted SFC revenue.</li>
+<li>Particularly, when a complete SFC is placed successfully, the total SFC revenue will be returned to the agent.</li>
+</ul>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/17.jpg" /></p>
+<p>Advantage actor-critic is an efficient training method for discrete action space. Both actor and critic are composed of the aforementioned neural network but have disparate output. The state, including the features of the current physical network and VNF being placed, is input into the actor network. The agent selects the action based on the probability distribution, and the environment returns the reward. Meanwhile, we can obtain a value estimating the state after the same state is input into the critic network. Then, with the help of reward and this value, the Temporal error can be calculated to optimize the actor and critic.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/18.jpg" /></p>
+<p>Besides, we use the well-known Asynchronous Advantage Actor-critic methods to enhance the training efficiency and model robustness. Briefly, There are several agents simultaneously explore in independent environments. At set intervals, experiences collected by them will be submitted to a master-worker to update global shared parameters. This parallel training architecture accelerates the training rate and Strengthen the model robustness.</p>
+<h2 id="performance-simulation">Performance Simulation</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/19.jpg" /></p>
+<p>To demonstrate the performance of our approach, we conduct a series of experiments with these settings, compared with two other algorithms. Here, the orange asterisks mean corresponding parameters will be varied in the experiments.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/20.jpg" /></p>
+<p>These figures compare our approach with other algorithms in terms of the long-term average revenue and acceptance rate, respectively. Obviously, when the number reaches 2-thousand, our model outperforms them in the long-term average revenue and acceptance rate.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/21.jpg" /></p>
+<p>The figures provide the experiment results of three algorithms in various arrival rate conditions. Our model's impressive performance can always attain the best deployment results, which shows the excellent abilities of fitting and generalization of DNN.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/22.jpg" /></p>
+<p>In this experiment, we estimate the average processing time in different SFC lengths to test our model's scalability. As the length of SFC request increases, the average processing time of our model is slightly inferior to GRC but much faster than MCTS, which demonstrates that our model is well-suited for Application on online scenarios.</p>
+<h2 id="conclusion-and-future-work">Conclusion and Future work</h2>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/23.jpg" /></p>
+<p>To conclude,</p>
+<ul>
+<li>we first model the SFC placement to MDP and employ an intelligent agent to guide SFC requests' online placement decisions.</li>
+<li>Effective neural network architecture is then leveraged to extract sufficient information from the physical network and SFC requests, integrating GNN and Seq2Seq model.</li>
+<li>What's more, we utilize the well-known A3C method to enhance the training efficiency and model robustness.</li>
+</ul>
+<p>Additionally, more powerful neural network architectures, more efficient DRL methods and More realistic modelling scenarios are expected to be studied in future.</p>
+<p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/24.jpg" /></p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\07\13\RP - 科研论文\paper-drl-sfcp\" rel="bookmark">【论文笔记】Automatic Virtual Network Embedding - A DRL Approach with GCN</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\12\02\RP - 科研论文\paper-list-nfv-ra\" rel="bookmark">【论文汇总】Papers on NFV-RA</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\11\29\RP - 科研论文\paper-nfv-multi-domain-non-cooperative-vnf-fg-embedding\" rel="bookmark">【论文笔记】Multi-domain Non-cooperative VNF-FG Embedding - A DRL Approach</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\08\20\RP - 科研论文\paper-nfv-vnf-placement-optimization-drl\" rel="bookmark">【论文笔记】VNF placement optimization with DLR</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2021\01\13\RP - 科研论文\paper-nfv-vnf-placement-latency-aware-ne\" rel="bookmark">【论文笔记】Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network</a></div>
+    </li>
+  </ul>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Gemini向光性
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.geminilight.cn/2021/04/19/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-drl-gcn/" title="【Presentation】DRL-SFCP&amp;#58 Adaptive Service Function Chains Placement with Deep Reinforcement Learning">https://www.geminilight.cn/2021/04/19/RP - 科研论文/paper-nfv-vne-drl-gcn/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/GNN/" rel="tag"># GNN</a>
+              <a href="/tags/Paper/" rel="tag"># Paper</a>
+              <a href="/tags/NFV/" rel="tag"># NFV</a>
+              <a href="/tags/DRL/" rel="tag"># DRL</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/02/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/course-collection-on-ai/" rel="prev" title="【AI】人工智能课程集">
+                  <i class="fa fa-chevron-left"></i> 【AI】人工智能课程集
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GeminiLight</span>
+</div>
+
+      
+
+
+
+
+
+
+
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      const script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
+
+
+
+
+
+  <script async type="text/javascript" src="/js/custom/cursor-firework.js"></script>
+
