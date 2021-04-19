@@ -11,7 +11,8 @@
 <strong>Publication</strong>：ICC-2021 (CCF-C)<br />
 <strong>Direction</strong>：Network Function Virtualization, Service Function Chain Placement<br />
 <strong>Keywords</strong>：Service Function Chain Placement, Deep Reinforcement Learning, Asynchronous Advantage Actor-Critic, Graph Neural Network, Sequence-to-sequence Model<br />
-<strong>Innovation</strong>：Propose a DRL algorithm integrating GNN and Seq2Seq model to capture sufficient information from input features and utilizing A3C methods to accelerate the training efficiency and model robustness. <a href="/resource/paper/icc-2021-drl-sfcp.pdf">paper</a> | <a href="/resource/slide/icc-2021-drl-sfcp-slide.pdf">slide</a></p>
+<strong>Innovation</strong>：Propose a DRL algorithm integrating GNN and Seq2Seq model to capture sufficient information from input features and utilizing A3C methods to accelerate the training efficiency and model robustness.<br />
+<a href="/resource/paper/icc-2021-drl-sfcp.pdf">paper</a> | <a href="/resource/slide/icc-2021-drl-sfcp-slide.pdf">slide</a></p>
 <a id="more"></a>
 <p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/2.jpg" /></p>
 <p>This presentation is divided into 5 parts.</p>
