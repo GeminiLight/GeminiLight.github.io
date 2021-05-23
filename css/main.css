@@ -3222,6 +3222,27 @@ mjx-container[display="true"] + br {
 .float-right {
   float: right;
 }
+.sidebar-inner {
+  border-radius: 5px;
+}
+.sidebar-inner .site-author-name {
+  color: #aaf;
+}
+.sidebar-inner .exturl {
+  border-bottom: 0px;
+}
+.header-inner {
+  border-radius: 0 0 8px 8px;
+}
+.header-inner .main-menu {
+  color: #87daff;
+}
+.pagination {
+  border-radius: 8px;
+}
+.main-inner .post-block {
+  border-radius: 8px;
+}
 .main-inner article a {
   color: #a8f;
   border-bottom: 0;
@@ -3326,6 +3347,9 @@ body {
 .post-copyright {
   border-left: 3px solid #fb9;
   background-color: rgba(212,226,253,0.3);
+}
+.post-copyright .fa {
+  color: #f99;
 }
 figcaption {
   text-align: center;
