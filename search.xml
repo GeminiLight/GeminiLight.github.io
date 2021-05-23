@@ -17,10 +17,11 @@
   </entry>
   <entry>
     <title>【Presentation】DRL-SFCP&amp;#58 Adaptive Service Function Chains Placement with Deep Reinforcement Learning</title>
-    <url>/2021/04/19/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-drl-gcn/</url>
+    <url>/2021/04/19/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/pre-nfv-drl-sfcp/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>This is a presentation on our paper named "DRL-SFCP" accepted by IEEE ICC 2021, where a novel algorithm integrating GNN, Seq2Seq model and DRL is proposed.</p>
 <h2 id="document">Document</h2>
 <p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/1.jpg" /></p>
+<a id="more"></a>
 <p><strong>Title</strong>：DRL-SFCP: Adaptive Service Function Chains Placement with Deep Reinforcement Learning<br />
 <strong>Authors</strong>：Tianfu Wang, Qilin Fan*, Xiuhua Li, Xu Zhang, Qingyu Xiong, Shu Fu and Min Gao<br />
 <strong>Publication</strong>：ICC-2021 (CCF-C)<br />
@@ -28,7 +29,6 @@
 <strong>Keywords</strong>：Service Function Chain Placement, Deep Reinforcement Learning, Asynchronous Advantage Actor-Critic, Graph Neural Network, Sequence-to-sequence Model<br />
 <strong>Innovation</strong>：Propose a DRL algorithm integrating GNN and Seq2Seq model to capture sufficient information from input features and utilizing A3C methods to accelerate the training efficiency and model robustness.<br />
 <a href="/resource/paper/icc-2021-drl-sfcp.pdf">paper</a> | <a href="/resource/slide/icc-2021-drl-sfcp-slide.pdf">slide</a></p>
-<a id="more"></a>
 <p><img data-src="/resource/images/paper/icc-2021-drl-sfcp-slide/2.jpg" /></p>
 <p>This presentation is divided into 5 parts.</p>
 <ul>
@@ -3478,7 +3478,7 @@ The software package that can give a thinking machine the benefits of agency sho
   </entry>
   <entry>
     <title>【论文笔记】Automatic Virtual Network Embedding - A DRL Approach with GCN</title>
-    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-drl-sfcp/</url>
+    <url>/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-dlr-gcn/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇论文将强化学习A3C算法与图卷积神经网络GCN相结合，并且设置了多目标的奖励函数，提出了一种更加高效的虚拟网络嵌入算法。</p>
 <h2 id="论文简介">论文简介</h2>
 <p><strong>论文名称</strong>：Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach with Graph Convolutional Networks<br />
