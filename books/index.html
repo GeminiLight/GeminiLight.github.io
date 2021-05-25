@@ -24,27 +24,19 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="图神经网络（GNN）是当前深度学习领域研究的焦点之一，本文提出了一种GAT（graph attention networks）网络，它使用多头的masked自注意力机制来为每个邻居节点分配不同的权重，优化了图卷积神经网络的平均加权的问题。 论文名称：Graph Attention Networks 论文作者：Petar Veličković, Guillem Cucurull, Arantxa">
+  <meta name="description" content="This is my book quote         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background: #">
 <meta property="og:type" content="website">
-<meta property="og:title" content="【论文笔记】GNN之GRN：Gated Graph Sequence Nerual Networks">
-<meta property="og:url" content="https://www.geminilight.cn/resource/draft/paper-dl-gnn-grn.html">
+<meta property="og:title" content="This is my book title">
+<meta property="og:url" content="https://www.geminilight.cn/books/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="图神经网络（GNN）是当前深度学习领域研究的焦点之一，本文提出了一种GAT（graph attention networks）网络，它使用多头的masked自注意力机制来为每个邻居节点分配不同的权重，优化了图卷积神经网络的平均加权的问题。 论文名称：Graph Attention Networks 论文作者：Petar Veličković, Guillem Cucurull, Arantxa">
+<meta property="og:description" content="This is my book quote         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background: #">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-dl-gnn-gat-1.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-dl-gnn-gat-2.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-dl-gnn-gat-3.png">
-<meta property="og:image" content="https://www.geminilight.cn/resource/images/paper/paper-dl-gnn-gat-4.png">
-<meta property="article:published_time" content="2020-11-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-14T03:24:10.804Z">
 <meta property="article:author" content="GeminiLight">
-<meta property="article:tag" content="DL">
-<meta property="article:tag" content="GNN">
+<meta property="article:tag" content="Gemini向光性, GeminiLight, 技术, 生活">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.geminilight.cn/resource/images/paper/paper-dl-gnn-gat-1.png">
 
 
-<link rel="canonical" href="https://www.geminilight.cn/resource/draft/paper-dl-gnn-grn">
+<link rel="canonical" href="https://www.geminilight.cn/books/">
 
 
 <script class="page-configurations">
@@ -57,7 +49,7 @@
   };
 </script>
 
-  <title>【论文笔记】GNN之GRN：Gated Graph Sequence Nerual Networks | Gemini向光性
+  <title>This is my book title | Gemini向光性
 </title>
   
 
@@ -222,7 +214,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -234,7 +226,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E7%AE%80%E4%BB%8B"><span class="nav-text">论文简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%A9%E5%86%99%E9%87%8A%E4%B9%89"><span class="nav-text">缩写释义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-text">研究背景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B-graph-attentional-layer"><span class="nav-text">算法模型 Graph Attentional Layer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#input-output"><span class="nav-text">Input&#x2F; Output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#self-attention"><span class="nav-text">Self Attention</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multi-head-attention"><span class="nav-text">Multi-head Attention</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%94%B9%E8%BF%9B"><span class="nav-text">模型改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="nav-text">性能评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="nav-text">数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E4%BB%BB%E5%8A%A1"><span class="nav-text">测试任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AC%E5%AF%BC%E5%AD%A6%E4%B9%A0transductive-learning"><span class="nav-text">转导学习（Transductive Learning）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BD%92%E7%BA%B3%E5%AD%A6%E4%B9%A0inductive-learning"><span class="nav-text">归纳学习（Inductive Learning）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text">评估指标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%80%9D%E8%80%83"><span class="nav-text">总结思考</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -588,8 +579,6 @@ if(canvas.getContext){
 
     <div class="main-inner page posts-expand">
       
-  
-  
 
       
 
@@ -599,18 +588,11 @@ if(canvas.getContext){
     <div class="post-block" lang="zh-CN">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">【论文笔记】GNN之GRN：Gated Graph Sequence Nerual Networks
+<h1 class="post-title" itemprop="name headline">This is my book title
 </h1>
 
 <div class="post-meta">
   
-  <ul class="breadcrumb">
-          
-            <li><a href="/resource/">RESOURCE</a></li>
-            <li><a href="/resource/draft/">DRAFT</a></li>
-            <li>PAPER-DL-GNN-GRN</li>
-          
-  </ul>
 
 </div>
 
@@ -620,146 +602,250 @@ if(canvas.getContext){
       
       
       <div class="post-body">
-          <p>图神经网络（GNN）是当前深度学习领域研究的焦点之一，本文提出了一种GAT（graph attention networks）网络，它使用多头的masked自注意力机制来为每个邻居节点分配不同的权重，优化了图卷积神经网络的平均加权的问题。</p>
-<p><strong>论文名称</strong>：Graph Attention Networks<br />
-<strong>论文作者</strong>：Petar Veličković, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Liò, Yoshua Bengio<br />
-<strong>发表期刊</strong>：ICLR-2016 (THU-A)<br />
-<strong>研究方向</strong>：GNN 图神经网络<br />
-<strong>关键技术</strong>：GRU (Gate Recurrent Units), Multi Attention<br />
-<strong>主要创新</strong>：将多头注意力机制应用于图神经网络，来提升特征提取效果。<br />
-<span class="exturl" data-url="aHR0cHM6Ly9oYWwuYXJjaGl2ZXMtb3V2ZXJ0ZXMuZnIvaGFsLTAyMDg4ODE5L2ZpbGUvTXVsdGlEb21haW5fVk5GX0ZHX2VtYmVkZGluZ19fQV9EZWVwX3JlaW5mb3JjZW1lbnRfbGVhcm5pbmdfYXBwcm9hY2gtYXV0aG9ycyUyMHZlcnNpb24ucGRm">下载论文<i class="fa fa-external-link-alt"></i></span> | <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BldGFyVi0vR0FUP3V0bV9zb3VyY2U9Y2F0YWx5emV4LmNvbQ==">查看源码<i class="fa fa-external-link-alt"></i></span></p>
-<a id="more"></a>
-<h2 id="论文简介">论文简介</h2>
-<h3 id="缩写释义">缩写释义</h3>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">缩写</th>
-<th>描述</th>
-<th>全称</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">GNN</td>
-<td>图神经网络</td>
-<td>Graph Neural Network</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">GCN</td>
-<td>图卷积网络</td>
-<td>Graph Convolutional Network</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">GAT</td>
-<td>图注意力网络</td>
-<td>Graph Attention Network</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">/</td>
-<td>注意力机制</td>
-<td>Attention mechanisms</td>
-</tr>
-</tbody>
-</table>
-<h3 id="研究背景">研究背景</h3>
-<p><strong>图结构数据</strong></p>
-<ul>
-<li>广泛存在的且较难处理</li>
-</ul>
-<p><strong>图神经网络</strong></p>
-<ul>
-<li>早期，将图数据网格化以适应神经网络模型（如利用CNN进行特征提取）</li>
-<li>之后，直接扩展神经网络来直接对图数据进行处理</li>
-<li>图卷积神经网络受到CNN卷积思想的启发被提出和不断完善，通常分为谱方法和非谱方法。</li>
-</ul>
-<p><strong>注意力机制</strong></p>
-<ul>
-<li>它可以提取当前处理的输入与整个输入序列相关性更高的信息，从而提升了特征提取的效果。</li>
-<li>被广泛应用在端到端的任务模型中</li>
-</ul>
-<p>本文提出一种基于注意力机制的图神经网络来GAT来使神经网络可以更高效的提取节点特征。其思想是通过关注邻域，遵循self-attention策略，计算图中每个节点的隐藏表示。</p>
-<h2 id="算法模型-graph-attentional-layer">算法模型 Graph Attentional Layer</h2>
-<h3 id="input-output">Input/ Output</h3>
-<ul>
-<li>输入：图中<span class="math inline">\(N\)</span>个节点<span class="math inline">\(F\)</span>个特征的集合 <span class="math display">\[\mathbf{h}=\left\{\vec{h}_{1}, \vec{h}_{2}, \ldots, \vec{h}_{N}\right\}, \vec{h}_{i} \in \mathbb{R}^{F}\]</span></li>
-<li>输出：新的节点特征表示（<span class="math inline">\(F&#39;\)</span>为潜在基数） <span class="math display">\[\mathbf{h&#39;}=\left\{\vec{h&#39;}_{1}, \vec{h&#39;}_{2}, \ldots, \vec{h&#39;}_{N}\right\}, \vec{h&#39;}_{i} \in \mathbb{R}^{F&#39;}\]</span></li>
-</ul>
-<h3 id="self-attention">Self Attention</h3>
-<p>为了充分提取原始节点的特征信息，模型放弃了图的结构信息而运行每个节点都可以进行信息交换，同时利用 masked 自注意机制模型来注入结构信息，即对于节点<span class="math inline">\(i\)</span>，仅计算其直接邻居<span class="math inline">\(j \in \mathcal{N_i}\)</span>（包括节点<span class="math inline">\(i\)</span>自身）之间的相关程度（权重系数）<span class="math inline">\(e_{i,j}\)</span>，并利用归一化方法方便进行加权。</p>
-<p><span class="math inline">\(e_{i,j}\)</span>表示节点<span class="math inline">\(j\)</span>对节点<span class="math inline">\(i\)</span>的重要程度，类似于打分分值，计算式如下</p>
-<p><span class="math display">\[e_{i j}=a\left(\mathbf{W} \vec{h}_{i}, \mathbf{W} \vec{h}_{j}\right)\]</span></p>
-<p>式中，<span class="math inline">\(\mathbf{W} \in \mathbb{R}^{F^{\prime} \times F}\)</span>是一个参数矩阵，<span class="math inline">\(a: \mathbb{R}^{F^{\prime}} \times \mathbb{R}^{F^{\prime}} \rightarrow \mathbb{R}\)</span>是一种自注意力机制。</p>
-<p>然后，利用Softmax进行归一化：</p>
-<p><span class="math display">\[\alpha_{i j}=\operatorname{softmax}_{j}\left(e_{i j}\right)=\frac{\exp \left(e_{i j}\right)}{\sum_{k \in \mathcal{N}_{i}} \exp \left(e_{i k}\right)}\]</span></p>
-<p>在本文中，注意力机制<span class="math inline">\(a\)</span>是一个参数为<span class="math inline">\(\overrightarrow{\mathbf{a}} \in \mathbb{R}^{2 F^{\prime}}\)</span>的前馈神经网络，且利用LeakyReLU作激活函数，故权重系数也可写做：</p>
-<p><span class="math display">\[\alpha_{i j}=\frac{\exp \left(\text { Leaky } \operatorname{ReLU}\left(\overrightarrow{\mathbf{a}}^{T}\left[\mathbf{W} \vec{h}_{i} \| \mathbf{W} \vec{h}_{j}\right]\right)\right)}{\sum_{k \in \mathcal{N}_{i}} \exp \left(\text { LeakyReLU }\left(\overrightarrow{\mathbf{a}}^{T}\left[\mathbf{W} \vec{h}_{i} \| \mathbf{W} \vec{h}_{k}\right]\right)\right)}\]</span></p>
-<p>式中，<span class="math inline">\(·T\)</span>代表转置，<span class="math inline">\(\|\)</span>表示连接操作。</p>
-<p>通过上述运算，我们得到了节点<span class="math inline">\(i\)</span>与其邻居<span class="math inline">\(j\)</span>的注意力权重<span class="math inline">\(e_{i,j}\)</span>。之后进行加权求和，从而得到节点<span class="math inline">\(i\)</span>的特征输出：</p>
-<p><span class="math display">\[\vec{h}_{i}^{\prime}=\sigma\left(\sum_{j \in \mathcal{N}_{i}} \alpha_{i j} \mathbf{W} \vec{h}_{j}\right)\]</span></p>
-<p>式中，<span class="math inline">\(\sigma\)</span>是激活函数。</p>
-<h3 id="multi-head-attention">Multi-head Attention</h3>
-<p>为了进一步提升注意力机制的性能，GAT利用了多头注意力机制，即<span class="math inline">\(K\)</span>个注意力机制分别独立执行相应操作，然后将它们的输出连接起来生成最终输出：</p>
-<p><span class="math display">\[\vec{h}_{i}^{\prime}=\|_{k=1}^{K} \sigma\left(\sum_{j \in \mathcal{N}_{i}} \alpha_{i j}^{k} \mathbf{W}^{k} \vec{h}_{j}\right)\]</span></p>
-<p>式中，<span class="math inline">\(\alpha_{ij}^{k}\)</span>表示第<span class="math inline">\(k\)</span>个注意力机制<span class="math inline">\(a_k\)</span>计算出的归一化注意力系数，<span class="math inline">\(\mathbf{W}^k是该注意力机制的参数矩阵\)</span>。注意到，在多头注意力机制下，最终输出中每个节点的特征数量为<span class="math inline">\(KF&#39;\)</span></p>
-<p>特别地，如果在预测层（即Softmax上一层）执行多头注意力机制，将使用平均方法来代替连接操作：</p>
-<p><span class="math display">\[\vec{h}_{i}^{\prime}=\sigma\left(\frac{1}{K} \sum_{k=1}^{K} \sum_{j \in \mathcal{N}_{i}} \alpha_{i j}^{k} \mathbf{W}^{k} \vec{h}_{j}\right)\]</span></p>
-<p><img data-src="/resource/images/paper/paper-dl-gnn-gat-1.png" /></p>
-<p>上图描述了连接操作和平均方法的基于多头注意力机制的GAT。</p>
-<p>左图中，注意力机制<span class="math inline">\(a(\mathbf{W}\vec{h_i},\mathbf{W}\vec{h_j})\)</span>分为两步：</p>
-<ol type="1">
-<li>线性加权得到注意力权值，即用神经网络参数<span class="math inline">\(\overrightarrow{\mathbf{a}}^{T}\)</span>与<span class="math inline">\(\left[\mathbf{W} \vec{h}_{i} \| \mathbf{W} \vec{h}_{j}\right]\)</span>相乘</li>
-</ol>
-<p><span class="math display">\[e_{i,j} = \overrightarrow{\mathbf{a}}^{T}\left[\mathbf{W} \vec{h}_{i} \| \mathbf{W} \vec{h}_{j}\right]\]</span></p>
-<ol type="1">
-<li>非线性激活进行归一化，即用softmax对注意力权值进行归一化</li>
-</ol>
-<p><span class="math display">\[\alpha_{i j}=\operatorname{softmax}_{j}\left(e_{i j}\right)=\frac{\exp \left(e_{i j}\right)}{\sum_{k \in \mathcal{N}_{i}} \exp \left(e_{i k}\right)}\]</span></p>
-<ol type="1">
-<li>加权求和得到最终输出，即用归一化注意力权值对各节点信息进行加权</li>
-</ol>
-<p><span class="math display">\[\vec{h}_{i}^{\prime}=\sigma\left(\sum_{j \in \mathcal{N}_{i}} \alpha_{i j} \mathbf{W} \vec{h}_{j}\right)\]</span></p>
-<p>右图中，有三条不同颜色的线分别代表三个注意力机制在节点<span class="math inline">\(i\)</span>处得到的结果，即此处<span class="math inline">\(K=3\)</span>。之后，进行连接操作或平均操作得到最终输出<span class="math inline">\(\vec{h}&#39;\)</span>。</p>
-<h2 id="模型改进">模型改进</h2>
-<ul>
-<li><p><strong>计算高效且可并行</strong>。无需使用特征值分解等复杂的矩阵运算，且操作基本都可以实现并行。</p></li>
-<li><p><strong>节点不同权重提升模型表达能力</strong>。可为同一个邻居的节点分配不同的重要性，且利用了多头注意力机制。</p></li>
-<li><p><strong>提高可解释性较强</strong>。注意力机制可提高解释能力。</p></li>
-<li><p><strong>不依赖全局图结构</strong>。注意机制以共享的方式应用于图中的所有边，因此它不依赖于对全局图结构或需预先访问其所有节点的。我们无需访问整个图，而只需要访问所关注节点的邻节点即可。</p></li>
-<li><p><strong>不受节点顺序影响</strong>。它是建立在所有邻节点上的，而且无需假设任何节点顺序</p></li>
-<li><p><strong>实质仍是节点相似性</strong>。GAT可以被看作是MoNet的一个特例。</p>
-<ul>
-<li>GAT
-<ul>
-<li>节点相似计算：节点特征</li>
-<li>伪坐标函数：<span class="math inline">\(u(x,y)=f(x) \| f(y)\)</span>，其中<span class="math inline">\(f(x)\)</span>表示节点<span class="math inline">\(x\)</span>的特征，<span class="math inline">\(\|\)</span>；相应的权重函数则变成了<span class="math inline">\(w_j(u)=softmax(MLP(u))\)</span>。</li>
-</ul></li>
-<li>MoNet
-<ul>
-<li>节点相似计算：节点的结构属性</li>
-<li>伪坐标函数：<span class="math inline">\(u(x,y)=f(x) \| f(y)\)</span></li>
-</ul></li>
-</ul></li>
-</ul>
-<h2 id="性能评估">性能评估</h2>
-<h3 id="数据集">数据集</h3>
-<p><img data-src="/resource/images/paper/paper-dl-gnn-gat-2.png" /></p>
-<h3 id="测试任务">测试任务</h3>
-<h4 id="转导学习transductive-learning">转导学习（Transductive Learning）</h4>
-<p>先观察特定的训练样本，然后对特定的测试样本做出预测（从特殊到特殊），这类模型如k近邻、SVM等。</p>
-<p>使用了三个标准的引证网络数据集——Cora、Citeseer与Pubmed。在这些数据集中，节点对应于文档，边（无向的）对应于引用关系。节点特征对应于文档的BoW表示。每个节点拥有一个类别标签（在分类时使用softmax激活函数）。</p>
-<p><img data-src="/resource/images/paper/paper-dl-gnn-gat-3.png" /></p>
-<h4 id="归纳学习inductive-learning">归纳学习（Inductive Learning）</h4>
-<p>先从训练样本中学习到一定的模式，然后利用其对测试样本进行预测（即首先从特殊到一般，然后再从一般到特殊），这类模型如常见的贝叶斯模型。</p>
-<p>本文使用了一个蛋白质关联数据集（protein-protein interaction, PPI），在其中，每张图对应于人类的不同组织。此时，使用20张图进行训练，2张图进行验证，2张图用于测试。每个节点可能的标签数为121个，而且，每个节点可以同时拥有多个标签（在分类时使用sigmoid激活函数）</p>
-<p><img data-src="/resource/images/paper/paper-dl-gnn-gat-4.png" /></p>
-<h3 id="评估指标">评估指标</h3>
-<h2 id="总结思考">总结思考</h2>
-<ul>
-<li>融合注意力机制：为每个邻接节点赋予不同的注意力权重</li>
-<li>多头注意力机制：给出了两种聚合方案，提高特征了提取效果</li>
-<li>不依赖整个拓扑结构：无需了解整个图结构，只需知道每个节点的邻节点即可</li>
-</ul>
+          <blockquote>
+    <p>This is my book quote</p>
+</blockquote>
+
+<style>
+    
+.hexo-douban-tabs {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.hexo-douban-tab {
+    padding: 5px;
+}
+
+.hexo-douban-active {
+    background: #657b83;
+    color: #fff;
+}
+
+.hexo-douban-item {
+    padding-bottom: 10px;
+    position: relative;
+    clear: both;
+    min-height: 170px;
+    padding: 10px 0;
+    border-bottom: 1px #ddd solid;
+}
+
+@media screen and (max-width: 600px) {
+    .hexo-douban-item {
+        width: 100%;
+    }
+}
+
+.hexo-douban-picture {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100px;
+}
+
+.hexo-douban-info {
+    padding-left: 120px;
+}
+
+.hexo-douban-meta {
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+.hexo-douban-comments {
+    font-size: 12px;
+}
+
+.hexo-douban-pagination {
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hexo-douban-button {
+    padding: 5px;
+}
+
+.hexo-douban-button:hover {
+    background: #657b83;
+    color: #fff;
+}
+
+.hexo-douban-hide {
+    display: none;
+}
+
+.hexo-douban-show {
+    display: block;
+}
+
+
+</style>
+
+<div class="hexo-douban-tabs">
+    <a class="hexo-douban-tab" id="hexo-douban-tab1" href="javascript:;"
+       rel="external">
+        在读
+        (0)</a>
+    <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;"
+       rel="external">
+        想读
+        (0)</a>
+    <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;"
+       rel="external">
+        已读
+        (0)</a>
+</div>
+<div>
+    <div id="hexo-douban-item1">
+        
+        <div class="hexo-douban-pagination">
+    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
+    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
+    <span class="hexo-douban-pagenum">2 / 3</span>
+    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;">下一页</a>
+    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;">尾页</a>
+</div>
+    </div>
+    <div id="hexo-douban-item2">
+        
+        <div class="hexo-douban-pagination">
+    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
+    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
+    <span class="hexo-douban-pagenum">2 / 3</span>
+    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;">下一页</a>
+    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;">尾页</a>
+</div>
+
+    </div>
+    <div id="hexo-douban-item3">
+        
+        <div class="hexo-douban-pagination">
+    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
+    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
+    <span class="hexo-douban-pagenum">2 / 3</span>
+    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;">下一页</a>
+    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;">尾页</a>
+</div>
+    </div>
+
+</div>
+
+<script>
+    /**
+ * Created by myths on 18-2-8.
+ */
+
+Element.prototype.siblings = function () {
+    var siblingElement = [];
+    var sibs = this.parentNode.children;
+    for (var i = 0; i < sibs.length; i++) {
+        if (sibs[i] !== this) {
+            siblingElement.push(sibs[i]);
+        }
+    }
+    return siblingElement;
+};
+function tabClick() {
+    //修改标签样式
+    this.classList.add('hexo-douban-active');
+    var sibs = this.siblings();
+    for (var j = 0; j < sibs.length; j++) {
+        sibs[j].classList.remove('hexo-douban-active');
+    }
+    //显示对应板块
+    var itemId = this.id.replace('tab', 'item');
+    var target = document.getElementById(itemId);
+    target.classList.remove('hexo-douban-hide');
+    target.classList.add('hexo-douban-show');
+    sibs = document.getElementById(itemId).siblings();
+    for (var k = 0; k < sibs.length; k++) {
+        sibs[k].classList.remove('hexo-douban-show');
+        sibs[k].classList.add('hexo-douban-hide');
+    }
+}
+var tabs = document.getElementsByClassName("hexo-douban-tab");
+for (var i = 0; i < tabs.length; i++) {
+    tabs[i].onclick = tabClick;
+    tabs[i].onclick.apply(tabs[i]);
+}
+tabs[2].click();
+
+    var firstpages = document.getElementsByClassName("hexo-douban-firstpage");
+var previouspages = document.getElementsByClassName("hexo-douban-previouspage");
+var nextpages = document.getElementsByClassName("hexo-douban-nextpage");
+var lastpages = document.getElementsByClassName("hexo-douban-lastpage");
+var pagenums = document.getElementsByClassName("hexo-douban-pagenum");
+
+function makePageNum(num, arr) {
+    return (num + 1) + ' / ' + (Math.ceil(arr.length / 10 === 0 ? 1 : Math.ceil(arr.length / 10)));
+}
+
+function firstBtn() {
+    var sibs = this.parentNode.siblings();
+    displayPage(sibs, 0);
+    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(0, sibs);
+}
+
+function previousBtn() {
+    var sibs = this.parentNode.siblings();
+    var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
+    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
+    currNum = parseInt(currNum, 10) - 1;
+    if (currNum > 0) {
+        currNum--;
+    }
+    displayPage(sibs, currNum);
+    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
+}
+
+function nextBtn() {
+    var sibs = this.parentNode.siblings();
+    var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
+    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
+    currNum = parseInt(currNum, 10) - 1;
+    if (currNum < Math.ceil(sibs.length / 10) - 1) {
+        currNum++;
+    }
+    displayPage(sibs, currNum);
+    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
+}
+
+function lastBtn() {
+    var sibs = this.parentNode.siblings();
+    displayPage(sibs, Math.ceil(sibs.length / 10) - 1);
+    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 10) - 1 === -1 ? 0 : Math.ceil(sibs.length / 10) - 1, sibs);
+}
+
+function displayPage(arr, num) {
+    for (var i = 0; i < arr.length; i++) {
+        if (Math.floor(i / 10) === num) {
+            arr[i].classList.remove('hexo-douban-hide');
+            var img = arr[i].getElementsByTagName('img')[0];
+            img.src = img.getAttribute('data-src');
+        } else {
+            arr[i].classList.add('hexo-douban-hide');
+        }
+    }
+}
+
+for (var i = 0; i < firstpages.length; i++) {
+
+    //add listener
+    firstpages[i].onclick = firstBtn;
+    previouspages[i].onclick = previousBtn;
+    nextpages[i].onclick = nextBtn;
+    lastpages[i].onclick = lastBtn;
+
+    //set page num
+    var size = pagenums[i].parentNode.siblings().length;
+    pagenums[i].innerText = '1 / ' + (Math.ceil(size / 10) === 0 ? 1 : Math.ceil(size / 10));
+    firstpages[i].click();
+}
+
+</script>
+
 
       </div>
       
@@ -767,13 +853,6 @@ if(canvas.getContext){
       
     </div>
     
-  <ul class="breadcrumb">
-          
-            <li><a href="/resource/">RESOURCE</a></li>
-            <li><a href="/resource/draft/">DRAFT</a></li>
-            <li>PAPER-DL-GNN-GRN</li>
-          
-  </ul>
 
     
     
@@ -872,57 +951,6 @@ if(canvas.getContext){
   
 
   
-      <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              const target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      const script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
