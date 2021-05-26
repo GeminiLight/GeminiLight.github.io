@@ -24,22 +24,22 @@
     var CONFIG = {"hostname":"www.geminilight.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="Welcome to My Blog Gemini向光性 困在双子星座的流浪旅人 了解更多">
+  <meta name="description" content="本文提出了一种基于卷积操作的图神经网络GCN，它将卷积操作适应于图结构，同时提取图结构和节点的特征信息，并在在半监督学习中获得了较好的效果提升。 论文名称：Semi-Supervised Classification with Graph Convolutional Networks 论文作者：Thomas N. Kipf, Max Welling 发表期刊：ICLR-2017 (THU-A">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Start the Journey of My Blog">
-<meta property="og:url" content="https://www.geminilight.cn/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/index.html">
+<meta property="og:title" content="【论文笔记】GNN之GCN：Semi-Supervised Classification with Graph Convolutional Networks">
+<meta property="og:url" content="https://www.geminilight.cn/2020/07/27/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-dl-gnn-gcn/index.html">
 <meta property="og:site_name" content="Gemini向光性">
-<meta property="og:description" content="Welcome to My Blog Gemini向光性 困在双子星座的流浪旅人 了解更多">
+<meta property="og:description" content="本文提出了一种基于卷积操作的图神经网络GCN，它将卷积操作适应于图结构，同时提取图结构和节点的特征信息，并在在半监督学习中获得了较好的效果提升。 论文名称：Semi-Supervised Classification with Graph Convolutional Networks 论文作者：Thomas N. Kipf, Max Welling 发表期刊：ICLR-2017 (THU-A">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-08-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-25T17:10:53.371Z">
+<meta property="article:published_time" content="2020-07-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-26T00:59:46.784Z">
 <meta property="article:author" content="GeminiLight">
-<meta property="article:tag" content="Blog">
-<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="DL">
+<meta property="article:tag" content="GNN">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.geminilight.cn/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/">
+<link rel="canonical" href="https://www.geminilight.cn/2020/07/27/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-dl-gnn-gcn/">
 
 
 <script class="page-configurations">
@@ -52,7 +52,7 @@
   };
 </script>
 
-  <title>Start the Journey of My Blog | Gemini向光性</title>
+  <title>【论文笔记】GNN之GCN：Semi-Supervised Classification with Graph Convolutional Networks | Gemini向光性</title>
   
 
 
@@ -109,9 +109,6 @@
   </style>
 </noscript>
 
-<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
-<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
-<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -231,7 +228,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#welcome-to-my-blog"><span class="nav-text">Welcome to My Blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#involved-fields"><span class="nav-text">Involved Fields</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF"><span class="nav-text">技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%91%E8%9E%8D"><span class="nav-text">金融</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1"><span class="nav-text">设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%B4%BB"><span class="nav-text">生活</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E7%AE%80%E4%BB%8B"><span class="nav-text">论文简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%A9%E5%86%99%E9%87%8A%E4%B9%89"><span class="nav-text">缩写释义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-text">研究背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E8%B4%A1%E7%8C%AE"><span class="nav-text">主要贡献</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E7%AE%97%E6%B3%95"><span class="nav-text">模型算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%B1%82gcn%E4%BC%A0%E6%92%AD%E8%A7%84%E5%88%99"><span class="nav-text">多层GCN传播规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E8%B0%B1%E6%96%B9%E6%B3%95%E7%9A%84%E5%9B%BE%E5%8D%B7%E7%A7%AF"><span class="nav-text">基于谱方法的图卷积</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%94%B9%E8%BF%9B"><span class="nav-text">模型改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="nav-text">性能评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="nav-text">数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="nav-text">评估指标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%80%9D%E8%80%83"><span class="nav-text">总结思考</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -592,7 +589,7 @@ if(canvas.getContext){
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/">
+    <link itemprop="mainEntityOfPage" href="https://www.geminilight.cn/2020/07/27/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-dl-gnn-gcn/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.webp">
@@ -608,7 +605,7 @@ if(canvas.getContext){
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Start the Journey of My Blog
+          【论文笔记】GNN之GCN：Semi-Supervised Classification with Graph Convolutional Networks
         </h1>
 
         <div class="post-meta">
@@ -619,7 +616,7 @@ if(canvas.getContext){
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-08-03 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-03T00:00:00+08:00">2019-08-03</time>
+              <time title="创建时间：2020-07-27 00:00:00" itemprop="dateCreated datePublished" datetime="2020-07-27T00:00:00+08:00">2020-07-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -627,7 +624,7 @@ if(canvas.getContext){
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MY-%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">MY - 感悟随笔</span></a>
+                  <a href="/categories/RP-%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">RP - 科研论文</span></a>
                 </span>
             </span>
 
@@ -637,7 +634,7 @@ if(canvas.getContext){
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>268</span>
+              <span>1.8k</span>
             </span>
 
         </div>
@@ -647,47 +644,77 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-        
-    <div id="aplayer-iymJlfPe" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="0046Ze2d2A7jeA" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
-    ></div>
-<h2 id="welcome-to-my-blog">Welcome to My Blog</h2>
-<p>Gemini向光性<br />
-困在双子星座的流浪旅人<br />
-<a href="/about">了解更多</a></p>
+        <p>本文提出了一种基于卷积操作的图神经网络GCN，它将卷积操作适应于图结构，同时提取图结构和节点的特征信息，并在在半监督学习中获得了较好的效果提升。</p>
+<p><strong>论文名称</strong>：Semi-Supervised Classification with Graph Convolutional Networks<br />
+<strong>论文作者</strong>：Thomas N. Kipf, Max Welling<br />
+<strong>发表期刊</strong>：ICLR-2017 (THU-A)<br />
+<strong>研究方向</strong>：GNN 图神经网络<br />
+<strong>关键技术</strong>：Graph Convolution<br />
+<strong>主要创新</strong>：将多头注意力机制应用于图神经网络，来提升特征提取效果。<br />
+<span class="exturl" data-url="aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzE2MDkuMDI5MDc=">下载论文<i class="fa fa-external-link-alt"></i></span> | <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RraXBmL2djbj91dG1fc291cmNlPWNhdGFseXpleC5jb20=">查看源码<i class="fa fa-external-link-alt"></i></span></p>
 <a id="more"></a>
-<h2 id="involved-fields">Involved Fields</h2>
-<p>博客计划主要涉及以下内容：</p>
-<h3 id="技术">技术</h3>
+<h2 id="论文简介">论文简介</h2>
+<h3 id="缩写释义">缩写释义</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">缩写</th>
+<th>描述</th>
+<th>全称</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">GNN</td>
+<td>图神经网络</td>
+<td>Graph Neural Network</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">GCN</td>
+<td>图卷积网络</td>
+<td>Graph Convolutional Network</td>
+</tr>
+</tbody>
+</table>
+<h3 id="研究背景">研究背景</h3>
 <ul>
-<li>机器学习：传统机器学习、深度学习、强化学习</li>
-<li>数据分析：Numpy、Pandas、Scipy、Matlibplot</li>
-<li>全栈开发：Vue、jQuery、MySQL、SpringBoot、Django</li>
-<li>编程语言：Python、C/C++、Java、JS/TS</li>
+<li></li>
 </ul>
-<h3 id="金融">金融</h3>
+<h3 id="主要贡献">主要贡献</h3>
 <ul>
-<li>宏观经济</li>
-<li>微观经济</li>
-<li>企业分析</li>
-<li>金融分析</li>
+<li>提出了一种简单、有效且可以直接在图上进行的卷积操作的神经网络</li>
+<li>证明了GCN可以快速的和可伸缩处理半监督节点分类问题</li>
 </ul>
-<h3 id="设计">设计</h3>
+<h2 id="模型算法">模型算法</h2>
+<h3 id="多层gcn传播规则">多层GCN传播规则</h3>
+<p>多层的 Graph Convolutional Network (GCN) 传播规则如下</p>
+<p><span class="math display">\[H^{(l+1)}=\sigma\left(\tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}} H^{(l)} W^{(l)}\right)\]</span></p>
+<p>式中，</p>
 <ul>
-<li>PPT设计</li>
-<li>平面设计</li>
-<li>视频剪辑</li>
+<li><span class="math inline">\(\tilde{A}=A+I_{N}\)</span>是无向图<span class="math inline">\(\mathcal{G}\)</span>的邻接矩阵与自连接的单位矩阵的加和</li>
+<li><span class="math inline">\(\tilde{D}_{i i}=\sum_{j} \tilde{A}_{i j}\)</span></li>
+<li><span class="math inline">\(W^{(l)}\)</span>是分层可训练的权重矩阵</li>
+<li><span class="math inline">\(\sigma (·)\)</span>是一个激活函数</li>
+<li><span class="math inline">\(H^{(l)} \in \mathbb{R}^{N \times D}\)</span>是第<span class="math inline">\(l\)</span>层的激活矩阵，且<span class="math inline">\(H^{(l)}=X\)</span></li>
 </ul>
-<h3 id="生活">生活</h3>
+<h3 id="基于谱方法的图卷积">基于谱方法的图卷积</h3>
+<p>图的谱卷积操作被定义为信号<span class="math inline">\(x \in \mathbb{R}^N\)</span>与傅里叶域滤波器<span class="math inline">\(g_{\theta}=\operatorname{diag}(\theta)\)</span>的乘积：</p>
+<p>式中，<span class="math inline">\(U\)</span>是归一化图拉普拉斯特征向量的矩阵，满足</p>
+<p><span class="math display">\[L=I_{N}-D^{-\frac{1}{2}} A D^{-\frac{1}{2}}=U \Lambda U^{\top}\]</span></p>
+<p>其特征值<span class="math inline">\(\Lambda\)</span>的对角矩阵和<span class="math inline">\(U^{\top} x\)</span>是<span class="math inline">\(x\)</span>的图傅里叶变换。我们可以理解<span class="math inline">\(g_{\theta}\)</span>为<span class="math inline">\(L\)</span>特征值的函数，如<span class="math inline">\(g_{\theta}(\Lambda)\)</span>。</p>
+<p>但大型图的特征分解是高计算需求的。为了避免这个问题，<span class="math inline">\(g_{\theta}(\Lambda)\)</span>可以通过切比雪夫多项式<span class="math inline">\(T_k(x)\)</span>的截断展开很好地逼近到第<span class="math inline">\(K^{th}\)</span>阶：</p>
+<p><span class="math display">\[g_{\theta} \star x=U g_{\theta} U^{\top} x\]</span></p>
+<p>式中，<span class="math inline">\(\tilde{\Lambda}=\frac{2}{\lambda_{\max }} \Lambda-I_{N}\)</span>，<span class="math inline">\(\lambda_{\max }\)</span>表示L的最大特征值。<span class="math inline">\(\theta&#39; \in \mathbb{R}^K\)</span>是切比雪夫系数的向量表示。切比雪夫多项式递归定义为<span class="math inline">\(T_{k}(x) = 2 x T_{k-1}(x)-T_{k-2}(x)\)</span>, <span class="math inline">\(T_{0}(x)=1, T_1(x)=x\)</span>。</p>
+<p>因此，信号<span class="math inline">\(x\)</span>和滤波<span class="math inline">\(g_{\theta^{\prime}}\)</span>的卷积操作可以定义为 <span class="math display">\[g_{\theta^{\prime}}(\Lambda) \approx \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{\Lambda})\]</span> 式中，<span class="math inline">\(\tilde{L}=\frac{2}{\lambda_{\max }} L-I_{N}\)</span>，因为<span class="math inline">\(\left(U \Lambda U^{\top}\right)^{k}=U \Lambda^{k} U^{\top}\)</span>。注意，这个表达式现在是K-local，因为它是Laplacian中的第K阶多项式，即它只依赖于距离中心节点（第K阶邻域）最大K步的节点。</p>
+<p><span class="math display">\[g_{\theta^{\prime}} \star x \approx \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{L}) x\]</span></p>
+<h2 id="模型改进">模型改进</h2>
+<h2 id="性能评估">性能评估</h2>
+<h3 id="数据集">数据集</h3>
+<h3 id="评估指标">评估指标</h3>
+<h2 id="总结思考">总结思考</h2>
 <ul>
-<li>随笔</li>
-<li>音乐</li>
-<li>摄影</li>
-<li>影视</li>
-<li>游戏</li>
-<li>烹饪</li>
+<li></li>
 </ul>
-<p>但深知自己才疏博浅且臻爱原创，又不愿随波逐流，故更新进度随缘。</p>
 
     </div>
 
@@ -698,10 +725,13 @@ if(canvas.getContext){
   <div class="popular-posts-header">相关文章</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\08\25\MY - 感悟随笔\my-record-our-moments\" rel="bookmark">【随笔】时光刻痕——记博客重启</a></div>
+      <div class="popular-posts-title"><a href="\2020\12\01\RP - 科研论文\paper-dl-gnn-gat\" rel="bookmark">【论文笔记】GNN之GAT：Graph Attention Networks</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\08\16\ST - 软件工具\st-hexo-next-custom\" rel="bookmark">【Blog】深度美化和定制Hexo和NexT方法</a></div>
+      <div class="popular-posts-title"><a href="\2021\04\19\RP - 科研论文\pre-nfv-drl-sfcp\" rel="bookmark">【Presentation】DRL-SFCP&#58 Adaptive Service Function Chains Placement with Deep Reinforcement Learning</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\07\13\RP - 科研论文\paper-nfv-vne-dlr-gcn\" rel="bookmark">【论文笔记】Automatic Virtual Network Embedding - A DRL Approach with GCN</a></div>
     </li>
   </ul>
 
@@ -714,7 +744,7 @@ if(canvas.getContext){
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.geminilight.cn/2019/08/03/MY%20-%20%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/my-start-my-blog/" title="Start the Journey of My Blog">https://www.geminilight.cn/2019/08/03/MY - 感悟随笔/my-start-my-blog/</a>
+    <a href="https://www.geminilight.cn/2020/07/27/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-dl-gnn-gcn/" title="【论文笔记】GNN之GCN：Semi-Supervised Classification with Graph Convolutional Networks">https://www.geminilight.cn/2020/07/27/RP - 科研论文/paper-dl-gnn-gcn/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -725,21 +755,21 @@ if(canvas.getContext){
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Blog/" rel="tag"># Blog</a>
-              <a href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag"># 随笔</a>
+              <a href="/tags/DL/" rel="tag"># DL</a>
+              <a href="/tags/GNN/" rel="tag"># GNN</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019/01/11/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-fundamental-syntax/" rel="prev" title="【Python】基础语法总结">
-                  <i class="fa fa-chevron-left"></i> 【Python】基础语法总结
+                <a href="/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-dlr-gcn/" rel="prev" title="【论文笔记】Automatic Virtual Network Embedding - A DRL Approach with GCN">
+                  <i class="fa fa-chevron-left"></i> 【论文笔记】Automatic Virtual Network Embedding - A DRL Approach with GCN
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2019/08/22/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dl-introduction/" rel="next" title="深度学习知识体系">
-                  深度学习知识体系 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/" rel="next" title="【Python】with语句原理">
+                  【Python】with语句原理 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
