@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.geminilight.cn/404.html</loc>
+    
+    <lastmod>2021-05-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/more/plans/index.html</loc>
+    
+    <lastmod>2021-05-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.geminilight.cn/2020/07/27/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-dl-gnn-gcn/</loc>
     
     <lastmod>2021-05-26</lastmod>
@@ -170,13 +184,6 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/more/plans/index.html</loc>
-    
-    <lastmod>2020-11-30</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.geminilight.cn/2019/09/22/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/lecture-academician-pan-fu-sheng/</loc>
     
     <lastmod>2020-11-30</lastmod>
@@ -215,13 +222,6 @@
     <loc>https://www.geminilight.cn/2020/02/25/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/research-effictive-ml-researcher/</loc>
     
     <lastmod>2020-11-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/404.html</loc>
-    
-    <lastmod>2020-11-27</lastmod>
     
   </url>
   
