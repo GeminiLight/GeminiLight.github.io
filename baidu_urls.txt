@@ -1,5 +1,5 @@
+https://www.geminilight.cn/2021/06/30/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/ts-and-dl/
 https://www.geminilight.cn/2021/05/08/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/ml-for-co/
-https://www.geminilight.cn/2021/05/08/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/ts-and-dl/
 https://www.geminilight.cn/2021/04/19/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/pre-nfv-drl-sfcp/
 https://www.geminilight.cn/2021/03/02/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/course-collection-on-ai/
 https://www.geminilight.cn/2021/02/19/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/dml-parallel-computing-and-machine-learning/
