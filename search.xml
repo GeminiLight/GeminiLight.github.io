@@ -4,15 +4,103 @@
     <title>【ML】机器学习在组合优化中的应用</title>
     <url>/2021/05/08/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/ml-for-co/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>组合优化</strong>问题遍布工业工程、交通运输、通讯网络等诸多领域，高效求解此类问题决定着实践场景中决策的质量；<strong>机器学习</strong>已经被广泛应用和落地于各种场景，用其来解决组合优化问题的尝试也成为了学术和工业界的热点。</p>
-<p>本人浅研机器学习与组合优化方向已有一段时间，阅读相关顶会论文也有数十篇，故在此作出一些自己的总结和思考。作者才疏学浅，存在错误是难免的，欢迎反馈；如您兴趣相似，从事ML+CO的研究或应用，欢迎交流。</p>
+<p>自己浅研机器学习与组合优化方向已有一段时间，阅读相关顶会论文也有数十篇，故在此作出一些自己的总结和思考。作者才疏学浅，存在错误是难免的，欢迎反馈；如您兴趣相似，从事ML+CO的研究或应用，欢迎交流。</p>
 ]]></content>
       <categories>
         <category>ML - 机器学习</category>
       </categories>
       <tags>
-        <tag>机器学习</tag>
-        <tag>组合优化</tag>
-        <tag>图神经网络</tag>
+        <tag>GNN</tag>
+        <tag>ML</tag>
+        <tag>CO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【ML】机器学习在组合优化中的应用</title>
+    <url>/2021/05/08/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/ts-and-dl/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img data-src="/resource/images/report/ts-and-dl/1.jpg" /></p>
+<p>总结一些自己所阅读DL-based时序预测算法的文献，包括了一些基于CNN、RNN、Attention、Transformer、GNN、GAN的算法。</p>
+<p>为了对抗拖延症打算先放图占个坑，后续会逐一补充文字说明。在文字总结时，自己也会继续扩充相关内容和进行勘误，并分享slide版本。</p>
+<p>如您发现错误，欢迎指正~</p>
+<a id="more"></a>
+<p><img data-src="/resource/images/report/ts-and-dl/2.jpg" /></p>
+<h2 id="时序预测简介">时序预测简介</h2>
+<p><img data-src="/resource/images/report/ts-and-dl/3.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/4.jpg" /></p>
+<h2 id="ts经典方法">TS经典方法</h2>
+<p><img data-src="/resource/images/report/ts-and-dl/5.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/6.jpg" /></p>
+<h2 id="dl方法汇总">DL方法汇总</h2>
+<h3 id="基础模型canonical与seq2seq">基础模型：Canonical与Seq2Seq</h3>
+<h4 id="mlp">MLP</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/7.jpg" /></p>
+<h4 id="cnn">CNN</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/8.jpg" /></p>
+<h4 id="rnn">RNN</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/9.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/10.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/11.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/12.jpg" /></p>
+<h4 id="seq2seq">Seq2Seq</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/13.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/14.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/15.jpg" /></p>
+<h3 id="attention-based-方法">Attention-based 方法</h3>
+<p><img data-src="/resource/images/report/ts-and-dl/16.jpg" /></p>
+<h4 id="lstnet">LSTNet</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/17.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/18.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/19.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/20.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/21.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/22.jpg" /></p>
+<h4 id="mtnet">MTNet</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/23.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/24.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/25.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/26.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/27.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/28.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/29.jpg" /></p>
+<h4 id="tpa-lstm">TPA-LSTM</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/30.jpg" /></p>
+<h3 id="transformer">Transformer</h3>
+<p><img data-src="/resource/images/report/ts-and-dl/31.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/32.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/33.jpg" /></p>
+<h4 id="n-beats">N-BEATS</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/34.jpg" /></p>
+<h4 id="informer">Informer</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/35.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/36.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/37.jpg" /></p>
+<h3 id="gnn-based-方法">GNN-based 方法</h3>
+<h4 id="mtgnn">MTGNN</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/38.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/39.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/40.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/41.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/42.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/43.jpg" /></p>
+<h4 id="mtad-gat">MTAD-GAT</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/44.jpg" /></p>
+<h4 id="gdn">GDN</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/45.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/46.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/47.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/48.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/49.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/50.jpg" /></p>
+<p><img data-src="/resource/images/report/ts-and-dl/51.jpg" /></p>
+<h4 id="summary">Summary</h4>
+<p><img data-src="/resource/images/report/ts-and-dl/52.jpg" /></p>
+]]></content>
+      <categories>
+        <category>ML - 机器学习</category>
+      </categories>
+      <tags>
+        <tag>DL</tag>
+        <tag>TS</tag>
       </tags>
   </entry>
   <entry>
@@ -888,8 +976,7 @@ The growing number of network complexities and ever-increasing demand for cloud-
         <category>ML - 机器学习</category>
       </categories>
       <tags>
-        <tag>分布式</tag>
-        <tag>人工智能</tag>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -1162,8 +1249,8 @@ Li and others: Scaling distributed machine learning with the parameter server. I
         <category>ML - 机器学习</category>
       </categories>
       <tags>
-        <tag>深度学习</tag>
-        <tag>分布式</tag>
+        <tag>DL</tag>
+        <tag>Distributed</tag>
       </tags>
   </entry>
   <entry>
@@ -4352,7 +4439,8 @@ The software package that can give a thinking machine the benefits of agency sho
         <category>ML - 机器学习</category>
       </categories>
       <tags>
-        <tag>深度学习</tag>
+        <tag>DL</tag>
+        <tag>ML</tag>
       </tags>
   </entry>
   <entry>
