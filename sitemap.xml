@@ -333,6 +333,48 @@
   </url>
   
   <url>
+    <loc>https://www.geminilight.cn/tags/DL/</loc>
+    <lastmod>2021-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/tags/ML/</loc>
+    <lastmod>2021-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/tags/Distributed/</loc>
+    <lastmod>2021-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/tags/CO/</loc>
+    <lastmod>2021-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/tags/GNN/</loc>
+    <lastmod>2021-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/tags/TS/</loc>
+    <lastmod>2021-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.geminilight.cn/tags/Blog/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
@@ -375,13 +417,6 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/tags/Data-Visualization/</loc>
-    <lastmod>2021-07-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.geminilight.cn/tags/AI/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
@@ -389,14 +424,7 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/tags/DL/</loc>
-    <lastmod>2021-07-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/tags/GNN/</loc>
+    <loc>https://www.geminilight.cn/tags/Data-Visualization/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -424,7 +452,7 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/tags/ML/</loc>
+    <loc>https://www.geminilight.cn/tags/Hexo/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -445,13 +473,6 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/tags/Hexo/</loc>
-    <lastmod>2021-07-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.geminilight.cn/tags/Data-Science/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
@@ -460,27 +481,6 @@
   
   <url>
     <loc>https://www.geminilight.cn/tags/SciPy/</loc>
-    <lastmod>2021-07-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/tags/Distributed/</loc>
-    <lastmod>2021-07-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/tags/CO/</loc>
-    <lastmod>2021-07-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/tags/TS/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -496,14 +496,14 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/categories/ML-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://www.geminilight.cn/categories/MY-%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/categories/MY-%E6%84%9F%E6%82%9F%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://www.geminilight.cn/categories/ML-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -524,14 +524,14 @@
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/categories/WD-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://www.geminilight.cn/categories/ST-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.geminilight.cn/categories/ST-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://www.geminilight.cn/categories/WD-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
