@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.geminilight.cn/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/</loc>
+    
+    <lastmod>2021-07-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.geminilight.cn/2021/06/30/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/ts-and-dl/</loc>
     
     <lastmod>2021-07-15</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://www.geminilight.cn/tags/index.html</loc>
     
     <lastmod>2021-05-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.geminilight.cn/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/gd-ppt-conclusion-18-20/</loc>
-    
-    <lastmod>2021-05-23</lastmod>
     
   </url>
   
@@ -312,13 +312,6 @@
 
   
   <url>
-    <loc>https://www.geminilight.cn/tags/he-Slide/</loc>
-    <lastmod>2021-07-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.geminilight.cn/tags/Game/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
@@ -481,6 +474,13 @@
   
   <url>
     <loc>https://www.geminilight.cn/tags/SciPy/</loc>
+    <lastmod>2021-07-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geminilight.cn/tags/Slide/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
