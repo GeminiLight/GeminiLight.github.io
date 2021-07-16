@@ -91,8 +91,50 @@
   <entry>
     <title>【ML】机器学习在组合优化中的应用</title>
     <url>/2021/05/08/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/ml-for-co/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>组合优化</strong>问题遍布工业工程、交通运输、通讯网络等诸多领域，高效求解此类问题决定着实践场景中决策的质量；<strong>机器学习</strong>已经被广泛应用和落地于各种场景，用其来解决组合优化问题的尝试也成为了学术和工业界的热点。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img data-src="/resource/images/report/ml-and-co/1.jpg" /></p>
+<p><strong>组合优化</strong>问题遍布工业工程、交通运输、通讯网络等诸多领域，高效求解此类问题决定着实践场景中决策的质量；<strong>机器学习</strong>已经被广泛应用和落地于各种场景，用其来解决组合优化问题的尝试也成为了学术和工业界的热点。</p>
 <p>自己浅研机器学习与组合优化方向已有一段时间，阅读相关顶会论文也有数十篇，故在此作出一些自己的总结和思考。作者才疏学浅，存在错误是难免的，欢迎反馈；如您兴趣相似，从事ML+CO的研究或应用，欢迎交流。</p>
+<a id="more"></a>
+<p><img data-src="/resource/images/report/ml-and-co/2.jpg" /></p>
+<h2 id="组合优化简介">组合优化简介</h2>
+<h3 id="应用场景">应用场景</h3>
+<p><img data-src="/resource/images/report/ml-and-co/3.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/4.jpg" /></p>
+<h3 id="典型问题">典型问题</h3>
+<p><img data-src="/resource/images/report/ml-and-co/5.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/6.jpg" /></p>
+<h3 id="方法分类">方法分类</h3>
+<p><img data-src="/resource/images/report/ml-and-co/7.jpg" /></p>
+<h2 id="机器学习方法">机器学习方法</h2>
+<h3 id="图神经网络">图神经网络</h3>
+<p><img data-src="/resource/images/report/ml-and-co/8.jpg" /></p>
+<h4 id="s2v-dqn">S2V-DQN</h4>
+<p><img data-src="/resource/images/report/ml-and-co/9.jpg" /></p>
+<h4 id="gnn-tsp">GNN-TSP</h4>
+<p><img data-src="/resource/images/report/ml-and-co/10.jpg" /></p>
+<h4 id="am">AM</h4>
+<p><img data-src="/resource/images/report/ml-and-co/11.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/12.jpg" /></p>
+<h4 id="gpt">GPT</h4>
+<p><img data-src="/resource/images/report/ml-and-co/13.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/14.jpg" /></p>
+<h4 id="mst">MST</h4>
+<p><img data-src="/resource/images/report/ml-and-co/15.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/16.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/17.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/18.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/19.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/20.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/21.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/22.jpg" /></p>
+<h3 id="迭代式方法">迭代式方法</h3>
+<h4 id="iterative">Iterative</h4>
+<p><img data-src="/resource/images/report/ml-and-co/23.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/24.jpg" /></p>
+<h4 id="rgb">RGB</h4>
+<p><img data-src="/resource/images/report/ml-and-co/25.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/26.jpg" /></p>
+<p><img data-src="/resource/images/report/ml-and-co/27.jpg" /></p>
 ]]></content>
       <categories>
         <category>ML - 机器学习</category>
