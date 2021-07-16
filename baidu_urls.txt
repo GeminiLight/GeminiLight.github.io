@@ -16,5 +16,5 @@ https://www.geminilight.cn/2020/08/17/GD%20-%20%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE
 https://www.geminilight.cn/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next-custom/
 https://www.geminilight.cn/2020/08/14/PL%20-%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/pl-python-with/
 https://www.geminilight.cn/2020/07/27/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-dl-gnn-gcn/
+https://www.geminilight.cn/2020/07/27/ML%20-%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/paper-dl-gnn-gcn/
 https://www.geminilight.cn/2020/07/13/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/paper-nfv-vne-dlr-gcn/
-https://www.geminilight.cn/2020/03/21/RP%20-%20%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/lecture-zju-professor-chenwei-date-visonlization/
