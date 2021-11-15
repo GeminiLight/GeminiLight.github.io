@@ -1,6 +1,6 @@
 # GeminiLight's Blog
 
-The light never goes on
+The light always goes on
 
 ## Introduction
 
